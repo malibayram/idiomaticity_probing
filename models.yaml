@@ -1,0 +1,70 @@
+# Model registry for the idiomaticity probing framework.
+#
+# Each entry becomes a pluggable embedder. `type` selects the embedder implementation:
+#   static      -> gensim KeyedVectors (Word2Vec / GloVe / fastText)   [needs `path`]
+#   transformer -> HuggingFace AutoModel encoder (BERT, XLM-R, BERTurk) [needs `hf_id`]
+#   causal      -> HuggingFace AutoModelForCausalLM (Llama, Qwen, ...)  [needs `hf_id`]
+#   sentence    -> sentence-transformers (SBERT, BGE, E5, GTE)          [needs `hf_id`]
+#   mock        -> dependency-free deterministic vectors (smoke test only)
+#
+# Run a subset with: scripts/run_experiment.py --models models.yaml --select mbert berturk
+
+models:
+  # ---- Smoke test (no downloads) ----
+  - name: mock
+    type: mock
+    dim: 128
+
+  # ---- Models from the original paper ----
+  - name: mBERT
+    type: transformer
+    hf_id: bert-base-multilingual-cased
+    last_n_layers: 4
+
+  - name: DistilBERT-ML
+    type: transformer
+    hf_id: distilbert-base-multilingual-cased
+    last_n_layers: 4
+
+  - name: mSBERT
+    type: sentence
+    hf_id: sentence-transformers/distiluse-base-multilingual-cased
+
+  # ---- New / modern models to extend the study (Phase 7) ----
+  - name: XLM-R-large
+    type: transformer
+    hf_id: xlm-roberta-large
+    last_n_layers: 4
+
+  - name: BGE-M3
+    type: sentence
+    hf_id: BAAI/bge-m3
+
+  - name: E5-large
+    type: sentence
+    hf_id: intfloat/multilingual-e5-large
+
+  # ---- Turkish models (extension beyond EN/PT) ----
+  - name: BERTurk
+    type: transformer
+    hf_id: dbmdz/bert-base-turkish-cased
+    last_n_layers: 4
+
+  # ---- Modern open LLMs (decoder-only hidden states) ----
+  - name: Qwen2.5-7B
+    type: causal
+    hf_id: Qwen/Qwen2.5-7B
+    last_n_layers: 4
+    dtype: bfloat16
+
+  - name: Llama-3.1-8B
+    type: causal
+    hf_id: meta-llama/Llama-3.1-8B
+    last_n_layers: 4
+    dtype: bfloat16
+
+  # ---- Static baselines (provide local paths) ----
+  # - name: GloVe
+  #   type: static
+  #   path: /path/to/glove.840B.300d.w2vformat.txt
+  #   no_header: false

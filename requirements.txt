@@ -1,0 +1,22 @@
+# --- Core (metrics + synthetic data; always required) ---
+numpy>=1.23
+scipy>=1.9
+pandas>=1.5
+PyYAML>=6.0
+
+# --- Plotting (scripts/make_plots.py) ---
+matplotlib>=3.6
+seaborn>=0.12
+
+# --- Embedders (install what you need) ---
+# Transformer / Causal LM embedders:
+torch>=2.0
+transformers>=4.40
+# Static embedders (Word2Vec / GloVe / fastText):
+gensim>=4.3
+# Sentence-level embedders:
+sentence-transformers>=2.6
+
+# --- Data download (xlsx human scores) ---
+openpyxl>=3.1
+requests>=2.28
