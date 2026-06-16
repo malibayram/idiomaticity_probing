@@ -18,13 +18,14 @@ Durum işaretleri: ✅ tamam · 🟡 devam ediyor · ⬜ planlandı
 - ✅ `requirements.txt` — bağımlılıklar
 - ⬜ `python -m venv` + `pip install -r requirements.txt` ile ortam kurulumu (kullanıcı)
 
-## Faz 1 — Veri katmanı (`idiomaticity/data.py`)
-- ✅ NCIMP CSV şemasını modelle (`original sentence`, `*_tag`, prob sütunları)
-- ✅ Orijinal repodan veri indirme scripti (`scripts/download_data.py`)
-- ✅ `MinimalPair` / `NCItem` veri sınıfları (cümle + NC span + her prob için ikame)
+## Faz 1 — Veri katmanı (`idiomaticity/data.py`) — ✅ GERÇEK VERİYLE DOĞRULANDI
+- ✅ NCIMP CSV şemasını modelle (list-literal `*_tag` formatı, BOM, kanonik vs yüzey NC)
+- ✅ Orijinal repodan veri indirme scripti (`scripts/download_data.py`) — 10/10 dosya indi
+- ✅ `Substitution` / `NCInstance` veri sınıfları (cümle + NC span + her prob için ikame)
 - ✅ Naturalistic (S1–S3) ve Neutral cümleleri yükleme
-- ✅ İnsan `Comp` skorlarını (xlsx) yükleme ve NC'lere bağlama
-- ⬜ Veri yoksa çalışabilen küçük **sentetik örnek veri seti** (`data/sample/`) — smoke test için ✅
+- ✅ İnsan `Comp` skorlarını (xlsx) yükleme ve NC'lere bağlama (NC=idiyomatik→I eşlemesi)
+- ✅ Doğrulama: EN 1116/1124, PT 720/720 instance skorlu; 4 prob %100 kapsama; spanlar doğru
+- ✅ Sentetik örnek veri seti (`data/sample/`) — indirme olmadan smoke test
 
 ## Faz 2 — Model-agnostik embedder arayüzü (`idiomaticity/embedders/`)
 - ✅ `BaseEmbedder` soyut sınıfı: `embed_span(sentence, span) -> vector`,

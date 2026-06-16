@@ -38,7 +38,7 @@ def plot_similarity(df: pd.DataFrame, level: str, out_dir: str) -> None:
     for ax, probe in zip(axes.ravel(), probes):
         data = [sub[(sub.model == m) & (sub.measurement == probe)].value.dropna()
                 for m in models]
-        ax.boxplot(data, labels=models, showfliers=False)
+        ax.boxplot(data, tick_labels=models, showfliers=False)
         ax.set_title(probe.replace("sim_", ""))
         ax.set_ylim(-0.2, 1.05)
         ax.axhspan(*_ideal_band(probe), color="tab:green", alpha=0.08)
@@ -74,7 +74,7 @@ def plot_scaled(df: pd.DataFrame, level: str, out_dir: str) -> None:
     ):
         data = [sub[(sub.model == m) & (sub.measurement == meas)].value.dropna()
                 for m in models]
-        ax.boxplot(data, labels=models, showfliers=False)
+        ax.boxplot(data, tick_labels=models, showfliers=False)
         ax.axhline(0, color="k", ls="--", lw=0.8)
         ax.axhline(1, color="tab:green", ls=":", lw=0.8)
         ax.set_title(title)

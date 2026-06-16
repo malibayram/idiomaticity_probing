@@ -81,3 +81,37 @@ def test_end_to_end_mock():
     # Sim values are valid cosines in [-1, 1].
     sims = [r["value"] for r in rows if r["measurement"] == "sim_P_Syn"]
     assert all(-1.0001 <= v <= 1.0001 for v in sims)
+
+
+def test_analysis_indicators_and_cohort():
+    """The research-question analysis (indicators + cohort comparison) runs on mock results."""
+    import pandas as pd
+
+    from idiomaticity.analysis import (
+        cohort_comparison,
+        compute_indicators,
+        indicators_table,
+        verdict,
+    )
+    from idiomaticity.data import load_dataset
+    from idiomaticity.embedders.base import build_embedder
+    from idiomaticity.experiment import run
+
+    data_dir = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "sample"
+    )
+    items = load_dataset(data_dir, lang="EN", contexts=("naturalistic",))
+    embedder = build_embedder({"name": "mock", "type": "mock", "dim": 32})
+    df = pd.DataFrame(run(items, embedder, level="nc"))
+
+    ind = compute_indicators(df, "mock", "EN", "naturalistic", "nc")
+    assert ind is not None
+    assert 0.0 <= ind.ICS <= 1.0
+    assert ind.n_idiomatic >= 1
+    assert isinstance(verdict(ind), str)
+
+    table = indicators_table(df, level="nc")
+    assert not table.empty
+    # Comparing a cohort against itself yields zero deltas.
+    deltas = cohort_comparison(table, ["mock"], ["mock"])
+    assert deltas["ICS"]["delta"] == pytest.approx(0.0, abs=1e-9)

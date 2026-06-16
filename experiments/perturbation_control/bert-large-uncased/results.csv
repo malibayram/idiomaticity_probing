@@ -1,0 +1,34 @@
+group,case,variant,target,replacement,sentence_sim,contextual_span_sim,isolated_phrase_sim,changed_sentence
+idiomatic_nc,grey matter,synonym,grey matter,brain,0.9799143671989441,0.769569993019104,0.6207592487335205,These youngsters use their brain when the presentation is right.
+idiomatic_nc,grey matter,component,grey matter,matter,0.9443325996398926,0.76596999168396,0.746953010559082,These youngsters use their matter when the presentation is right.
+idiomatic_nc,grey matter,word_by_word,grey matter,silvery material,0.9467748403549194,0.7982324957847595,0.7886698246002197,These youngsters use their silvery material when the presentation is right.
+idiomatic_nc,grey matter,random,grey matter,battlefront serviceman,0.913196325302124,0.7137090563774109,0.6566162705421448,These youngsters use their battlefront serviceman when the presentation is right.
+idiomatic_nc,eager beaver,synonym,eager beaver,hard worker,0.9556119441986084,0.7517197728157043,0.6376748085021973,Eric was being an hard worker and left work late.
+idiomatic_nc,eager beaver,component,eager beaver,beaver,0.9431701302528381,0.5348063707351685,0.7230561375617981,Eric was being an beaver and left work late.
+idiomatic_nc,eager beaver,word_by_word,eager beaver,restless rodent,0.9687566161155701,0.7930501103401184,0.6581696271896362,Eric was being an restless rodent and left work late.
+idiomatic_nc,eager beaver,random,eager beaver,petrol station,0.8890513777732849,0.6291152238845825,0.6065704226493835,Eric was being an petrol station and left work late.
+compositional_nc,economic aid,synonym,economic aid,financial assistance,0.9928369522094727,0.9451380372047424,0.8549742698669434,The committee approved financial assistance for the region after the storm.
+compositional_nc,economic aid,component,economic aid,aid,0.9879218935966492,0.8895115852355957,0.5634267330169678,The committee approved aid for the region after the storm.
+compositional_nc,economic aid,word_by_word,economic aid,budgetary assistance,0.9883314967155457,0.8999400734901428,0.8420116305351257,The committee approved budgetary assistance for the region after the storm.
+compositional_nc,economic aid,random,economic aid,kitchen table,0.9416424632072449,0.7362020611763,0.6416845917701721,The committee approved kitchen table for the region after the storm.
+compositional_nc,research lab,synonym,research lab,research facility,0.9838115572929382,0.9378713369369507,0.9372996687889099,The students joined a research facility during the summer program.
+compositional_nc,research lab,component,research lab,lab,0.9852969646453857,0.9399954080581665,0.8495054244995117,The students joined a lab during the summer program.
+compositional_nc,research lab,word_by_word,research lab,investigation workplace,0.9504708051681519,0.7683920860290527,0.7446772456169128,The students joined a investigation workplace during the summer program.
+compositional_nc,research lab,random,research lab,garden party,0.9371898770332336,0.7093195915222168,0.7270941734313965,The students joined a garden party during the summer program.
+single_word_control,doctor,synonym,doctor,physician,0.9955236315727234,0.9563882350921631,0.8974977135658264,The physician opened the door quickly.
+single_word_control,doctor,related,doctor,nurse,0.979131281375885,0.8646883368492126,0.8575405478477478,The nurse opened the door quickly.
+single_word_control,doctor,random,doctor,carpet,0.9562696218490601,0.6241328716278076,0.7371885776519775,The carpet opened the door quickly.
+single_word_control,apple,synonym,apple,fruit,0.989111602306366,0.8865174651145935,0.7700281739234924,She bought a fresh fruit from the market.
+single_word_control,apple,related,apple,pear,0.9928148984909058,0.8883654475212097,0.8185403943061829,She bought a fresh pear from the market.
+single_word_control,apple,random,apple,engine,0.9469093084335327,0.6466279625892639,0.7675926089286804,She bought a fresh engine from the market.
+single_word_control,teacher,synonym,teacher,instructor,0.9863616824150085,0.8923826813697815,0.8391311168670654,The instructor explained the problem clearly.
+single_word_control,teacher,related,teacher,professor,0.9521640539169312,0.7567015290260315,0.7423110008239746,The professor explained the problem clearly.
+single_word_control,teacher,random,teacher,mountain,0.9254504442214966,0.6110070943832397,0.6206879019737244,The mountain explained the problem clearly.
+ordinary_two_word_control,red car,synonym,red car,crimson vehicle,0.9834762215614319,0.8857792019844055,0.7818030714988708,The crimson vehicle stopped near the school gate.
+ordinary_two_word_control,red car,component,red car,car,0.9871706962585449,0.9025301337242126,0.7231742143630981,The car stopped near the school gate.
+ordinary_two_word_control,red car,word_by_word,red car,scarlet automobile,0.9801401495933533,0.8700099587440491,0.7030644416809082,The scarlet automobile stopped near the school gate.
+ordinary_two_word_control,red car,random,red car,coffee spoon,0.9556130766868591,0.6509921550750732,0.6714286208152771,The coffee spoon stopped near the school gate.
+ordinary_two_word_control,coffee cup,synonym,coffee cup,mug,0.9868385791778564,0.8712736368179321,0.6254063844680786,She placed the mug on the wooden table.
+ordinary_two_word_control,coffee cup,component,coffee cup,cup,0.982059895992279,0.881743311882019,0.6363994479179382,She placed the cup on the wooden table.
+ordinary_two_word_control,coffee cup,word_by_word,coffee cup,java container,0.9792622923851013,0.8134071826934814,0.7241984009742737,She placed the java container on the wooden table.
+ordinary_two_word_control,coffee cup,random,coffee cup,traffic signal,0.9508147239685059,0.6015323996543884,0.7098783850669861,She placed the traffic signal on the wooden table.

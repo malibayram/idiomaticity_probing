@@ -135,6 +135,9 @@ Thumbs.db
 
 # Project-specific
 data/
+!data/sample/
+!data/sample/**
+runs/
 *.pkl
 *.pickle
 *.joblib

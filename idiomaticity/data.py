@@ -70,14 +70,17 @@ class NCInstance:
 # Tag / span helpers
 # ----------------------------------------------------------------------------------------
 def span_from_tag(sentence: str, tag: str | Sequence) -> Optional[Span]:
-    """Return the (start, end) word span marked truthy in a binary/BIO ``tag``.
+    """Return the (start, end) word span marked truthy in a ``tag``.
 
-    Accepts a space-separated string ("0 0 1 1 0"), BIO-ish tags ("O O B I O"), or a list.
+    Accepts the NCIMP list-literal format (``"[False, True, True, False]"``), a space-separated
+    string (``"0 0 1 1 0"``), BIO-ish tags (``"O O B I O"``), or an already-parsed list.
     Returns the first contiguous marked run as a half-open word span, or ``None``.
     """
     if tag is None:
         return None
-    items = tag.split() if isinstance(tag, str) else list(tag)
+    items = _parse_tag(tag)
+    if not items:
+        return None
     marked = [i for i, t in enumerate(items) if _is_marked(t)]
     if not marked:
         return None
@@ -91,7 +94,25 @@ def span_from_tag(sentence: str, tag: str | Sequence) -> Optional[Span]:
     return (start, end + 1)
 
 
+def _parse_tag(tag: str | Sequence) -> list:
+    """Normalize a tag value into a list of per-word markers."""
+    if not isinstance(tag, str):
+        return list(tag)
+    s = tag.strip()
+    if s.startswith("[") and s.endswith("]"):
+        try:
+            import ast
+
+            return list(ast.literal_eval(s))
+        except (ValueError, SyntaxError):
+            # Fallback: strip brackets and split on commas.
+            return [t.strip() for t in s[1:-1].split(",")]
+    return s.split()
+
+
 def _is_marked(tok) -> bool:
+    if isinstance(tok, bool):
+        return tok
     s = str(tok).strip().upper()
     return s not in ("", "0", "O", "FALSE", "NONE", "_")
 
@@ -213,15 +234,23 @@ def load_ncimp_csv(
     orig_col = _COL["orig_neut"] if context == "neutral" else _COL["orig_nat"]
     items: List[NCInstance] = []
 
-    with open(csv_path, "r", encoding="utf-8") as fh:
+    # utf-8-sig strips the BOM on the first column name ("﻿compound").
+    with open(csv_path, "r", encoding="utf-8-sig") as fh:
         reader = csv.DictReader(fh)
+        # Surface form (as it appears in the sentence, may be plural).
+        nc_col = "compound noun" if "compound noun" in reader.fieldnames else reader.fieldnames[0]
+        # Canonical form (singular lemma) used to join with the xlsx scores.
+        canon_col = "compound" if "compound" in reader.fieldnames else nc_col
         for row in reader:
-            nc = _get(row, reader.fieldnames[0])  # first column is the compound id
+            nc = _get(row, nc_col)
+            canon = _get(row, canon_col) or nc
             orig_sentence = _get(row, orig_col)
             if not orig_sentence:
                 continue
+            # The original-position tag column is named "original sentence_tag" in both the
+            # naturalistic and neutral files.
             original = make_substitution(
-                orig_sentence, row.get(orig_col + "_tag"), phrase=nc
+                orig_sentence, row.get("original sentence_tag"), phrase=nc
             )
             if original is None:
                 continue
@@ -257,13 +286,14 @@ def load_ncimp_csv(
             if rand_subs:
                 probes[Probe.RAND] = rand_subs
 
+            key = canon.lower()
             items.append(
                 NCInstance(
                     nc=nc,
                     lang=lang,
                     context=context,
-                    comp_class=comp_classes.get(nc, "?"),
-                    comp_score=comp_scores.get(nc),
+                    comp_class=comp_classes.get(key, "?"),
+                    comp_score=comp_scores.get(key),
                     original=original,
                     probes=probes,
                     sent_id=sent_id,
@@ -272,55 +302,62 @@ def load_ncimp_csv(
     return items
 
 
-def load_comp_scores(xlsx_path: str) -> Tuple[Dict[str, float], Dict[str, str]]:
+def load_comp_scores(
+    xlsx_path: str, lang: Optional[str] = None
+) -> Tuple[Dict[str, float], Dict[str, str]]:
     """Load human compositionality scores + classes from the NCIMP xlsx.
 
-    Returns ``(scores, classes)`` keyed by NC string. Best-effort about column names: looks
-    for an NC/compound column, a numeric score column, and an optional class column.
+    Real schema columns: ``language, experiment_type, file, compound, ClassType, ClassToken,
+    CompositionalityType, CompositionalityToken``. We use the **type-level** score
+    (``CompositionalityType``, 0=idiomatic..5=compositional) and class (``ClassType``), keyed
+    by compound. ``ClassType='NC'`` means non-compositional → mapped to the paper's ``I``.
+
+    ``lang`` filters by the ``language`` column ("en"/"pt"); ``None`` keeps all.
+    Returns ``(scores, classes)`` keyed by NC string.
     """
     from openpyxl import load_workbook
 
     wb = load_workbook(xlsx_path, read_only=True, data_only=True)
+    ws = wb.active
+    rows = ws.iter_rows(values_only=True)
+    header = next(rows, None)
+    if not header:
+        return {}, {}
+    idx = {str(h).strip(): i for i, h in enumerate(header) if h is not None}
+
+    lang_i = idx.get("language")
+    nc_i = idx.get("compound")
+    score_i = idx.get("CompositionalityType")
+    class_i = idx.get("ClassType")
+    if nc_i is None or score_i is None:
+        return {}, {}
+
+    target = lang.lower() if lang else None
     scores: Dict[str, float] = {}
     classes: Dict[str, str] = {}
-    for ws in wb.worksheets:
-        rows = ws.iter_rows(values_only=True)
-        header = next(rows, None)
-        if not header:
+    for row in rows:
+        if nc_i >= len(row) or row[nc_i] is None:
             continue
-        header = [str(h).strip().lower() if h is not None else "" for h in header]
-        nc_i = _first_index(header, ("compound", "nc", "noun compound"))
-        score_i = _first_index(header, ("comp", "score", "compositionality"))
-        class_i = _first_index(header, ("class", "type", "level"))
-        if nc_i is None or score_i is None:
-            continue
-        for row in rows:
-            if nc_i >= len(row) or row[nc_i] is None:
+        if target is not None and lang_i is not None:
+            if str(row[lang_i]).strip().lower() != target:
                 continue
-            nc = str(row[nc_i]).strip()
-            try:
-                scores[nc] = float(row[score_i])
-            except (TypeError, ValueError):
-                pass
-            if class_i is not None and class_i < len(row) and row[class_i] is not None:
-                classes[nc] = _normalize_class(str(row[class_i]))
+        nc = str(row[nc_i]).strip().lower()
+        try:
+            scores[nc] = float(row[score_i])
+        except (TypeError, ValueError):
+            pass
+        if class_i is not None and class_i < len(row) and row[class_i] is not None:
+            classes[nc] = _normalize_class(str(row[class_i]))
     return scores, classes
-
-
-def _first_index(header, needles) -> Optional[int]:
-    for i, h in enumerate(header):
-        if any(n in h for n in needles):
-            return i
-    return None
 
 
 def _normalize_class(value: str) -> str:
     v = value.strip().lower()
-    if v.startswith("idio") or v in ("i",):
-        return "I"
-    if v.startswith("part") or v in ("pc",):
+    if v in ("nc", "i") or v.startswith("idio") or v.startswith("non"):
+        return "I"  # NC = non-compositional = idiomatic
+    if v in ("pc",) or v.startswith("part"):
         return "PC"
-    if v.startswith("comp") or v in ("c",):
+    if v in ("c",) or v.startswith("comp"):
         return "C"
     return value.strip()
 
@@ -358,7 +395,7 @@ def load_dataset(
         for fname in os.listdir(data_dir):
             if fname.lower().endswith(".xlsx"):
                 comp_scores, comp_classes = load_comp_scores(
-                    os.path.join(data_dir, fname)
+                    os.path.join(data_dir, fname), lang=lang
                 )
                 break
         items: List[NCInstance] = []

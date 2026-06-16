@@ -7,7 +7,23 @@
 #   sentence    -> sentence-transformers (SBERT, BGE, E5, GTE)          [needs `hf_id`]
 #   mock        -> dependency-free deterministic vectors (smoke test only)
 #
-# Run a subset with: scripts/run_experiment.py --models models.yaml --select mbert berturk
+# Run a subset with: scripts/run_experiment.py --models models.yaml --select mBERT XLM-R-large
+#
+# ============================================================================
+# SELECTED STUDY: lightweight EN+PT cohort (encoder + embedding models, CPU-friendly).
+# All models below are multilingual, so they cover both EN and PT in one run.
+#
+#   OLD (paper-era):  mBERT  DistilBERT-ML  mSBERT
+#   NEW (modern):     XLM-R-large  BGE-M3  E5-large
+#
+# Reproduce the central comparison:
+#   python scripts/run_experiment.py --models models.yaml \
+#       --select mBERT DistilBERT-ML mSBERT XLM-R-large BGE-M3 E5-large \
+#       --data data/ncimp --lang EN --context naturalistic neutral --level nc --out runs/en
+#   python scripts/analyze.py --results runs/en/results.csv --out runs/en --level nc \
+#       --old mBERT DistilBERT-ML mSBERT --new XLM-R-large BGE-M3 E5-large
+# (repeat with --lang PT for Portuguese)
+# ============================================================================
 
 models:
   # ---- Smoke test (no downloads) ----
