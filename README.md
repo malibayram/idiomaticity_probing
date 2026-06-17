@@ -12,6 +12,8 @@ dilli embedding modelleri ve Türkçe modeller** üzerinde de aynı deney koştu
 
 📄 Detaylı yöntem özeti: [PAPER_SUMMARY.md](PAPER_SUMMARY.md)
 🧪 Ana araştırma sorusu ve deney tasarımı: [RESEARCH_DESIGN.md](RESEARCH_DESIGN.md)
+📊 **Bulgular (EN+PT, 6 model çalıştırıldı):** [FINDINGS.md](FINDINGS.md)
+📓 **Bütünsel proje kaydı + tüm sonuçlar:** [PROJECT_LOG.md](PROJECT_LOG.md)
 🗺️ Geliştirme planı: [ROADMAP.md](ROADMAP.md)
 
 > **Bu çalışmanın ana sorusu:** Bu sürede her alanda gelişen yapay zeka modelleri,
@@ -180,19 +182,30 @@ red car -> crimson vehicle / coffee spoon
 ```
 
 Makaledeki güçlü BERT ayarına yakın bir model olarak `bert-large-uncased` indirildi ve aynı
-kontrolle çalıştırıldı. BERT-large sonuçları:
+kontrolle çalıştırıldı. BERT-large için en açıklayıcı tablo, `contextual_span_sim` değerlerini
+yan yana göstermektir:
 
-| group | random `sentence_sim` | `synonym - random` contextual span farkı |
-|---|---:|---:|
-| `idiomatic_nc` | 0.901 | 0.089 |
-| `compositional_nc` | 0.939 | 0.219 |
-| `ordinary_two_word_control` | 0.953 | 0.252 |
-| `single_word_control` | 0.943 | 0.285 |
+| group | synonym `contextual_span_sim` | random `contextual_span_sim` | `synonym - random` farkı |
+|---|---:|---:|---:|
+| `idiomatic_nc` | 0.761 | 0.671 | 0.089 |
+| `compositional_nc` | 0.942 | 0.723 | 0.219 |
+| `ordinary_two_word_control` | 0.879 | 0.626 | 0.252 |
+| `single_word_control` | 0.912 | 0.627 | 0.285 |
+
+Ek olarak, sentence-level random benzerlikler sıradan kontrollerde de yüksek kalıyor:
+
+| group | random `sentence_sim` |
+|---|---:|
+| `idiomatic_nc` | 0.901 |
+| `compositional_nc` | 0.939 |
+| `ordinary_two_word_control` | 0.953 |
+| `single_word_control` | 0.943 |
 
 Okuma: sentence-level random similarity sıradan kontrollerde de çok yüksek; bu yüzden tam cümle
 embedding'i ortak cümle iskeletinden ciddi biçimde etkileniyor. Contextual span seviyesinde ise
-BERT-large sıradan kontrollerde synonym/random ayrımını daha iyi yapıyor, en zayıf ayrım
-idiyomatik NC'lerde kalıyor. Bu sonuç makaleyi tamamen geçersiz kılmaz; fakat ordinary-word /
+BERT-large sıradan kontrollerde synonym/random ayrımını daha iyi yapıyor: synonym skorları
+yüksek, random skorları daha düşük, fark da belirgin. En zayıf synonym-random farkı idiyomatik
+NC'lerde kalıyor. Bu sonuç makaleyi tamamen geçersiz kılmaz; fakat ordinary-word /
 ordinary-phrase kalibrasyonu raporlanmadan "başarısızlık idiyomatikliğe özgüdür" iddiası eksik
 kalır.
 

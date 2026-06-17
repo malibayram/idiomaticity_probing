@@ -76,18 +76,18 @@ gösterir. Tam cümle embedding'i ortak cümle iskeleti tarafından ciddi biçim
 
 ### 2. Contextual span seviyesinde BERT sıradan kontrolleri daha iyi ayırıyor
 
-`bert-large-uncased` için `synonym - random` farkı:
+`bert-large-uncased` için `synonym`, `random` ve fark değerleri:
 
-| group | contextual_span_gap |
-|---|---:|
-| `single_word_control` | 0.285 |
-| `ordinary_two_word_control` | 0.252 |
-| `compositional_nc` | 0.219 |
-| `idiomatic_nc` | 0.089 |
+| group | synonym contextual_span | random contextual_span | synonym - random farkı |
+|---|---:|---:|---:|
+| `single_word_control` | 0.912 | 0.627 | 0.285 |
+| `ordinary_two_word_control` | 0.879 | 0.626 | 0.252 |
+| `compositional_nc` | 0.942 | 0.723 | 0.219 |
+| `idiomatic_nc` | 0.761 | 0.671 | 0.089 |
 
 Bu tablo önemli nüansı gösterir: BERT-large sıradan kelime ve sıradan iki kelimelik ifadelerde
-synonym ile random arasında daha belirgin fark koyabiliyor. En zayıf ayrım idiyomatik NC
-grubunda görülüyor.
+synonym'i yüksek, random'ı daha düşük konumlandırabiliyor. En zayıf synonym-random ayrımı
+idiyomatik NC grubunda görülüyor.
 
 Dolayısıyla BERT-large sonucu "konunun idiyomatiklikle hiç alakası yok" demiyor. Daha doğru
 sonuç şu:

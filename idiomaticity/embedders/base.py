@@ -73,7 +73,7 @@ def _autoload() -> None:
     """Import bundled embedder modules to populate the registry (best-effort)."""
     import importlib
 
-    for mod in ("mock", "static", "transformer", "sentence", "causal"):
+    for mod in ("mock", "static", "transformer", "sentence", "causal", "multimodal"):
         try:
             importlib.import_module(f"idiomaticity.embedders.{mod}")
         except Exception:

@@ -25,12 +25,24 @@ class SentenceEmbedder(BaseEmbedder):
         hf_id: str,
         name: str | None = None,
         device: str | None = None,
+        trust_remote_code: bool = False,
+        dtype: str | None = None,
         **_: object,
     ) -> None:
         super().__init__(name=name or hf_id)
         from sentence_transformers import SentenceTransformer
 
-        self.model = SentenceTransformer(hf_id, device=device)
+        model_kwargs = {}
+        if dtype is not None:
+            import torch
+
+            model_kwargs["torch_dtype"] = getattr(torch, dtype)
+        self.model = SentenceTransformer(
+            hf_id,
+            device=device,
+            trust_remote_code=trust_remote_code,
+            model_kwargs=model_kwargs or None,
+        )
 
     def embed_sentence(self, sentence: str) -> np.ndarray:
         return np.asarray(

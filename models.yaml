@@ -60,24 +60,102 @@ models:
     type: sentence
     hf_id: intfloat/multilingual-e5-large
 
+  # ---- Modern SOTA embedding models (sentence-level) ----
+  # METHODOLOGY: these are sentence-embedding models. In our framework they map to `sentence`:
+  #   --level sentence  -> full-sentence embedding (paper's sentence level)
+  #   --level nc        -> ISOLATED PHRASE embedding (the span text re-encoded on its own)
+  # They do NOT give a *contextual token span* (unlike BERT/XLM-R/Qwen hidden states). Label
+  # results accordingly. Great for the sentence-level analysis + ordinary-perturbation control.
+  - name: Qwen3-Emb-0.6B
+    type: sentence
+    hf_id: Qwen/Qwen3-Embedding-0.6B
+
+  - name: Qwen3-Emb-4B
+    type: sentence
+    hf_id: Qwen/Qwen3-Embedding-4B
+    dtype: float16
+
+  - name: Qwen3-Emb-8B            # Qwen card: ~70.58 multilingual MTEB (SOTA line)
+    type: sentence
+    hf_id: Qwen/Qwen3-Embedding-8B
+    dtype: float16
+
+  - name: mE5-large-instruct      # instruct variant of E5; 94 languages
+    type: sentence
+    hf_id: intfloat/multilingual-e5-large-instruct
+
+  - name: gte-Qwen2-1.5B-instruct
+    type: sentence
+    hf_id: Alibaba-NLP/gte-Qwen2-1.5B-instruct
+    trust_remote_code: true
+
+  - name: gte-Qwen2-7B-instruct   # strong EN/ZH MTEB; heavier
+    type: sentence
+    hf_id: Alibaba-NLP/gte-Qwen2-7B-instruct
+    trust_remote_code: true
+    dtype: float16
+
+  - name: llama-embed-nemotron-8b # NVIDIA: multilingual MTEB SOTA (Oct 2025). NON-COMMERCIAL license.
+    type: sentence
+    hf_id: nvidia/llama-embed-nemotron-8b
+    trust_remote_code: true
+    dtype: float16
+
+  - name: NV-Embed-v2             # MTEB #1 (2024). Custom code; may need special pooling.
+    type: sentence
+    hf_id: nvidia/NV-Embed-v2
+    trust_remote_code: true
+    dtype: float16
+
+  - name: bge-en-icl             # BGE few-shot/in-context embedding; English-focused
+    type: sentence
+    hf_id: BAAI/bge-en-icl
+    dtype: float16
+
+  # ---- API embedding models (need an `api` embedder + keys; not yet implemented) ----
+  # gemini-embedding-2 / voyage-4-large / cohere embed-v4.0 / text-embedding-3-large
+  # These return sentence/phrase embeddings only (no contextual span). Add via a future
+  # `api` embedder type when keys are available.
+
   # ---- Turkish models (extension beyond EN/PT) ----
   - name: BERTurk
     type: transformer
     hf_id: dbmdz/bert-base-turkish-cased
     last_n_layers: 4
 
-  # ---- Modern open LLMs (decoder-only hidden states) ----
-  - name: Qwen2.5-7B
+  # ---- Modern open decoder-only LLMs (base/PT, pure-text, <15B) ----
+  # Qwen3 base ladder: clean scaling study within the newest open generation.
+  # All are Qwen3ForCausalLM, Apache-2.0, ungated -> work with the `causal` embedder as-is.
+  - name: Qwen3-4B-Base
     type: causal
-    hf_id: Qwen/Qwen2.5-7B
+    hf_id: Qwen/Qwen3-4B-Base
     last_n_layers: 4
-    dtype: bfloat16
+    dtype: float16
 
-  - name: Llama-3.1-8B
+  - name: Qwen3-8B-Base
     type: causal
-    hf_id: meta-llama/Llama-3.1-8B
+    hf_id: Qwen/Qwen3-8B-Base
     last_n_layers: 4
-    dtype: bfloat16
+    dtype: float16
+
+  - name: Qwen3-14B-Base
+    type: causal
+    hf_id: Qwen/Qwen3-14B-Base
+    last_n_layers: 4
+    dtype: float16
+
+  # ---- Multimodal newest-gen (text path via multimodal_causal embedder) ----
+  - name: Gemma4-12B-Base
+    type: multimodal_causal
+    hf_id: google/gemma-4-12B
+    last_n_layers: 4
+    dtype: float16
+
+  - name: Gemma4-E4B-Base
+    type: multimodal_causal
+    hf_id: google/gemma-4-E4B
+    last_n_layers: 4
+    dtype: float16
 
   # ---- Static baselines (provide local paths) ----
   # - name: GloVe
