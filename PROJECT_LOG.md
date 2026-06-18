@@ -10,7 +10,7 @@ kohortu (Qwen3 / Gemma 4) indiriliyor.
 
 ## 0. Amaç ve ana soru
 
-He et al. (2025), *Investigating Idiomaticity in Word Representations* (Computational
+He et al. (2025), _Investigating Idiomaticity in Word Representations_ (Computational
 Linguistics 51(2)) makalesinin yöntemini **model-agnostik** bir çerçeveye taşıyıp, makalenin
 durduğu 2024 modellerinin ötesinde **modern modellerde** tekrar uygulamak.
 
@@ -18,14 +18,15 @@ durduğu 2024 modellerinin ötesinde **modern modellerde** tekrar uygulamak.
 > temsilinde de gelişti mi? Gelişti ise ne kadar? Gelişmedi ise temel sorun ne?
 
 ### Doküman haritası
-| Dosya | İçerik |
-|-------|--------|
-| [PAPER_SUMMARY.md](PAPER_SUMMARY.md) | Makalenin detaylı Türkçe yöntem özeti (NCIMP, problar, metrikler) |
+
+| Dosya                                    | İçerik                                                             |
+| ---------------------------------------- | ------------------------------------------------------------------ |
+| [PAPER_SUMMARY.md](PAPER_SUMMARY.md)     | Makalenin detaylı Türkçe yöntem özeti (NCIMP, problar, metrikler)  |
 | [RESEARCH_DESIGN.md](RESEARCH_DESIGN.md) | Soruyu ölçülebilir göstergelere/hipotezlere çeviren deney tasarımı |
-| [FINDINGS.md](FINDINGS.md) | Encoder kohortu (EN+PT) bulguları ve birleşik hüküm |
-| [README.md](README.md) | Kurulum, kullanım, yeni model ekleme |
-| [ROADMAP.md](ROADMAP.md) | Fazlara bölünmüş yol haritası |
-| **PROJECT_LOG.md** (bu dosya) | Bütünsel kayıt + tüm sonuçlar |
+| [FINDINGS.md](FINDINGS.md)               | Encoder kohortu (EN+PT) bulguları ve birleşik hüküm                |
+| [README.md](README.md)                   | Kurulum, kullanım, yeni model ekleme                               |
+| [ROADMAP.md](ROADMAP.md)                 | Fazlara bölünmüş yol haritası                                      |
+| **PROJECT_LOG.md** (bu dosya)            | Bütünsel kayıt + tüm sonuçlar                                      |
 
 ---
 
@@ -56,6 +57,7 @@ durduğu 2024 modellerinin ötesinde **modern modellerde** tekrar uygulamak.
 ## 2. Yöntem özeti (kısa)
 
 Her isim bileşiği (NC) cümle içinde 4 probla değiştirilir; orijinalle kosinüs benzerliği ölçülür.
+
 - **P_Syn** = altın bütüncül eş anlamlı (yüksek beklenir) · **P_Comp** = tek bileşen ·
   **P_WordsSyn** = kelime-kelime eş anlamlı · **P_Rand** = frekans-eşli rastgele (düşük/taban).
 - **Metrikler:** Sim (ham kosinüs), Affinity (`Sim(Pi)−Sim(Pj)`), Scaled Similarity
@@ -69,6 +71,7 @@ Her isim bileşiği (NC) cümle içinde 4 probla değiştirilir; orijinalle kosi
 ## 3. Veri (doğrulanmış)
 
 `scripts/download_data.py` ile orijinal repodan indirildi (`data/ncimp/`, 10/10 dosya):
+
 - EN: `naturalistics_examplesent{1,2,3}.csv` + `neutral.csv` → **1124 instance**, 1116'sı skorlu.
 - PT: aynı yapı → **720 instance**, 720'si skorlu.
 - `human_compositionality scores.xlsx` → type-level `Comp` skoru (0=idiyomatik..5=kompozisyonel)
@@ -84,41 +87,44 @@ BGE-M3, E5-large. Hepsi çok dilli; NC düzeyi; naturalistic+neutral bağlam.
 Çıktılar: `runs/en_all/`, `runs/pt_all/` (+ `runs/en_mbert/` ilk pilot).
 
 ### 4.1 İngilizce (EN) — eski vs yeni
-| Gösterge | Eski | Yeni | Δ | İyileşti? |
-|----------|------|------|---|-----------|
-| **ICS** (↑) | 0.341 | 0.430 | +0.089 (**+26%**) | ✅ |
-| ISC (↑) | 0.099 | 0.174 | +0.075 | ✅ |
-| IG (↓) | 0.446 | 0.348 | −0.098 | ✅ |
-| LOD (↓; <0 ideal) | 0.227 | 0.077 | −0.150 | ✅ (hâlâ >0) |
-| AID (↑; >0 ideal) | −0.108 | −0.021 | +0.087 | ✅ (hâlâ <0) |
-| FLOOR (teşhis) | 0.575 | 0.723 | +0.148 | ❌ kötüleşti |
-| RHO (↓) | 0.615 | 0.578 | −0.037 | ✅ |
+
+| Gösterge          | Eski   | Yeni   | Δ                 | İyileşti?    |
+| ----------------- | ------ | ------ | ----------------- | ------------ |
+| **ICS** (↑)       | 0.341  | 0.430  | +0.089 (**+26%**) | ✅           |
+| ISC (↑)           | 0.099  | 0.174  | +0.075            | ✅           |
+| IG (↓)            | 0.446  | 0.348  | −0.098            | ✅           |
+| LOD (↓; <0 ideal) | 0.227  | 0.077  | −0.150            | ✅ (hâlâ >0) |
+| AID (↑; >0 ideal) | −0.108 | −0.021 | +0.087            | ✅ (hâlâ <0) |
+| FLOOR (teşhis)    | 0.575  | 0.723  | +0.148            | ❌ kötüleşti |
+| RHO (↓)           | 0.615  | 0.578  | −0.037            | ✅           |
 
 **EN model bazında ICS:** E5-large 0.44 · BGE-M3 0.43 · XLM-R-large 0.42 · mBERT 0.35 ·
 DistilBERT-ML 0.35 · mSBERT 0.32 → **hepsi <0.55, "yakalamıyor".**
 **Hüküm:** Mütevazı iyileşme (+26%), ama idiyomatiklik hâlâ çözülmedi.
 
 ### 4.2 Portekizce (PT) — eski vs yeni
-| Gösterge | Eski | Yeni | Δ | İyileşti? |
-|----------|------|------|---|-----------|
-| **ICS** (↑) | 0.428 | 0.423 | −0.005 (**≈%0**) | ❌ |
-| ISC (↑) | 0.150 | 0.095 | −0.055 | ❌ geriledi |
-| IG (↓) | 0.304 | 0.328 | +0.024 | ❌ |
-| LOD (↓) | 0.203 | 0.158 | −0.045 | ✅ (hâlâ >0) |
-| AID (↑) | −0.085 | −0.026 | +0.059 | ✅ (hâlâ <0) |
-| FLOOR | 0.608 | 0.730 | +0.122 | ❌ |
-| RHO (↓) | 0.421 | 0.492 | +0.072 | ❌ |
+
+| Gösterge    | Eski   | Yeni   | Δ                | İyileşti?    |
+| ----------- | ------ | ------ | ---------------- | ------------ |
+| **ICS** (↑) | 0.428  | 0.423  | −0.005 (**≈%0**) | ❌           |
+| ISC (↑)     | 0.150  | 0.095  | −0.055           | ❌ geriledi  |
+| IG (↓)      | 0.304  | 0.328  | +0.024           | ❌           |
+| LOD (↓)     | 0.203  | 0.158  | −0.045           | ✅ (hâlâ >0) |
+| AID (↑)     | −0.085 | −0.026 | +0.059           | ✅ (hâlâ <0) |
+| FLOOR       | 0.608  | 0.730  | +0.122           | ❌           |
+| RHO (↓)     | 0.421  | 0.492  | +0.072           | ❌           |
 
 **PT model bazında ICS:** BGE-M3 0.45 · mBERT 0.44 · mSBERT 0.43 · DistilBERT-ML 0.42 ·
 E5-large 0.42 · XLM-R-large 0.40 → **hepsi <0.55, "yakalamıyor".**
 **Hüküm:** Esasen değişim yok.
 
 ### 4.3 Birleşik hüküm (EN + PT)
-| | EN | PT |
-|--|----|----|
-| Eski ICS | 0.34 | 0.43 |
-| Yeni ICS | 0.43 | 0.42 |
-| Δ | **+26%** | **≈ %0** |
+
+|          | EN       | PT       |
+| -------- | -------- | -------- |
+| Eski ICS | 0.34     | 0.43     |
+| Yeni ICS | 0.43     | 0.42     |
+| Δ        | **+26%** | **≈ %0** |
 
 1. **Gelişme dile bağlı ve kırılgan:** İngilizce'de gerçek iyileşme var, Portekizce'de yok →
    kazanım büyük ölçüde modern modellerin **İngilizce-ağırlıklı verisinden** geliyor olabilir.
@@ -129,6 +135,7 @@ E5-large 0.42 · XLM-R-large 0.40 → **hepsi <0.55, "yakalamıyor".**
    kökten çözmüyor; sorun kapasite değil **temsil önyargısı** (ifadeyi parçalarının toplamı sayma).
 
 ### 4.4 mBERT pilotu (ilk gerçek koşu, EN)
+
 mBERT naturalistic: ISC 0.087 · IG 0.493 · LOD 0.213 · FLOOR 0.779 · RHO 0.676 · **ICS 0.332**.
 Beş başarısızlık imzasının tamamını gösterdi; He et al. (2025)'in mBERT bulgusunu birebir üretti.
 `Sim_R|Syn` sınıf merdiveni: idiyomatik 0.09 · kısmi 0.31 · kompozisyonel 0.55.
@@ -140,13 +147,13 @@ Beş başarısızlık imzasının tamamını gösterdi; He et al. (2025)'in mBER
 Seçim gerekçesi (RESEARCH_DESIGN'la uyumlu): **IT değil base** kullanıyoruz (temsil-probing için
 hizalama geometriyi kirletir). Sınır 15B. 64GB M2 Max → bellek sorun değil.
 
-| Model | hf_id | Tip | Durum |
-|-------|-------|-----|-------|
-| Qwen3-4B-Base | Qwen/Qwen3-4B-Base | causal | İndiriliyor (doğrulama, EN limitli) |
-| **Qwen3-14B-Base** | Qwen/Qwen3-14B-Base | causal | **İndiriliyor (asıl koşu, EN nat+neut)** |
-| Qwen3-8B-Base | Qwen/Qwen3-8B-Base | causal | models.yaml'da hazır (sırada) |
-| Gemma4-12B-Base | google/gemma-4-12B | multimodal_causal | Adaptör hazır; Qwen sonrası |
-| Gemma4-E4B-Base | google/gemma-4-E4B | multimodal_causal | Adaptör hazır |
+| Model              | hf_id               | Tip               | Durum                                    |
+| ------------------ | ------------------- | ----------------- | ---------------------------------------- |
+| Qwen3-4B-Base      | Qwen/Qwen3-4B-Base  | causal            | İndiriliyor (doğrulama, EN limitli)      |
+| **Qwen3-14B-Base** | Qwen/Qwen3-14B-Base | causal            | **İndiriliyor (asıl koşu, EN nat+neut)** |
+| Qwen3-8B-Base      | Qwen/Qwen3-8B-Base  | causal            | models.yaml'da hazır (sırada)            |
+| Gemma4-12B-Base    | google/gemma-4-12B  | multimodal_causal | Adaptör hazır; Qwen sonrası              |
+| Gemma4-E4B-Base    | google/gemma-4-E4B  | multimodal_causal | Adaptör hazır                            |
 
 - **Qwen3** modelleri `Qwen3ForCausalLM`, Apache-2.0, ungated → mevcut `causal` embedder ile çalışır.
 - **Gemma 4** `Gemma4(Unified)ForConditionalGeneration` (multimodal) → yeni `multimodal_causal`
@@ -159,12 +166,14 @@ hizalama geometriyi kirletir). Sınır 15B. 64GB M2 Max → bellek sorun değil.
 konacak; FINDINGS.md ve bu dosya güncellenecek.
 
 ### 5.1 Modern SOTA embedding modelleri (eklendi, koşu bekliyor)
+
 `models.yaml`'a `type: sentence` olarak eklendi (hepsi ungated, doğrulandı):
 `Qwen3-Emb-0.6B/4B/8B`, `mE5-large-instruct`, `gte-Qwen2-1.5B/7B-instruct` (trust_remote_code),
 `llama-embed-nemotron-8b` (⚠️ non-commercial lisans), `NV-Embed-v2` (custom code, trust_remote_code),
 `bge-en-icl` (EN odaklı). `SentenceEmbedder` artık `trust_remote_code` + `dtype` destekliyor.
 
 **Metodolojik etiket (önemli):** Bunlar **sentence-embedding** modelleridir. Çerçevede:
+
 - `--level sentence` → tam cümle embedding'i (makalenin cümle düzeyi).
 - `--level nc` → **izole-ifade** embedding'i (span metnini tek başına encode eder).
 - **Contextual token span DEĞİL** (BERT/XLM-R/Qwen hidden-state'in aksine). Sonuçlar bu etiketle
@@ -224,6 +233,7 @@ python scripts/analyze.py --results runs/qwen14_en/results.csv --out runs/qwen14
 ---
 
 ## 9. Açık işler / sıradaki adımlar
+
 - [ ] Qwen3-14B-Base EN koşusu bitince analiz + rapor; sonra PT.
 - [ ] Qwen3-8B-Base ve Qwen3-4B-Base ile base merdivenini tamamla (4B→8B→14B ölçekleme eğrisi).
 - [ ] Gemma 4 12B'yi `multimodal_causal` ile koştur (yükleme API doğrulaması).
@@ -233,10 +243,17 @@ python scripts/analyze.py --results runs/qwen14_en/results.csv --out runs/qwen14
 ---
 
 ## 10. Değişiklik özeti (changelog)
+
 - **v0.1** Çerçeve + dokümanlar + gerçek veri doğrulama + sentetik smoke test.
 - **v0.2** Encoder/embedding kohortu (6 model × EN+PT) koşuldu; analiz/teşhis/grafik; FINDINGS.
 - **v0.3** Decoder-only LLM desteği: `causal` + yeni `multimodal_causal` embedder; Qwen3 base
-  merdiveni + Gemma 4 girişleri; LLM koşuları başlatıldı *(devam ediyor)*.
+  merdiveni + Gemma 4 girişleri; LLM koşuları başlatıldı _(devam ediyor)_.
 - **v0.4** Modern SOTA embedding modelleri eklendi (Qwen3-Embedding, gte-Qwen2, mE5-instruct,
   NV-Embed-v2, llama-embed-nemotron, bge-en-icl); `SentenceEmbedder`'a `trust_remote_code`+`dtype`;
   sentence-level vs izole-ifade vs contextual-span metodolojik etiketi belgelendi.
+- **v0.5** Decoder-only LLM kohortu MLX'te koşuldu (Qwen3.5 + Gemma3/4). Yeni `mlx_causal`
+  embedder: `mlx-lm` (text) + `mlx-vlm` (gemma4_unified) ile yükleme; **son-4 katman + final-norm**
+  reçetesi (decoder LLM residual akışı norm'suz anizotropik — Gemma'da FLOOR 0.98→0.6). Eski 2024
+  embedding modelleri çıkarıldı, Harrier-OSS (2026) eklendi. Makale: LLM tablosu CSV'den otomatik
+  `\input`; MLX metodolojisi + anizotropi/ICS-metrik uyarısı + base-vs-instruct belgelendi.
+  Gece-script'i kalan koşuları + base Gemma4-12B'yi tamamlayıp makaleyi otomatik yeniliyor.

@@ -60,57 +60,48 @@ models:
     type: sentence
     hf_id: intfloat/multilingual-e5-large
 
-  # ---- Modern SOTA embedding models (sentence-level) ----
+  # ---- Modern SOTA embedding models (sentence-level), 2025-2026 ONLY ----
   # METHODOLOGY: these are sentence-embedding models. In our framework they map to `sentence`:
   #   --level sentence  -> full-sentence embedding (paper's sentence level)
   #   --level nc        -> ISOLATED PHRASE embedding (the span text re-encoded on its own)
-  # They do NOT give a *contextual token span* (unlike BERT/XLM-R/Qwen hidden states). Label
-  # results accordingly. Great for the sentence-level analysis + ordinary-perturbation control.
-  - name: Qwen3-Emb-0.6B
+  # They do NOT give a *contextual token span* (unlike BERT/XLM-R/Qwen hidden states).
+  # Per request, only newest high-performing models are active here; 2024-era models are
+  # commented out below.
+  - name: Qwen3-Emb-0.6B # Qwen3-Embedding (2025)
     type: sentence
     hf_id: Qwen/Qwen3-Embedding-0.6B
 
-  - name: Qwen3-Emb-4B
+  - name: Qwen3-Emb-4B # Qwen3-Embedding (2025)
     type: sentence
     hf_id: Qwen/Qwen3-Embedding-4B
     dtype: float16
 
-  - name: Qwen3-Emb-8B            # Qwen card: ~70.58 multilingual MTEB (SOTA line)
+  - name: Qwen3-Emb-8B # Qwen3-Embedding (2025); ~70.58 multilingual MTEB
     type: sentence
     hf_id: Qwen/Qwen3-Embedding-8B
     dtype: float16
 
-  - name: mE5-large-instruct      # instruct variant of E5; 94 languages
+  - name: Harrier-OSS-0.6B # Microsoft Harrier-OSS-v1 (2026, MIT)
     type: sentence
-    hf_id: intfloat/multilingual-e5-large-instruct
-
-  - name: gte-Qwen2-1.5B-instruct
-    type: sentence
-    hf_id: Alibaba-NLP/gte-Qwen2-1.5B-instruct
+    hf_id: microsoft/harrier-oss-v1-0.6b
     trust_remote_code: true
 
-  - name: gte-Qwen2-7B-instruct   # strong EN/ZH MTEB; heavier
+  - name: Harrier-OSS-270M # Microsoft Harrier-OSS-v1 (2026, MIT); tiny control
     type: sentence
-    hf_id: Alibaba-NLP/gte-Qwen2-7B-instruct
+    hf_id: microsoft/harrier-oss-v1-270m
     trust_remote_code: true
-    dtype: float16
 
-  - name: llama-embed-nemotron-8b # NVIDIA: multilingual MTEB SOTA (Oct 2025). NON-COMMERCIAL license.
+  - name: llama-embed-nemotron-8b # NVIDIA (Oct 2025): #1 open multilingual MTEB. NON-COMMERCIAL license.
     type: sentence
     hf_id: nvidia/llama-embed-nemotron-8b
     trust_remote_code: true
     dtype: float16
 
-  - name: NV-Embed-v2             # MTEB #1 (2024). Custom code; may need special pooling.
-    type: sentence
-    hf_id: nvidia/NV-Embed-v2
-    trust_remote_code: true
-    dtype: float16
-
-  - name: bge-en-icl             # BGE few-shot/in-context embedding; English-focused
-    type: sentence
-    hf_id: BAAI/bge-en-icl
-    dtype: float16
+  # ---- REMOVED: 2024-era / older-generation embedding models (excluded by request) ----
+  # mE5-large-instruct (intfloat/multilingual-e5-large-instruct) -- 2024; already run once as reference
+  # gte-Qwen2-1.5B/7B-instruct (Alibaba-NLP) -- Qwen2-based 2024; also breaks on transformers 5.8.1
+  # NV-Embed-v2 (nvidia/NV-Embed-v2) -- 2024
+  # bge-en-icl (BAAI/bge-en-icl) -- 2024, English-focused
 
   # ---- API embedding models (need an `api` embedder + keys; not yet implemented) ----
   # gemini-embedding-2 / voyage-4-large / cohere embed-v4.0 / text-embedding-3-large
@@ -123,28 +114,91 @@ models:
     hf_id: dbmdz/bert-base-turkish-cased
     last_n_layers: 4
 
-  # ---- Modern open decoder-only LLMs (base/PT, pure-text, <15B) ----
-  # Qwen3 base ladder: clean scaling study within the newest open generation.
-  # All are Qwen3ForCausalLM, Apache-2.0, ungated -> work with the `causal` embedder as-is.
+  # ---- Modern open decoder-only LLMs (base/PT, <15B) ----
+  # Qwen3-4B-Base: Qwen3ForCausalLM, Apache-2.0, pure-text. ALREADY RUN (runs/qwen4_en).
+  # Kept as a 2025-generation reference point against the newer Qwen3.5 below.
   - name: Qwen3-4B-Base
     type: causal
     hf_id: Qwen/Qwen3-4B-Base
     last_n_layers: 4
     dtype: float16
 
-  - name: Qwen3-8B-Base
-    type: causal
-    hf_id: Qwen/Qwen3-8B-Base
+  # Qwen3.5 base ladder (2026 generation). Linear-attention arch -> torch/MPS falls back to a slow
+  # CPU path, so we use the `mlx_causal` embedder (MLX, native Apple Silicon, ~17ms/forward).
+  # mlx-lm converts the base HF checkpoint on the fly (keeps base/full-precision). NOTE: MLX path
+  # reports the FINAL hidden state, not the last-4-layer mean used by the torch embedders.
+  # Apache-2.0, ungated. Primary = 9B (<15B); 0.8B/2B/4B give a scaling curve + cheap validation.
+  - name: Qwen3.5-9B-Base
+    type: mlx_causal
+    hf_id: Qwen/Qwen3.5-9B-Base
     last_n_layers: 4
     dtype: float16
 
-  - name: Qwen3-14B-Base
-    type: causal
-    hf_id: Qwen/Qwen3-14B-Base
+  - name: Qwen3.5-4B-Base
+    type: mlx_causal
+    hf_id: Qwen/Qwen3.5-4B-Base
     last_n_layers: 4
     dtype: float16
 
-  # ---- Multimodal newest-gen (text path via multimodal_causal embedder) ----
+  - name: Qwen3.5-2B-Base
+    type: mlx_causal
+    hf_id: Qwen/Qwen3.5-2B-Base
+    last_n_layers: 4
+    dtype: float16
+
+  - name: Qwen3.5-0.8B-Base # tiny -> quick validation
+    type: mlx_causal
+    hf_id: Qwen/Qwen3.5-0.8B-Base
+    last_n_layers: 4
+    dtype: float16
+
+  # Qwen3.5 INSTRUCT pre-converted MLX versions (no base MLX exists for 2B/4B/9B).
+  # Fast: download the already-MLX weights, no convert. NOTE: instruct, not base -> alignment
+  # tuning shifts representation geometry; label results as 'instruct' when comparing to base.
+  - name: Qwen3.5-2B-it       # mlx-community, bf16, from Qwen/Qwen3.5-2B
+    type: mlx_causal
+    hf_id: mlx-community/Qwen3.5-2B-MLX-bf16
+
+  - name: Qwen3.5-4B-it       # mlx-community, 8bit, from Qwen/Qwen3.5-4B
+    type: mlx_causal
+    hf_id: mlx-community/Qwen3.5-4B-MLX-8bit
+
+  - name: Qwen3.5-9B-it       # lmstudio-community, 4bit, from Qwen/Qwen3.5-9B
+    type: mlx_causal
+    hf_id: lmstudio-community/Qwen3.5-9B-MLX-4bit
+
+  # ---- Gemma via MLX (downloaded for offline runs) ----
+  # Gemma 3 (pt=base) is fully supported by mlx-lm -> works with mlx_causal.
+  - name: Gemma3-1B-it          # tiny control (qat 4bit)
+    type: mlx_causal
+    hf_id: mlx-community/gemma-3-1b-it-qat-4bit
+
+  - name: Gemma3-4B-pt          # Gemma 3 4B BASE, bf16
+    type: mlx_causal
+    hf_id: mlx-community/gemma-3-4b-pt-bf16
+
+  - name: Gemma3-12B-pt         # Gemma 3 12B BASE, 6bit
+    type: mlx_causal
+    hf_id: mlx-community/gemma-3-12b-pt-6bit
+
+  # Gemma 4 12B via MLX works through mlx-vlm>=0.6 (gemma4_unified). The mlx_causal embedder
+  # falls back to mlx-vlm automatically when mlx-lm cannot load the model.
+  - name: Gemma4-12B-it
+    type: mlx_causal
+    hf_id: mlx-community/gemma-4-12B-it-8bit
+
+  - name: Gemma4-12B-base       # BASE Gemma 4 12B (mxfp8) -> fair vs Gemma3-12B-pt base
+    type: mlx_causal
+    hf_id: mlx-community/gemma-4-12B-mxfp8
+
+  # ---- Gemma 4 via torch multimodal_causal (E2B/E4B effective; slow but works) ----
+  # Gemma 4 uses standard attention -> works on MPS torch (unlike Qwen3.5's linear-attention fallback).
+  - name: Gemma4-E2B-Base       # ~5B effective, smallest Gemma 4 (downloaded)
+    type: multimodal_causal
+    hf_id: google/gemma-4-E2B
+    last_n_layers: 4
+    dtype: float16
+
   - name: Gemma4-12B-Base
     type: multimodal_causal
     hf_id: google/gemma-4-12B

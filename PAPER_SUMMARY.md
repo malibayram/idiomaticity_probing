@@ -1,7 +1,7 @@
-# Makale Özeti — *Investigating Idiomaticity in Word Representations*
+# Makale Özeti — _Investigating Idiomaticity in Word Representations_
 
 > He, W., Vieira, T. K., Garcia, M., Scarton, C., Idiart, M., & Villavicencio, A. (2025).
-> **Investigating Idiomaticity in Word Representations.** *Computational Linguistics*, 51(2), 505–555.
+> **Investigating Idiomaticity in Word Representations.** _Computational Linguistics_, 51(2), 505–555.
 > https://doi.org/10.1162/coli_a_00546 · [PDF](paper.pdf) · [Orijinal kod](https://github.com/risehnhew/Finding-Idiomaticity-in-Word-Representations)
 
 Bu dosya, makalenin yöntemini **yeni modeller üzerinde birebir tekrar uygulayabilmek** için
@@ -11,7 +11,7 @@ gereken tüm kavramları derler. Sonuçlardan çok "ne yapıldı ve nasıl ölç
 
 ## 1. Problem ve Amaç
 
-**İdiyomatik ifadeler** (örn. *eager beaver* = "çok çalışkan kişi") anlamları bileşen
+**İdiyomatik ifadeler** (örn. _eager beaver_ = "çok çalışkan kişi") anlamları bileşen
 kelimelerinden doğrudan türetilemeyen çok-kelimeli ifadelerdir (MWE). Soru şudur:
 
 > Kelime temsil modelleri (statik + bağlamsal/Transformer) idiyomatikliği gerçekten
@@ -38,25 +38,28 @@ büyük autoregressive modeller (Llama2) çoğu zaman statik modellere benziyor.
 Toplam **32.200 cümle**: İngilizce 280 NC (19.600 cümle), Portekizce 180 NC (12.600 cümle).
 Her NC üç idiyomatiklik sınıfından birine girer:
 
-| Sınıf | Açıklama | Örnek | EN sayısı | PT sayısı |
-|-------|----------|-------|-----------|-----------|
-| **Idiomatic (I)** | Anlam iki kelimeyle de ilgisiz | *eager beaver*, *grey matter* | 103 | 60 |
-| **Partly compositional (PC)** | Anlam kelimelerden biriyle ilgili | *grandfather clock*, *Dutch courage* | 88 | 60 |
-| **Compositional (C)** | Anlam iki kelimeyle de ilgili | *research project*, *economic aid* | 89 | 60 |
+| Sınıf                         | Açıklama                          | Örnek                                | EN sayısı | PT sayısı |
+| ----------------------------- | --------------------------------- | ------------------------------------ | --------- | --------- |
+| **Idiomatic (I)**             | Anlam iki kelimeyle de ilgisiz    | _eager beaver_, _grey matter_        | 103       | 60        |
+| **Partly compositional (PC)** | Anlam kelimelerden biriyle ilgili | _grandfather clock_, _Dutch courage_ | 88        | 60        |
+| **Compositional (C)**         | Anlam iki kelimeyle de ilgili     | _research project_, _economic aid_   | 89        | 60        |
 
 ### Bağlam (cümle) türleri
+
 - **Naturalistic (Nat):** NC'yi aynı anlamda örnekleyen, korpustan alınmış **3 doğal cümle**
   (her NC için S1, S2, S3). Uzun ve bilgilendirici (EN ort. 23.4 kelime, PT 13.0).
-- **Neutral (Neut):** Bilgi vermeyen 5 kelimelik kalıp — EN: *"This is a/an &lt;NC&gt;"*,
-  PT: *"Este/a é um(a) &lt;NC&gt;"*. Modelin "varsayılan/ön-eğitim" eğilimini ölçer.
+- **Neutral (Neut):** Bilgi vermeyen 5 kelimelik kalıp — EN: _"This is a/an &lt;NC&gt;"_,
+  PT: _"Este/a é um(a) &lt;NC&gt;"_. Modelin "varsayılan/ön-eğitim" eğilimini ölçer.
 
 ### İnsan etiketleri (altın standart)
+
 Her NC, her cümlede **0 (tamamen idiyomatik) – 5 (tamamen kompozisyonel)** Likert ölçeğiyle
 etiketlenmiş. NC başına kompozisyonelite skoru:
 
 ```
 Comp(NC_α) = ⟨ ⟨ Comp_αβj ⟩_Annot ⟩_Sent      (Denklem 1)
 ```
+
 yani önce anotörler üzerinden, sonra cümleler üzerinden ortalama. Bu skor `Comp` ile
 gösterilir ve tüm korelasyon analizlerinde altın standart olarak kullanılır.
 
@@ -67,12 +70,12 @@ gösterilir ve tüm korelasyon analizlerinde altın standart olarak kullanılır
 Her cümlede hedef NC, sistematik olarak bir **prob (P)** ile değiştirilerek minimal çift
 oluşturulur. Her probun beklenen anlam değişimi = **Dilbilimsel Tahmin (Linguistic Prediction, LP)**.
 
-| Prob | Ne ile değiştirilir | Örnek (NC = *crocodile tears*) | Beklenen benzerlik (LP) |
-|------|---------------------|--------------------------------|--------------------------|
-| **P_Syn** | NC'nin altın eş anlamlısı (bütüncül) | → *fake tears* / *brain* (grey matter için) | **Yüksek** — her zaman, idiyomatiklikten bağımsız |
-| **P_Comp** | NC'nin anlamı en çok koruyan tek bileşeni (baş veya niteleyici) | → *tears* veya *crocodile* | Kompozisyonel NC'lerde yüksek, idiyomatikte düşük (`Comp` ile korelasyon) |
-| **P_WordsSyn** | Her bileşenin bağlamdan-bağımsız eş anlamlısı (kelime-kelime) | → *alligator sobs* | Kompozisyonelde yüksek, idiyomatikte düşük (`Comp` ile **yüksek** korelasyon) |
-| **P_Rand** | Frekansı eşlenmiş rastgele iki-kelimelik ifade (5 örnek) | → *supermarket city* | **Düşük** — her zaman (alt sınır/kontrol) |
+| Prob           | Ne ile değiştirilir                                             | Örnek (NC = _crocodile tears_)              | Beklenen benzerlik (LP)                                                       |
+| -------------- | --------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------------------------- |
+| **P_Syn**      | NC'nin altın eş anlamlısı (bütüncül)                            | → _fake tears_ / _brain_ (grey matter için) | **Yüksek** — her zaman, idiyomatiklikten bağımsız                             |
+| **P_Comp**     | NC'nin anlamı en çok koruyan tek bileşeni (baş veya niteleyici) | → _tears_ veya _crocodile_                  | Kompozisyonel NC'lerde yüksek, idiyomatikte düşük (`Comp` ile korelasyon)     |
+| **P_WordsSyn** | Her bileşenin bağlamdan-bağımsız eş anlamlısı (kelime-kelime)   | → _alligator sobs_                          | Kompozisyonelde yüksek, idiyomatikte düşük (`Comp` ile **yüksek** korelasyon) |
+| **P_Rand**     | Frekansı eşlenmiş rastgele iki-kelimelik ifade (5 örnek)        | → _supermarket city_                        | **Düşük** — her zaman (alt sınır/kontrol)                                     |
 
 İdeal (beklenen) benzerlik deseni: **P_Syn yüksek > P_Comp ≈ P_WordsSyn orta > P_Rand düşük.**
 Makalenin temel bulgusu: gerçek modeller bu kademeli deseni göstermez.
@@ -106,35 +109,44 @@ ile ölçülür.
 ## 5. Metrikler
 
 ### 5.1 Similarity (Sim) — kosinüs
+
 ```
 cossim(X, Y) = (e_X · e_Y) / (||e_X|| ||e_Y||)                       (Denklem 2)
 Sim(Pi, Target) = ⟨ cossim(expr(Pi), expr(NC)) ⟩_Pi                  (Denklem 3)
 ```
+
 Orijinal ifade ile prob-değiştirilmiş ifade arasındaki ortalama kosinüs. P_Rand için 5 ikame
 üzerinden ortalama; diğerleri tek ikame.
 
 ### 5.2 Affinity (Aff) — karşılaştırmalı tercih
+
 ```
 Aff(Pi, Pj | Target) = Sim(Pi, Target) − Sim(Pj, Target)            (Denklem 4)
 ```
+
 Hedefin, iki prob arasında hangisine **daha yakın** olduğunu ölçer. +1'e yakın → Pi tercih
 edilir, −1'e yakın → Pj, 0 → tercih yok. Zorunlu-seçim (forced-choice) testlerinin sürekli
 genellemesidir. İki kilit affinity:
+
 - **A_Syn|WordsSyn = Aff(P_Syn, P_WordsSyn | NC)** — NC altın eş anlamlısına mı yoksa
   kelime-kelime eş anlamlısına mı daha yakın?
 - **A_Syn|Rand = Aff(P_Syn, P_Rand | NC)** — NC altın eş anlamlısına rastgeleye göre daha mı yakın?
 
 ### 5.3 Scaled Similarity (Sim_R) — yeniden ölçeklenmiş benzerlik
+
 Anizotropik uzaylarda rastgele iki embedding bile yüksek benzerlik verebilir; bu yüzden
 rastgele alt sınıra göre yeniden ölçekleme (max-min normalizasyonuna eşdeğer):
+
 ```
 Sim_R(Pi | Target) = ⟨ (Sim(Pi,T) − Sim(P_Rand,T)) / (1 − Sim(P_Rand,T)) ⟩_Sent   (Denklem 5)
 ```
+
 - `Sim_R ≈ 1` → prob neredeyse mükemmel (P_Syn için beklenir).
 - `Sim_R ≈ 0` → prob rastgele kadar kötü.
-İki kilit ölçüm: **Sim_R|Syn** (≈1 beklenir) ve **Sim_R|WordsSyn** (idiyomatikte ≈0 beklenir).
+  İki kilit ölçüm: **Sim_R|Syn** (≈1 beklenir) ve **Sim_R|WordsSyn** (idiyomatikte ≈0 beklenir).
 
 ### 5.4 Correlation (ρ) — Spearman
+
 Her ölçüm (Sim, Aff, Sim_R) ile insan `Comp` skoru arasında **Spearman korelasyonu**.
 Beklenti: P_Syn ve P_Rand için korelasyon yok; P_Comp ve P_WordsSyn için orta korelasyon.
 
@@ -142,13 +154,13 @@ Beklenti: P_Syn ve P_Rand için korelasyon yok; P_Comp ve P_WordsSyn için orta 
 
 ## 6. Değerlendirilen Modeller (orijinal makale)
 
-| Tip | Modeller |
-|-----|----------|
-| Statik | Word2Vec, GloVe (PT için 300-boyut Hartmann 2017) |
-| Bağlamsal (LSTM) | ELMo |
+| Tip                              | Modeller                                                          |
+| -------------------------------- | ----------------------------------------------------------------- |
+| Statik                           | Word2Vec, GloVe (PT için 300-boyut Hartmann 2017)                 |
+| Bağlamsal (LSTM)                 | ELMo                                                              |
 | Bağlamsal (Transformer, encoder) | BERT (large), mBERT, DistilBERT (mono+ML), Sentence-BERT (mSBERT) |
-| Bağlamsal (autoregressive) | Llama2-13B |
-| API (yalnız cümle düzeyi) | OpenAI text-embedding-ada-002 |
+| Bağlamsal (autoregressive)       | Llama2-13B                                                        |
+| API (yalnız cümle düzeyi)        | OpenAI text-embedding-ada-002                                     |
 
 Her model EN ve PT'de, Nat ve Neut bağlamlarda değerlendirildi.
 
@@ -159,8 +171,8 @@ Her model EN ve PT'de, Nat ve Neut bağlamlarda değerlendirildi.
 1. **Yüzeysel yüksek benzerlik yanıltıcıdır (Q1).** Cümle düzeyinde tüm problar (rastgele dahil)
    yüksek benzerlik üretir; bunun başlıca sebebi minimal çiftler arası **sözcüksel örtüşme**
    (lexical overlap). Benzerlikler `Comp` ile beklenen deseni göstermez.
-2. **NC düzeyine inince desen biraz düzelir ama hâlâ ideal değildir.** P_Syn benzerlikleri,
-   idiyomatik NC'ler için (örn. *grey matter*) düşük ve modelden modele çok değişken
+2. **NC düzeyine inince desen biraz düzelir ama hâlâ ideal değildir.** P*Syn benzerlikleri,
+   idiyomatik NC'ler için (örn. \_grey matter*) düşük ve modelden modele çok değişken
    (0.27'den 0.81'e). Yani modeller idiyomatik eş anlamlılığı güvenilir yakalamıyor.
 3. **İdiyomatiklik derecesi önemli (Q2).** İdiyomatik NC'lerde modeller daha çok zorlanıyor:
    `Sim_R|Syn < Sim_R|WordsSyn` — yani kelime-kelime eş anlamlı, altın eş anlamlıdan daha

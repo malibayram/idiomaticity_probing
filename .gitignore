@@ -133,6 +133,23 @@ dmypy.json
 .DS_Store
 Thumbs.db
 
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.toc
+*.out
+*.synctex.gz
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.latexmk
+*.run.xml
+
 # Project-specific
 data/
 !data/sample/

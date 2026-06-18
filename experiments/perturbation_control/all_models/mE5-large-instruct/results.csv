@@ -1,0 +1,241 @@
+model,group,case,variant,sentence_sim,contextual_span_sim,isolated_phrase_sim
+mE5-large-instruct,idiomatic_nc,grey matter,synonym,0.9754425689973106,0.9366789796814854,0.9366789796814854
+mE5-large-instruct,idiomatic_nc,grey matter,component,0.9674846966957256,0.8937656468567431,0.8937656468567431
+mE5-large-instruct,idiomatic_nc,grey matter,word_by_word,0.9346469672097909,0.8438028593758553,0.8438028593758553
+mE5-large-instruct,idiomatic_nc,grey matter,random,0.9093193070770028,0.8362071015470581,0.8362071015470581
+mE5-large-instruct,idiomatic_nc,eager beaver,synonym,0.9425930208276994,0.8743760884524505,0.8743760884524505
+mE5-large-instruct,idiomatic_nc,eager beaver,component,0.9725638250787491,0.9548345717310405,0.9548345717310405
+mE5-large-instruct,idiomatic_nc,eager beaver,word_by_word,0.9484020469755318,0.9114743163716071,0.9114743163716071
+mE5-large-instruct,idiomatic_nc,eager beaver,random,0.899472393445203,0.8230843348288696,0.8230843348288696
+mE5-large-instruct,idiomatic_nc,couch potato,synonym,0.9543876882542833,0.8804543264016668,0.8804543264016668
+mE5-large-instruct,idiomatic_nc,couch potato,component,0.9683778117968413,0.9229140275273043,0.9229140275273043
+mE5-large-instruct,idiomatic_nc,couch potato,word_by_word,0.9658721198739372,0.9169459960012503,0.9169459960012503
+mE5-large-instruct,idiomatic_nc,couch potato,random,0.9037300152567118,0.8287648619609114,0.8287648619609114
+mE5-large-instruct,idiomatic_nc,cold feet,synonym,0.9564739738427316,0.8596201644222152,0.8596201644222152
+mE5-large-instruct,idiomatic_nc,cold feet,component,0.9457560284970663,0.9254963735041002,0.9254963735041002
+mE5-large-instruct,idiomatic_nc,cold feet,word_by_word,0.9834263722866488,0.9596963150180852,0.9596963150180852
+mE5-large-instruct,idiomatic_nc,cold feet,random,0.9081795629746672,0.8304358311501898,0.8304358311501898
+mE5-large-instruct,idiomatic_nc,white elephant,synonym,0.92850950751724,0.832255151860045,0.832255151860045
+mE5-large-instruct,idiomatic_nc,white elephant,component,0.9747074041819507,0.9574077305955726,0.9574077305955726
+mE5-large-instruct,idiomatic_nc,white elephant,word_by_word,0.9489488913742192,0.9082634836499076,0.9082634836499076
+mE5-large-instruct,idiomatic_nc,white elephant,random,0.9067110179673198,0.8077630797694629,0.8077630797694629
+mE5-large-instruct,idiomatic_nc,red tape,synonym,0.9689944325094144,0.9166452556115606,0.9166452556115606
+mE5-large-instruct,idiomatic_nc,red tape,component,0.9585604154492919,0.9269302325072211,0.9269302325072211
+mE5-large-instruct,idiomatic_nc,red tape,word_by_word,0.9506452024664513,0.8897948133706476,0.8897948133706476
+mE5-large-instruct,idiomatic_nc,red tape,random,0.9114395763646029,0.8494115038223697,0.8494115038223697
+mE5-large-instruct,idiomatic_nc,dark horse,synonym,0.9201017430139056,0.8947717890088536,0.8947717890088536
+mE5-large-instruct,idiomatic_nc,dark horse,component,0.9580505114249429,0.9409177907866861,0.9409177907866861
+mE5-large-instruct,idiomatic_nc,dark horse,word_by_word,0.949130973259788,0.9201507599429718,0.9201507599429718
+mE5-large-instruct,idiomatic_nc,dark horse,random,0.8770244805692565,0.849062903284598,0.849062903284598
+mE5-large-instruct,idiomatic_nc,black sheep,synonym,0.9386839266710024,0.8709273508886637,0.8709273508886637
+mE5-large-instruct,idiomatic_nc,black sheep,component,0.9738029474031219,0.9561926295656745,0.9561926295656745
+mE5-large-instruct,idiomatic_nc,black sheep,word_by_word,0.9693601819757531,0.9338932838403207,0.9338932838403207
+mE5-large-instruct,idiomatic_nc,black sheep,random,0.9025890004924606,0.8064593901910067,0.8064593901910067
+mE5-large-instruct,idiomatic_nc,silver lining,synonym,0.9678051247809185,0.9184953517113824,0.9184953517113824
+mE5-large-instruct,idiomatic_nc,silver lining,component,0.9746030134640794,0.8838279495879211,0.8838279495879211
+mE5-large-instruct,idiomatic_nc,silver lining,word_by_word,0.9193886513988094,0.8656153602827611,0.8656153602827611
+mE5-large-instruct,idiomatic_nc,silver lining,random,0.9068451985308239,0.8450688059459494,0.8450688059459494
+mE5-large-instruct,idiomatic_nc,ivory tower,synonym,0.9278800033148401,0.8575475650509549,0.8575475650509549
+mE5-large-instruct,idiomatic_nc,ivory tower,component,0.9714069098504079,0.9203388456453292,0.9203388456453292
+mE5-large-instruct,idiomatic_nc,ivory tower,word_by_word,0.9366815034899184,0.8713360526850318,0.8713360526850318
+mE5-large-instruct,idiomatic_nc,ivory tower,random,0.932134866211636,0.8788333564531641,0.8788333564531641
+mE5-large-instruct,idiomatic_nc,glass ceiling,synonym,0.9481284953399897,0.8733496145448677,0.8733496145448677
+mE5-large-instruct,idiomatic_nc,glass ceiling,component,0.9774696622130512,0.9290913550579581,0.9290913550579581
+mE5-large-instruct,idiomatic_nc,glass ceiling,word_by_word,0.9251959914998814,0.8933490694899292,0.8933490694899292
+mE5-large-instruct,idiomatic_nc,glass ceiling,random,0.8758550113270233,0.8350515336216016,0.8350515336216016
+mE5-large-instruct,idiomatic_nc,cash cow,synonym,0.9904870965008772,0.9431573475325784,0.9431573475325784
+mE5-large-instruct,idiomatic_nc,cash cow,component,0.9506729636704109,0.8933078425260581,0.8933078425260581
+mE5-large-instruct,idiomatic_nc,cash cow,word_by_word,0.9880189081739206,0.9209565284210988,0.9209565284210988
+mE5-large-instruct,idiomatic_nc,cash cow,random,0.8793573523262175,0.8360243604739339,0.8360243604739339
+mE5-large-instruct,idiomatic_nc,loose cannon,synonym,0.9373821961733002,0.8615762269966801,0.8615762269966801
+mE5-large-instruct,idiomatic_nc,loose cannon,component,0.9548443132263553,0.9426574849429639,0.9426574849429639
+mE5-large-instruct,idiomatic_nc,loose cannon,word_by_word,0.9585479485718955,0.9215560836639834,0.9215560836639834
+mE5-large-instruct,idiomatic_nc,loose cannon,random,0.9332607617879393,0.8586816820327099,0.8586816820327099
+mE5-large-instruct,idiomatic_nc,golden handshake,synonym,0.9076327891777266,0.8438512011054613,0.8438512011054613
+mE5-large-instruct,idiomatic_nc,golden handshake,component,0.971202744425169,0.9607798983894174,0.9607798983894174
+mE5-large-instruct,idiomatic_nc,golden handshake,word_by_word,0.9476016463369945,0.9093092897682576,0.9093092897682576
+mE5-large-instruct,idiomatic_nc,golden handshake,random,0.9041655276565922,0.84846093545053,0.84846093545053
+mE5-large-instruct,idiomatic_nc,paper tiger,synonym,0.908119238546654,0.8576230988330624,0.8576230988330624
+mE5-large-instruct,idiomatic_nc,paper tiger,component,0.9499395206553236,0.9297786711081916,0.9297786711081916
+mE5-large-instruct,idiomatic_nc,paper tiger,word_by_word,0.9351855691306676,0.8592184064299596,0.8592184064299596
+mE5-large-instruct,idiomatic_nc,paper tiger,random,0.9074124838632649,0.8758916831838162,0.8758916831838162
+mE5-large-instruct,idiomatic_nc,smoking gun,synonym,0.9515670194910519,0.8869163336812627,0.8869163336812627
+mE5-large-instruct,idiomatic_nc,smoking gun,component,0.9682304506806099,0.9007835816143037,0.9007835816143037
+mE5-large-instruct,idiomatic_nc,smoking gun,word_by_word,0.9713686754513047,0.8868968856271922,0.8868968856271922
+mE5-large-instruct,idiomatic_nc,smoking gun,random,0.9376256062698894,0.8346634833160399,0.8346634833160399
+mE5-large-instruct,compositional_nc,economic aid,synonym,0.9868909233163863,0.9598178025206917,0.9598178025206917
+mE5-large-instruct,compositional_nc,economic aid,component,0.9843127059284565,0.960884188415337,0.960884188415337
+mE5-large-instruct,compositional_nc,economic aid,word_by_word,0.9722203465098282,0.9443661265552935,0.9443661265552935
+mE5-large-instruct,compositional_nc,economic aid,random,0.9175287625084562,0.8118297675271974,0.8118297675271974
+mE5-large-instruct,compositional_nc,research lab,synonym,0.9819185750733681,0.9693442095457704,0.9693442095457704
+mE5-large-instruct,compositional_nc,research lab,component,0.9919085258154081,0.9700029173265858,0.9700029173265858
+mE5-large-instruct,compositional_nc,research lab,word_by_word,0.9547441926007686,0.9190112586874659,0.9190112586874659
+mE5-large-instruct,compositional_nc,research lab,random,0.8973732483273866,0.8346166783411062,0.8346166783411062
+mE5-large-instruct,compositional_nc,climate policy,synonym,0.9744582767795333,0.9688761936483414,0.9688761936483414
+mE5-large-instruct,compositional_nc,climate policy,component,0.960526146689046,0.9275991521183156,0.9275991521183156
+mE5-large-instruct,compositional_nc,climate policy,word_by_word,0.9463371716583504,0.8788835686497771,0.8788835686497771
+mE5-large-instruct,compositional_nc,climate policy,random,0.897816423166674,0.8147116511521949,0.8147116511521949
+mE5-large-instruct,compositional_nc,medical school,synonym,0.9916544805960978,0.9875635300554159,0.9875635300554159
+mE5-large-instruct,compositional_nc,medical school,component,0.9610383280126555,0.9003793313415484,0.9003793313415484
+mE5-large-instruct,compositional_nc,medical school,word_by_word,0.9733336412504162,0.9470521272725121,0.9470521272725121
+mE5-large-instruct,compositional_nc,medical school,random,0.8998816480633294,0.8010109661193264,0.8010109661193264
+mE5-large-instruct,compositional_nc,mountain village,synonym,0.9630947844783413,0.938548225233214,0.938548225233214
+mE5-large-instruct,compositional_nc,mountain village,component,0.9770120498430452,0.9538058561802766,0.9538058561802766
+mE5-large-instruct,compositional_nc,mountain village,word_by_word,0.9566439828500276,0.9141223080239816,0.9141223080239816
+mE5-large-instruct,compositional_nc,mountain village,random,0.8893506992617702,0.828333693053665,0.828333693053665
+mE5-large-instruct,compositional_nc,solar panel,synonym,0.9822436917517444,0.9615444956695111,0.9615444956695111
+mE5-large-instruct,compositional_nc,solar panel,component,0.9736066351928069,0.8915647894517935,0.8915647894517935
+mE5-large-instruct,compositional_nc,solar panel,word_by_word,0.9761643383417908,0.9357718288462559,0.9357718288462559
+mE5-large-instruct,compositional_nc,solar panel,random,0.9102405692144506,0.831456572630063,0.831456572630063
+mE5-large-instruct,compositional_nc,election result,synonym,0.9835615752541291,0.9682889557260949,0.9682889557260949
+mE5-large-instruct,compositional_nc,election result,component,0.9821324351889905,0.9294782909385577,0.9294782909385577
+mE5-large-instruct,compositional_nc,election result,word_by_word,0.9870406951177975,0.9667052040103444,0.9667052040103444
+mE5-large-instruct,compositional_nc,election result,random,0.8984134343219803,0.8344749618839428,0.8344749618839428
+mE5-large-instruct,compositional_nc,airport security,synonym,0.9800553904574114,0.9566190423727654,0.9566190423727654
+mE5-large-instruct,compositional_nc,airport security,component,0.9670710599913243,0.9276159130822461,0.9276159130822461
+mE5-large-instruct,compositional_nc,airport security,word_by_word,0.9650230421724536,0.916763771217011,0.916763771217011
+mE5-large-instruct,compositional_nc,airport security,random,0.8565478378679858,0.8080894918807894,0.8080894918807894
+mE5-large-instruct,compositional_nc,language teacher,synonym,0.9894318545117124,0.9889235958221687,0.9889235958221687
+mE5-large-instruct,compositional_nc,language teacher,component,0.979885631450777,0.9535635238034805,0.9535635238034805
+mE5-large-instruct,compositional_nc,language teacher,word_by_word,0.9833439041848402,0.9741737659996724,0.9741737659996724
+mE5-large-instruct,compositional_nc,language teacher,random,0.9077749728932983,0.8114304000552908,0.8114304000552908
+mE5-large-instruct,compositional_nc,water bottle,synonym,0.9709751397289935,0.9383136361735471,0.9383136361735471
+mE5-large-instruct,compositional_nc,water bottle,component,0.9792221585796144,0.9602338491098336,0.9602338491098336
+mE5-large-instruct,compositional_nc,water bottle,word_by_word,0.9644729002958098,0.9222567639493571,0.9222567639493571
+mE5-large-instruct,compositional_nc,water bottle,random,0.9046162332251495,0.8445068144566199,0.8445068144566199
+mE5-large-instruct,compositional_nc,history book,synonym,0.9883588371247988,0.9403855591767291,0.9403855591767291
+mE5-large-instruct,compositional_nc,history book,component,0.9641162985226892,0.9346277999608223,0.9346277999608223
+mE5-large-instruct,compositional_nc,history book,word_by_word,0.9612955919525255,0.9242196368629633,0.9242196368629633
+mE5-large-instruct,compositional_nc,history book,random,0.8733089834953204,0.821110673800943,0.821110673800943
+mE5-large-instruct,compositional_nc,river bridge,synonym,0.9648051280084726,0.9464543991430379,0.9464543991430379
+mE5-large-instruct,compositional_nc,river bridge,component,0.9887354533156778,0.9369372583093551,0.9369372583093551
+mE5-large-instruct,compositional_nc,river bridge,word_by_word,0.9644515685257802,0.951820482334969,0.951820482334969
+mE5-large-instruct,compositional_nc,river bridge,random,0.8958195158385495,0.8273845755597555,0.8273845755597555
+mE5-large-instruct,compositional_nc,hospital room,synonym,0.9866177530055984,0.9098436904259753,0.9098436904259753
+mE5-large-instruct,compositional_nc,hospital room,component,0.9892240164246457,0.9317622769093318,0.9317622769093318
+mE5-large-instruct,compositional_nc,hospital room,word_by_word,0.9786595806753533,0.9413035375158472,0.9413035375158472
+mE5-large-instruct,compositional_nc,hospital room,random,0.9386810599700187,0.8195822255627583,0.8195822255627583
+mE5-large-instruct,compositional_nc,village market,synonym,0.9857078708118412,0.9470632863280571,0.9470632863280571
+mE5-large-instruct,compositional_nc,village market,component,0.9881833679905601,0.9280148702091251,0.9280148702091251
+mE5-large-instruct,compositional_nc,village market,word_by_word,0.9658263309668164,0.8938634969796326,0.8938634969796326
+mE5-large-instruct,compositional_nc,village market,random,0.9128025296750123,0.8132463443307545,0.8132463443307545
+mE5-large-instruct,compositional_nc,data center,synonym,0.9794909246101061,0.956767088326622,0.956767088326622
+mE5-large-instruct,compositional_nc,data center,component,0.9526575684767602,0.8765089544662387,0.8765089544662387
+mE5-large-instruct,compositional_nc,data center,word_by_word,0.9539143114951103,0.9009529475385475,0.9009529475385475
+mE5-large-instruct,compositional_nc,data center,random,0.9032951109275721,0.842760902241667,0.842760902241667
+mE5-large-instruct,compositional_nc,music festival,synonym,0.9755949727737896,0.9483985433123758,0.9483985433123758
+mE5-large-instruct,compositional_nc,music festival,component,0.9816114889746005,0.9569658281534016,0.9569658281534016
+mE5-large-instruct,compositional_nc,music festival,word_by_word,0.9502880754184752,0.8936172589047229,0.8936172589047229
+mE5-large-instruct,compositional_nc,music festival,random,0.9031581624984567,0.8467951190472638,0.8467951190472638
+mE5-large-instruct,single_word_control,doctor,synonym,0.9877520570159481,0.9766440697553703,0.9766440697553703
+mE5-large-instruct,single_word_control,doctor,related,0.9457785349840764,0.9352794938885741,0.9352794938885741
+mE5-large-instruct,single_word_control,doctor,random,0.9081129995340869,0.8428145045844809,0.8428145045844809
+mE5-large-instruct,single_word_control,apple,synonym,0.9720015106569727,0.9528052949181365,0.9528052949181365
+mE5-large-instruct,single_word_control,apple,related,0.9533214845139727,0.9529791392407895,0.9529791392407895
+mE5-large-instruct,single_word_control,apple,random,0.8967023180891871,0.8327933865875325,0.8327933865875325
+mE5-large-instruct,single_word_control,teacher,synonym,0.9703877024687847,0.9538547221694786,0.9538547221694786
+mE5-large-instruct,single_word_control,teacher,related,0.9728460087715886,0.9459381684736566,0.9459381684736566
+mE5-large-instruct,single_word_control,teacher,random,0.9048439651168827,0.8384819945262124,0.8384819945262124
+mE5-large-instruct,single_word_control,lawyer,synonym,0.9931893206370679,0.9879315388808617,0.9879315388808617
+mE5-large-instruct,single_word_control,lawyer,related,0.9724922313425209,0.9432782128398786,0.9432782128398786
+mE5-large-instruct,single_word_control,lawyer,random,0.9387749928411037,0.8375224030347022,0.8375224030347022
+mE5-large-instruct,single_word_control,river,synonym,0.9861955374372883,0.9164694390453892,0.9164694390453892
+mE5-large-instruct,single_word_control,river,related,0.9588040982410243,0.9146983064893657,0.9146983064893657
+mE5-large-instruct,single_word_control,river,random,0.9249733001346948,0.8278525756806556,0.8278525756806556
+mE5-large-instruct,single_word_control,city,synonym,0.9672284433050214,0.9472824105534228,0.9472824105534228
+mE5-large-instruct,single_word_control,city,related,0.9659930100613722,0.9378163614267933,0.9378163614267933
+mE5-large-instruct,single_word_control,city,random,0.9125488856625429,0.8458157295339918,0.8458157295339918
+mE5-large-instruct,single_word_control,storm,synonym,0.9853952822002224,0.9650364796544902,0.9650364796544902
+mE5-large-instruct,single_word_control,storm,related,0.9799139022532707,0.9553092740323977,0.9553092740323977
+mE5-large-instruct,single_word_control,storm,random,0.9334082932184474,0.8214866708396271,0.8214866708396271
+mE5-large-instruct,single_word_control,idea,synonym,0.9854776387292583,0.9514368376464364,0.9514368376464364
+mE5-large-instruct,single_word_control,idea,related,0.9830299014814461,0.9295649878471499,0.9295649878471499
+mE5-large-instruct,single_word_control,idea,random,0.9105000935027909,0.850212020257206,0.850212020257206
+mE5-large-instruct,single_word_control,problem,synonym,0.9928202122343637,0.9550119290804893,0.9550119290804893
+mE5-large-instruct,single_word_control,problem,related,0.9687208687220412,0.910966173477947,0.910966173477947
+mE5-large-instruct,single_word_control,problem,random,0.9273391141506425,0.8466683163568688,0.8466683163568688
+mE5-large-instruct,single_word_control,music,synonym,0.9802761378428426,0.9113476006665521,0.9113476006665521
+mE5-large-instruct,single_word_control,music,related,0.9722329327173649,0.9163881832217395,0.9163881832217395
+mE5-large-instruct,single_word_control,music,random,0.9212641471249873,0.8128567526901034,0.8128567526901034
+mE5-large-instruct,single_word_control,letter,synonym,0.9733983456247047,0.9394241849438084,0.9394241849438084
+mE5-large-instruct,single_word_control,letter,related,0.9707850225744888,0.9329207921658733,0.9329207921658733
+mE5-large-instruct,single_word_control,letter,random,0.8908848375710169,0.8369844477909588,0.8369844477909588
+mE5-large-instruct,single_word_control,machine,synonym,0.9787989297537527,0.9447545753748994,0.9447545753748994
+mE5-large-instruct,single_word_control,machine,related,0.9847336918915811,0.9524065706097139,0.9524065706097139
+mE5-large-instruct,single_word_control,machine,random,0.9128469207331611,0.8287884760804176,0.8287884760804176
+mE5-large-instruct,single_word_control,road,synonym,0.9850317243036728,0.9578192195737897,0.9578192195737897
+mE5-large-instruct,single_word_control,road,related,0.9796363496502413,0.967605481458791,0.967605481458791
+mE5-large-instruct,single_word_control,road,random,0.934713100055955,0.8325794375501417,0.8325794375501417
+mE5-large-instruct,single_word_control,flower,synonym,0.9866532480867117,0.9472437785122837,0.9472437785122837
+mE5-large-instruct,single_word_control,flower,related,0.9716057816113397,0.9431177343294157,0.9431177343294157
+mE5-large-instruct,single_word_control,flower,random,0.926660479790704,0.8322948127421603,0.8322948127421603
+mE5-large-instruct,single_word_control,ocean,synonym,0.9891218758146141,0.98198599609067,0.98198599609067
+mE5-large-instruct,single_word_control,ocean,related,0.938685390442089,0.9296816503678983,0.9296816503678983
+mE5-large-instruct,single_word_control,ocean,random,0.892073954443599,0.8383852331241168,0.8383852331241168
+mE5-large-instruct,single_word_control,child,synonym,0.9759823565373495,0.9560144698647411,0.9560144698647411
+mE5-large-instruct,single_word_control,child,related,0.942594249195815,0.9137479439627157,0.9137479439627157
+mE5-large-instruct,single_word_control,child,random,0.9086590115518427,0.8564734909373963,0.8564734909373963
+mE5-large-instruct,ordinary_two_word_control,red car,synonym,0.9581178118545831,0.9358131868358726,0.9358131868358726
+mE5-large-instruct,ordinary_two_word_control,red car,component,0.9631145573071813,0.9153991122354339,0.9153991122354339
+mE5-large-instruct,ordinary_two_word_control,red car,word_by_word,0.9504167329323778,0.9264000653640503,0.9264000653640503
+mE5-large-instruct,ordinary_two_word_control,red car,random,0.892184130731463,0.8300294871212169,0.8300294871212169
+mE5-large-instruct,ordinary_two_word_control,coffee cup,synonym,0.9498210601205245,0.9434734541600912,0.9434734541600912
+mE5-large-instruct,ordinary_two_word_control,coffee cup,component,0.972265989462677,0.9535171731913438,0.9535171731913438
+mE5-large-instruct,ordinary_two_word_control,coffee cup,word_by_word,0.9103295586595753,0.8626106351509242,0.8626106351509242
+mE5-large-instruct,ordinary_two_word_control,coffee cup,random,0.8955126867394295,0.8327248201978433,0.8327248201978433
+mE5-large-instruct,ordinary_two_word_control,wooden chair,synonym,0.9562042342674072,0.9464556821199412,0.9464556821199412
+mE5-large-instruct,ordinary_two_word_control,wooden chair,component,0.9826504919419617,0.9508437500395042,0.9508437500395042
+mE5-large-instruct,ordinary_two_word_control,wooden chair,word_by_word,0.9687258162617498,0.9632716661185727,0.9632716661185727
+mE5-large-instruct,ordinary_two_word_control,wooden chair,random,0.8969090084623527,0.8471255462640992,0.8471255462640992
+mE5-large-instruct,ordinary_two_word_control,summer rain,synonym,0.9768156679944114,0.9507000643398447,0.9507000643398447
+mE5-large-instruct,ordinary_two_word_control,summer rain,component,0.9787696975081046,0.9557405680173399,0.9557405680173399
+mE5-large-instruct,ordinary_two_word_control,summer rain,word_by_word,0.9375172785918654,0.8839355136992441,0.8839355136992441
+mE5-large-instruct,ordinary_two_word_control,summer rain,random,0.8869220369083374,0.8079967132943446,0.8079967132943446
+mE5-large-instruct,ordinary_two_word_control,city park,synonym,0.9457112623874764,0.9492968881644294,0.9492968881644294
+mE5-large-instruct,ordinary_two_word_control,city park,component,0.9711756186676579,0.9635476973106141,0.9635476973106141
+mE5-large-instruct,ordinary_two_word_control,city park,word_by_word,0.9446551523679687,0.9100516157300611,0.9100516157300611
+mE5-large-instruct,ordinary_two_word_control,city park,random,0.862790596546274,0.8432105765120879,0.8432105765120879
+mE5-large-instruct,ordinary_two_word_control,glass bottle,synonym,0.9440003216415702,0.9143445910958171,0.9143445910958171
+mE5-large-instruct,ordinary_two_word_control,glass bottle,component,0.9867581579982627,0.9731197398491743,0.9731197398491743
+mE5-large-instruct,ordinary_two_word_control,glass bottle,word_by_word,0.9419448356373679,0.9065185028972934,0.9065185028972934
+mE5-large-instruct,ordinary_two_word_control,glass bottle,random,0.900488260239189,0.8377721835236966,0.8377721835236966
+mE5-large-instruct,ordinary_two_word_control,school bus,synonym,0.9506282445662363,0.9461337848577923,0.9461337848577923
+mE5-large-instruct,ordinary_two_word_control,school bus,component,0.9777897458965356,0.9578198258130647,0.9578198258130647
+mE5-large-instruct,ordinary_two_word_control,school bus,word_by_word,0.9341776141236533,0.8845112148839273,0.8845112148839273
+mE5-large-instruct,ordinary_two_word_control,school bus,random,0.8631464170368084,0.8244242213433798,0.8244242213433798
+mE5-large-instruct,ordinary_two_word_control,paper bag,synonym,0.9778366468639779,0.975944293325778,0.975944293325778
+mE5-large-instruct,ordinary_two_word_control,paper bag,component,0.9792393027288244,0.9587617785229047,0.9587617785229047
+mE5-large-instruct,ordinary_two_word_control,paper bag,word_by_word,0.9484676639429653,0.9253236058229918,0.9253236058229918
+mE5-large-instruct,ordinary_two_word_control,paper bag,random,0.9030158899429268,0.8443063695190913,0.8443063695190913
+mE5-large-instruct,ordinary_two_word_control,kitchen knife,synonym,0.9730553931866889,0.9653567481314446,0.9653567481314446
+mE5-large-instruct,ordinary_two_word_control,kitchen knife,component,0.9911614346452748,0.9728037974428595,0.9728037974428595
+mE5-large-instruct,ordinary_two_word_control,kitchen knife,word_by_word,0.9736091835316004,0.9469765597810534,0.9469765597810534
+mE5-large-instruct,ordinary_two_word_control,kitchen knife,random,0.8850546198821,0.849671902373616,0.849671902373616
+mE5-large-instruct,ordinary_two_word_control,garden flower,synonym,0.9734678999561339,0.9527135867646539,0.9527135867646539
+mE5-large-instruct,ordinary_two_word_control,garden flower,component,0.9872825892533486,0.964511565825795,0.964511565825795
+mE5-large-instruct,ordinary_two_word_control,garden flower,word_by_word,0.9650581686022097,0.9382174959256968,0.9382174959256968
+mE5-large-instruct,ordinary_two_word_control,garden flower,random,0.897123319293567,0.8418966722191583,0.8418966722191583
+mE5-large-instruct,ordinary_two_word_control,ocean wave,synonym,0.9821402097202613,0.959858579902618,0.959858579902618
+mE5-large-instruct,ordinary_two_word_control,ocean wave,component,0.9915948482058072,0.9588691483312025,0.9588691483312025
+mE5-large-instruct,ordinary_two_word_control,ocean wave,word_by_word,0.9627375526305606,0.9412307030886711,0.9412307030886711
+mE5-large-instruct,ordinary_two_word_control,ocean wave,random,0.9207124049508669,0.8118639336977959,0.8118639336977959
+mE5-large-instruct,ordinary_two_word_control,train station,synonym,0.9798835912121973,0.9604338632104167,0.9604338632104167
+mE5-large-instruct,ordinary_two_word_control,train station,component,0.9837233065616958,0.9670127210391517,0.9670127210391517
+mE5-large-instruct,ordinary_two_word_control,train station,word_by_word,0.968822203237093,0.9519109873878626,0.9519109873878626
+mE5-large-instruct,ordinary_two_word_control,train station,random,0.8857410240247076,0.8237562829459709,0.8237562829459709
+mE5-large-instruct,ordinary_two_word_control,computer screen,synonym,0.9773902460569479,0.9456514058340034,0.9456514058340034
+mE5-large-instruct,ordinary_two_word_control,computer screen,component,0.9818053229541934,0.9624703324467696,0.9624703324467696
+mE5-large-instruct,ordinary_two_word_control,computer screen,word_by_word,0.9760022561490522,0.9604178529097845,0.9604178529097845
+mE5-large-instruct,ordinary_two_word_control,computer screen,random,0.9069386589096122,0.8232523680511618,0.8232523680511618
+mE5-large-instruct,ordinary_two_word_control,stone bridge,synonym,0.9504513368522731,0.9438289347080014,0.9438289347080014
+mE5-large-instruct,ordinary_two_word_control,stone bridge,component,0.9725621049561348,0.9285919894056667,0.9285919894056667
+mE5-large-instruct,ordinary_two_word_control,stone bridge,word_by_word,0.9542910640519717,0.9497652993910201,0.9497652993910201
+mE5-large-instruct,ordinary_two_word_control,stone bridge,random,0.9207246775333986,0.8583130927927665,0.8583130927927665
+mE5-large-instruct,ordinary_two_word_control,plastic box,synonym,0.9479792039609701,0.9216663753769285,0.9216663753769285
+mE5-large-instruct,ordinary_two_word_control,plastic box,component,0.9762067191691859,0.9522358674790203,0.9522358674790203
+mE5-large-instruct,ordinary_two_word_control,plastic box,word_by_word,0.9552257339756098,0.9224219152170038,0.9224219152170038
+mE5-large-instruct,ordinary_two_word_control,plastic box,random,0.89711728427539,0.8280486206080439,0.8280486206080439
+mE5-large-instruct,ordinary_two_word_control,winter coat,synonym,0.9594866016201896,0.9583873598321563,0.9583873598321563
+mE5-large-instruct,ordinary_two_word_control,winter coat,component,0.9771955908339884,0.9548405512424524,0.9548405512424524
+mE5-large-instruct,ordinary_two_word_control,winter coat,word_by_word,0.9394832058526724,0.9295615714326276,0.9295615714326276
+mE5-large-instruct,ordinary_two_word_control,winter coat,random,0.8801172477250571,0.8583832926471562,0.8583832926471562

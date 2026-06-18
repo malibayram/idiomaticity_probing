@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Small perturbation-control experiment for the idiomaticity probe setup.
+"""Perturbation-control experiment for the idiomaticity probe setup.
 
-This is intentionally tiny. It checks whether high similarity after a random substitution is
-specific to idiomatic noun compounds, or whether the same effect appears for ordinary words and
-ordinary two-word phrases in the same syntactic slot.
+This checks whether high similarity after a random substitution is specific to idiomatic noun
+compounds, or whether the same effect appears for ordinary words and ordinary two-word phrases
+in the same syntactic slot.
 
 Outputs:
   - results.csv: one row per example x variant
@@ -36,7 +36,11 @@ class Example:
     variants: Dict[str, str]
 
 
-EXAMPLES = [
+DEFAULT_EXAMPLES_PATH = Path(__file__).with_name("control_examples.csv")
+VARIANT_COLUMNS = ("synonym", "component", "word_by_word", "related", "random")
+
+
+FALLBACK_EXAMPLES = [
     Example(
         group="idiomatic_nc",
         name="grey matter",
@@ -145,6 +149,54 @@ EXAMPLES = [
 ]
 
 
+def load_examples(path: Path) -> list[Example]:
+    if not path.exists():
+        return FALLBACK_EXAMPLES
+
+    examples: list[Example] = []
+    with path.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        required = {"group", "name", "original", "target", *VARIANT_COLUMNS}
+        missing = required.difference(reader.fieldnames or [])
+        if missing:
+            raise ValueError(f"{path} is missing columns: {sorted(missing)}")
+
+        for row_num, row in enumerate(reader, start=2):
+            group = row["group"].strip()
+            name = row["name"].strip()
+            original = row["original"].strip()
+            target = row["target"].strip()
+            variants = {
+                column: row[column].strip()
+                for column in VARIANT_COLUMNS
+                if row[column].strip()
+            }
+
+            if not all([group, name, original, target]):
+                raise ValueError(f"Missing required value in {path}:{row_num}")
+            if original.count(target) != 1:
+                raise ValueError(
+                    f"Expected exactly one target occurrence in {path}:{row_num}: "
+                    f"{target!r} in {original!r}"
+                )
+            if "synonym" not in variants or "random" not in variants:
+                raise ValueError(f"Each example needs synonym and random in {path}:{row_num}")
+
+            examples.append(
+                Example(
+                    group=group,
+                    name=name,
+                    original=original,
+                    target=target,
+                    variants=variants,
+                )
+            )
+
+    if not examples:
+        raise ValueError(f"No examples found in {path}")
+    return examples
+
+
 def replace_once(sentence: str, old: str, new: str) -> str:
     if sentence.count(old) != 1:
         raise ValueError(f"Expected exactly one occurrence of {old!r} in {sentence!r}")
@@ -214,14 +266,44 @@ class LocalHFEmbedder:
         return np.mean(np.stack(rows, axis=0), axis=0)
 
 
+class LocalSentenceTransformerEmbedder:
+    """Sentence-transformers fallback for mSBERT/API-like embedding models.
+
+    These models do not expose contextual token vectors. For span-level columns we encode the
+    target phrase in isolation, matching the repository's sentence embedder convention.
+    """
+
+    def __init__(self, model_id: str, local_files_only: bool = True):
+        if local_files_only:
+            os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
+            os.environ.setdefault("HF_HUB_OFFLINE", "1")
+
+        from sentence_transformers import SentenceTransformer
+
+        self.model_id = model_id
+        self.model = SentenceTransformer(model_id, device="cpu")
+        self.cache: dict[str, np.ndarray] = {}
+
+    def embed_sentence(self, text: str) -> np.ndarray:
+        if text not in self.cache:
+            self.cache[text] = np.asarray(
+                self.model.encode(text, normalize_embeddings=False), dtype=np.float32
+            )
+        return self.cache[text]
+
+    def embed_span(self, text: str, span: Span) -> np.ndarray:
+        start, end = span
+        return self.embed_sentence(text[start:end])
+
+
 def mean(values: Iterable[float]) -> float:
     vals = list(values)
     return float(np.mean(vals)) if vals else float("nan")
 
 
-def build_rows(embedder: LocalHFEmbedder) -> list[dict]:
+def build_rows(embedder: object, examples: Iterable[Example]) -> list[dict]:
     rows = []
-    for ex in EXAMPLES:
+    for ex in examples:
         orig_span = phrase_span(ex.original, ex.target)
         orig_sentence_vec = embedder.embed_sentence(ex.original)
         orig_context_span_vec = embedder.embed_span(ex.original, orig_span)
@@ -263,14 +345,18 @@ def write_csv(rows: list[dict], path: Path) -> None:
         writer.writerows(rows)
 
 
-def write_summary(rows: list[dict], path: Path, model_id: str) -> None:
+def write_summary(
+    rows: list[dict], path: Path, model_id: str, model_type: str = "hf"
+) -> None:
     groups = sorted({r["group"] for r in rows})
     variants = ["synonym", "component", "word_by_word", "related", "random"]
+    n_cases = len({(r["group"], r["case"]) for r in rows})
 
     lines = [
         "# Perturbation Control Özeti",
         "",
         f"Model: `{model_id}`",
+        f"Örnek sayısı: `{n_cases}` · Ölçüm satırı: `{len(rows)}`",
         "",
         "Skorlar kosinüs benzerliğidir. Yüksek değer, orijinal ve değiştirilmiş ifadenin",
         "model uzayında daha yakın göründüğü anlamına gelir.",
@@ -280,6 +366,14 @@ def write_summary(rows: list[dict], path: Path, model_id: str) -> None:
         "| group | variant | sentence_sim | contextual_span_sim | isolated_phrase_sim |",
         "|---|---:|---:|---:|---:|",
     ]
+
+    if model_type == "sentence":
+        lines[8:8] = [
+            "",
+            "Not: Bu sentence-transformers tipi bir modeldir; gerçek contextual token-span",
+            "vermez. Bu yüzden `contextual_span_sim`, hedef ifadenin cümleden kesilip ayrı",
+            "encode edilmesiyle hesaplanır ve `isolated_phrase_sim` ile aynı yoruma sahiptir.",
+        ]
 
     for group in groups:
         for variant in variants:
@@ -352,19 +446,36 @@ def write_summary(rows: list[dict], path: Path, model_id: str) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", default="alibayram/embeddingmagibu-200m")
+    parser.add_argument(
+        "--model-type",
+        choices=["auto", "hf", "sentence"],
+        default="auto",
+        help="hf=AutoModel contextual encoder, sentence=sentence-transformers pooled model.",
+    )
     parser.add_argument("--out", default="experiments/perturbation_control")
+    parser.add_argument("--examples", default=str(DEFAULT_EXAMPLES_PATH))
     parser.add_argument("--allow-downloads", action="store_true")
     args = parser.parse_args()
 
     os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
     out_dir = Path(args.out)
-    embedder = LocalHFEmbedder(
-        args.model,
-        local_files_only=not args.allow_downloads,
-    )
-    rows = build_rows(embedder)
+    examples = load_examples(Path(args.examples))
+    model_type = args.model_type
+    if model_type == "auto":
+        model_type = "sentence" if args.model.startswith("sentence-transformers/") else "hf"
+    if model_type == "sentence":
+        embedder = LocalSentenceTransformerEmbedder(
+            args.model,
+            local_files_only=not args.allow_downloads,
+        )
+    else:
+        embedder = LocalHFEmbedder(
+            args.model,
+            local_files_only=not args.allow_downloads,
+        )
+    rows = build_rows(embedder, examples)
     write_csv(rows, out_dir / "results.csv")
-    write_summary(rows, out_dir / "summary.md", args.model)
+    write_summary(rows, out_dir / "summary.md", args.model, model_type)
 
     print(f"Wrote {out_dir / 'results.csv'}")
     print(f"Wrote {out_dir / 'summary.md'}")

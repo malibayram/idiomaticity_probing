@@ -1,0 +1,961 @@
+model,group,case,variant,target,replacement,sentence_sim,contextual_span_sim,isolated_phrase_sim,changed_sentence
+BERT-large-EN,idiomatic_nc,grey matter,synonym,grey matter,brain,0.979914367198944,0.769569993019104,0.6207592487335205,These youngsters use their brain when the presentation is right.
+BERT-large-EN,idiomatic_nc,grey matter,component,grey matter,matter,0.9443325996398926,0.76596999168396,0.746953010559082,These youngsters use their matter when the presentation is right.
+BERT-large-EN,idiomatic_nc,grey matter,word_by_word,grey matter,silvery material,0.9467748403549194,0.7982324957847595,0.7886698246002197,These youngsters use their silvery material when the presentation is right.
+BERT-large-EN,idiomatic_nc,grey matter,random,grey matter,battlefront serviceman,0.913196325302124,0.7137090563774109,0.6566162705421448,These youngsters use their battlefront serviceman when the presentation is right.
+BERT-large-EN,idiomatic_nc,eager beaver,synonym,eager beaver,hard worker,0.962595283985138,0.7776262760162354,0.6376748085021973,Eric stayed a real hard worker during the audit.
+BERT-large-EN,idiomatic_nc,eager beaver,component,eager beaver,beaver,0.9524078369140624,0.8304882049560547,0.7230561375617981,Eric stayed a real beaver during the audit.
+BERT-large-EN,idiomatic_nc,eager beaver,word_by_word,eager beaver,restless rodent,0.9609785079956056,0.8318785429000854,0.6581696271896362,Eric stayed a real restless rodent during the audit.
+BERT-large-EN,idiomatic_nc,eager beaver,random,eager beaver,petrol station,0.8851872086524963,0.6041553020477295,0.6065704226493835,Eric stayed a real petrol station during the audit.
+BERT-large-EN,idiomatic_nc,couch potato,synonym,couch potato,lazy person,0.9534603953361512,0.7288091778755188,0.6169403791427612,Nina became a lazy person after the exams.
+BERT-large-EN,idiomatic_nc,couch potato,component,couch potato,potato,0.9698473811149596,0.7611016631126404,0.7450448870658875,Nina became a potato after the exams.
+BERT-large-EN,idiomatic_nc,couch potato,word_by_word,couch potato,sofa tuber,0.9454746842384338,0.710413932800293,0.6480417847633362,Nina became a sofa tuber after the exams.
+BERT-large-EN,idiomatic_nc,couch potato,random,couch potato,railway signal,0.899526059627533,0.535157322883606,0.5357686281204224,Nina became a railway signal after the exams.
+BERT-large-EN,idiomatic_nc,cold feet,synonym,cold feet,nervousness,0.9575691223144532,0.7027617692947388,0.7136509418487549,The sudden audit gave the manager nervousness before the launch.
+BERT-large-EN,idiomatic_nc,cold feet,component,cold feet,feet,0.9685929417610168,0.7763724327087402,0.621543288230896,The sudden audit gave the manager feet before the launch.
+BERT-large-EN,idiomatic_nc,cold feet,word_by_word,cold feet,chilly legs,0.9809582829475404,0.8727181553840637,0.8750699758529663,The sudden audit gave the manager chilly legs before the launch.
+BERT-large-EN,idiomatic_nc,cold feet,random,cold feet,garden invoice,0.926543951034546,0.5588942170143127,0.6425261497497559,The sudden audit gave the manager garden invoice before the launch.
+BERT-large-EN,idiomatic_nc,white elephant,synonym,white elephant,burden,0.9566698670387268,0.6836446523666382,0.5533778667449951,The abandoned stadium became a burden for the city.
+BERT-large-EN,idiomatic_nc,white elephant,component,white elephant,elephant,0.9814623594284058,0.8921149969100952,0.8240001201629639,The abandoned stadium became a elephant for the city.
+BERT-large-EN,idiomatic_nc,white elephant,word_by_word,white elephant,pale animal,0.9742985367774964,0.8555995225906372,0.7408245205879211,The abandoned stadium became a pale animal for the city.
+BERT-large-EN,idiomatic_nc,white elephant,random,white elephant,kitchen policy,0.964133083820343,0.7442452311515808,0.7036072611808777,The abandoned stadium became a kitchen policy for the city.
+BERT-large-EN,idiomatic_nc,red tape,synonym,red tape,bureaucracy,0.9629217386245728,0.8257452249526978,0.6044412851333618,The permit was delayed by bureaucracy at the ministry.
+BERT-large-EN,idiomatic_nc,red tape,component,red tape,tape,0.9749357104301452,0.8251074552536011,0.7606197595596313,The permit was delayed by tape at the ministry.
+BERT-large-EN,idiomatic_nc,red tape,word_by_word,red tape,crimson ribbon,0.9694243669509888,0.8252291679382324,0.6193953156471252,The permit was delayed by crimson ribbon at the ministry.
+BERT-large-EN,idiomatic_nc,red tape,random,red tape,ocean doorway,0.9487560987472534,0.6750591993331909,0.7287779450416565,The permit was delayed by ocean doorway at the ministry.
+BERT-large-EN,idiomatic_nc,dark horse,synonym,dark horse,unexpected contender,0.8391463160514832,0.7096147537231445,0.6223325729370117,A unexpected contender won the final round of the tournament.
+BERT-large-EN,idiomatic_nc,dark horse,component,dark horse,horse,0.8627814054489136,0.7996158599853516,0.6038139462471008,A horse won the final round of the tournament.
+BERT-large-EN,idiomatic_nc,dark horse,word_by_word,dark horse,shadowy animal,0.8106850385665894,0.6817201972007751,0.6446636915206909,A shadowy animal won the final round of the tournament.
+BERT-large-EN,idiomatic_nc,dark horse,random,dark horse,library candle,0.8282381892204285,0.5817103385925293,0.6678972244262695,A library candle won the final round of the tournament.
+BERT-large-EN,idiomatic_nc,black sheep,synonym,black sheep,outcast,0.964203715324402,0.7934755682945251,0.5909719467163086,After the scandal Omar was the outcast of the board.
+BERT-large-EN,idiomatic_nc,black sheep,component,black sheep,sheep,0.9683402180671692,0.7509967088699341,0.6385380029678345,After the scandal Omar was the sheep of the board.
+BERT-large-EN,idiomatic_nc,black sheep,word_by_word,black sheep,dark animal,0.9558863043785096,0.8025549650192261,0.7886688709259033,After the scandal Omar was the dark animal of the board.
+BERT-large-EN,idiomatic_nc,black sheep,random,black sheep,museum ticket,0.8908551335334778,0.5883742570877075,0.6831106543540955,After the scandal Omar was the museum ticket of the board.
+BERT-large-EN,idiomatic_nc,silver lining,synonym,silver lining,hopeful aspect,0.9584645628929138,0.6803494691848755,0.7148369550704956,The grant rejection had a hopeful aspect for the startup.
+BERT-large-EN,idiomatic_nc,silver lining,component,silver lining,lining,0.9765836000442504,0.767105758190155,0.5750614404678345,The grant rejection had a lining for the startup.
+BERT-large-EN,idiomatic_nc,silver lining,word_by_word,silver lining,metallic edge,0.9593147039413452,0.7024130821228027,0.6882456541061401,The grant rejection had a metallic edge for the startup.
+BERT-large-EN,idiomatic_nc,silver lining,random,silver lining,desert violin,0.909760355949402,0.5113489627838135,0.7248653769493103,The grant rejection had a desert violin for the startup.
+BERT-large-EN,idiomatic_nc,ivory tower,synonym,ivory tower,academic isolation,0.9698798656463624,0.7555060982704163,0.7035610675811768,The report criticized the academic isolation at the institute.
+BERT-large-EN,idiomatic_nc,ivory tower,component,ivory tower,tower,0.967960238456726,0.7826036810874939,0.8354645371437073,The report criticized the tower at the institute.
+BERT-large-EN,idiomatic_nc,ivory tower,word_by_word,ivory tower,pale structure,0.9674360752105712,0.7529053092002869,0.6438975930213928,The report criticized the pale structure at the institute.
+BERT-large-EN,idiomatic_nc,ivory tower,random,ivory tower,market umbrella,0.9668956995010376,0.7698685526847839,0.7677261829376221,The report criticized the market umbrella at the institute.
+BERT-large-EN,idiomatic_nc,glass ceiling,synonym,glass ceiling,invisible barrier,0.9548650979995728,0.7910478115081787,0.7586382627487183,The promotion exposed the invisible barrier in the company.
+BERT-large-EN,idiomatic_nc,glass ceiling,component,glass ceiling,ceiling,0.9762590527534484,0.8922256231307983,0.8010031580924988,The promotion exposed the ceiling in the company.
+BERT-large-EN,idiomatic_nc,glass ceiling,word_by_word,glass ceiling,transparent roof,0.9707076549530028,0.9217848777770996,0.8242682218551636,The promotion exposed the transparent roof in the company.
+BERT-large-EN,idiomatic_nc,glass ceiling,random,glass ceiling,forest melody,0.9332231879234314,0.7176271080970764,0.6864890456199646,The promotion exposed the forest melody in the company.
+BERT-large-EN,idiomatic_nc,cash cow,synonym,cash cow,moneymaker,0.9832147359848022,0.9028000831604004,0.6979562640190125,The old product became a moneymaker for the firm.
+BERT-large-EN,idiomatic_nc,cash cow,component,cash cow,cow,0.95393967628479,0.7180779576301575,0.5627411603927612,The old product became a cow for the firm.
+BERT-large-EN,idiomatic_nc,cash cow,word_by_word,cash cow,money animal,0.9854233264923096,0.917143702507019,0.8050302267074585,The old product became a money animal for the firm.
+BERT-large-EN,idiomatic_nc,cash cow,random,cash cow,airport blanket,0.9401680827140808,0.6483232975006104,0.6055694222450256,The old product became a airport blanket for the firm.
+BERT-large-EN,idiomatic_nc,loose cannon,synonym,loose cannon,unpredictable person,0.9662838578224182,0.8262540102005005,0.7147617936134338,The spokesman was a unpredictable person during the debate.
+BERT-large-EN,idiomatic_nc,loose cannon,component,loose cannon,cannon,0.9584108591079712,0.7642670273780823,0.7222194075584412,The spokesman was a cannon during the debate.
+BERT-large-EN,idiomatic_nc,loose cannon,word_by_word,loose cannon,unstable weapon,0.9569689035415648,0.8651536107063293,0.7374705672264099,The spokesman was a unstable weapon during the debate.
+BERT-large-EN,idiomatic_nc,loose cannon,random,loose cannon,velvet engine,0.93003910779953,0.6958050727844238,0.7413725256919861,The spokesman was a velvet engine during the debate.
+BERT-large-EN,idiomatic_nc,golden handshake,synonym,golden handshake,severance payment,0.9170485138893129,0.6926454901695251,0.6818305253982544,The manager received a severance payment after the merger.
+BERT-large-EN,idiomatic_nc,golden handshake,component,golden handshake,handshake,0.980421781539917,0.947110950946808,0.932315230369568,The manager received a handshake after the merger.
+BERT-large-EN,idiomatic_nc,golden handshake,word_by_word,golden handshake,valuable greeting,0.9454679489135742,0.8227546811103821,0.7214354276657104,The manager received a valuable greeting after the merger.
+BERT-large-EN,idiomatic_nc,golden handshake,random,golden handshake,mountain pillow,0.9250648021697998,0.729747474193573,0.6782271862030029,The manager received a mountain pillow after the merger.
+BERT-large-EN,idiomatic_nc,paper tiger,synonym,paper tiger,weak threat,0.9448901414871216,0.7074018716812134,0.564272940158844,The threat was a weak threat in the negotiations.
+BERT-large-EN,idiomatic_nc,paper tiger,component,paper tiger,tiger,0.969341516494751,0.8218750953674316,0.6752465963363647,The threat was a tiger in the negotiations.
+BERT-large-EN,idiomatic_nc,paper tiger,word_by_word,paper tiger,document animal,0.9498358964920044,0.8086920380592346,0.717266321182251,The threat was a document animal in the negotiations.
+BERT-large-EN,idiomatic_nc,paper tiger,random,paper tiger,river button,0.9723621010780334,0.8118017911911011,0.708915650844574,The threat was a river button in the negotiations.
+BERT-large-EN,idiomatic_nc,smoking gun,synonym,smoking gun,decisive evidence,0.9217901825904846,0.693135678768158,0.6476229429244995,The email became the decisive evidence in the investigation.
+BERT-large-EN,idiomatic_nc,smoking gun,component,smoking gun,gun,0.9744570851325988,0.8494541049003601,0.7078924179077148,The email became the gun in the investigation.
+BERT-large-EN,idiomatic_nc,smoking gun,word_by_word,smoking gun,burning weapon,0.985605001449585,0.902481734752655,0.8680703043937683,The email became the burning weapon in the investigation.
+BERT-large-EN,idiomatic_nc,smoking gun,random,smoking gun,kitchen horizon,0.9522387981414796,0.7500230669975281,0.688036322593689,The email became the kitchen horizon in the investigation.
+BERT-large-EN,compositional_nc,economic aid,synonym,economic aid,financial assistance,0.9928369522094728,0.9451380372047424,0.8549742698669434,The committee approved financial assistance for the region after the storm.
+BERT-large-EN,compositional_nc,economic aid,component,economic aid,aid,0.9879218935966492,0.8895115852355957,0.5634267330169678,The committee approved aid for the region after the storm.
+BERT-large-EN,compositional_nc,economic aid,word_by_word,economic aid,budgetary assistance,0.9883314967155457,0.8999400734901428,0.8420116305351257,The committee approved budgetary assistance for the region after the storm.
+BERT-large-EN,compositional_nc,economic aid,random,economic aid,kitchen table,0.9416424632072448,0.7362020611763,0.6416845917701721,The committee approved kitchen table for the region after the storm.
+BERT-large-EN,compositional_nc,research lab,synonym,research lab,research facility,0.9838115572929382,0.9378713369369508,0.93729966878891,The students joined a research facility during the summer program.
+BERT-large-EN,compositional_nc,research lab,component,research lab,lab,0.9852969646453856,0.9399954080581664,0.8495054244995117,The students joined a lab during the summer program.
+BERT-large-EN,compositional_nc,research lab,word_by_word,research lab,investigation workplace,0.950470805168152,0.7683920860290527,0.7446772456169128,The students joined a investigation workplace during the summer program.
+BERT-large-EN,compositional_nc,research lab,random,research lab,garden party,0.9371898770332336,0.7093195915222168,0.7270941734313965,The students joined a garden party during the summer program.
+BERT-large-EN,compositional_nc,climate policy,synonym,climate policy,environmental policy,0.9721248745918274,0.9237439036369324,0.9361259937286376,The council debated environmental policy during the evening session.
+BERT-large-EN,compositional_nc,climate policy,component,climate policy,policy,0.9511750340461732,0.7972026467323303,0.753643810749054,The council debated policy during the evening session.
+BERT-large-EN,compositional_nc,climate policy,word_by_word,climate policy,weather guideline,0.969309628009796,0.8403157591819763,0.7765565514564514,The council debated weather guideline during the evening session.
+BERT-large-EN,compositional_nc,climate policy,random,climate policy,garden spoon,0.949690043926239,0.7484310269355774,0.6879038214683533,The council debated garden spoon during the evening session.
+BERT-large-EN,compositional_nc,medical school,synonym,medical school,medical college,0.9738617539405824,0.950495183467865,0.8762705326080322,Her brother entered medical college after years of preparation.
+BERT-large-EN,compositional_nc,medical school,component,medical school,school,0.968826949596405,0.8144648671150208,0.7158600091934204,Her brother entered school after years of preparation.
+BERT-large-EN,compositional_nc,medical school,word_by_word,medical school,clinical academy,0.9737995862960817,0.9143332839012146,0.878349244594574,Her brother entered clinical academy after years of preparation.
+BERT-large-EN,compositional_nc,medical school,random,medical school,ocean mirror,0.9291990995407104,0.7140038013458252,0.7194468379020691,Her brother entered ocean mirror after years of preparation.
+BERT-large-EN,compositional_nc,mountain village,synonym,mountain village,alpine settlement,0.9832037091255188,0.9229024648666382,0.6914487481117249,The travelers reached a alpine settlement before sunset.
+BERT-large-EN,compositional_nc,mountain village,component,mountain village,village,0.9886313676834106,0.9048099517822266,0.720133364200592,The travelers reached a village before sunset.
+BERT-large-EN,compositional_nc,mountain village,word_by_word,mountain village,hill hamlet,0.9802258610725404,0.910860538482666,0.8397101759910583,The travelers reached a hill hamlet before sunset.
+BERT-large-EN,compositional_nc,mountain village,random,mountain village,plastic thunder,0.9357783794403076,0.7508534789085388,0.7675148248672485,The travelers reached a plastic thunder before sunset.
+BERT-large-EN,compositional_nc,solar panel,synonym,solar panel,photovoltaic module,0.9713236689567566,0.9256801009178162,0.8815726041793823,The engineer installed a photovoltaic module on the roof.
+BERT-large-EN,compositional_nc,solar panel,component,solar panel,panel,0.955661118030548,0.8315698504447937,0.6378877758979797,The engineer installed a panel on the roof.
+BERT-large-EN,compositional_nc,solar panel,word_by_word,solar panel,sun powered plate,0.9579067826271056,0.8507457375526428,0.8198544979095459,The engineer installed a sun powered plate on the roof.
+BERT-large-EN,compositional_nc,solar panel,random,solar panel,velvet sandwich,0.931080162525177,0.7321520447731018,0.6525856852531433,The engineer installed a velvet sandwich on the roof.
+BERT-large-EN,compositional_nc,election result,synonym,election result,vote outcome,0.9802070260047911,0.9348379969596864,0.8612160682678223,The newspaper published the vote outcome at midnight.
+BERT-large-EN,compositional_nc,election result,component,election result,result,0.978000283241272,0.8609611988067627,0.836690366268158,The newspaper published the result at midnight.
+BERT-large-EN,compositional_nc,election result,word_by_word,election result,ballot outcome,0.9784395098686218,0.928852081298828,0.8350711464881897,The newspaper published the ballot outcome at midnight.
+BERT-large-EN,compositional_nc,election result,random,election result,kitchen river,0.9116454720497132,0.6366003751754761,0.5709556937217712,The newspaper published the kitchen river at midnight.
+BERT-large-EN,compositional_nc,airport security,synonym,airport security,aviation security,0.9878328442573548,0.9631049633026124,0.8716761469841003,The staff improved aviation security before the summit.
+BERT-large-EN,compositional_nc,airport security,component,airport security,security,0.9817845225334167,0.8892011046409607,0.7423136830329895,The staff improved security before the summit.
+BERT-large-EN,compositional_nc,airport security,word_by_word,airport security,terminal safety,0.957720160484314,0.908756673336029,0.7728476524353027,The staff improved terminal safety before the summit.
+BERT-large-EN,compositional_nc,airport security,random,airport security,forest melody,0.9066547155380248,0.7166857719421387,0.5951104164123535,The staff improved forest melody before the summit.
+BERT-large-EN,compositional_nc,language teacher,synonym,language teacher,language instructor,0.995258331298828,0.9851489067077636,0.96200692653656,The language instructor corrected the essays carefully.
+BERT-large-EN,compositional_nc,language teacher,component,language teacher,teacher,0.9897844791412354,0.8895812630653381,0.8081229329109192,The teacher corrected the essays carefully.
+BERT-large-EN,compositional_nc,language teacher,word_by_word,language teacher,linguistic educator,0.9745370149612428,0.9114824533462524,0.8089393377304077,The linguistic educator corrected the essays carefully.
+BERT-large-EN,compositional_nc,language teacher,random,language teacher,silver engine,0.911102533340454,0.7116214036941528,0.6427534222602844,The silver engine corrected the essays carefully.
+BERT-large-EN,compositional_nc,water bottle,synonym,water bottle,drinking container,0.9761569499969482,0.8619300723075867,0.8315742611885071,She packed a drinking container for the hike.
+BERT-large-EN,compositional_nc,water bottle,component,water bottle,bottle,0.9792670607566832,0.8311549425125122,0.6631752252578735,She packed a bottle for the hike.
+BERT-large-EN,compositional_nc,water bottle,word_by_word,water bottle,liquid vessel,0.9539519548416138,0.7990583181381226,0.7807028293609619,She packed a liquid vessel for the hike.
+BERT-large-EN,compositional_nc,water bottle,random,water bottle,museum thunder,0.9321587085723876,0.6420778632164001,0.6973970532417297,She packed a museum thunder for the hike.
+BERT-large-EN,compositional_nc,history book,synonym,history book,historical volume,0.9752655625343324,0.9268917441368104,0.8576282858848572,The student borrowed a historical volume from the library.
+BERT-large-EN,compositional_nc,history book,component,history book,book,0.9795026779174804,0.8978012800216675,0.7691605687141418,The student borrowed a book from the library.
+BERT-large-EN,compositional_nc,history book,word_by_word,history book,past chronicle,0.972146213054657,0.8363684415817261,0.7622022032737732,The student borrowed a past chronicle from the library.
+BERT-large-EN,compositional_nc,history book,random,history book,desert umbrella,0.9594296813011168,0.7090240716934204,0.7188435792922974,The student borrowed a desert umbrella from the library.
+BERT-large-EN,compositional_nc,river bridge,synonym,river bridge,waterway crossing,0.9814532995224,0.9141780138015748,0.8886076807975769,The workers repaired the waterway crossing after the flood.
+BERT-large-EN,compositional_nc,river bridge,component,river bridge,bridge,0.9846781492233276,0.9278837442398072,0.7688764333724976,The workers repaired the bridge after the flood.
+BERT-large-EN,compositional_nc,river bridge,word_by_word,river bridge,stream viaduct,0.9811675548553468,0.9141504764556884,0.8913387060165405,The workers repaired the stream viaduct after the flood.
+BERT-large-EN,compositional_nc,river bridge,random,river bridge,lemon window,0.9571518898010254,0.776110827922821,0.7864992618560791,The workers repaired the lemon window after the flood.
+BERT-large-EN,compositional_nc,hospital room,synonym,hospital room,medical chamber,0.98516845703125,0.922471523284912,0.84553462266922,The nurse cleaned the medical chamber before noon.
+BERT-large-EN,compositional_nc,hospital room,component,hospital room,room,0.9880789518356324,0.928205668926239,0.6924117207527161,The nurse cleaned the room before noon.
+BERT-large-EN,compositional_nc,hospital room,word_by_word,hospital room,clinic space,0.9755927920341492,0.8473835587501526,0.8064668774604797,The nurse cleaned the clinic space before noon.
+BERT-large-EN,compositional_nc,hospital room,random,hospital room,cloud hammer,0.9600736498832704,0.6997436285018921,0.6816251873970032,The nurse cleaned the cloud hammer before noon.
+BERT-large-EN,compositional_nc,village market,synonym,village market,rural marketplace,0.9852214455604552,0.9417828917503356,0.8078879117965698,The farmer visited the rural marketplace every Friday.
+BERT-large-EN,compositional_nc,village market,component,village market,market,0.9897762537002563,0.9095871448516846,0.7466383576393127,The farmer visited the market every Friday.
+BERT-large-EN,compositional_nc,village market,word_by_word,village market,hamlet bazaar,0.9920416474342346,0.9452214241027832,0.7555484771728516,The farmer visited the hamlet bazaar every Friday.
+BERT-large-EN,compositional_nc,village market,random,village market,iron ocean,0.9518964886665344,0.7322340607643127,0.6414473056793213,The farmer visited the iron ocean every Friday.
+BERT-large-EN,compositional_nc,data center,synonym,data center,computing facility,0.9866355657577516,0.9111537933349608,0.8927742838859558,The company expanded the computing facility near the campus.
+BERT-large-EN,compositional_nc,data center,component,data center,center,0.9800193309783936,0.7959261536598206,0.777275562286377,The company expanded the center near the campus.
+BERT-large-EN,compositional_nc,data center,word_by_word,data center,information hub,0.9901373982429504,0.9150356650352478,0.887890100479126,The company expanded the information hub near the campus.
+BERT-large-EN,compositional_nc,data center,random,data center,velvet forest,0.9547815322875975,0.6953564882278442,0.7335956692695618,The company expanded the velvet forest near the campus.
+BERT-large-EN,compositional_nc,music festival,synonym,music festival,concert event,0.9865606427192688,0.9361931681632996,0.8471770882606506,The town hosted a concert event in July.
+BERT-large-EN,compositional_nc,music festival,component,music festival,festival,0.9851810336112976,0.9094502925872804,0.8820403814315796,The town hosted a festival in July.
+BERT-large-EN,compositional_nc,music festival,word_by_word,music festival,melody celebration,0.967133104801178,0.8767982721328735,0.8172731399536133,The town hosted a melody celebration in July.
+BERT-large-EN,compositional_nc,music festival,random,music festival,paper mountain,0.9382521510124208,0.7666844129562378,0.7171798944473267,The town hosted a paper mountain in July.
+BERT-large-EN,single_word_control,doctor,synonym,doctor,physician,0.9955236315727234,0.9563882350921632,0.8974977135658264,The physician opened the door quickly.
+BERT-large-EN,single_word_control,doctor,related,doctor,nurse,0.979131281375885,0.8646883368492126,0.8575405478477478,The nurse opened the door quickly.
+BERT-large-EN,single_word_control,doctor,random,doctor,carpet,0.95626962184906,0.6241328716278076,0.7371885776519775,The carpet opened the door quickly.
+BERT-large-EN,single_word_control,apple,synonym,apple,fruit,0.989111602306366,0.8865174651145935,0.7700281739234924,She bought a fresh fruit from the market.
+BERT-large-EN,single_word_control,apple,related,apple,pear,0.9928148984909058,0.8883654475212097,0.8185403943061829,She bought a fresh pear from the market.
+BERT-large-EN,single_word_control,apple,random,apple,engine,0.9469093084335328,0.6466279625892639,0.7675926089286804,She bought a fresh engine from the market.
+BERT-large-EN,single_word_control,teacher,synonym,teacher,instructor,0.9863616824150084,0.8923826813697815,0.8391311168670654,The instructor explained the problem clearly.
+BERT-large-EN,single_word_control,teacher,related,teacher,professor,0.9521640539169312,0.7567015290260315,0.7423110008239746,The professor explained the problem clearly.
+BERT-large-EN,single_word_control,teacher,random,teacher,mountain,0.9254504442214966,0.6110070943832397,0.6206879019737244,The mountain explained the problem clearly.
+BERT-large-EN,single_word_control,lawyer,synonym,lawyer,attorney,0.9981632828712464,0.9739303588867188,0.8804236650466919,The attorney reviewed the contract before lunch.
+BERT-large-EN,single_word_control,lawyer,related,lawyer,judge,0.984717607498169,0.8588944673538208,0.727037250995636,The judge reviewed the contract before lunch.
+BERT-large-EN,single_word_control,lawyer,random,lawyer,umbrella,0.9717943072319032,0.6131446361541748,0.6815586090087891,The umbrella reviewed the contract before lunch.
+BERT-large-EN,single_word_control,river,synonym,river,stream,0.9896150827407836,0.8449239730834961,0.839606523513794,The stream flooded the lower fields overnight.
+BERT-large-EN,single_word_control,river,related,river,canal,0.9843791723251344,0.7984069585800171,0.8731558918952942,The canal flooded the lower fields overnight.
+BERT-large-EN,single_word_control,river,random,river,microscope,0.9204761385917664,0.601699948310852,0.6388006210327148,The microscope flooded the lower fields overnight.
+BERT-large-EN,single_word_control,city,synonym,city,metropolis,0.9610812664031982,0.7508375644683838,0.7936182022094727,The metropolis approved the new housing plan.
+BERT-large-EN,single_word_control,city,related,city,town,0.9882428646087646,0.7421092987060547,0.8471338152885437,The town approved the new housing plan.
+BERT-large-EN,single_word_control,city,random,city,sandwich,0.978706419467926,0.6934777498245239,0.739243745803833,The sandwich approved the new housing plan.
+BERT-large-EN,single_word_control,storm,synonym,storm,tempest,0.9870667457580566,0.9219376444816588,0.8529075384140015,The tempest damaged several houses near the coast.
+BERT-large-EN,single_word_control,storm,related,storm,rainstorm,0.9813187122344972,0.8738889694213867,0.7243466377258301,The rainstorm damaged several houses near the coast.
+BERT-large-EN,single_word_control,storm,random,storm,violin,0.9505539536476136,0.5312157273292542,0.6853454113006592,The violin damaged several houses near the coast.
+BERT-large-EN,single_word_control,idea,synonym,idea,concept,0.9906467199325562,0.9456018805503844,0.9310318827629088,The concept changed the direction of the project.
+BERT-large-EN,single_word_control,idea,related,idea,thought,0.9858847856521606,0.893316388130188,0.8390235304832458,The thought changed the direction of the project.
+BERT-large-EN,single_word_control,idea,random,idea,hammer,0.9596189260482788,0.6844602227210999,0.7273122668266296,The hammer changed the direction of the project.
+BERT-large-EN,single_word_control,problem,synonym,problem,issue,0.9841039776802064,0.8852810859680176,0.7904719114303589,The issue delayed the final report.
+BERT-large-EN,single_word_control,problem,related,problem,question,0.9745239615440368,0.7887814044952393,0.8311623334884644,The question delayed the final report.
+BERT-large-EN,single_word_control,problem,random,problem,pillow,0.9616252779960632,0.7172983288764954,0.7817535400390625,The pillow delayed the final report.
+BERT-large-EN,single_word_control,music,synonym,music,melody,0.9859145879745485,0.8876553177833557,0.7918151021003723,The melody filled the old theater.
+BERT-large-EN,single_word_control,music,related,music,song,0.9859934449195862,0.8728044629096985,0.7460358142852783,The song filled the old theater.
+BERT-large-EN,single_word_control,music,random,music,staircase,0.9543542265892028,0.6688150763511658,0.6713306307792664,The staircase filled the old theater.
+BERT-large-EN,single_word_control,letter,synonym,letter,note,0.98704195022583,0.9039900898933412,0.7547897100448608,The note arrived before the meeting.
+BERT-large-EN,single_word_control,letter,related,letter,message,0.9897506833076476,0.8924106955528259,0.8065502643585205,The message arrived before the meeting.
+BERT-large-EN,single_word_control,letter,random,letter,volcano,0.9531552195549012,0.6285936832427979,0.7366477251052856,The volcano arrived before the meeting.
+BERT-large-EN,single_word_control,machine,synonym,machine,device,0.9789674282073976,0.8990662693977356,0.8398450613021851,The device stopped during the demonstration.
+BERT-large-EN,single_word_control,machine,related,machine,apparatus,0.9633697271347046,0.8106455206871033,0.7784640192985535,The apparatus stopped during the demonstration.
+BERT-large-EN,single_word_control,machine,random,machine,forest,0.952467441558838,0.6725801229476929,0.6911551356315613,The forest stopped during the demonstration.
+BERT-large-EN,single_word_control,road,synonym,road,street,0.980614960193634,0.8390604853630066,0.8370112776756287,The street crossed the valley below the town.
+BERT-large-EN,single_word_control,road,related,road,highway,0.9840713739395142,0.8808042407035828,0.8270267248153687,The highway crossed the valley below the town.
+BERT-large-EN,single_word_control,road,random,road,singer,0.9485194683074952,0.6319342851638794,0.664454996585846,The singer crossed the valley below the town.
+BERT-large-EN,single_word_control,flower,synonym,flower,blossom,0.9925432801246644,0.9050678014755248,0.8939307928085327,The blossom bloomed beside the window.
+BERT-large-EN,single_word_control,flower,related,flower,rose,0.9918404221534728,0.8926596641540527,0.9087067246437072,The rose bloomed beside the window.
+BERT-large-EN,single_word_control,flower,random,flower,engine,0.8926957845687866,0.6061386466026306,0.8173867464065552,The engine bloomed beside the window.
+BERT-large-EN,single_word_control,ocean,synonym,ocean,sea,0.9958698749542236,0.9633411169052124,0.8011791706085205,The sea reflected the morning light.
+BERT-large-EN,single_word_control,ocean,related,ocean,lake,0.9865620136260986,0.821823239326477,0.8208258152008057,The lake reflected the morning light.
+BERT-large-EN,single_word_control,ocean,random,ocean,notebook,0.9532891511917114,0.5764930248260498,0.7534525990486145,The notebook reflected the morning light.
+BERT-large-EN,single_word_control,child,synonym,child,youngster,0.9747251272201538,0.8529958724975586,0.7166314125061035,The youngster solved the puzzle quickly.
+BERT-large-EN,single_word_control,child,related,child,teenager,0.9830840826034546,0.8672845363616943,0.8595319390296936,The teenager solved the puzzle quickly.
+BERT-large-EN,single_word_control,child,random,child,candle,0.9608542919158936,0.6603880524635315,0.803194522857666,The candle solved the puzzle quickly.
+BERT-large-EN,ordinary_two_word_control,red car,synonym,red car,crimson vehicle,0.983476221561432,0.8857792019844055,0.7818030714988708,The crimson vehicle stopped near the school gate.
+BERT-large-EN,ordinary_two_word_control,red car,component,red car,car,0.9871706962585448,0.9025301337242126,0.7231742143630981,The car stopped near the school gate.
+BERT-large-EN,ordinary_two_word_control,red car,word_by_word,red car,scarlet automobile,0.9801401495933532,0.8700099587440491,0.7030644416809082,The scarlet automobile stopped near the school gate.
+BERT-large-EN,ordinary_two_word_control,red car,random,red car,coffee spoon,0.9556130766868592,0.6509921550750732,0.6714286208152771,The coffee spoon stopped near the school gate.
+BERT-large-EN,ordinary_two_word_control,coffee cup,synonym,coffee cup,mug,0.9868385791778564,0.8712736368179321,0.6254063844680786,She placed the mug on the wooden table.
+BERT-large-EN,ordinary_two_word_control,coffee cup,component,coffee cup,cup,0.982059895992279,0.881743311882019,0.6363994479179382,She placed the cup on the wooden table.
+BERT-large-EN,ordinary_two_word_control,coffee cup,word_by_word,coffee cup,java container,0.9792622923851012,0.8134071826934814,0.7241984009742737,She placed the java container on the wooden table.
+BERT-large-EN,ordinary_two_word_control,coffee cup,random,coffee cup,traffic signal,0.950814723968506,0.6015323996543884,0.7098783850669861,She placed the traffic signal on the wooden table.
+BERT-large-EN,ordinary_two_word_control,wooden chair,synonym,wooden chair,timber seat,0.9731358885765076,0.9205800890922546,0.8292964100837708,The timber seat stood beside the fireplace.
+BERT-large-EN,ordinary_two_word_control,wooden chair,component,wooden chair,chair,0.9905470013618468,0.921954333782196,0.7403839826583862,The chair stood beside the fireplace.
+BERT-large-EN,ordinary_two_word_control,wooden chair,word_by_word,wooden chair,wood seat,0.982886016368866,0.924034059047699,0.8899405002593994,The wood seat stood beside the fireplace.
+BERT-large-EN,ordinary_two_word_control,wooden chair,random,wooden chair,silver cloud,0.931357204914093,0.715857207775116,0.6984166502952576,The silver cloud stood beside the fireplace.
+BERT-large-EN,ordinary_two_word_control,summer rain,synonym,summer rain,seasonal rainfall,0.974892795085907,0.8520746827125549,0.7922326922416687,The seasonal rainfall cooled the dusty street.
+BERT-large-EN,ordinary_two_word_control,summer rain,component,summer rain,rain,0.989662230014801,0.9151225090026855,0.7685437202453613,The rain cooled the dusty street.
+BERT-large-EN,ordinary_two_word_control,summer rain,word_by_word,summer rain,warm shower,0.9678179025650024,0.7819820046424866,0.714929461479187,The warm shower cooled the dusty street.
+BERT-large-EN,ordinary_two_word_control,summer rain,random,summer rain,library key,0.947714388370514,0.6730114221572876,0.6986899375915527,The library key cooled the dusty street.
+BERT-large-EN,ordinary_two_word_control,city park,synonym,city park,urban garden,0.9827299118041992,0.8988738656044006,0.8726134896278381,The urban garden opened after the renovation.
+BERT-large-EN,ordinary_two_word_control,city park,component,city park,park,0.979618489742279,0.871633768081665,0.7936168909072876,The park opened after the renovation.
+BERT-large-EN,ordinary_two_word_control,city park,word_by_word,city park,municipal green,0.9869588017463684,0.9146578907966614,0.8409085869789124,The municipal green opened after the renovation.
+BERT-large-EN,ordinary_two_word_control,city park,random,city park,ocean pencil,0.9520475268363952,0.7848523259162903,0.6596320867538452,The ocean pencil opened after the renovation.
+BERT-large-EN,ordinary_two_word_control,glass bottle,synonym,glass bottle,transparent container,0.9656140804290771,0.8496695160865784,0.7643857598304749,The transparent container rolled under the bench.
+BERT-large-EN,ordinary_two_word_control,glass bottle,component,glass bottle,bottle,0.9873929619789124,0.9066218137741088,0.708176851272583,The bottle rolled under the bench.
+BERT-large-EN,ordinary_two_word_control,glass bottle,word_by_word,glass bottle,crystal vessel,0.9663606286048888,0.8293926119804382,0.8376457691192627,The crystal vessel rolled under the bench.
+BERT-large-EN,ordinary_two_word_control,glass bottle,random,glass bottle,mountain ticket,0.9574833512306212,0.7281322479248047,0.6577082872390747,The mountain ticket rolled under the bench.
+BERT-large-EN,ordinary_two_word_control,school bus,synonym,school bus,student transport,0.9780017137527466,0.8554761409759521,0.8129881024360657,The student transport waited outside the museum.
+BERT-large-EN,ordinary_two_word_control,school bus,component,school bus,bus,0.9840227365493774,0.8877828121185303,0.8068198561668396,The bus waited outside the museum.
+BERT-large-EN,ordinary_two_word_control,school bus,word_by_word,school bus,education coach,0.9797186255455016,0.87999027967453,0.8154267072677612,The education coach waited outside the museum.
+BERT-large-EN,ordinary_two_word_control,school bus,random,school bus,kitchen moon,0.946265697479248,0.7292343378067017,0.7608203887939453,The kitchen moon waited outside the museum.
+BERT-large-EN,ordinary_two_word_control,paper bag,synonym,paper bag,paper sack,0.99197256565094,0.9100041389465332,0.8560454845428467,The paper sack tore near the counter.
+BERT-large-EN,ordinary_two_word_control,paper bag,component,paper bag,bag,0.9909703731536864,0.8959705233573914,0.645205557346344,The bag tore near the counter.
+BERT-large-EN,ordinary_two_word_control,paper bag,word_by_word,paper bag,cellulose pouch,0.9169814586639404,0.72337806224823,0.7273096442222595,The cellulose pouch tore near the counter.
+BERT-large-EN,ordinary_two_word_control,paper bag,random,paper bag,thunder candle,0.9104739427566528,0.5454398393630981,0.6422703862190247,The thunder candle tore near the counter.
+BERT-large-EN,ordinary_two_word_control,kitchen knife,synonym,kitchen knife,cooking blade,0.9796688556671144,0.891322135925293,0.8133905529975891,The cooking blade rested beside the plate.
+BERT-large-EN,ordinary_two_word_control,kitchen knife,component,kitchen knife,knife,0.9739615321159364,0.8768350481987,0.5022180080413818,The knife rested beside the plate.
+BERT-large-EN,ordinary_two_word_control,kitchen knife,word_by_word,kitchen knife,culinary blade,0.9703823328018188,0.8637382388114929,0.7486869096755981,The culinary blade rested beside the plate.
+BERT-large-EN,ordinary_two_word_control,kitchen knife,random,kitchen knife,desert violin,0.9438544511795044,0.7141209244728088,0.758007824420929,The desert violin rested beside the plate.
+BERT-large-EN,ordinary_two_word_control,garden flower,synonym,garden flower,yard blossom,0.9725423455238342,0.8889968991279602,0.6990575790405273,The yard blossom attracted several bees.
+BERT-large-EN,ordinary_two_word_control,garden flower,component,garden flower,flower,0.9511625170707704,0.8797017335891724,0.6673080921173096,The flower attracted several bees.
+BERT-large-EN,ordinary_two_word_control,garden flower,word_by_word,garden flower,outdoor bloom,0.9543282985687256,0.8551765084266663,0.8591855764389038,The outdoor bloom attracted several bees.
+BERT-large-EN,ordinary_two_word_control,garden flower,random,garden flower,airport spoon,0.9060179591178894,0.6822507381439209,0.6356077790260315,The airport spoon attracted several bees.
+BERT-large-EN,ordinary_two_word_control,ocean wave,synonym,ocean wave,sea swell,0.989973247051239,0.9501936435699464,0.9189349412918092,The sea swell reached the empty pier.
+BERT-large-EN,ordinary_two_word_control,ocean wave,component,ocean wave,wave,0.985137701034546,0.9101008772850036,0.6041833758354187,The wave reached the empty pier.
+BERT-large-EN,ordinary_two_word_control,ocean wave,word_by_word,ocean wave,marine ripple,0.9743099808692932,0.8788689970970154,0.8579404354095459,The marine ripple reached the empty pier.
+BERT-large-EN,ordinary_two_word_control,ocean wave,random,ocean wave,factory pillow,0.9466384053230286,0.6887916922569275,0.6026344299316406,The factory pillow reached the empty pier.
+BERT-large-EN,ordinary_two_word_control,train station,synonym,train station,railway terminal,0.972212016582489,0.9164893627166748,0.857972264289856,The railway terminal closed after midnight.
+BERT-large-EN,ordinary_two_word_control,train station,component,train station,station,0.9380979537963868,0.8862523436546326,0.843870222568512,The station closed after midnight.
+BERT-large-EN,ordinary_two_word_control,train station,word_by_word,train station,rail depot,0.9688985347747804,0.8898442983627319,0.8668275475502014,The rail depot closed after midnight.
+BERT-large-EN,ordinary_two_word_control,train station,random,train station,lemon window,0.8562266826629639,0.6168935298919678,0.6305781006813049,The lemon window closed after midnight.
+BERT-large-EN,ordinary_two_word_control,computer screen,synonym,computer screen,monitor,0.9871528744697572,0.9046192169189452,0.7650651931762695,The monitor flickered during the call.
+BERT-large-EN,ordinary_two_word_control,computer screen,component,computer screen,screen,0.989106833934784,0.9389609098434448,0.7764504551887512,The screen flickered during the call.
+BERT-large-EN,ordinary_two_word_control,computer screen,word_by_word,computer screen,digital display,0.9861271381378174,0.9208441376686096,0.7886953353881836,The digital display flickered during the call.
+BERT-large-EN,ordinary_two_word_control,computer screen,random,computer screen,forest blanket,0.9251734018325806,0.715442419052124,0.7038244605064392,The forest blanket flickered during the call.
+BERT-large-EN,ordinary_two_word_control,stone bridge,synonym,stone bridge,masonry crossing,0.982638418674469,0.9256547689437866,0.833795964717865,The masonry crossing crossed the narrow river.
+BERT-large-EN,ordinary_two_word_control,stone bridge,component,stone bridge,bridge,0.9735311269760132,0.9068081974983216,0.7735244631767273,The bridge crossed the narrow river.
+BERT-large-EN,ordinary_two_word_control,stone bridge,word_by_word,stone bridge,rock viaduct,0.970559298992157,0.8972280621528625,0.8717042803764343,The rock viaduct crossed the narrow river.
+BERT-large-EN,ordinary_two_word_control,stone bridge,random,stone bridge,velvet engine,0.8946697115898132,0.721304178237915,0.6769256591796875,The velvet engine crossed the narrow river.
+BERT-large-EN,ordinary_two_word_control,plastic box,synonym,plastic box,synthetic container,0.978315770626068,0.8737905025482178,0.8271096348762512,The synthetic container held the spare cables.
+BERT-large-EN,ordinary_two_word_control,plastic box,component,plastic box,box,0.9869507551193236,0.9090061783790588,0.781038761138916,The box held the spare cables.
+BERT-large-EN,ordinary_two_word_control,plastic box,word_by_word,plastic box,polymer case,0.9868297576904296,0.9224918484687804,0.8572494983673096,The polymer case held the spare cables.
+BERT-large-EN,ordinary_two_word_control,plastic box,random,plastic box,museum thunder,0.9452247023582458,0.7184072732925415,0.7248023152351379,The museum thunder held the spare cables.
+BERT-large-EN,ordinary_two_word_control,winter coat,synonym,winter coat,cold weather jacket,0.9789057970046996,0.900231659412384,0.8801686763763428,The cold weather jacket hung behind the office door.
+BERT-large-EN,ordinary_two_word_control,winter coat,component,winter coat,coat,0.976520836353302,0.8678023815155029,0.714891254901886,The coat hung behind the office door.
+BERT-large-EN,ordinary_two_word_control,winter coat,word_by_word,winter coat,seasonal garment,0.9700624346733092,0.8311993479728699,0.8609516620635986,The seasonal garment hung behind the office door.
+BERT-large-EN,ordinary_two_word_control,winter coat,random,winter coat,river button,0.932872474193573,0.7134711146354675,0.6524345874786377,The river button hung behind the office door.
+mBERT,idiomatic_nc,grey matter,synonym,grey matter,brain,0.9778674840927124,0.7899659872055054,0.8514964580535889,These youngsters use their brain when the presentation is right.
+mBERT,idiomatic_nc,grey matter,component,grey matter,matter,0.9678497314453124,0.8544479608535767,0.9207090139389038,These youngsters use their matter when the presentation is right.
+mBERT,idiomatic_nc,grey matter,word_by_word,grey matter,silvery material,0.9862194657325744,0.8930928111076355,0.8977534174919128,These youngsters use their silvery material when the presentation is right.
+mBERT,idiomatic_nc,grey matter,random,grey matter,battlefront serviceman,0.9495513439178468,0.7838921546936035,0.8150076270103455,These youngsters use their battlefront serviceman when the presentation is right.
+mBERT,idiomatic_nc,eager beaver,synonym,eager beaver,hard worker,0.9626035690307616,0.793914258480072,0.8446952104568481,Eric stayed a real hard worker during the audit.
+mBERT,idiomatic_nc,eager beaver,component,eager beaver,beaver,0.9907523989677428,0.9406166076660156,0.929709017276764,Eric stayed a real beaver during the audit.
+mBERT,idiomatic_nc,eager beaver,word_by_word,eager beaver,restless rodent,0.9769002199172974,0.8631032109260559,0.8732114434242249,Eric stayed a real restless rodent during the audit.
+mBERT,idiomatic_nc,eager beaver,random,eager beaver,petrol station,0.9563219547271729,0.7650483846664429,0.8105238676071167,Eric stayed a real petrol station during the audit.
+mBERT,idiomatic_nc,couch potato,synonym,couch potato,lazy person,0.9481483697891236,0.783808708190918,0.8198250532150269,Nina became a lazy person after the exams.
+mBERT,idiomatic_nc,couch potato,component,couch potato,potato,0.9888477325439452,0.9330467581748962,0.9242300987243652,Nina became a potato after the exams.
+mBERT,idiomatic_nc,couch potato,word_by_word,couch potato,sofa tuber,0.9736580848693848,0.8646414279937744,0.8633520603179932,Nina became a sofa tuber after the exams.
+mBERT,idiomatic_nc,couch potato,random,couch potato,railway signal,0.9243276715278624,0.7321168184280396,0.8046064376831055,Nina became a railway signal after the exams.
+mBERT,idiomatic_nc,cold feet,synonym,cold feet,nervousness,0.9819543361663818,0.8135977983474731,0.8304911255836487,The sudden audit gave the manager nervousness before the launch.
+mBERT,idiomatic_nc,cold feet,component,cold feet,feet,0.9921985268592834,0.889467179775238,0.8689441680908203,The sudden audit gave the manager feet before the launch.
+mBERT,idiomatic_nc,cold feet,word_by_word,cold feet,chilly legs,0.9847617149353028,0.882400393486023,0.8999576568603516,The sudden audit gave the manager chilly legs before the launch.
+mBERT,idiomatic_nc,cold feet,random,cold feet,garden invoice,0.9710716009140016,0.7593415975570679,0.8109990954399109,The sudden audit gave the manager garden invoice before the launch.
+mBERT,idiomatic_nc,white elephant,synonym,white elephant,burden,0.9518945217132568,0.794258713722229,0.7861166596412659,The abandoned stadium became a burden for the city.
+mBERT,idiomatic_nc,white elephant,component,white elephant,elephant,0.99056214094162,0.9641717076301576,0.9357857704162598,The abandoned stadium became a elephant for the city.
+mBERT,idiomatic_nc,white elephant,word_by_word,white elephant,pale animal,0.978998363018036,0.8808448910713196,0.827975332736969,The abandoned stadium became a pale animal for the city.
+mBERT,idiomatic_nc,white elephant,random,white elephant,kitchen policy,0.9563865661621094,0.7816717624664307,0.7434769868850708,The abandoned stadium became a kitchen policy for the city.
+mBERT,idiomatic_nc,red tape,synonym,red tape,bureaucracy,0.9747266173362732,0.7891123294830322,0.8294883966445923,The permit was delayed by bureaucracy at the ministry.
+mBERT,idiomatic_nc,red tape,component,red tape,tape,0.9944254159927368,0.9208173155784608,0.9198967814445496,The permit was delayed by tape at the ministry.
+mBERT,idiomatic_nc,red tape,word_by_word,red tape,crimson ribbon,0.964136004447937,0.8290855288505554,0.809550404548645,The permit was delayed by crimson ribbon at the ministry.
+mBERT,idiomatic_nc,red tape,random,red tape,ocean doorway,0.9763219952583312,0.8580137491226196,0.8607374429702759,The permit was delayed by ocean doorway at the ministry.
+mBERT,idiomatic_nc,dark horse,synonym,dark horse,unexpected contender,0.9408496022224426,0.7827785015106201,0.8607040643692017,A unexpected contender won the final round of the tournament.
+mBERT,idiomatic_nc,dark horse,component,dark horse,horse,0.9736508131027222,0.9021260142326356,0.9136403799057008,A horse won the final round of the tournament.
+mBERT,idiomatic_nc,dark horse,word_by_word,dark horse,shadowy animal,0.9790470600128174,0.8936981558799744,0.9106515049934388,A shadowy animal won the final round of the tournament.
+mBERT,idiomatic_nc,dark horse,random,dark horse,library candle,0.9640831351280212,0.8395933508872986,0.8535763025283813,A library candle won the final round of the tournament.
+mBERT,idiomatic_nc,black sheep,synonym,black sheep,outcast,0.9776305556297302,0.8248900175094604,0.8392595648765564,After the scandal Omar was the outcast of the board.
+mBERT,idiomatic_nc,black sheep,component,black sheep,sheep,0.9963049292564392,0.9303608536720276,0.9292840361595154,After the scandal Omar was the sheep of the board.
+mBERT,idiomatic_nc,black sheep,word_by_word,black sheep,dark animal,0.982934296131134,0.8888778686523438,0.8628156781196594,After the scandal Omar was the dark animal of the board.
+mBERT,idiomatic_nc,black sheep,random,black sheep,museum ticket,0.9770219922065736,0.8448763489723206,0.8187137842178345,After the scandal Omar was the museum ticket of the board.
+mBERT,idiomatic_nc,silver lining,synonym,silver lining,hopeful aspect,0.955249845981598,0.7974887490272522,0.8087885975837708,The grant rejection had a hopeful aspect for the startup.
+mBERT,idiomatic_nc,silver lining,component,silver lining,lining,0.9791216254234314,0.908607006072998,0.9079383611679076,The grant rejection had a lining for the startup.
+mBERT,idiomatic_nc,silver lining,word_by_word,silver lining,metallic edge,0.9696210622787476,0.8518280386924744,0.8764535784721375,The grant rejection had a metallic edge for the startup.
+mBERT,idiomatic_nc,silver lining,random,silver lining,desert violin,0.976600706577301,0.8422098755836487,0.8056688904762268,The grant rejection had a desert violin for the startup.
+mBERT,idiomatic_nc,ivory tower,synonym,ivory tower,academic isolation,0.9594811797142028,0.8178125619888306,0.857003390789032,The report criticized the academic isolation at the institute.
+mBERT,idiomatic_nc,ivory tower,component,ivory tower,tower,0.980950117111206,0.8703567981719971,0.8623265027999878,The report criticized the tower at the institute.
+mBERT,idiomatic_nc,ivory tower,word_by_word,ivory tower,pale structure,0.9718527793884276,0.854473888874054,0.8749420046806335,The report criticized the pale structure at the institute.
+mBERT,idiomatic_nc,ivory tower,random,ivory tower,market umbrella,0.963795006275177,0.838532567024231,0.881801962852478,The report criticized the market umbrella at the institute.
+mBERT,idiomatic_nc,glass ceiling,synonym,glass ceiling,invisible barrier,0.9672265648841858,0.8494378328323364,0.8279392123222351,The promotion exposed the invisible barrier in the company.
+mBERT,idiomatic_nc,glass ceiling,component,glass ceiling,ceiling,0.988418459892273,0.9180323481559752,0.911899745464325,The promotion exposed the ceiling in the company.
+mBERT,idiomatic_nc,glass ceiling,word_by_word,glass ceiling,transparent roof,0.9836766719818116,0.9180872440338136,0.8933925032615662,The promotion exposed the transparent roof in the company.
+mBERT,idiomatic_nc,glass ceiling,random,glass ceiling,forest melody,0.9418521523475648,0.8115555644035339,0.762045681476593,The promotion exposed the forest melody in the company.
+mBERT,idiomatic_nc,cash cow,synonym,cash cow,moneymaker,0.9793827533721924,0.8590826988220215,0.8629511594772339,The old product became a moneymaker for the firm.
+mBERT,idiomatic_nc,cash cow,component,cash cow,cow,0.9907267689704896,0.9401909112930298,0.9456986784934998,The old product became a cow for the firm.
+mBERT,idiomatic_nc,cash cow,word_by_word,cash cow,money animal,0.9793314337730408,0.861505925655365,0.8669481873512268,The old product became a money animal for the firm.
+mBERT,idiomatic_nc,cash cow,random,cash cow,airport blanket,0.968582272529602,0.8431697487831116,0.8425301313400269,The old product became a airport blanket for the firm.
+mBERT,idiomatic_nc,loose cannon,synonym,loose cannon,unpredictable person,0.954939067363739,0.8013467788696289,0.8303686380386353,The spokesman was a unpredictable person during the debate.
+mBERT,idiomatic_nc,loose cannon,component,loose cannon,cannon,0.995534896850586,0.96905118227005,0.9346357583999634,The spokesman was a cannon during the debate.
+mBERT,idiomatic_nc,loose cannon,word_by_word,loose cannon,unstable weapon,0.9740971326828004,0.8678173422813416,0.8629962801933289,The spokesman was a unstable weapon during the debate.
+mBERT,idiomatic_nc,loose cannon,random,loose cannon,velvet engine,0.973961591720581,0.8744856715202332,0.8603807687759399,The spokesman was a velvet engine during the debate.
+mBERT,idiomatic_nc,golden handshake,synonym,golden handshake,severance payment,0.947264850139618,0.8190099596977234,0.8251810669898987,The manager received a severance payment after the merger.
+mBERT,idiomatic_nc,golden handshake,component,golden handshake,handshake,0.974218487739563,0.9329261183738708,0.9354596734046936,The manager received a handshake after the merger.
+mBERT,idiomatic_nc,golden handshake,word_by_word,golden handshake,valuable greeting,0.9617084860801696,0.8866109848022461,0.8381324410438538,The manager received a valuable greeting after the merger.
+mBERT,idiomatic_nc,golden handshake,random,golden handshake,mountain pillow,0.9563859701156616,0.8795976042747498,0.8825088143348694,The manager received a mountain pillow after the merger.
+mBERT,idiomatic_nc,paper tiger,synonym,paper tiger,weak threat,0.9590514302253724,0.8171480298042297,0.8464730978012085,The threat was a weak threat in the negotiations.
+mBERT,idiomatic_nc,paper tiger,component,paper tiger,tiger,0.9928342700004578,0.9542694687843324,0.940082550048828,The threat was a tiger in the negotiations.
+mBERT,idiomatic_nc,paper tiger,word_by_word,paper tiger,document animal,0.9736899137496948,0.8566080927848816,0.8428940176963806,The threat was a document animal in the negotiations.
+mBERT,idiomatic_nc,paper tiger,random,paper tiger,river button,0.9768911004066468,0.8761745095252991,0.9045264720916748,The threat was a river button in the negotiations.
+mBERT,idiomatic_nc,smoking gun,synonym,smoking gun,decisive evidence,0.9597399234771729,0.8202228546142578,0.8221522569656372,The email became the decisive evidence in the investigation.
+mBERT,idiomatic_nc,smoking gun,component,smoking gun,gun,0.9868201613426208,0.8752849102020264,0.8794683218002319,The email became the gun in the investigation.
+mBERT,idiomatic_nc,smoking gun,word_by_word,smoking gun,burning weapon,0.9845404028892516,0.8927937746047974,0.8744078874588013,The email became the burning weapon in the investigation.
+mBERT,idiomatic_nc,smoking gun,random,smoking gun,kitchen horizon,0.9609729051589966,0.8209110498428345,0.8591052889823914,The email became the kitchen horizon in the investigation.
+mBERT,compositional_nc,economic aid,synonym,economic aid,financial assistance,0.989635169506073,0.9466561079025269,0.922892689704895,The committee approved financial assistance for the region after the storm.
+mBERT,compositional_nc,economic aid,component,economic aid,aid,0.990271806716919,0.9311264157295228,0.8064062595367432,The committee approved aid for the region after the storm.
+mBERT,compositional_nc,economic aid,word_by_word,economic aid,budgetary assistance,0.9880810976028442,0.9344002604484558,0.8919020891189575,The committee approved budgetary assistance for the region after the storm.
+mBERT,compositional_nc,economic aid,random,economic aid,kitchen table,0.964264452457428,0.8087611198425293,0.7887452244758606,The committee approved kitchen table for the region after the storm.
+mBERT,compositional_nc,research lab,synonym,research lab,research facility,0.994041383266449,0.9683328866958618,0.955740749835968,The students joined a research facility during the summer program.
+mBERT,compositional_nc,research lab,component,research lab,lab,0.9937102198600768,0.9395816922187804,0.8436845541000366,The students joined a lab during the summer program.
+mBERT,compositional_nc,research lab,word_by_word,research lab,investigation workplace,0.977538526058197,0.8747795224189758,0.8480703234672546,The students joined a investigation workplace during the summer program.
+mBERT,compositional_nc,research lab,random,research lab,garden party,0.9715607762336732,0.8383743166923523,0.8256636261940002,The students joined a garden party during the summer program.
+mBERT,compositional_nc,climate policy,synonym,climate policy,environmental policy,0.9948460459709167,0.9575448632240297,0.9527558088302612,The council debated environmental policy during the evening session.
+mBERT,compositional_nc,climate policy,component,climate policy,policy,0.9899137020111084,0.8968188762664795,0.9349702596664428,The council debated policy during the evening session.
+mBERT,compositional_nc,climate policy,word_by_word,climate policy,weather guideline,0.9837136268615724,0.8969172239303589,0.8718085885047913,The council debated weather guideline during the evening session.
+mBERT,compositional_nc,climate policy,random,climate policy,garden spoon,0.9660528302192688,0.7907859683036804,0.8140798211097717,The council debated garden spoon during the evening session.
+mBERT,compositional_nc,medical school,synonym,medical school,medical college,0.9961525797843932,0.975868821144104,0.9434277415275574,Her brother entered medical college after years of preparation.
+mBERT,compositional_nc,medical school,component,medical school,school,0.9845678210258484,0.8889638781547546,0.8408715128898621,Her brother entered school after years of preparation.
+mBERT,compositional_nc,medical school,word_by_word,medical school,clinical academy,0.9811546802520752,0.8898193836212158,0.868075430393219,Her brother entered clinical academy after years of preparation.
+mBERT,compositional_nc,medical school,random,medical school,ocean mirror,0.9556919932365416,0.8014344573020935,0.7822873592376709,Her brother entered ocean mirror after years of preparation.
+mBERT,compositional_nc,mountain village,synonym,mountain village,alpine settlement,0.9837652444839478,0.9286943674087524,0.9175688028335572,The travelers reached a alpine settlement before sunset.
+mBERT,compositional_nc,mountain village,component,mountain village,village,0.9931226372718812,0.9318857789039612,0.7782326340675354,The travelers reached a village before sunset.
+mBERT,compositional_nc,mountain village,word_by_word,mountain village,hill hamlet,0.9897906184196472,0.9416936635971068,0.9157310724258424,The travelers reached a hill hamlet before sunset.
+mBERT,compositional_nc,mountain village,random,mountain village,plastic thunder,0.9662365317344666,0.836740255355835,0.8782132267951965,The travelers reached a plastic thunder before sunset.
+mBERT,compositional_nc,solar panel,synonym,solar panel,photovoltaic module,0.9851934313774108,0.9273660778999328,0.8889113068580627,The engineer installed a photovoltaic module on the roof.
+mBERT,compositional_nc,solar panel,component,solar panel,panel,0.9935385584831238,0.9358140230178832,0.9021100401878356,The engineer installed a panel on the roof.
+mBERT,compositional_nc,solar panel,word_by_word,solar panel,sun powered plate,0.9879955649375916,0.9140353202819824,0.9029424786567688,The engineer installed a sun powered plate on the roof.
+mBERT,compositional_nc,solar panel,random,solar panel,velvet sandwich,0.9746949672698976,0.8642580509185791,0.8386714458465576,The engineer installed a velvet sandwich on the roof.
+mBERT,compositional_nc,election result,synonym,election result,vote outcome,0.9674633145332336,0.8575055003166199,0.8447021245956421,The newspaper published the vote outcome at midnight.
+mBERT,compositional_nc,election result,component,election result,result,0.9536007642745972,0.8081710338592529,0.8379457592964172,The newspaper published the result at midnight.
+mBERT,compositional_nc,election result,word_by_word,election result,ballot outcome,0.9802784323692322,0.8823250532150269,0.8179275393486023,The newspaper published the ballot outcome at midnight.
+mBERT,compositional_nc,election result,random,election result,kitchen river,0.9023082852363586,0.6898264288902283,0.7019267678260803,The newspaper published the kitchen river at midnight.
+mBERT,compositional_nc,airport security,synonym,airport security,aviation security,0.9913652539253236,0.9539570212364196,0.9575285315513612,The staff improved aviation security before the summit.
+mBERT,compositional_nc,airport security,component,airport security,security,0.9895451068878174,0.9137487411499025,0.917468011379242,The staff improved security before the summit.
+mBERT,compositional_nc,airport security,word_by_word,airport security,terminal safety,0.9867520928382874,0.9417861104011536,0.9178991913795472,The staff improved terminal safety before the summit.
+mBERT,compositional_nc,airport security,random,airport security,forest melody,0.9468395113945008,0.8317679762840271,0.7904873490333557,The staff improved forest melody before the summit.
+mBERT,compositional_nc,language teacher,synonym,language teacher,language instructor,0.9954833984375,0.9716237783432008,0.9705899357795716,The language instructor corrected the essays carefully.
+mBERT,compositional_nc,language teacher,component,language teacher,teacher,0.986171007156372,0.912572979927063,0.9227969646453856,The teacher corrected the essays carefully.
+mBERT,compositional_nc,language teacher,word_by_word,language teacher,linguistic educator,0.9813706874847412,0.8936302661895752,0.9207126498222352,The linguistic educator corrected the essays carefully.
+mBERT,compositional_nc,language teacher,random,language teacher,silver engine,0.9584507942199708,0.7918164134025574,0.8640894293785095,The silver engine corrected the essays carefully.
+mBERT,compositional_nc,water bottle,synonym,water bottle,drinking container,0.9810448884963988,0.9052064418792723,0.8922134637832642,She packed a drinking container for the hike.
+mBERT,compositional_nc,water bottle,component,water bottle,bottle,0.9945146441459656,0.9605396389961244,0.9596825838088988,She packed a bottle for the hike.
+mBERT,compositional_nc,water bottle,word_by_word,water bottle,liquid vessel,0.9736999273300172,0.8827869296073914,0.8823713064193726,She packed a liquid vessel for the hike.
+mBERT,compositional_nc,water bottle,random,water bottle,museum thunder,0.967552363872528,0.8409765958786011,0.8632209897041321,She packed a museum thunder for the hike.
+mBERT,compositional_nc,history book,synonym,history book,historical volume,0.9868570566177368,0.923583686351776,0.9152930974960328,The student borrowed a historical volume from the library.
+mBERT,compositional_nc,history book,component,history book,book,0.9882382154464722,0.909343123435974,0.845815122127533,The student borrowed a book from the library.
+mBERT,compositional_nc,history book,word_by_word,history book,past chronicle,0.9770150780677797,0.9058711528778076,0.8888275027275085,The student borrowed a past chronicle from the library.
+mBERT,compositional_nc,history book,random,history book,desert umbrella,0.9597147107124328,0.8186017870903015,0.8228714466094971,The student borrowed a desert umbrella from the library.
+mBERT,compositional_nc,river bridge,synonym,river bridge,waterway crossing,0.9904003739356996,0.930442750453949,0.9256292581558228,The workers repaired the waterway crossing after the flood.
+mBERT,compositional_nc,river bridge,component,river bridge,bridge,0.9921474456787108,0.9318693280220032,0.9181638956069946,The workers repaired the bridge after the flood.
+mBERT,compositional_nc,river bridge,word_by_word,river bridge,stream viaduct,0.990260660648346,0.9229369759559632,0.8817092776298523,The workers repaired the stream viaduct after the flood.
+mBERT,compositional_nc,river bridge,random,river bridge,lemon window,0.9724223613739014,0.819754421710968,0.8574545383453369,The workers repaired the lemon window after the flood.
+mBERT,compositional_nc,hospital room,synonym,hospital room,medical chamber,0.9905720949172974,0.932547688484192,0.9098902344703674,The nurse cleaned the medical chamber before noon.
+mBERT,compositional_nc,hospital room,component,hospital room,room,0.9883186221122742,0.9178560376167296,0.8836415410041809,The nurse cleaned the room before noon.
+mBERT,compositional_nc,hospital room,word_by_word,hospital room,clinic space,0.9781474471092224,0.9075412154197692,0.8640518188476562,The nurse cleaned the clinic space before noon.
+mBERT,compositional_nc,hospital room,random,hospital room,cloud hammer,0.9575949311256408,0.7966265678405762,0.811892032623291,The nurse cleaned the cloud hammer before noon.
+mBERT,compositional_nc,village market,synonym,village market,rural marketplace,0.9788419604301452,0.922192633152008,0.8706275224685669,The farmer visited the rural marketplace every Friday.
+mBERT,compositional_nc,village market,component,village market,market,0.9878713488578796,0.9108890295028688,0.8681825399398804,The farmer visited the market every Friday.
+mBERT,compositional_nc,village market,word_by_word,village market,hamlet bazaar,0.97904372215271,0.8998699188232422,0.8645294904708862,The farmer visited the hamlet bazaar every Friday.
+mBERT,compositional_nc,village market,random,village market,iron ocean,0.959406852722168,0.7916817665100098,0.8101399540901184,The farmer visited the iron ocean every Friday.
+mBERT,compositional_nc,data center,synonym,data center,computing facility,0.9857550263404846,0.91526597738266,0.9093716144561768,The company expanded the computing facility near the campus.
+mBERT,compositional_nc,data center,component,data center,center,0.9844276905059814,0.9039487838745116,0.8921905755996704,The company expanded the center near the campus.
+mBERT,compositional_nc,data center,word_by_word,data center,information hub,0.9851350784301758,0.9232591986656188,0.8926753997802734,The company expanded the information hub near the campus.
+mBERT,compositional_nc,data center,random,data center,velvet forest,0.9646086096763612,0.8123779892921448,0.7909364104270935,The company expanded the velvet forest near the campus.
+mBERT,compositional_nc,music festival,synonym,music festival,concert event,0.9798625111579896,0.9378342032432556,0.909825563430786,The town hosted a concert event in July.
+mBERT,compositional_nc,music festival,component,music festival,festival,0.9904217720031738,0.945287585258484,0.9196000695228576,The town hosted a festival in July.
+mBERT,compositional_nc,music festival,word_by_word,music festival,melody celebration,0.975147306919098,0.8990192413330078,0.8316226005554199,The town hosted a melody celebration in July.
+mBERT,compositional_nc,music festival,random,music festival,paper mountain,0.9706344604492188,0.856701672077179,0.7991207838058472,The town hosted a paper mountain in July.
+mBERT,single_word_control,doctor,synonym,doctor,physician,0.9895511865615844,0.9324999451637268,0.9077977538108826,The physician opened the door quickly.
+mBERT,single_word_control,doctor,related,doctor,nurse,0.9884999990463256,0.925071120262146,0.8699479103088379,The nurse opened the door quickly.
+mBERT,single_word_control,doctor,random,doctor,carpet,0.9569016695022584,0.7696772813796997,0.7853082418441772,The carpet opened the door quickly.
+mBERT,single_word_control,apple,synonym,apple,fruit,0.9903151392936708,0.8996444344520569,0.8321112990379333,She bought a fresh fruit from the market.
+mBERT,single_word_control,apple,related,apple,pear,0.9880079627037048,0.8778331875801086,0.7904936671257019,She bought a fresh pear from the market.
+mBERT,single_word_control,apple,random,apple,engine,0.9732643961906432,0.8229618072509766,0.775364100933075,She bought a fresh engine from the market.
+mBERT,single_word_control,teacher,synonym,teacher,instructor,0.9923694133758544,0.9380587935447692,0.922167420387268,The instructor explained the problem clearly.
+mBERT,single_word_control,teacher,related,teacher,professor,0.9867628812789916,0.9067867398262024,0.902738392353058,The professor explained the problem clearly.
+mBERT,single_word_control,teacher,random,teacher,mountain,0.9596362709999084,0.7868804931640625,0.8471769094467163,The mountain explained the problem clearly.
+mBERT,single_word_control,lawyer,synonym,lawyer,attorney,0.9927235245704652,0.9530962705612184,0.8956948518753052,The attorney reviewed the contract before lunch.
+mBERT,single_word_control,lawyer,related,lawyer,judge,0.983025848865509,0.8958290219306946,0.8130102753639221,The judge reviewed the contract before lunch.
+mBERT,single_word_control,lawyer,random,lawyer,umbrella,0.96249920129776,0.709062933921814,0.7871270179748535,The umbrella reviewed the contract before lunch.
+mBERT,single_word_control,river,synonym,river,stream,0.9936732649803162,0.9246634244918824,0.9153013825416564,The stream flooded the lower fields overnight.
+mBERT,single_word_control,river,related,river,canal,0.9858633875846864,0.8576329350471497,0.8871637582778931,The canal flooded the lower fields overnight.
+mBERT,single_word_control,river,random,river,microscope,0.9716731905937196,0.7064540386199951,0.8122806549072266,The microscope flooded the lower fields overnight.
+mBERT,single_word_control,city,synonym,city,metropolis,0.9832732677459716,0.8688536286354065,0.8059439063072205,The metropolis approved the new housing plan.
+mBERT,single_word_control,city,related,city,town,0.9937984943389891,0.9393294453620912,0.9067546725273132,The town approved the new housing plan.
+mBERT,single_word_control,city,random,city,sandwich,0.9631616473197936,0.7495077848434448,0.6385887265205383,The sandwich approved the new housing plan.
+mBERT,single_word_control,storm,synonym,storm,tempest,0.9716995358467102,0.8287265300750732,0.8536338806152344,The tempest damaged several houses near the coast.
+mBERT,single_word_control,storm,related,storm,rainstorm,0.9706958532333374,0.8338093161582947,0.8667058348655701,The rainstorm damaged several houses near the coast.
+mBERT,single_word_control,storm,random,storm,violin,0.9610862135887146,0.7487117052078247,0.6616247296333313,The violin damaged several houses near the coast.
+mBERT,single_word_control,idea,synonym,idea,concept,0.9905765652656556,0.9360024333000184,0.9293935894966124,The concept changed the direction of the project.
+mBERT,single_word_control,idea,related,idea,thought,0.98294335603714,0.9030290246009828,0.9222975373268129,The thought changed the direction of the project.
+mBERT,single_word_control,idea,random,idea,hammer,0.9492294192314148,0.7066115140914917,0.8530462384223938,The hammer changed the direction of the project.
+mBERT,single_word_control,problem,synonym,problem,issue,0.9881900548934937,0.9107652306556702,0.7889036536216736,The issue delayed the final report.
+mBERT,single_word_control,problem,related,problem,question,0.984520673751831,0.8817910552024841,0.8818085193634033,The question delayed the final report.
+mBERT,single_word_control,problem,random,problem,pillow,0.9588674902915956,0.7542931437492371,0.7634918093681335,The pillow delayed the final report.
+mBERT,single_word_control,music,synonym,music,melody,0.9678751826286316,0.8470351696014404,0.8411445021629333,The melody filled the old theater.
+mBERT,single_word_control,music,related,music,song,0.9784726500511168,0.901032567024231,0.8461052179336548,The song filled the old theater.
+mBERT,single_word_control,music,random,music,staircase,0.94875967502594,0.745445966720581,0.7811431884765625,The staircase filled the old theater.
+mBERT,single_word_control,letter,synonym,letter,note,0.9844435453414916,0.906295657157898,0.7126209139823914,The note arrived before the meeting.
+mBERT,single_word_control,letter,related,letter,message,0.9881088137626648,0.9227339029312134,0.8398272395133972,The message arrived before the meeting.
+mBERT,single_word_control,letter,random,letter,volcano,0.9382815361022948,0.732138991355896,0.7813889384269714,The volcano arrived before the meeting.
+mBERT,single_word_control,machine,synonym,machine,device,0.9861546754837036,0.9031712412834167,0.9049816727638244,The device stopped during the demonstration.
+mBERT,single_word_control,machine,related,machine,apparatus,0.9778278470039368,0.8589849472045898,0.8465740084648132,The apparatus stopped during the demonstration.
+mBERT,single_word_control,machine,random,machine,forest,0.9464433193206788,0.7273052334785461,0.8671284317970276,The forest stopped during the demonstration.
+mBERT,single_word_control,road,synonym,road,street,0.9895913600921632,0.9217554926872252,0.8898513913154602,The street crossed the valley below the town.
+mBERT,single_word_control,road,related,road,highway,0.9931964874267578,0.947060525417328,0.923083484172821,The highway crossed the valley below the town.
+mBERT,single_word_control,road,random,road,singer,0.9527438282966614,0.781947672367096,0.735756516456604,The singer crossed the valley below the town.
+mBERT,single_word_control,flower,synonym,flower,blossom,0.969066321849823,0.8088774681091309,0.848860502243042,The blossom bloomed beside the window.
+mBERT,single_word_control,flower,related,flower,rose,0.9856224060058594,0.895784318447113,0.9088523983955384,The rose bloomed beside the window.
+mBERT,single_word_control,flower,random,flower,engine,0.953924596309662,0.7871765494346619,0.8297088742256165,The engine bloomed beside the window.
+mBERT,single_word_control,ocean,synonym,ocean,sea,0.9921973943710328,0.9339532256126404,0.8629258871078491,The sea reflected the morning light.
+mBERT,single_word_control,ocean,related,ocean,lake,0.969194233417511,0.855063796043396,0.8679355978965759,The lake reflected the morning light.
+mBERT,single_word_control,ocean,random,ocean,notebook,0.9458667039871216,0.7425838112831116,0.8234797716140747,The notebook reflected the morning light.
+mBERT,single_word_control,child,synonym,child,youngster,0.9787631630897522,0.8463531732559204,0.8532359004020691,The youngster solved the puzzle quickly.
+mBERT,single_word_control,child,related,child,teenager,0.9828063249588012,0.8632550835609436,0.8271213173866272,The teenager solved the puzzle quickly.
+mBERT,single_word_control,child,random,child,candle,0.969858169555664,0.8070738911628723,0.8450177907943726,The candle solved the puzzle quickly.
+mBERT,ordinary_two_word_control,red car,synonym,red car,crimson vehicle,0.9755128622055054,0.8649884462356567,0.8674625754356384,The crimson vehicle stopped near the school gate.
+mBERT,ordinary_two_word_control,red car,component,red car,car,0.989296853542328,0.910701334476471,0.916427731513977,The car stopped near the school gate.
+mBERT,ordinary_two_word_control,red car,word_by_word,red car,scarlet automobile,0.9753422141075134,0.8678238391876221,0.8495875000953674,The scarlet automobile stopped near the school gate.
+mBERT,ordinary_two_word_control,red car,random,red car,coffee spoon,0.9701908826828004,0.8062123656272888,0.8292404413223267,The coffee spoon stopped near the school gate.
+mBERT,ordinary_two_word_control,coffee cup,synonym,coffee cup,mug,0.9793898463249208,0.8363841772079468,0.7651576995849609,She placed the mug on the wooden table.
+mBERT,ordinary_two_word_control,coffee cup,component,coffee cup,cup,0.98573499917984,0.9257978796958924,0.7418761253356934,She placed the cup on the wooden table.
+mBERT,ordinary_two_word_control,coffee cup,word_by_word,coffee cup,java container,0.9680482149124146,0.8180151581764221,0.8238083124160767,She placed the java container on the wooden table.
+mBERT,ordinary_two_word_control,coffee cup,random,coffee cup,traffic signal,0.958699107170105,0.7359297871589661,0.769952118396759,She placed the traffic signal on the wooden table.
+mBERT,ordinary_two_word_control,wooden chair,synonym,wooden chair,timber seat,0.9671943187713624,0.8975870609283447,0.9087892174720764,The timber seat stood beside the fireplace.
+mBERT,ordinary_two_word_control,wooden chair,component,wooden chair,chair,0.992608904838562,0.9459624290466307,0.9029234647750854,The chair stood beside the fireplace.
+mBERT,ordinary_two_word_control,wooden chair,word_by_word,wooden chair,wood seat,0.9801581501960754,0.9023638367652892,0.9236168265342712,The wood seat stood beside the fireplace.
+mBERT,ordinary_two_word_control,wooden chair,random,wooden chair,silver cloud,0.9362374544143676,0.806633710861206,0.8305923938751221,The silver cloud stood beside the fireplace.
+mBERT,ordinary_two_word_control,summer rain,synonym,summer rain,seasonal rainfall,0.9821710586547852,0.9189424514770508,0.8794995546340942,The seasonal rainfall cooled the dusty street.
+mBERT,ordinary_two_word_control,summer rain,component,summer rain,rain,0.983769714832306,0.9317508339881896,0.8820903897285461,The rain cooled the dusty street.
+mBERT,ordinary_two_word_control,summer rain,word_by_word,summer rain,warm shower,0.9754377007484436,0.8942291140556335,0.8713982105255127,The warm shower cooled the dusty street.
+mBERT,ordinary_two_word_control,summer rain,random,summer rain,library key,0.9364044070243835,0.6786143183708191,0.7358694672584534,The library key cooled the dusty street.
+mBERT,ordinary_two_word_control,city park,synonym,city park,urban garden,0.9749546051025392,0.8969289660453796,0.8455817103385925,The urban garden opened after the renovation.
+mBERT,ordinary_two_word_control,city park,component,city park,park,0.9853990077972412,0.9235785007476808,0.8803635239601135,The park opened after the renovation.
+mBERT,ordinary_two_word_control,city park,word_by_word,city park,municipal green,0.9740321636199952,0.8838648200035095,0.8567897081375122,The municipal green opened after the renovation.
+mBERT,ordinary_two_word_control,city park,random,city park,ocean pencil,0.937277853488922,0.7827905416488647,0.7817977666854858,The ocean pencil opened after the renovation.
+mBERT,ordinary_two_word_control,glass bottle,synonym,glass bottle,transparent container,0.9697560667991638,0.8720974922180176,0.8928810954093933,The transparent container rolled under the bench.
+mBERT,ordinary_two_word_control,glass bottle,component,glass bottle,bottle,0.9911594986915588,0.954875111579895,0.9465122222900392,The bottle rolled under the bench.
+mBERT,ordinary_two_word_control,glass bottle,word_by_word,glass bottle,crystal vessel,0.9656693935394288,0.850628137588501,0.8923903107643127,The crystal vessel rolled under the bench.
+mBERT,ordinary_two_word_control,glass bottle,random,glass bottle,mountain ticket,0.959949553012848,0.8169844150543213,0.8584080338478088,The mountain ticket rolled under the bench.
+mBERT,ordinary_two_word_control,school bus,synonym,school bus,student transport,0.9763026237487792,0.8587712049484253,0.8697364926338196,The student transport waited outside the museum.
+mBERT,ordinary_two_word_control,school bus,component,school bus,bus,0.9867106080055236,0.8919275999069214,0.8624182343482971,The bus waited outside the museum.
+mBERT,ordinary_two_word_control,school bus,word_by_word,school bus,education coach,0.9757527709007264,0.8520762920379639,0.8594194650650024,The education coach waited outside the museum.
+mBERT,ordinary_two_word_control,school bus,random,school bus,kitchen moon,0.9349458813667296,0.7239249348640442,0.8193697333335876,The kitchen moon waited outside the museum.
+mBERT,ordinary_two_word_control,paper bag,synonym,paper bag,paper sack,0.9850324988365172,0.925838053226471,0.9204227924346924,The paper sack tore near the counter.
+mBERT,ordinary_two_word_control,paper bag,component,paper bag,bag,0.990546464920044,0.9307910799980164,0.8789150714874268,The bag tore near the counter.
+mBERT,ordinary_two_word_control,paper bag,word_by_word,paper bag,cellulose pouch,0.9623647332191468,0.8622795939445496,0.8233113288879395,The cellulose pouch tore near the counter.
+mBERT,ordinary_two_word_control,paper bag,random,paper bag,thunder candle,0.9530279636383056,0.8011022806167603,0.8133944869041443,The thunder candle tore near the counter.
+mBERT,ordinary_two_word_control,kitchen knife,synonym,kitchen knife,cooking blade,0.9566240310668944,0.8606000542640686,0.9017840623855592,The cooking blade rested beside the plate.
+mBERT,ordinary_two_word_control,kitchen knife,component,kitchen knife,knife,0.970192015171051,0.8972733616828918,0.9238252639770508,The knife rested beside the plate.
+mBERT,ordinary_two_word_control,kitchen knife,word_by_word,kitchen knife,culinary blade,0.9599847793579102,0.8376518487930298,0.8766197562217712,The culinary blade rested beside the plate.
+mBERT,ordinary_two_word_control,kitchen knife,random,kitchen knife,desert violin,0.9509795308113098,0.7725595831871033,0.8254488110542297,The desert violin rested beside the plate.
+mBERT,ordinary_two_word_control,garden flower,synonym,garden flower,yard blossom,0.9485406875610352,0.8268647789955139,0.8396912217140198,The yard blossom attracted several bees.
+mBERT,ordinary_two_word_control,garden flower,component,garden flower,flower,0.9637137055397034,0.8955407738685608,0.9172537326812744,The flower attracted several bees.
+mBERT,ordinary_two_word_control,garden flower,word_by_word,garden flower,outdoor bloom,0.9636680483818054,0.8711980581283569,0.8674864768981934,The outdoor bloom attracted several bees.
+mBERT,ordinary_two_word_control,garden flower,random,garden flower,airport spoon,0.9461082816123962,0.8180355429649353,0.8471278548240662,The airport spoon attracted several bees.
+mBERT,ordinary_two_word_control,ocean wave,synonym,ocean wave,sea swell,0.9746143817901612,0.8857110142707825,0.882235050201416,The sea swell reached the empty pier.
+mBERT,ordinary_two_word_control,ocean wave,component,ocean wave,wave,0.983852207660675,0.9158509969711304,0.9350090026855468,The wave reached the empty pier.
+mBERT,ordinary_two_word_control,ocean wave,word_by_word,ocean wave,marine ripple,0.9609296917915344,0.8516773581504822,0.8323385715484619,The marine ripple reached the empty pier.
+mBERT,ordinary_two_word_control,ocean wave,random,ocean wave,factory pillow,0.9434176683425904,0.7849749326705933,0.8296906352043152,The factory pillow reached the empty pier.
+mBERT,ordinary_two_word_control,train station,synonym,train station,railway terminal,0.9728509783744812,0.8962705135345459,0.8949735760688782,The railway terminal closed after midnight.
+mBERT,ordinary_two_word_control,train station,component,train station,station,0.9802946448326112,0.9105656147003174,0.9311920404434204,The station closed after midnight.
+mBERT,ordinary_two_word_control,train station,word_by_word,train station,rail depot,0.979886531829834,0.909999430179596,0.9104135632514954,The rail depot closed after midnight.
+mBERT,ordinary_two_word_control,train station,random,train station,lemon window,0.896091639995575,0.7058865427970886,0.7909495830535889,The lemon window closed after midnight.
+mBERT,ordinary_two_word_control,computer screen,synonym,computer screen,monitor,0.9841452240943908,0.8992317914962769,0.9098190665245056,The monitor flickered during the call.
+mBERT,ordinary_two_word_control,computer screen,component,computer screen,screen,0.9877310991287231,0.9164000749588012,0.8895741701126099,The screen flickered during the call.
+mBERT,ordinary_two_word_control,computer screen,word_by_word,computer screen,digital display,0.9811601638793944,0.9096605181694032,0.9199947118759156,The digital display flickered during the call.
+mBERT,ordinary_two_word_control,computer screen,random,computer screen,forest blanket,0.9210920929908752,0.7952810525894165,0.8233621716499329,The forest blanket flickered during the call.
+mBERT,ordinary_two_word_control,stone bridge,synonym,stone bridge,masonry crossing,0.966091513633728,0.854193925857544,0.8790040612220764,The masonry crossing crossed the narrow river.
+mBERT,ordinary_two_word_control,stone bridge,component,stone bridge,bridge,0.9853379130363464,0.9312201738357544,0.9090172648429872,The bridge crossed the narrow river.
+mBERT,ordinary_two_word_control,stone bridge,word_by_word,stone bridge,rock viaduct,0.9753473997116088,0.8981274366378784,0.8603012561798096,The rock viaduct crossed the narrow river.
+mBERT,ordinary_two_word_control,stone bridge,random,stone bridge,velvet engine,0.9372999668121338,0.8097434639930725,0.8360137343406677,The velvet engine crossed the narrow river.
+mBERT,ordinary_two_word_control,plastic box,synonym,plastic box,synthetic container,0.9767379760742188,0.8971964120864868,0.9158525466918944,The synthetic container held the spare cables.
+mBERT,ordinary_two_word_control,plastic box,component,plastic box,box,0.9866144061088562,0.9221429228782654,0.9109642505645752,The box held the spare cables.
+mBERT,ordinary_two_word_control,plastic box,word_by_word,plastic box,polymer case,0.9776418209075928,0.8983095288276672,0.8776166439056396,The polymer case held the spare cables.
+mBERT,ordinary_two_word_control,plastic box,random,plastic box,museum thunder,0.9428128600120544,0.7517455220222473,0.8227647542953491,The museum thunder held the spare cables.
+mBERT,ordinary_two_word_control,winter coat,synonym,winter coat,cold weather jacket,0.968189775943756,0.8885264992713928,0.908236026763916,The cold weather jacket hung behind the office door.
+mBERT,ordinary_two_word_control,winter coat,component,winter coat,coat,0.9896758198738098,0.9298970103263856,0.9170179963111876,The coat hung behind the office door.
+mBERT,ordinary_two_word_control,winter coat,word_by_word,winter coat,seasonal garment,0.972395122051239,0.869246780872345,0.8759443759918213,The seasonal garment hung behind the office door.
+mBERT,ordinary_two_word_control,winter coat,random,winter coat,river button,0.9601790308952332,0.8022218346595764,0.8918244242668152,The river button hung behind the office door.
+DistilBERT-ML,idiomatic_nc,grey matter,synonym,grey matter,brain,0.9785292148590088,0.6920003890991211,0.7252885699272156,These youngsters use their brain when the presentation is right.
+DistilBERT-ML,idiomatic_nc,grey matter,component,grey matter,matter,0.9867463707923888,0.8810410499572754,0.8451299667358398,These youngsters use their matter when the presentation is right.
+DistilBERT-ML,idiomatic_nc,grey matter,word_by_word,grey matter,silvery material,0.9834778904914856,0.8188745379447937,0.8093464970588684,These youngsters use their silvery material when the presentation is right.
+DistilBERT-ML,idiomatic_nc,grey matter,random,grey matter,battlefront serviceman,0.9585237503051758,0.7057245373725891,0.7079095840454102,These youngsters use their battlefront serviceman when the presentation is right.
+DistilBERT-ML,idiomatic_nc,eager beaver,synonym,eager beaver,hard worker,0.9672285914421082,0.7425409555435181,0.7354769706726074,Eric stayed a real hard worker during the audit.
+DistilBERT-ML,idiomatic_nc,eager beaver,component,eager beaver,beaver,0.989863932132721,0.911909520626068,0.906217396259308,Eric stayed a real beaver during the audit.
+DistilBERT-ML,idiomatic_nc,eager beaver,word_by_word,eager beaver,restless rodent,0.967380940914154,0.778846800327301,0.7820274829864502,Eric stayed a real restless rodent during the audit.
+DistilBERT-ML,idiomatic_nc,eager beaver,random,eager beaver,petrol station,0.966832399368286,0.7676256895065308,0.7145504355430603,Eric stayed a real petrol station during the audit.
+DistilBERT-ML,idiomatic_nc,couch potato,synonym,couch potato,lazy person,0.9540675282478333,0.7399852871894836,0.7368877530097961,Nina became a lazy person after the exams.
+DistilBERT-ML,idiomatic_nc,couch potato,component,couch potato,potato,0.9898363947868348,0.9295819997787476,0.9169886112213136,Nina became a potato after the exams.
+DistilBERT-ML,idiomatic_nc,couch potato,word_by_word,couch potato,sofa tuber,0.9616120457649232,0.796662449836731,0.762185275554657,Nina became a sofa tuber after the exams.
+DistilBERT-ML,idiomatic_nc,couch potato,random,couch potato,railway signal,0.9461855292320251,0.7037860155105591,0.6665675044059753,Nina became a railway signal after the exams.
+DistilBERT-ML,idiomatic_nc,cold feet,synonym,cold feet,nervousness,0.97963285446167,0.7108139991760254,0.7298601865768433,The sudden audit gave the manager nervousness before the launch.
+DistilBERT-ML,idiomatic_nc,cold feet,component,cold feet,feet,0.994446337223053,0.8802850842475891,0.8462905287742615,The sudden audit gave the manager feet before the launch.
+DistilBERT-ML,idiomatic_nc,cold feet,word_by_word,cold feet,chilly legs,0.9870373010635376,0.816918134689331,0.8119807839393616,The sudden audit gave the manager chilly legs before the launch.
+DistilBERT-ML,idiomatic_nc,cold feet,random,cold feet,garden invoice,0.9778568744659424,0.7411612868309021,0.7405033707618713,The sudden audit gave the manager garden invoice before the launch.
+DistilBERT-ML,idiomatic_nc,white elephant,synonym,white elephant,burden,0.9733364582061768,0.7728411555290222,0.7136191129684448,The abandoned stadium became a burden for the city.
+DistilBERT-ML,idiomatic_nc,white elephant,component,white elephant,elephant,0.9939045906066896,0.9643643498420716,0.9352725148200988,The abandoned stadium became a elephant for the city.
+DistilBERT-ML,idiomatic_nc,white elephant,word_by_word,white elephant,pale animal,0.9795671701431274,0.8289335370063782,0.7836354374885559,The abandoned stadium became a pale animal for the city.
+DistilBERT-ML,idiomatic_nc,white elephant,random,white elephant,kitchen policy,0.9693291187286376,0.7643604278564453,0.70065838098526,The abandoned stadium became a kitchen policy for the city.
+DistilBERT-ML,idiomatic_nc,red tape,synonym,red tape,bureaucracy,0.9667893648147584,0.6534559726715088,0.6615082025527954,The permit was delayed by bureaucracy at the ministry.
+DistilBERT-ML,idiomatic_nc,red tape,component,red tape,tape,0.9929799437522888,0.8768565058708191,0.8466137051582336,The permit was delayed by tape at the ministry.
+DistilBERT-ML,idiomatic_nc,red tape,word_by_word,red tape,crimson ribbon,0.9601868987083436,0.745599627494812,0.7113463878631592,The permit was delayed by crimson ribbon at the ministry.
+DistilBERT-ML,idiomatic_nc,red tape,random,red tape,ocean doorway,0.9741504788398744,0.7481693029403687,0.7623808979988098,The permit was delayed by ocean doorway at the ministry.
+DistilBERT-ML,idiomatic_nc,dark horse,synonym,dark horse,unexpected contender,0.9753502011299132,0.7924712300300598,0.810763955116272,A unexpected contender won the final round of the tournament.
+DistilBERT-ML,idiomatic_nc,dark horse,component,dark horse,horse,0.9933626055717468,0.893187940120697,0.8433190584182739,A horse won the final round of the tournament.
+DistilBERT-ML,idiomatic_nc,dark horse,word_by_word,dark horse,shadowy animal,0.9772607088088988,0.8230863809585571,0.8452499508857727,A shadowy animal won the final round of the tournament.
+DistilBERT-ML,idiomatic_nc,dark horse,random,dark horse,library candle,0.9733541011810304,0.7827460169792175,0.7773929238319397,A library candle won the final round of the tournament.
+DistilBERT-ML,idiomatic_nc,black sheep,synonym,black sheep,outcast,0.9793478846549988,0.7563625574111938,0.7327612638473511,After the scandal Omar was the outcast of the board.
+DistilBERT-ML,idiomatic_nc,black sheep,component,black sheep,sheep,0.9917322397232056,0.8448915481567383,0.842420756816864,After the scandal Omar was the sheep of the board.
+DistilBERT-ML,idiomatic_nc,black sheep,word_by_word,black sheep,dark animal,0.9851333498954772,0.851962685585022,0.855818510055542,After the scandal Omar was the dark animal of the board.
+DistilBERT-ML,idiomatic_nc,black sheep,random,black sheep,museum ticket,0.9791978597640992,0.7860323190689087,0.754858136177063,After the scandal Omar was the museum ticket of the board.
+DistilBERT-ML,idiomatic_nc,silver lining,synonym,silver lining,hopeful aspect,0.9617456197738647,0.7420552968978882,0.7170743346214294,The grant rejection had a hopeful aspect for the startup.
+DistilBERT-ML,idiomatic_nc,silver lining,component,silver lining,lining,0.988477885723114,0.9270886182785034,0.9261071681976318,The grant rejection had a lining for the startup.
+DistilBERT-ML,idiomatic_nc,silver lining,word_by_word,silver lining,metallic edge,0.9718613624572754,0.7884604930877686,0.7768151164054871,The grant rejection had a metallic edge for the startup.
+DistilBERT-ML,idiomatic_nc,silver lining,random,silver lining,desert violin,0.9729591012001038,0.7489182949066162,0.738153874874115,The grant rejection had a desert violin for the startup.
+DistilBERT-ML,idiomatic_nc,ivory tower,synonym,ivory tower,academic isolation,0.965045928955078,0.7736589312553406,0.7729328274726868,The report criticized the academic isolation at the institute.
+DistilBERT-ML,idiomatic_nc,ivory tower,component,ivory tower,tower,0.9831342697143556,0.8199564814567566,0.8131008148193359,The report criticized the tower at the institute.
+DistilBERT-ML,idiomatic_nc,ivory tower,word_by_word,ivory tower,pale structure,0.9738621115684508,0.7935298085212708,0.7905730605125427,The report criticized the pale structure at the institute.
+DistilBERT-ML,idiomatic_nc,ivory tower,random,ivory tower,market umbrella,0.9641388654708862,0.7730199694633484,0.822348415851593,The report criticized the market umbrella at the institute.
+DistilBERT-ML,idiomatic_nc,glass ceiling,synonym,glass ceiling,invisible barrier,0.9798014760017396,0.8598862886428833,0.8321264386177063,The promotion exposed the invisible barrier in the company.
+DistilBERT-ML,idiomatic_nc,glass ceiling,component,glass ceiling,ceiling,0.9902901649475098,0.8843662738800049,0.8820394277572632,The promotion exposed the ceiling in the company.
+DistilBERT-ML,idiomatic_nc,glass ceiling,word_by_word,glass ceiling,transparent roof,0.9885953664779664,0.8894200325012207,0.9011378884315492,The promotion exposed the transparent roof in the company.
+DistilBERT-ML,idiomatic_nc,glass ceiling,random,glass ceiling,forest melody,0.956012725830078,0.7545744180679321,0.7163443565368652,The promotion exposed the forest melody in the company.
+DistilBERT-ML,idiomatic_nc,cash cow,synonym,cash cow,moneymaker,0.9831294417381288,0.8168292045593262,0.7642941474914551,The old product became a moneymaker for the firm.
+DistilBERT-ML,idiomatic_nc,cash cow,component,cash cow,cow,0.9936456680297852,0.9449416995048524,0.9021642208099364,The old product became a cow for the firm.
+DistilBERT-ML,idiomatic_nc,cash cow,word_by_word,cash cow,money animal,0.9816582202911376,0.79891437292099,0.7667936086654663,The old product became a money animal for the firm.
+DistilBERT-ML,idiomatic_nc,cash cow,random,cash cow,airport blanket,0.9637539386749268,0.7605594396591187,0.7116806507110596,The old product became a airport blanket for the firm.
+DistilBERT-ML,idiomatic_nc,loose cannon,synonym,loose cannon,unpredictable person,0.9554137587547302,0.7127983570098877,0.7279179692268372,The spokesman was a unpredictable person during the debate.
+DistilBERT-ML,idiomatic_nc,loose cannon,component,loose cannon,cannon,0.996142327785492,0.9607895016670228,0.9461870789527892,The spokesman was a cannon during the debate.
+DistilBERT-ML,idiomatic_nc,loose cannon,word_by_word,loose cannon,unstable weapon,0.9724820256233216,0.7668852806091309,0.7762588858604431,The spokesman was a unstable weapon during the debate.
+DistilBERT-ML,idiomatic_nc,loose cannon,random,loose cannon,velvet engine,0.9690725803375244,0.790913999080658,0.7795875072479248,The spokesman was a velvet engine during the debate.
+DistilBERT-ML,idiomatic_nc,golden handshake,synonym,golden handshake,severance payment,0.951272189617157,0.7384015917778015,0.717953622341156,The manager received a severance payment after the merger.
+DistilBERT-ML,idiomatic_nc,golden handshake,component,golden handshake,handshake,0.9873656630516052,0.952420711517334,0.919996738433838,The manager received a handshake after the merger.
+DistilBERT-ML,idiomatic_nc,golden handshake,word_by_word,golden handshake,valuable greeting,0.966610848903656,0.839733362197876,0.8134915828704834,The manager received a valuable greeting after the merger.
+DistilBERT-ML,idiomatic_nc,golden handshake,random,golden handshake,mountain pillow,0.9638872146606444,0.8205595016479492,0.7972378730773926,The manager received a mountain pillow after the merger.
+DistilBERT-ML,idiomatic_nc,paper tiger,synonym,paper tiger,weak threat,0.9675432443618774,0.7565228939056396,0.7538947463035583,The threat was a weak threat in the negotiations.
+DistilBERT-ML,idiomatic_nc,paper tiger,component,paper tiger,tiger,0.9917615652084352,0.9333979487419128,0.9414473176002502,The threat was a tiger in the negotiations.
+DistilBERT-ML,idiomatic_nc,paper tiger,word_by_word,paper tiger,document animal,0.977404534816742,0.8137431740760803,0.7886142730712891,The threat was a document animal in the negotiations.
+DistilBERT-ML,idiomatic_nc,paper tiger,random,paper tiger,river button,0.9725908041000366,0.8099213242530823,0.8106229305267334,The threat was a river button in the negotiations.
+DistilBERT-ML,idiomatic_nc,smoking gun,synonym,smoking gun,decisive evidence,0.9657435417175292,0.7696054577827454,0.7886298298835754,The email became the decisive evidence in the investigation.
+DistilBERT-ML,idiomatic_nc,smoking gun,component,smoking gun,gun,0.986191749572754,0.8331372737884521,0.8210177421569824,The email became the gun in the investigation.
+DistilBERT-ML,idiomatic_nc,smoking gun,word_by_word,smoking gun,burning weapon,0.981130838394165,0.8318496942520142,0.8604604601860046,The email became the burning weapon in the investigation.
+DistilBERT-ML,idiomatic_nc,smoking gun,random,smoking gun,kitchen horizon,0.9618316888809204,0.7423793077468872,0.7504509687423706,The email became the kitchen horizon in the investigation.
+DistilBERT-ML,compositional_nc,economic aid,synonym,economic aid,financial assistance,0.9934769868850708,0.9273269772529602,0.9201666712760924,The committee approved financial assistance for the region after the storm.
+DistilBERT-ML,compositional_nc,economic aid,component,economic aid,aid,0.9941139817237854,0.906032919883728,0.8166354894638062,The committee approved aid for the region after the storm.
+DistilBERT-ML,compositional_nc,economic aid,word_by_word,economic aid,budgetary assistance,0.9903680086135864,0.8983819484710693,0.8897252082824707,The committee approved budgetary assistance for the region after the storm.
+DistilBERT-ML,compositional_nc,economic aid,random,economic aid,kitchen table,0.977161169052124,0.7399698495864868,0.7583128809928894,The committee approved kitchen table for the region after the storm.
+DistilBERT-ML,compositional_nc,research lab,synonym,research lab,research facility,0.9943283200263976,0.942419409751892,0.940329134464264,The students joined a research facility during the summer program.
+DistilBERT-ML,compositional_nc,research lab,component,research lab,lab,0.9890447854995728,0.8734495043754578,0.8275308012962341,The students joined a lab during the summer program.
+DistilBERT-ML,compositional_nc,research lab,word_by_word,research lab,investigation workplace,0.9816929697990416,0.8598994016647339,0.8446735739707947,The students joined a investigation workplace during the summer program.
+DistilBERT-ML,compositional_nc,research lab,random,research lab,garden party,0.9707422256469728,0.7811375856399536,0.7872902750968933,The students joined a garden party during the summer program.
+DistilBERT-ML,compositional_nc,climate policy,synonym,climate policy,environmental policy,0.9932741522789,0.9246262907981871,0.9374366998672484,The council debated environmental policy during the evening session.
+DistilBERT-ML,compositional_nc,climate policy,component,climate policy,policy,0.9922099113464355,0.8924813270568848,0.8601824045181274,The council debated policy during the evening session.
+DistilBERT-ML,compositional_nc,climate policy,word_by_word,climate policy,weather guideline,0.9838154315948486,0.8512330055236816,0.8342922925949097,The council debated weather guideline during the evening session.
+DistilBERT-ML,compositional_nc,climate policy,random,climate policy,garden spoon,0.9669645428657532,0.7389408349990845,0.725182294845581,The council debated garden spoon during the evening session.
+DistilBERT-ML,compositional_nc,medical school,synonym,medical school,medical college,0.9959623217582704,0.9608376026153564,0.9528802633285522,Her brother entered medical college after years of preparation.
+DistilBERT-ML,compositional_nc,medical school,component,medical school,school,0.9889940619468688,0.8680577278137207,0.8378212451934814,Her brother entered school after years of preparation.
+DistilBERT-ML,compositional_nc,medical school,word_by_word,medical school,clinical academy,0.9820259213447572,0.8471722602844238,0.8715806007385254,Her brother entered clinical academy after years of preparation.
+DistilBERT-ML,compositional_nc,medical school,random,medical school,ocean mirror,0.9629203677177428,0.7416119575500488,0.7665442228317261,Her brother entered ocean mirror after years of preparation.
+DistilBERT-ML,compositional_nc,mountain village,synonym,mountain village,alpine settlement,0.9849045872688292,0.8795406222343445,0.8856076598167419,The travelers reached a alpine settlement before sunset.
+DistilBERT-ML,compositional_nc,mountain village,component,mountain village,village,0.9936347007751464,0.9099689722061156,0.8908563852310181,The travelers reached a village before sunset.
+DistilBERT-ML,compositional_nc,mountain village,word_by_word,mountain village,hill hamlet,0.991302728652954,0.903594136238098,0.9090624451637268,The travelers reached a hill hamlet before sunset.
+DistilBERT-ML,compositional_nc,mountain village,random,mountain village,plastic thunder,0.9704979062080384,0.7657023668289185,0.7628830671310425,The travelers reached a plastic thunder before sunset.
+DistilBERT-ML,compositional_nc,solar panel,synonym,solar panel,photovoltaic module,0.982671856880188,0.8836863040924072,0.8485064506530762,The engineer installed a photovoltaic module on the roof.
+DistilBERT-ML,compositional_nc,solar panel,component,solar panel,panel,0.9939544200897216,0.922467827796936,0.8871068954467773,The engineer installed a panel on the roof.
+DistilBERT-ML,compositional_nc,solar panel,word_by_word,solar panel,sun powered plate,0.9869874119758606,0.8802560567855835,0.8729678988456726,The engineer installed a sun powered plate on the roof.
+DistilBERT-ML,compositional_nc,solar panel,random,solar panel,velvet sandwich,0.9667614698410034,0.7806032299995422,0.7458576560020447,The engineer installed a velvet sandwich on the roof.
+DistilBERT-ML,compositional_nc,election result,synonym,election result,vote outcome,0.9857527017593384,0.8635491728782654,0.8955972194671631,The newspaper published the vote outcome at midnight.
+DistilBERT-ML,compositional_nc,election result,component,election result,result,0.9860902428627014,0.8492110967636108,0.8353367447853088,The newspaper published the result at midnight.
+DistilBERT-ML,compositional_nc,election result,word_by_word,election result,ballot outcome,0.9849631786346436,0.8439986705780029,0.8954095840454102,The newspaper published the ballot outcome at midnight.
+DistilBERT-ML,compositional_nc,election result,random,election result,kitchen river,0.9591301083564758,0.7069075107574463,0.730207085609436,The newspaper published the kitchen river at midnight.
+DistilBERT-ML,compositional_nc,airport security,synonym,airport security,aviation security,0.9932153224945068,0.948761522769928,0.9585180282592772,The staff improved aviation security before the summit.
+DistilBERT-ML,compositional_nc,airport security,component,airport security,security,0.9903533458709716,0.9056603908538818,0.8978134393692017,The staff improved security before the summit.
+DistilBERT-ML,compositional_nc,airport security,word_by_word,airport security,terminal safety,0.988610565662384,0.9141719937324524,0.9117032289505004,The staff improved terminal safety before the summit.
+DistilBERT-ML,compositional_nc,airport security,random,airport security,forest melody,0.9534236788749696,0.7727258205413818,0.7296844124794006,The staff improved forest melody before the summit.
+DistilBERT-ML,compositional_nc,language teacher,synonym,language teacher,language instructor,0.994246244430542,0.9492288827896118,0.9519881010055542,The language instructor corrected the essays carefully.
+DistilBERT-ML,compositional_nc,language teacher,component,language teacher,teacher,0.992303431034088,0.9176025986671448,0.9038306474685668,The teacher corrected the essays carefully.
+DistilBERT-ML,compositional_nc,language teacher,word_by_word,language teacher,linguistic educator,0.9861621856689452,0.8674398064613342,0.8985773324966431,The linguistic educator corrected the essays carefully.
+DistilBERT-ML,compositional_nc,language teacher,random,language teacher,silver engine,0.9595411419868468,0.7481297850608826,0.7593448162078857,The silver engine corrected the essays carefully.
+DistilBERT-ML,compositional_nc,water bottle,synonym,water bottle,drinking container,0.9782137274742126,0.8316419124603271,0.805703341960907,She packed a drinking container for the hike.
+DistilBERT-ML,compositional_nc,water bottle,component,water bottle,bottle,0.9948362708091736,0.9572879076004028,0.9393086433410645,She packed a bottle for the hike.
+DistilBERT-ML,compositional_nc,water bottle,word_by_word,water bottle,liquid vessel,0.9723662734031676,0.8262709379196167,0.8022630214691162,She packed a liquid vessel for the hike.
+DistilBERT-ML,compositional_nc,water bottle,random,water bottle,museum thunder,0.9692833423614502,0.8002427816390991,0.781650722026825,She packed a museum thunder for the hike.
+DistilBERT-ML,compositional_nc,history book,synonym,history book,historical volume,0.9894604682922364,0.8922547101974487,0.8813971877098083,The student borrowed a historical volume from the library.
+DistilBERT-ML,compositional_nc,history book,component,history book,book,0.9946110844612122,0.9022406935691832,0.8849666118621826,The student borrowed a book from the library.
+DistilBERT-ML,compositional_nc,history book,word_by_word,history book,past chronicle,0.9814784526824952,0.7945679426193237,0.7854482531547546,The student borrowed a past chronicle from the library.
+DistilBERT-ML,compositional_nc,history book,random,history book,desert umbrella,0.96707683801651,0.7327306270599365,0.7393773794174194,The student borrowed a desert umbrella from the library.
+DistilBERT-ML,compositional_nc,river bridge,synonym,river bridge,waterway crossing,0.9896689653396606,0.8945813179016113,0.8961933851242065,The workers repaired the waterway crossing after the flood.
+DistilBERT-ML,compositional_nc,river bridge,component,river bridge,bridge,0.9949284791946412,0.934637725353241,0.9100139141082764,The workers repaired the bridge after the flood.
+DistilBERT-ML,compositional_nc,river bridge,word_by_word,river bridge,stream viaduct,0.98785400390625,0.8791345357894897,0.8673609495162964,The workers repaired the stream viaduct after the flood.
+DistilBERT-ML,compositional_nc,river bridge,random,river bridge,lemon window,0.9724003672599792,0.774437427520752,0.7860097885131836,The workers repaired the lemon window after the flood.
+DistilBERT-ML,compositional_nc,hospital room,synonym,hospital room,medical chamber,0.9882994890213012,0.8889455795288086,0.8939758539199829,The nurse cleaned the medical chamber before noon.
+DistilBERT-ML,compositional_nc,hospital room,component,hospital room,room,0.9910511374473572,0.9017598628997804,0.860363781452179,The nurse cleaned the room before noon.
+DistilBERT-ML,compositional_nc,hospital room,word_by_word,hospital room,clinic space,0.9807718396186828,0.8580905795097351,0.840499997138977,The nurse cleaned the clinic space before noon.
+DistilBERT-ML,compositional_nc,hospital room,random,hospital room,cloud hammer,0.9646645784378052,0.7404298186302185,0.7640485763549805,The nurse cleaned the cloud hammer before noon.
+DistilBERT-ML,compositional_nc,village market,synonym,village market,rural marketplace,0.9847448468208312,0.910201609134674,0.9042202830314636,The farmer visited the rural marketplace every Friday.
+DistilBERT-ML,compositional_nc,village market,component,village market,market,0.9900559186935424,0.9024688601493835,0.8688891530036926,The farmer visited the market every Friday.
+DistilBERT-ML,compositional_nc,village market,word_by_word,village market,hamlet bazaar,0.9785031080245972,0.8350638747215271,0.8116084337234497,The farmer visited the hamlet bazaar every Friday.
+DistilBERT-ML,compositional_nc,village market,random,village market,iron ocean,0.95560485124588,0.7214609980583191,0.7380155324935913,The farmer visited the iron ocean every Friday.
+DistilBERT-ML,compositional_nc,data center,synonym,data center,computing facility,0.9876863956451416,0.8637624382972717,0.8132662773132324,The company expanded the computing facility near the campus.
+DistilBERT-ML,compositional_nc,data center,component,data center,center,0.9896854758262634,0.872579038143158,0.8921554088592529,The company expanded the center near the campus.
+DistilBERT-ML,compositional_nc,data center,word_by_word,data center,information hub,0.9867034554481506,0.8572606444358826,0.8188245296478271,The company expanded the information hub near the campus.
+DistilBERT-ML,compositional_nc,data center,random,data center,velvet forest,0.961923599243164,0.7035773992538452,0.668075442314148,The company expanded the velvet forest near the campus.
+DistilBERT-ML,compositional_nc,music festival,synonym,music festival,concert event,0.9863070845603944,0.9050542712211608,0.8940623998641968,The town hosted a concert event in July.
+DistilBERT-ML,compositional_nc,music festival,component,music festival,festival,0.9947537779808044,0.9275069236755372,0.9054954051971436,The town hosted a festival in July.
+DistilBERT-ML,compositional_nc,music festival,word_by_word,music festival,melody celebration,0.9678836464881896,0.8354843258857727,0.8013977408409119,The town hosted a melody celebration in July.
+DistilBERT-ML,compositional_nc,music festival,random,music festival,paper mountain,0.9682396054267884,0.792129635810852,0.7830647230148315,The town hosted a paper mountain in July.
+DistilBERT-ML,single_word_control,doctor,synonym,doctor,physician,0.9923613667488098,0.887664794921875,0.8518542051315308,The physician opened the door quickly.
+DistilBERT-ML,single_word_control,doctor,related,doctor,nurse,0.9875841736793518,0.8263816833496094,0.8186571598052979,The nurse opened the door quickly.
+DistilBERT-ML,single_word_control,doctor,random,doctor,carpet,0.9669525027275084,0.6783887147903442,0.7109180688858032,The carpet opened the door quickly.
+DistilBERT-ML,single_word_control,apple,synonym,apple,fruit,0.9851032495498656,0.7480636239051819,0.7231664657592773,She bought a fresh fruit from the market.
+DistilBERT-ML,single_word_control,apple,related,apple,pear,0.984633207321167,0.7541238069534302,0.7110904455184937,She bought a fresh pear from the market.
+DistilBERT-ML,single_word_control,apple,random,apple,engine,0.9701238870620728,0.6820708513259888,0.7010433077812195,She bought a fresh engine from the market.
+DistilBERT-ML,single_word_control,teacher,synonym,teacher,instructor,0.9912273287773132,0.8601526618003845,0.9123834371566772,The instructor explained the problem clearly.
+DistilBERT-ML,single_word_control,teacher,related,teacher,professor,0.98838609457016,0.8327736854553223,0.8593122363090515,The professor explained the problem clearly.
+DistilBERT-ML,single_word_control,teacher,random,teacher,mountain,0.9771050810813904,0.7388495206832886,0.787873387336731,The mountain explained the problem clearly.
+DistilBERT-ML,single_word_control,lawyer,synonym,lawyer,attorney,0.9942060112953186,0.9293109178543092,0.9408943057060242,The attorney reviewed the contract before lunch.
+DistilBERT-ML,single_word_control,lawyer,related,lawyer,judge,0.9904646277427672,0.8609092831611633,0.89369136095047,The judge reviewed the contract before lunch.
+DistilBERT-ML,single_word_control,lawyer,random,lawyer,umbrella,0.972809076309204,0.7110387682914734,0.7630996704101562,The umbrella reviewed the contract before lunch.
+DistilBERT-ML,single_word_control,river,synonym,river,stream,0.9933225512504578,0.8678843975067139,0.8193268179893494,The stream flooded the lower fields overnight.
+DistilBERT-ML,single_word_control,river,related,river,canal,0.990321695804596,0.8356979489326477,0.8022292852401733,The canal flooded the lower fields overnight.
+DistilBERT-ML,single_word_control,river,random,river,microscope,0.9559343457221984,0.6239190697669983,0.6690340638160706,The microscope flooded the lower fields overnight.
+DistilBERT-ML,single_word_control,city,synonym,city,metropolis,0.988334596157074,0.8300968408584595,0.793333113193512,The metropolis approved the new housing plan.
+DistilBERT-ML,single_word_control,city,related,city,town,0.9924666285514832,0.8902211785316467,0.8971453309059143,The town approved the new housing plan.
+DistilBERT-ML,single_word_control,city,random,city,sandwich,0.9763533473014832,0.7158428430557251,0.6793641448020935,The sandwich approved the new housing plan.
+DistilBERT-ML,single_word_control,storm,synonym,storm,tempest,0.9755990505218506,0.6794858574867249,0.758369505405426,The tempest damaged several houses near the coast.
+DistilBERT-ML,single_word_control,storm,related,storm,rainstorm,0.980906307697296,0.7813087701797485,0.7634291052818298,The rainstorm damaged several houses near the coast.
+DistilBERT-ML,single_word_control,storm,random,storm,violin,0.9801847338676452,0.701820433139801,0.7676839828491211,The violin damaged several houses near the coast.
+DistilBERT-ML,single_word_control,idea,synonym,idea,concept,0.9928929805755616,0.8873593211174011,0.8711303472518921,The concept changed the direction of the project.
+DistilBERT-ML,single_word_control,idea,related,idea,thought,0.990889608860016,0.82235187292099,0.8112615346908569,The thought changed the direction of the project.
+DistilBERT-ML,single_word_control,idea,random,idea,hammer,0.9659370183944702,0.6431077718734741,0.6823853850364685,The hammer changed the direction of the project.
+DistilBERT-ML,single_word_control,problem,synonym,problem,issue,0.9843602776527404,0.8474552631378174,0.8219795227050781,The issue delayed the final report.
+DistilBERT-ML,single_word_control,problem,related,problem,question,0.983784556388855,0.8122376799583435,0.8504163026809692,The question delayed the final report.
+DistilBERT-ML,single_word_control,problem,random,problem,pillow,0.9528724551200868,0.6509416699409485,0.6548574566841125,The pillow delayed the final report.
+DistilBERT-ML,single_word_control,music,synonym,music,melody,0.9671973586082458,0.766098141670227,0.723764181137085,The melody filled the old theater.
+DistilBERT-ML,single_word_control,music,related,music,song,0.9861107468605042,0.8318898677825928,0.8391760587692261,The song filled the old theater.
+DistilBERT-ML,single_word_control,music,random,music,staircase,0.9517524838447572,0.6638246178627014,0.6664531826972961,The staircase filled the old theater.
+DistilBERT-ML,single_word_control,letter,synonym,letter,note,0.9844791293144226,0.7969990968704224,0.7529879808425903,The note arrived before the meeting.
+DistilBERT-ML,single_word_control,letter,related,letter,message,0.9878431558609008,0.8648262619972229,0.8611104488372803,The message arrived before the meeting.
+DistilBERT-ML,single_word_control,letter,random,letter,volcano,0.9575831294059752,0.6750099658966064,0.6646922826766968,The volcano arrived before the meeting.
+DistilBERT-ML,single_word_control,machine,synonym,machine,device,0.988180935382843,0.8277652859687805,0.8583702445030212,The device stopped during the demonstration.
+DistilBERT-ML,single_word_control,machine,related,machine,apparatus,0.9700950980186462,0.7247630953788757,0.7218335270881653,The apparatus stopped during the demonstration.
+DistilBERT-ML,single_word_control,machine,random,machine,forest,0.9720875024795532,0.7067711353302002,0.7744548916816711,The forest stopped during the demonstration.
+DistilBERT-ML,single_word_control,road,synonym,road,street,0.9911121129989624,0.8666250705718994,0.8539356589317322,The street crossed the valley below the town.
+DistilBERT-ML,single_word_control,road,related,road,highway,0.9936107397079468,0.9076138734817504,0.9170291423797609,The highway crossed the valley below the town.
+DistilBERT-ML,single_word_control,road,random,road,singer,0.9788115620613098,0.7342199087142944,0.788500189781189,The singer crossed the valley below the town.
+DistilBERT-ML,single_word_control,flower,synonym,flower,blossom,0.98078715801239,0.7520945072174072,0.6880561113357544,The blossom bloomed beside the window.
+DistilBERT-ML,single_word_control,flower,related,flower,rose,0.9870420694351196,0.8218991756439209,0.8460867404937744,The rose bloomed beside the window.
+DistilBERT-ML,single_word_control,flower,random,flower,engine,0.953596293926239,0.7343087196350098,0.771079421043396,The engine bloomed beside the window.
+DistilBERT-ML,single_word_control,ocean,synonym,ocean,sea,0.9912014603614808,0.8642197251319885,0.8588519096374512,The sea reflected the morning light.
+DistilBERT-ML,single_word_control,ocean,related,ocean,lake,0.9795951247215272,0.799837589263916,0.8257615566253662,The lake reflected the morning light.
+DistilBERT-ML,single_word_control,ocean,random,ocean,notebook,0.948958933353424,0.6666337847709656,0.6571003198623657,The notebook reflected the morning light.
+DistilBERT-ML,single_word_control,child,synonym,child,youngster,0.9865412712097168,0.7911509871482849,0.7492536902427673,The youngster solved the puzzle quickly.
+DistilBERT-ML,single_word_control,child,related,child,teenager,0.9853444695472716,0.7930599451065063,0.7503376603126526,The teenager solved the puzzle quickly.
+DistilBERT-ML,single_word_control,child,random,child,candle,0.9733368158340454,0.694800615310669,0.7094706892967224,The candle solved the puzzle quickly.
+DistilBERT-ML,ordinary_two_word_control,red car,synonym,red car,crimson vehicle,0.9710398316383362,0.8257117867469788,0.8040252327919006,The crimson vehicle stopped near the school gate.
+DistilBERT-ML,ordinary_two_word_control,red car,component,red car,car,0.989921510219574,0.8866564631462097,0.8561486005783081,The car stopped near the school gate.
+DistilBERT-ML,ordinary_two_word_control,red car,word_by_word,red car,scarlet automobile,0.9758737683296204,0.8453399538993835,0.8151228427886963,The scarlet automobile stopped near the school gate.
+DistilBERT-ML,ordinary_two_word_control,red car,random,red car,coffee spoon,0.9690731167793274,0.7777999639511108,0.7302336096763611,The coffee spoon stopped near the school gate.
+DistilBERT-ML,ordinary_two_word_control,coffee cup,synonym,coffee cup,mug,0.9729344248771667,0.7209875583648682,0.6636360287666321,She placed the mug on the wooden table.
+DistilBERT-ML,ordinary_two_word_control,coffee cup,component,coffee cup,cup,0.98853862285614,0.9171358942985536,0.8357599973678589,She placed the cup on the wooden table.
+DistilBERT-ML,ordinary_two_word_control,coffee cup,word_by_word,coffee cup,java container,0.9691522121429444,0.7760648131370544,0.7468350529670715,She placed the java container on the wooden table.
+DistilBERT-ML,ordinary_two_word_control,coffee cup,random,coffee cup,traffic signal,0.9614179134368896,0.7108263969421387,0.684481680393219,She placed the traffic signal on the wooden table.
+DistilBERT-ML,ordinary_two_word_control,wooden chair,synonym,wooden chair,timber seat,0.9824938774108888,0.891599714756012,0.8609082102775574,The timber seat stood beside the fireplace.
+DistilBERT-ML,ordinary_two_word_control,wooden chair,component,wooden chair,chair,0.9910059571266174,0.905061423778534,0.8721398115158081,The chair stood beside the fireplace.
+DistilBERT-ML,ordinary_two_word_control,wooden chair,word_by_word,wooden chair,wood seat,0.984513521194458,0.8858591914176941,0.8763042092323303,The wood seat stood beside the fireplace.
+DistilBERT-ML,ordinary_two_word_control,wooden chair,random,wooden chair,silver cloud,0.9713072180747986,0.8250064849853516,0.8092281818389893,The silver cloud stood beside the fireplace.
+DistilBERT-ML,ordinary_two_word_control,summer rain,synonym,summer rain,seasonal rainfall,0.9850173592567444,0.8813387155532837,0.8519852161407471,The seasonal rainfall cooled the dusty street.
+DistilBERT-ML,ordinary_two_word_control,summer rain,component,summer rain,rain,0.9893837571144104,0.9117677211761476,0.8314811587333679,The rain cooled the dusty street.
+DistilBERT-ML,ordinary_two_word_control,summer rain,word_by_word,summer rain,warm shower,0.977426052093506,0.8173943161964417,0.81499183177948,The warm shower cooled the dusty street.
+DistilBERT-ML,ordinary_two_word_control,summer rain,random,summer rain,library key,0.9480845332145692,0.7064449191093445,0.6844272613525391,The library key cooled the dusty street.
+DistilBERT-ML,ordinary_two_word_control,city park,synonym,city park,urban garden,0.982657551765442,0.8886487483978271,0.8831497430801392,The urban garden opened after the renovation.
+DistilBERT-ML,ordinary_two_word_control,city park,component,city park,park,0.9907742738723756,0.9091245532035828,0.8737968802452087,The park opened after the renovation.
+DistilBERT-ML,ordinary_two_word_control,city park,word_by_word,city park,municipal green,0.9807493686676024,0.8683232665061951,0.8584223985671997,The municipal green opened after the renovation.
+DistilBERT-ML,ordinary_two_word_control,city park,random,city park,ocean pencil,0.95343416929245,0.7520008683204651,0.728470504283905,The ocean pencil opened after the renovation.
+DistilBERT-ML,ordinary_two_word_control,glass bottle,synonym,glass bottle,transparent container,0.966671586036682,0.8181145787239075,0.8078464865684509,The transparent container rolled under the bench.
+DistilBERT-ML,ordinary_two_word_control,glass bottle,component,glass bottle,bottle,0.992346167564392,0.9600355625152588,0.9491546750068665,The bottle rolled under the bench.
+DistilBERT-ML,ordinary_two_word_control,glass bottle,word_by_word,glass bottle,crystal vessel,0.9706873297691344,0.8224639892578125,0.8258039951324463,The crystal vessel rolled under the bench.
+DistilBERT-ML,ordinary_two_word_control,glass bottle,random,glass bottle,mountain ticket,0.9550986289978028,0.7779208421707153,0.7843565940856934,The mountain ticket rolled under the bench.
+DistilBERT-ML,ordinary_two_word_control,school bus,synonym,school bus,student transport,0.9800000786781312,0.8546460866928101,0.8654287457466125,The student transport waited outside the museum.
+DistilBERT-ML,ordinary_two_word_control,school bus,component,school bus,bus,0.9889734983444214,0.8905885219573975,0.8851351737976074,The bus waited outside the museum.
+DistilBERT-ML,ordinary_two_word_control,school bus,word_by_word,school bus,education coach,0.9731128811836244,0.8302323222160339,0.8333831429481506,The education coach waited outside the museum.
+DistilBERT-ML,ordinary_two_word_control,school bus,random,school bus,kitchen moon,0.9653321504592896,0.7508483529090881,0.768997311592102,The kitchen moon waited outside the museum.
+DistilBERT-ML,ordinary_two_word_control,paper bag,synonym,paper bag,paper sack,0.9837757349014282,0.8737413883209229,0.8715471625328064,The paper sack tore near the counter.
+DistilBERT-ML,ordinary_two_word_control,paper bag,component,paper bag,bag,0.990142285823822,0.91632878780365,0.8672319054603577,The bag tore near the counter.
+DistilBERT-ML,ordinary_two_word_control,paper bag,word_by_word,paper bag,cellulose pouch,0.9634525179862976,0.805658221244812,0.7980505228042603,The cellulose pouch tore near the counter.
+DistilBERT-ML,ordinary_two_word_control,paper bag,random,paper bag,thunder candle,0.9556332230567932,0.7535334229469299,0.7423149347305298,The thunder candle tore near the counter.
+DistilBERT-ML,ordinary_two_word_control,kitchen knife,synonym,kitchen knife,cooking blade,0.9833030700683594,0.8873732686042786,0.8785154819488525,The cooking blade rested beside the plate.
+DistilBERT-ML,ordinary_two_word_control,kitchen knife,component,kitchen knife,knife,0.9903994202613832,0.9554674625396729,0.9399260878562928,The knife rested beside the plate.
+DistilBERT-ML,ordinary_two_word_control,kitchen knife,word_by_word,kitchen knife,culinary blade,0.9699501395225524,0.8292960524559021,0.8217917084693909,The culinary blade rested beside the plate.
+DistilBERT-ML,ordinary_two_word_control,kitchen knife,random,kitchen knife,desert violin,0.9649664759635924,0.7779783010482788,0.7577054500579834,The desert violin rested beside the plate.
+DistilBERT-ML,ordinary_two_word_control,garden flower,synonym,garden flower,yard blossom,0.9597923159599304,0.8018200397491455,0.7508453726768494,The yard blossom attracted several bees.
+DistilBERT-ML,ordinary_two_word_control,garden flower,component,garden flower,flower,0.978751301765442,0.9162043929100036,0.8721433877944946,The flower attracted several bees.
+DistilBERT-ML,ordinary_two_word_control,garden flower,word_by_word,garden flower,outdoor bloom,0.9710248112678528,0.8479893207550049,0.8021575808525085,The outdoor bloom attracted several bees.
+DistilBERT-ML,ordinary_two_word_control,garden flower,random,garden flower,airport spoon,0.9564946293830872,0.807907223701477,0.7741504907608032,The airport spoon attracted several bees.
+DistilBERT-ML,ordinary_two_word_control,ocean wave,synonym,ocean wave,sea swell,0.977416455745697,0.8406268358230591,0.8257414698600769,The sea swell reached the empty pier.
+DistilBERT-ML,ordinary_two_word_control,ocean wave,component,ocean wave,wave,0.9864993691444396,0.8960858583450317,0.8641278743743896,The wave reached the empty pier.
+DistilBERT-ML,ordinary_two_word_control,ocean wave,word_by_word,ocean wave,marine ripple,0.9663985967636108,0.802362322807312,0.7649667859077454,The marine ripple reached the empty pier.
+DistilBERT-ML,ordinary_two_word_control,ocean wave,random,ocean wave,factory pillow,0.9457066655158995,0.7381842732429504,0.7380552887916565,The factory pillow reached the empty pier.
+DistilBERT-ML,ordinary_two_word_control,train station,synonym,train station,railway terminal,0.983089566230774,0.8900347948074341,0.8910245299339294,The railway terminal closed after midnight.
+DistilBERT-ML,ordinary_two_word_control,train station,component,train station,station,0.9905095100402832,0.9238463044166564,0.90279221534729,The station closed after midnight.
+DistilBERT-ML,ordinary_two_word_control,train station,word_by_word,train station,rail depot,0.9823653101921082,0.8819922208786011,0.8849692940711975,The rail depot closed after midnight.
+DistilBERT-ML,ordinary_two_word_control,train station,random,train station,lemon window,0.9290863871574402,0.6889489889144897,0.7083888053894043,The lemon window closed after midnight.
+DistilBERT-ML,ordinary_two_word_control,computer screen,synonym,computer screen,monitor,0.9813408255577089,0.8532647490501404,0.8260840177536011,The monitor flickered during the call.
+DistilBERT-ML,ordinary_two_word_control,computer screen,component,computer screen,screen,0.9889534711837769,0.9128642082214355,0.8813340067863464,The screen flickered during the call.
+DistilBERT-ML,ordinary_two_word_control,computer screen,word_by_word,computer screen,digital display,0.9809786081314088,0.869784414768219,0.8492036461830139,The digital display flickered during the call.
+DistilBERT-ML,ordinary_two_word_control,computer screen,random,computer screen,forest blanket,0.9199588894844056,0.7231397032737732,0.6910800933837891,The forest blanket flickered during the call.
+DistilBERT-ML,ordinary_two_word_control,stone bridge,synonym,stone bridge,masonry crossing,0.9688670635223388,0.826237678527832,0.8160731196403503,The masonry crossing crossed the narrow river.
+DistilBERT-ML,ordinary_two_word_control,stone bridge,component,stone bridge,bridge,0.9888086915016174,0.9127370119094848,0.9071683883666992,The bridge crossed the narrow river.
+DistilBERT-ML,ordinary_two_word_control,stone bridge,word_by_word,stone bridge,rock viaduct,0.9759629368782043,0.8624234199523926,0.8418034315109253,The rock viaduct crossed the narrow river.
+DistilBERT-ML,ordinary_two_word_control,stone bridge,random,stone bridge,velvet engine,0.9427724480628968,0.7365392446517944,0.7373341917991638,The velvet engine crossed the narrow river.
+DistilBERT-ML,ordinary_two_word_control,plastic box,synonym,plastic box,synthetic container,0.9657615423202516,0.8191190361976624,0.8098386526107788,The synthetic container held the spare cables.
+DistilBERT-ML,ordinary_two_word_control,plastic box,component,plastic box,box,0.985599935054779,0.8859792351722717,0.8604516983032227,The box held the spare cables.
+DistilBERT-ML,ordinary_two_word_control,plastic box,word_by_word,plastic box,polymer case,0.9698715209960938,0.822049081325531,0.8266096711158752,The polymer case held the spare cables.
+DistilBERT-ML,ordinary_two_word_control,plastic box,random,plastic box,museum thunder,0.950894057750702,0.75267493724823,0.7320838570594788,The museum thunder held the spare cables.
+DistilBERT-ML,ordinary_two_word_control,winter coat,synonym,winter coat,cold weather jacket,0.9685686826705932,0.8518696427345276,0.8564665913581848,The cold weather jacket hung behind the office door.
+DistilBERT-ML,ordinary_two_word_control,winter coat,component,winter coat,coat,0.9884122610092164,0.9022600650787354,0.8423430919647217,The coat hung behind the office door.
+DistilBERT-ML,ordinary_two_word_control,winter coat,word_by_word,winter coat,seasonal garment,0.9696744084358216,0.8086650371551514,0.7955644130706787,The seasonal garment hung behind the office door.
+DistilBERT-ML,ordinary_two_word_control,winter coat,random,winter coat,river button,0.9592362642288208,0.7403153777122498,0.7735258936882019,The river button hung behind the office door.
+mSBERT,idiomatic_nc,grey matter,synonym,grey matter,brain,0.7943269610404968,0.2633971571922302,0.2633971571922302,These youngsters use their brain when the presentation is right.
+mSBERT,idiomatic_nc,grey matter,component,grey matter,matter,0.89521324634552,0.5487267971038818,0.5487267971038818,These youngsters use their matter when the presentation is right.
+mSBERT,idiomatic_nc,grey matter,word_by_word,grey matter,silvery material,0.847402036190033,0.5954694151878357,0.5954694151878357,These youngsters use their silvery material when the presentation is right.
+mSBERT,idiomatic_nc,grey matter,random,grey matter,battlefront serviceman,0.7539421319961548,0.1550470292568206,0.1550470292568206,These youngsters use their battlefront serviceman when the presentation is right.
+mSBERT,idiomatic_nc,eager beaver,synonym,eager beaver,hard worker,0.860613226890564,0.3528120517730713,0.3528120517730713,Eric stayed a real hard worker during the audit.
+mSBERT,idiomatic_nc,eager beaver,component,eager beaver,beaver,0.9471555352211,0.7763929963111877,0.7763929963111877,Eric stayed a real beaver during the audit.
+mSBERT,idiomatic_nc,eager beaver,word_by_word,eager beaver,restless rodent,0.8864530324935913,0.4068284928798675,0.4068284928798675,Eric stayed a real restless rodent during the audit.
+mSBERT,idiomatic_nc,eager beaver,random,eager beaver,petrol station,0.7938449382781982,0.2175748497247696,0.2175748497247696,Eric stayed a real petrol station during the audit.
+mSBERT,idiomatic_nc,couch potato,synonym,couch potato,lazy person,0.7663518190383911,0.2635653018951416,0.2635653018951416,Nina became a lazy person after the exams.
+mSBERT,idiomatic_nc,couch potato,component,couch potato,potato,0.9328203201293944,0.810091495513916,0.810091495513916,Nina became a potato after the exams.
+mSBERT,idiomatic_nc,couch potato,word_by_word,couch potato,sofa tuber,0.8894719481468201,0.627135157585144,0.627135157585144,Nina became a sofa tuber after the exams.
+mSBERT,idiomatic_nc,couch potato,random,couch potato,railway signal,0.6981021165847778,0.145998328924179,0.145998328924179,Nina became a railway signal after the exams.
+mSBERT,idiomatic_nc,cold feet,synonym,cold feet,nervousness,0.8002975583076477,0.3499815762042999,0.3499815762042999,The sudden audit gave the manager nervousness before the launch.
+mSBERT,idiomatic_nc,cold feet,component,cold feet,feet,0.9159163236618042,0.7658362984657288,0.7658362984657288,The sudden audit gave the manager feet before the launch.
+mSBERT,idiomatic_nc,cold feet,word_by_word,cold feet,chilly legs,0.9010700583457948,0.6684649586677551,0.6684649586677551,The sudden audit gave the manager chilly legs before the launch.
+mSBERT,idiomatic_nc,cold feet,random,cold feet,garden invoice,0.7417951226234436,0.1841263473033905,0.1841263473033905,The sudden audit gave the manager garden invoice before the launch.
+mSBERT,idiomatic_nc,white elephant,synonym,white elephant,burden,0.7057104110717773,0.1363866329193115,0.1363866329193115,The abandoned stadium became a burden for the city.
+mSBERT,idiomatic_nc,white elephant,component,white elephant,elephant,0.9127402305603028,0.8224281072616577,0.8224281072616577,The abandoned stadium became a elephant for the city.
+mSBERT,idiomatic_nc,white elephant,word_by_word,white elephant,pale animal,0.7877333164215088,0.5164105892181396,0.5164105892181396,The abandoned stadium became a pale animal for the city.
+mSBERT,idiomatic_nc,white elephant,random,white elephant,kitchen policy,0.5776941180229187,0.0257503017783164,0.0257503017783164,The abandoned stadium became a kitchen policy for the city.
+mSBERT,idiomatic_nc,red tape,synonym,red tape,bureaucracy,0.8052374720573425,0.1972885578870773,0.1972885578870773,The permit was delayed by bureaucracy at the ministry.
+mSBERT,idiomatic_nc,red tape,component,red tape,tape,0.8928773403167725,0.6898747086524963,0.6898747086524963,The permit was delayed by tape at the ministry.
+mSBERT,idiomatic_nc,red tape,word_by_word,red tape,crimson ribbon,0.8511221408843994,0.6263130903244019,0.6263130903244019,The permit was delayed by crimson ribbon at the ministry.
+mSBERT,idiomatic_nc,red tape,random,red tape,ocean doorway,0.6777123808860779,0.1515508294105529,0.1515508294105529,The permit was delayed by ocean doorway at the ministry.
+mSBERT,idiomatic_nc,dark horse,synonym,dark horse,unexpected contender,0.7022373676300049,0.1867436468601226,0.1867436468601226,A unexpected contender won the final round of the tournament.
+mSBERT,idiomatic_nc,dark horse,component,dark horse,horse,0.9047613143920898,0.7755700945854187,0.7755700945854187,A horse won the final round of the tournament.
+mSBERT,idiomatic_nc,dark horse,word_by_word,dark horse,shadowy animal,0.7943435311317444,0.581845760345459,0.581845760345459,A shadowy animal won the final round of the tournament.
+mSBERT,idiomatic_nc,dark horse,random,dark horse,library candle,0.6032019853591919,0.2436659634113311,0.2436659634113311,A library candle won the final round of the tournament.
+mSBERT,idiomatic_nc,black sheep,synonym,black sheep,outcast,0.8225119709968567,0.1703818142414093,0.1703818142414093,After the scandal Omar was the outcast of the board.
+mSBERT,idiomatic_nc,black sheep,component,black sheep,sheep,0.9021226167678832,0.7732805013656616,0.7732805013656616,After the scandal Omar was the sheep of the board.
+mSBERT,idiomatic_nc,black sheep,word_by_word,black sheep,dark animal,0.9020888209342957,0.6334710121154785,0.6334710121154785,After the scandal Omar was the dark animal of the board.
+mSBERT,idiomatic_nc,black sheep,random,black sheep,museum ticket,0.6483907103538513,0.1096986532211303,0.1096986532211303,After the scandal Omar was the museum ticket of the board.
+mSBERT,idiomatic_nc,silver lining,synonym,silver lining,hopeful aspect,0.8278273344039917,0.2383063733577728,0.2383063733577728,The grant rejection had a hopeful aspect for the startup.
+mSBERT,idiomatic_nc,silver lining,component,silver lining,lining,0.956382691860199,0.6411433815956116,0.6411433815956116,The grant rejection had a lining for the startup.
+mSBERT,idiomatic_nc,silver lining,word_by_word,silver lining,metallic edge,0.8116666078567505,0.4998734593391418,0.4998734593391418,The grant rejection had a metallic edge for the startup.
+mSBERT,idiomatic_nc,silver lining,random,silver lining,desert violin,0.7029806971549988,0.2952965199947357,0.2952965199947357,The grant rejection had a desert violin for the startup.
+mSBERT,idiomatic_nc,ivory tower,synonym,ivory tower,academic isolation,0.6652207970619202,0.1157370582222938,0.1157370582222938,The report criticized the academic isolation at the institute.
+mSBERT,idiomatic_nc,ivory tower,component,ivory tower,tower,0.9578096866607666,0.7775486707687378,0.7775486707687378,The report criticized the tower at the institute.
+mSBERT,idiomatic_nc,ivory tower,word_by_word,ivory tower,pale structure,0.7923873662948608,0.368632823228836,0.368632823228836,The report criticized the pale structure at the institute.
+mSBERT,idiomatic_nc,ivory tower,random,ivory tower,market umbrella,0.6684725284576416,0.2294787168502807,0.2294787168502807,The report criticized the market umbrella at the institute.
+mSBERT,idiomatic_nc,glass ceiling,synonym,glass ceiling,invisible barrier,0.6581055521965027,0.3462875783443451,0.3462875783443451,The promotion exposed the invisible barrier in the company.
+mSBERT,idiomatic_nc,glass ceiling,component,glass ceiling,ceiling,0.8785786628723145,0.7732944488525391,0.7732944488525391,The promotion exposed the ceiling in the company.
+mSBERT,idiomatic_nc,glass ceiling,word_by_word,glass ceiling,transparent roof,0.8010376691818237,0.6733108758926392,0.6733108758926392,The promotion exposed the transparent roof in the company.
+mSBERT,idiomatic_nc,glass ceiling,random,glass ceiling,forest melody,0.5009690523147583,0.1744735091924667,0.1744735091924667,The promotion exposed the forest melody in the company.
+mSBERT,idiomatic_nc,cash cow,synonym,cash cow,moneymaker,0.8058695197105408,0.5539370179176331,0.5539370179176331,The old product became a moneymaker for the firm.
+mSBERT,idiomatic_nc,cash cow,component,cash cow,cow,0.920218288898468,0.7755383849143982,0.7755383849143982,The old product became a cow for the firm.
+mSBERT,idiomatic_nc,cash cow,word_by_word,cash cow,money animal,0.8138286471366882,0.6189085841178894,0.6189085841178894,The old product became a money animal for the firm.
+mSBERT,idiomatic_nc,cash cow,random,cash cow,airport blanket,0.5878962874412537,0.2604283690452575,0.2604283690452575,The old product became a airport blanket for the firm.
+mSBERT,idiomatic_nc,loose cannon,synonym,loose cannon,unpredictable person,0.7865923643112183,0.3222884833812713,0.3222884833812713,The spokesman was a unpredictable person during the debate.
+mSBERT,idiomatic_nc,loose cannon,component,loose cannon,cannon,0.9770126342773438,0.8604745268821716,0.8604745268821716,The spokesman was a cannon during the debate.
+mSBERT,idiomatic_nc,loose cannon,word_by_word,loose cannon,unstable weapon,0.8335601091384888,0.5334213972091675,0.5334213972091675,The spokesman was a unstable weapon during the debate.
+mSBERT,idiomatic_nc,loose cannon,random,loose cannon,velvet engine,0.7980683445930481,0.3615698218345642,0.3615698218345642,The spokesman was a velvet engine during the debate.
+mSBERT,idiomatic_nc,golden handshake,synonym,golden handshake,severance payment,0.7365821599960327,0.1276024580001831,0.1276024580001831,The manager received a severance payment after the merger.
+mSBERT,idiomatic_nc,golden handshake,component,golden handshake,handshake,0.8855876326560974,0.6897584199905396,0.6897584199905396,The manager received a handshake after the merger.
+mSBERT,idiomatic_nc,golden handshake,word_by_word,golden handshake,valuable greeting,0.768250048160553,0.3162369728088379,0.3162369728088379,The manager received a valuable greeting after the merger.
+mSBERT,idiomatic_nc,golden handshake,random,golden handshake,mountain pillow,0.6615534424781799,0.231678768992424,0.231678768992424,The manager received a mountain pillow after the merger.
+mSBERT,idiomatic_nc,paper tiger,synonym,paper tiger,weak threat,0.7506824135780334,0.2060151547193527,0.2060151547193527,The threat was a weak threat in the negotiations.
+mSBERT,idiomatic_nc,paper tiger,component,paper tiger,tiger,0.9105526804924012,0.7390990257263184,0.7390990257263184,The threat was a tiger in the negotiations.
+mSBERT,idiomatic_nc,paper tiger,word_by_word,paper tiger,document animal,0.8605167269706726,0.5583450794219971,0.5583450794219971,The threat was a document animal in the negotiations.
+mSBERT,idiomatic_nc,paper tiger,random,paper tiger,river button,0.6355233788490295,0.1805970668792724,0.1805970668792724,The threat was a river button in the negotiations.
+mSBERT,idiomatic_nc,smoking gun,synonym,smoking gun,decisive evidence,0.713933527469635,0.1693369448184967,0.1693369448184967,The email became the decisive evidence in the investigation.
+mSBERT,idiomatic_nc,smoking gun,component,smoking gun,gun,0.9059164524078368,0.7449976205825806,0.7449976205825806,The email became the gun in the investigation.
+mSBERT,idiomatic_nc,smoking gun,word_by_word,smoking gun,burning weapon,0.8586752414703369,0.6569245457649231,0.6569245457649231,The email became the burning weapon in the investigation.
+mSBERT,idiomatic_nc,smoking gun,random,smoking gun,kitchen horizon,0.6725527048110962,0.1863452941179275,0.1863452941179275,The email became the kitchen horizon in the investigation.
+mSBERT,compositional_nc,economic aid,synonym,economic aid,financial assistance,0.8762770891189575,0.6837964653968811,0.6837964653968811,The committee approved financial assistance for the region after the storm.
+mSBERT,compositional_nc,economic aid,component,economic aid,aid,0.9079041481018066,0.7152019739151001,0.7152019739151001,The committee approved aid for the region after the storm.
+mSBERT,compositional_nc,economic aid,word_by_word,economic aid,budgetary assistance,0.8805440664291382,0.722678542137146,0.722678542137146,The committee approved budgetary assistance for the region after the storm.
+mSBERT,compositional_nc,economic aid,random,economic aid,kitchen table,0.7124093770980835,0.1226361095905304,0.1226361095905304,The committee approved kitchen table for the region after the storm.
+mSBERT,compositional_nc,research lab,synonym,research lab,research facility,0.9564644694328308,0.8074634671211243,0.8074634671211243,The students joined a research facility during the summer program.
+mSBERT,compositional_nc,research lab,component,research lab,lab,0.9606751203536988,0.4951547980308532,0.4951547980308532,The students joined a lab during the summer program.
+mSBERT,compositional_nc,research lab,word_by_word,research lab,investigation workplace,0.9296104907989502,0.7146071195602417,0.7146071195602417,The students joined a investigation workplace during the summer program.
+mSBERT,compositional_nc,research lab,random,research lab,garden party,0.7246484756469727,0.2067231833934784,0.2067231833934784,The students joined a garden party during the summer program.
+mSBERT,compositional_nc,climate policy,synonym,climate policy,environmental policy,0.901976764202118,0.7628304958343506,0.7628304958343506,The council debated environmental policy during the evening session.
+mSBERT,compositional_nc,climate policy,component,climate policy,policy,0.896144449710846,0.6462321281433105,0.6462321281433105,The council debated policy during the evening session.
+mSBERT,compositional_nc,climate policy,word_by_word,climate policy,weather guideline,0.8629730343818665,0.5451529622077942,0.5451529622077942,The council debated weather guideline during the evening session.
+mSBERT,compositional_nc,climate policy,random,climate policy,garden spoon,0.6983832120895386,0.0739544555544853,0.0739544555544853,The council debated garden spoon during the evening session.
+mSBERT,compositional_nc,medical school,synonym,medical school,medical college,0.9592496752738952,0.8789577484130859,0.8789577484130859,Her brother entered medical college after years of preparation.
+mSBERT,compositional_nc,medical school,component,medical school,school,0.8865127563476562,0.6888588666915894,0.6888588666915894,Her brother entered school after years of preparation.
+mSBERT,compositional_nc,medical school,word_by_word,medical school,clinical academy,0.9272148013114928,0.8158624768257141,0.8158624768257141,Her brother entered clinical academy after years of preparation.
+mSBERT,compositional_nc,medical school,random,medical school,ocean mirror,0.6475401520729065,0.1659389734268188,0.1659389734268188,Her brother entered ocean mirror after years of preparation.
+mSBERT,compositional_nc,mountain village,synonym,mountain village,alpine settlement,0.8427191972732544,0.6074389815330505,0.6074389815330505,The travelers reached a alpine settlement before sunset.
+mSBERT,compositional_nc,mountain village,component,mountain village,village,0.8973771333694458,0.7788794040679932,0.7788794040679932,The travelers reached a village before sunset.
+mSBERT,compositional_nc,mountain village,word_by_word,mountain village,hill hamlet,0.822711169719696,0.5454133152961731,0.5454133152961731,The travelers reached a hill hamlet before sunset.
+mSBERT,compositional_nc,mountain village,random,mountain village,plastic thunder,0.600799024105072,0.134092628955841,0.134092628955841,The travelers reached a plastic thunder before sunset.
+mSBERT,compositional_nc,solar panel,synonym,solar panel,photovoltaic module,0.830303966999054,0.5779803991317749,0.5779803991317749,The engineer installed a photovoltaic module on the roof.
+mSBERT,compositional_nc,solar panel,component,solar panel,panel,0.8448089361190796,0.6421113014221191,0.6421113014221191,The engineer installed a panel on the roof.
+mSBERT,compositional_nc,solar panel,word_by_word,solar panel,sun powered plate,0.9688064455986024,0.883293092250824,0.883293092250824,The engineer installed a sun powered plate on the roof.
+mSBERT,compositional_nc,solar panel,random,solar panel,velvet sandwich,0.675154983997345,0.2398359626531601,0.2398359626531601,The engineer installed a velvet sandwich on the roof.
+mSBERT,compositional_nc,election result,synonym,election result,vote outcome,0.9368491172790528,0.8608843684196472,0.8608843684196472,The newspaper published the vote outcome at midnight.
+mSBERT,compositional_nc,election result,component,election result,result,0.8649398684501648,0.726836621761322,0.726836621761322,The newspaper published the result at midnight.
+mSBERT,compositional_nc,election result,word_by_word,election result,ballot outcome,0.9541000127792358,0.9028885960578918,0.9028885960578918,The newspaper published the ballot outcome at midnight.
+mSBERT,compositional_nc,election result,random,election result,kitchen river,0.5914623737335205,0.0930254608392715,0.0930254608392715,The newspaper published the kitchen river at midnight.
+mSBERT,compositional_nc,airport security,synonym,airport security,aviation security,0.9117255806922911,0.8162628412246704,0.8162628412246704,The staff improved aviation security before the summit.
+mSBERT,compositional_nc,airport security,component,airport security,security,0.8622938990592957,0.6723082065582275,0.6723082065582275,The staff improved security before the summit.
+mSBERT,compositional_nc,airport security,word_by_word,airport security,terminal safety,0.8788321018218994,0.662296712398529,0.662296712398529,The staff improved terminal safety before the summit.
+mSBERT,compositional_nc,airport security,random,airport security,forest melody,0.5479113459587097,0.1564588248729705,0.1564588248729705,The staff improved forest melody before the summit.
+mSBERT,compositional_nc,language teacher,synonym,language teacher,language instructor,0.9750702381134032,0.9362794160842896,0.9362794160842896,The language instructor corrected the essays carefully.
+mSBERT,compositional_nc,language teacher,component,language teacher,teacher,0.9055997133255004,0.8056064248085022,0.8056064248085022,The teacher corrected the essays carefully.
+mSBERT,compositional_nc,language teacher,word_by_word,language teacher,linguistic educator,0.9305506348609924,0.855774462223053,0.855774462223053,The linguistic educator corrected the essays carefully.
+mSBERT,compositional_nc,language teacher,random,language teacher,silver engine,0.5681846737861633,0.1485469937324524,0.1485469937324524,The silver engine corrected the essays carefully.
+mSBERT,compositional_nc,water bottle,synonym,water bottle,drinking container,0.7857841849327087,0.6516931056976318,0.6516931056976318,She packed a drinking container for the hike.
+mSBERT,compositional_nc,water bottle,component,water bottle,bottle,0.9128268361091614,0.8426095247268677,0.8426095247268677,She packed a bottle for the hike.
+mSBERT,compositional_nc,water bottle,word_by_word,water bottle,liquid vessel,0.7840249538421631,0.6808102130889893,0.6808102130889893,She packed a liquid vessel for the hike.
+mSBERT,compositional_nc,water bottle,random,water bottle,museum thunder,0.4888264238834381,0.1693718284368515,0.1693718284368515,She packed a museum thunder for the hike.
+mSBERT,compositional_nc,history book,synonym,history book,historical volume,0.941252827644348,0.724483847618103,0.724483847618103,The student borrowed a historical volume from the library.
+mSBERT,compositional_nc,history book,component,history book,book,0.8758219480514526,0.6630613207817078,0.6630613207817078,The student borrowed a book from the library.
+mSBERT,compositional_nc,history book,word_by_word,history book,past chronicle,0.932414174079895,0.7009878754615784,0.7009878754615784,The student borrowed a past chronicle from the library.
+mSBERT,compositional_nc,history book,random,history book,desert umbrella,0.6404774785041809,0.1131418198347091,0.1131418198347091,The student borrowed a desert umbrella from the library.
+mSBERT,compositional_nc,river bridge,synonym,river bridge,waterway crossing,0.825330913066864,0.5032602548599243,0.5032602548599243,The workers repaired the waterway crossing after the flood.
+mSBERT,compositional_nc,river bridge,component,river bridge,bridge,0.9644864201545716,0.8342979550361633,0.8342979550361633,The workers repaired the bridge after the flood.
+mSBERT,compositional_nc,river bridge,word_by_word,river bridge,stream viaduct,0.859164297580719,0.5482859015464783,0.5482859015464783,The workers repaired the stream viaduct after the flood.
+mSBERT,compositional_nc,river bridge,random,river bridge,lemon window,0.6494476199150085,0.2153370976448059,0.2153370976448059,The workers repaired the lemon window after the flood.
+mSBERT,compositional_nc,hospital room,synonym,hospital room,medical chamber,0.940621554851532,0.7996512055397034,0.7996512055397034,The nurse cleaned the medical chamber before noon.
+mSBERT,compositional_nc,hospital room,component,hospital room,room,0.96210914850235,0.7026766538619995,0.7026766538619995,The nurse cleaned the room before noon.
+mSBERT,compositional_nc,hospital room,word_by_word,hospital room,clinic space,0.9222009181976318,0.758730411529541,0.758730411529541,The nurse cleaned the clinic space before noon.
+mSBERT,compositional_nc,hospital room,random,hospital room,cloud hammer,0.7440551519393921,0.120728462934494,0.120728462934494,The nurse cleaned the cloud hammer before noon.
+mSBERT,compositional_nc,village market,synonym,village market,rural marketplace,0.9764226078987122,0.8757761120796204,0.8757761120796204,The farmer visited the rural marketplace every Friday.
+mSBERT,compositional_nc,village market,component,village market,market,0.9469000101089478,0.760341227054596,0.760341227054596,The farmer visited the market every Friday.
+mSBERT,compositional_nc,village market,word_by_word,village market,hamlet bazaar,0.8270609974861145,0.4007213115692138,0.4007213115692138,The farmer visited the hamlet bazaar every Friday.
+mSBERT,compositional_nc,village market,random,village market,iron ocean,0.7044777274131775,0.1564646661281585,0.1564646661281585,The farmer visited the iron ocean every Friday.
+mSBERT,compositional_nc,data center,synonym,data center,computing facility,0.7284342646598816,0.3292995095252991,0.3292995095252991,The company expanded the computing facility near the campus.
+mSBERT,compositional_nc,data center,component,data center,center,0.8985149264335632,0.7750589847564697,0.7750589847564697,The company expanded the center near the campus.
+mSBERT,compositional_nc,data center,word_by_word,data center,information hub,0.835195004940033,0.4904362261295318,0.4904362261295318,The company expanded the information hub near the campus.
+mSBERT,compositional_nc,data center,random,data center,velvet forest,0.6832752823829651,0.1298981606960296,0.1298981606960296,The company expanded the velvet forest near the campus.
+mSBERT,compositional_nc,music festival,synonym,music festival,concert event,0.9267775416374208,0.7889442443847656,0.7889442443847656,The town hosted a concert event in July.
+mSBERT,compositional_nc,music festival,component,music festival,festival,0.9202792644500732,0.827665388584137,0.827665388584137,The town hosted a festival in July.
+mSBERT,compositional_nc,music festival,word_by_word,music festival,melody celebration,0.9005782008171082,0.704975426197052,0.704975426197052,The town hosted a melody celebration in July.
+mSBERT,compositional_nc,music festival,random,music festival,paper mountain,0.5729462504386902,0.107364609837532,0.107364609837532,The town hosted a paper mountain in July.
+mSBERT,single_word_control,doctor,synonym,doctor,physician,0.9935147166252136,0.9790579676628112,0.9790579676628112,The physician opened the door quickly.
+mSBERT,single_word_control,doctor,related,doctor,nurse,0.8353169560432434,0.6661373376846313,0.6661373376846313,The nurse opened the door quickly.
+mSBERT,single_word_control,doctor,random,doctor,carpet,0.7049383521080017,0.3288349211215973,0.3288349211215973,The carpet opened the door quickly.
+mSBERT,single_word_control,apple,synonym,apple,fruit,0.8897944092750549,0.7454557418823242,0.7454557418823242,She bought a fresh fruit from the market.
+mSBERT,single_word_control,apple,related,apple,pear,0.859817385673523,0.5672358274459839,0.5672358274459839,She bought a fresh pear from the market.
+mSBERT,single_word_control,apple,random,apple,engine,0.710749089717865,0.2587770819664001,0.2587770819664001,She bought a fresh engine from the market.
+mSBERT,single_word_control,teacher,synonym,teacher,instructor,0.9514546990394592,0.8834083676338196,0.8834083676338196,The instructor explained the problem clearly.
+mSBERT,single_word_control,teacher,related,teacher,professor,0.967590868473053,0.9384040236473083,0.9384040236473083,The professor explained the problem clearly.
+mSBERT,single_word_control,teacher,random,teacher,mountain,0.7143945693969727,0.3481307625770569,0.3481307625770569,The mountain explained the problem clearly.
+mSBERT,single_word_control,lawyer,synonym,lawyer,attorney,0.9875589609146118,0.9477902054786682,0.9477902054786682,The attorney reviewed the contract before lunch.
+mSBERT,single_word_control,lawyer,related,lawyer,judge,0.9283657073974608,0.6783109903335571,0.6783109903335571,The judge reviewed the contract before lunch.
+mSBERT,single_word_control,lawyer,random,lawyer,umbrella,0.8155825734138489,0.2745813727378845,0.2745813727378845,The umbrella reviewed the contract before lunch.
+mSBERT,single_word_control,river,synonym,river,stream,0.956329107284546,0.7625539898872375,0.7625539898872375,The stream flooded the lower fields overnight.
+mSBERT,single_word_control,river,related,river,canal,0.8948821425437927,0.6218158602714539,0.6218158602714539,The canal flooded the lower fields overnight.
+mSBERT,single_word_control,river,random,river,microscope,0.7403058409690857,0.2480499148368835,0.2480499148368835,The microscope flooded the lower fields overnight.
+mSBERT,single_word_control,city,synonym,city,metropolis,0.9690161943435668,0.8665457963943481,0.8665457963943481,The metropolis approved the new housing plan.
+mSBERT,single_word_control,city,related,city,town,0.9954736828804016,0.9662982225418092,0.9662982225418092,The town approved the new housing plan.
+mSBERT,single_word_control,city,random,city,sandwich,0.7913568615913391,0.3201459646224975,0.3201459646224975,The sandwich approved the new housing plan.
+mSBERT,single_word_control,storm,synonym,storm,tempest,0.9512172937393188,0.6697523593902588,0.6697523593902588,The tempest damaged several houses near the coast.
+mSBERT,single_word_control,storm,related,storm,rainstorm,0.9754652976989746,0.883524477481842,0.883524477481842,The rainstorm damaged several houses near the coast.
+mSBERT,single_word_control,storm,random,storm,violin,0.7975448369979858,0.3597594201564789,0.3597594201564789,The violin damaged several houses near the coast.
+mSBERT,single_word_control,idea,synonym,idea,concept,0.9735721349716188,0.8457703590393066,0.8457703590393066,The concept changed the direction of the project.
+mSBERT,single_word_control,idea,related,idea,thought,0.9679250121116638,0.8144168853759766,0.8144168853759766,The thought changed the direction of the project.
+mSBERT,single_word_control,idea,random,idea,hammer,0.8288483023643494,0.3974956274032593,0.3974956274032593,The hammer changed the direction of the project.
+mSBERT,single_word_control,problem,synonym,problem,issue,0.9780555367469788,0.9264035224914552,0.9264035224914552,The issue delayed the final report.
+mSBERT,single_word_control,problem,related,problem,question,0.9039068222045898,0.6906673312187195,0.6906673312187195,The question delayed the final report.
+mSBERT,single_word_control,problem,random,problem,pillow,0.7465118169784546,0.2938986718654632,0.2938986718654632,The pillow delayed the final report.
+mSBERT,single_word_control,music,synonym,music,melody,0.932399570941925,0.7919498682022095,0.7919498682022095,The melody filled the old theater.
+mSBERT,single_word_control,music,related,music,song,0.919099748134613,0.7969156503677368,0.7969156503677368,The song filled the old theater.
+mSBERT,single_word_control,music,random,music,staircase,0.8035563230514526,0.3114940226078033,0.3114940226078033,The staircase filled the old theater.
+mSBERT,single_word_control,letter,synonym,letter,note,0.8854732513427734,0.540115237236023,0.540115237236023,The note arrived before the meeting.
+mSBERT,single_word_control,letter,related,letter,message,0.9214762449264526,0.6746388077735901,0.6746388077735901,The message arrived before the meeting.
+mSBERT,single_word_control,letter,random,letter,volcano,0.6328299641609192,0.2832546532154083,0.2832546532154083,The volcano arrived before the meeting.
+mSBERT,single_word_control,machine,synonym,machine,device,0.8964089751243591,0.708530843257904,0.708530843257904,The device stopped during the demonstration.
+mSBERT,single_word_control,machine,related,machine,apparatus,0.913477659225464,0.738349974155426,0.738349974155426,The apparatus stopped during the demonstration.
+mSBERT,single_word_control,machine,random,machine,forest,0.663987398147583,0.3547269105911255,0.3547269105911255,The forest stopped during the demonstration.
+mSBERT,single_word_control,road,synonym,road,street,0.9931952953338624,0.9128090143203736,0.9128090143203736,The street crossed the valley below the town.
+mSBERT,single_word_control,road,related,road,highway,0.9781277775764464,0.8890738487243652,0.8890738487243652,The highway crossed the valley below the town.
+mSBERT,single_word_control,road,random,road,singer,0.83528071641922,0.389868825674057,0.389868825674057,The singer crossed the valley below the town.
+mSBERT,single_word_control,flower,synonym,flower,blossom,0.9944657683372498,0.9617955684661864,0.9617955684661864,The blossom bloomed beside the window.
+mSBERT,single_word_control,flower,related,flower,rose,0.8622069954872131,0.6635844707489014,0.6635844707489014,The rose bloomed beside the window.
+mSBERT,single_word_control,flower,random,flower,engine,0.7569248080253601,0.2603341042995453,0.2603341042995453,The engine bloomed beside the window.
+mSBERT,single_word_control,ocean,synonym,ocean,sea,0.9645646810531616,0.893927276134491,0.893927276134491,The sea reflected the morning light.
+mSBERT,single_word_control,ocean,related,ocean,lake,0.768261194229126,0.6208024024963379,0.6208024024963379,The lake reflected the morning light.
+mSBERT,single_word_control,ocean,random,ocean,notebook,0.6805614233016968,0.2196886390447616,0.2196886390447616,The notebook reflected the morning light.
+mSBERT,single_word_control,child,synonym,child,youngster,0.9089208841323853,0.7185267210006714,0.7185267210006714,The youngster solved the puzzle quickly.
+mSBERT,single_word_control,child,related,child,teenager,0.8673738241195679,0.6329028010368347,0.6329028010368347,The teenager solved the puzzle quickly.
+mSBERT,single_word_control,child,random,child,candle,0.7592630386352539,0.3702192008495331,0.3702192008495331,The candle solved the puzzle quickly.
+mSBERT,ordinary_two_word_control,red car,synonym,red car,crimson vehicle,0.8227097392082214,0.5891976952552795,0.5891976952552795,The crimson vehicle stopped near the school gate.
+mSBERT,ordinary_two_word_control,red car,component,red car,car,0.8718750476837158,0.6680198311805725,0.6680198311805725,The car stopped near the school gate.
+mSBERT,ordinary_two_word_control,red car,word_by_word,red car,scarlet automobile,0.8541931509971619,0.6576853394508362,0.6576853394508362,The scarlet automobile stopped near the school gate.
+mSBERT,ordinary_two_word_control,red car,random,red car,coffee spoon,0.6265429258346558,0.2117961794137954,0.2117961794137954,The coffee spoon stopped near the school gate.
+mSBERT,ordinary_two_word_control,coffee cup,synonym,coffee cup,mug,0.9292709231376648,0.6087820529937744,0.6087820529937744,She placed the mug on the wooden table.
+mSBERT,ordinary_two_word_control,coffee cup,component,coffee cup,cup,0.9397566318511964,0.8101412057876587,0.8101412057876587,She placed the cup on the wooden table.
+mSBERT,ordinary_two_word_control,coffee cup,word_by_word,coffee cup,java container,0.7027669548988342,0.2573609352111816,0.2573609352111816,She placed the java container on the wooden table.
+mSBERT,ordinary_two_word_control,coffee cup,random,coffee cup,traffic signal,0.6149993538856506,0.0863040089607238,0.0863040089607238,She placed the traffic signal on the wooden table.
+mSBERT,ordinary_two_word_control,wooden chair,synonym,wooden chair,timber seat,0.9394504427909852,0.8503801822662354,0.8503801822662354,The timber seat stood beside the fireplace.
+mSBERT,ordinary_two_word_control,wooden chair,component,wooden chair,chair,0.9119139909744264,0.8130674958229065,0.8130674958229065,The chair stood beside the fireplace.
+mSBERT,ordinary_two_word_control,wooden chair,word_by_word,wooden chair,wood seat,0.9465193152427672,0.868974506855011,0.868974506855011,The wood seat stood beside the fireplace.
+mSBERT,ordinary_two_word_control,wooden chair,random,wooden chair,silver cloud,0.5131323933601379,0.1228544116020202,0.1228544116020202,The silver cloud stood beside the fireplace.
+mSBERT,ordinary_two_word_control,summer rain,synonym,summer rain,seasonal rainfall,0.9361158013343812,0.8381184935569763,0.8381184935569763,The seasonal rainfall cooled the dusty street.
+mSBERT,ordinary_two_word_control,summer rain,component,summer rain,rain,0.8697338104248047,0.8019832372665405,0.8019832372665405,The rain cooled the dusty street.
+mSBERT,ordinary_two_word_control,summer rain,word_by_word,summer rain,warm shower,0.7897272706031799,0.5634715557098389,0.5634715557098389,The warm shower cooled the dusty street.
+mSBERT,ordinary_two_word_control,summer rain,random,summer rain,library key,0.5189421772956848,0.1294030547142028,0.1294030547142028,The library key cooled the dusty street.
+mSBERT,ordinary_two_word_control,city park,synonym,city park,urban garden,0.872302234172821,0.746489942073822,0.746489942073822,The urban garden opened after the renovation.
+mSBERT,ordinary_two_word_control,city park,component,city park,park,0.9251729249954224,0.8133242130279541,0.8133242130279541,The park opened after the renovation.
+mSBERT,ordinary_two_word_control,city park,word_by_word,city park,municipal green,0.7552548050880432,0.523133397102356,0.523133397102356,The municipal green opened after the renovation.
+mSBERT,ordinary_two_word_control,city park,random,city park,ocean pencil,0.5666176676750183,0.1430319100618362,0.1430319100618362,The ocean pencil opened after the renovation.
+mSBERT,ordinary_two_word_control,glass bottle,synonym,glass bottle,transparent container,0.5380338430404663,0.3323048651218414,0.3323048651218414,The transparent container rolled under the bench.
+mSBERT,ordinary_two_word_control,glass bottle,component,glass bottle,bottle,0.929004430770874,0.8805263638496399,0.8805263638496399,The bottle rolled under the bench.
+mSBERT,ordinary_two_word_control,glass bottle,word_by_word,glass bottle,crystal vessel,0.664580762386322,0.5182128548622131,0.5182128548622131,The crystal vessel rolled under the bench.
+mSBERT,ordinary_two_word_control,glass bottle,random,glass bottle,mountain ticket,0.4947410225868225,0.1865194141864776,0.1865194141864776,The mountain ticket rolled under the bench.
+mSBERT,ordinary_two_word_control,school bus,synonym,school bus,student transport,0.8304728865623474,0.5883124470710754,0.5883124470710754,The student transport waited outside the museum.
+mSBERT,ordinary_two_word_control,school bus,component,school bus,bus,0.9327131509780884,0.7744684815406799,0.7744684815406799,The bus waited outside the museum.
+mSBERT,ordinary_two_word_control,school bus,word_by_word,school bus,education coach,0.8131668567657471,0.4959107935428619,0.4959107935428619,The education coach waited outside the museum.
+mSBERT,ordinary_two_word_control,school bus,random,school bus,kitchen moon,0.6013571619987488,0.1877388060092926,0.1877388060092926,The kitchen moon waited outside the museum.
+mSBERT,ordinary_two_word_control,paper bag,synonym,paper bag,paper sack,0.9779353141784668,0.9517099857330322,0.9517099857330322,The paper sack tore near the counter.
+mSBERT,ordinary_two_word_control,paper bag,component,paper bag,bag,0.8636730313301086,0.7656691670417786,0.7656691670417786,The bag tore near the counter.
+mSBERT,ordinary_two_word_control,paper bag,word_by_word,paper bag,cellulose pouch,0.6885185837745667,0.5409447550773621,0.5409447550773621,The cellulose pouch tore near the counter.
+mSBERT,ordinary_two_word_control,paper bag,random,paper bag,thunder candle,0.4739623963832855,0.1849907487630844,0.1849907487630844,The thunder candle tore near the counter.
+mSBERT,ordinary_two_word_control,kitchen knife,synonym,kitchen knife,cooking blade,0.9280460476875304,0.8522166609764099,0.8522166609764099,The cooking blade rested beside the plate.
+mSBERT,ordinary_two_word_control,kitchen knife,component,kitchen knife,knife,0.8646599650382996,0.7698847055435181,0.7698847055435181,The knife rested beside the plate.
+mSBERT,ordinary_two_word_control,kitchen knife,word_by_word,kitchen knife,culinary blade,0.9242957830429076,0.8510679006576538,0.8510679006576538,The culinary blade rested beside the plate.
+mSBERT,ordinary_two_word_control,kitchen knife,random,kitchen knife,desert violin,0.4930546581745147,0.2026915252208709,0.2026915252208709,The desert violin rested beside the plate.
+mSBERT,ordinary_two_word_control,garden flower,synonym,garden flower,yard blossom,0.9627294540405272,0.8952318429946899,0.8952318429946899,The yard blossom attracted several bees.
+mSBERT,ordinary_two_word_control,garden flower,component,garden flower,flower,0.8950843811035156,0.780197024345398,0.780197024345398,The flower attracted several bees.
+mSBERT,ordinary_two_word_control,garden flower,word_by_word,garden flower,outdoor bloom,0.8153262138366699,0.6217858791351318,0.6217858791351318,The outdoor bloom attracted several bees.
+mSBERT,ordinary_two_word_control,garden flower,random,garden flower,airport spoon,0.6600947976112366,0.1635384112596511,0.1635384112596511,The airport spoon attracted several bees.
+mSBERT,ordinary_two_word_control,ocean wave,synonym,ocean wave,sea swell,0.8494464755058289,0.7387864589691162,0.7387864589691162,The sea swell reached the empty pier.
+mSBERT,ordinary_two_word_control,ocean wave,component,ocean wave,wave,0.8740931153297424,0.7767532467842102,0.7767532467842102,The wave reached the empty pier.
+mSBERT,ordinary_two_word_control,ocean wave,word_by_word,ocean wave,marine ripple,0.7817316055297852,0.6179694533348083,0.6179694533348083,The marine ripple reached the empty pier.
+mSBERT,ordinary_two_word_control,ocean wave,random,ocean wave,factory pillow,0.4562925696372986,0.1047870144248008,0.1047870144248008,The factory pillow reached the empty pier.
+mSBERT,ordinary_two_word_control,train station,synonym,train station,railway terminal,0.9433831572532654,0.8103499412536621,0.8103499412536621,The railway terminal closed after midnight.
+mSBERT,ordinary_two_word_control,train station,component,train station,station,0.9573652744293212,0.8661648035049438,0.8661648035049438,The station closed after midnight.
+mSBERT,ordinary_two_word_control,train station,word_by_word,train station,rail depot,0.911617636680603,0.6629071831703186,0.6629071831703186,The rail depot closed after midnight.
+mSBERT,ordinary_two_word_control,train station,random,train station,lemon window,0.6129281520843506,0.2070300132036209,0.2070300132036209,The lemon window closed after midnight.
+mSBERT,ordinary_two_word_control,computer screen,synonym,computer screen,monitor,0.8109917640686035,0.732928991317749,0.732928991317749,The monitor flickered during the call.
+mSBERT,ordinary_two_word_control,computer screen,component,computer screen,screen,0.8530181646347046,0.8291336297988892,0.8291336297988892,The screen flickered during the call.
+mSBERT,ordinary_two_word_control,computer screen,word_by_word,computer screen,digital display,0.6518095135688782,0.579124927520752,0.579124927520752,The digital display flickered during the call.
+mSBERT,ordinary_two_word_control,computer screen,random,computer screen,forest blanket,0.4874893128871918,0.1850727945566177,0.1850727945566177,The forest blanket flickered during the call.
+mSBERT,ordinary_two_word_control,stone bridge,synonym,stone bridge,masonry crossing,0.7233679294586182,0.4284882247447967,0.4284882247447967,The masonry crossing crossed the narrow river.
+mSBERT,ordinary_two_word_control,stone bridge,component,stone bridge,bridge,0.8807967901229858,0.7806216478347778,0.7806216478347778,The bridge crossed the narrow river.
+mSBERT,ordinary_two_word_control,stone bridge,word_by_word,stone bridge,rock viaduct,0.8650442361831665,0.671794593334198,0.671794593334198,The rock viaduct crossed the narrow river.
+mSBERT,ordinary_two_word_control,stone bridge,random,stone bridge,velvet engine,0.4650024175643921,0.0577477104961872,0.0577477104961872,The velvet engine crossed the narrow river.
+mSBERT,ordinary_two_word_control,plastic box,synonym,plastic box,synthetic container,0.845258891582489,0.6454386115074158,0.6454386115074158,The synthetic container held the spare cables.
+mSBERT,ordinary_two_word_control,plastic box,component,plastic box,box,0.8334409594535828,0.7245326638221741,0.7245326638221741,The box held the spare cables.
+mSBERT,ordinary_two_word_control,plastic box,word_by_word,plastic box,polymer case,0.6973647475242615,0.5381637811660767,0.5381637811660767,The polymer case held the spare cables.
+mSBERT,ordinary_two_word_control,plastic box,random,plastic box,museum thunder,0.5576239824295044,0.1860433965921402,0.1860433965921402,The museum thunder held the spare cables.
+mSBERT,ordinary_two_word_control,winter coat,synonym,winter coat,cold weather jacket,0.922784984111786,0.8285080790519714,0.8285080790519714,The cold weather jacket hung behind the office door.
+mSBERT,ordinary_two_word_control,winter coat,component,winter coat,coat,0.8511160612106323,0.7529857158660889,0.7529857158660889,The coat hung behind the office door.
+mSBERT,ordinary_two_word_control,winter coat,word_by_word,winter coat,seasonal garment,0.7978498339653015,0.6017382144927979,0.6017382144927979,The seasonal garment hung behind the office door.
+mSBERT,ordinary_two_word_control,winter coat,random,winter coat,river button,0.5670015215873718,0.1705292761325836,0.1705292761325836,The river button hung behind the office door.

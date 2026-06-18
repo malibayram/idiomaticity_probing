@@ -1,0 +1,65 @@
+group,name,original,target,synonym,component,word_by_word,related,random
+idiomatic_nc,grey matter,These youngsters use their grey matter when the presentation is right.,grey matter,brain,matter,silvery material,,battlefront serviceman
+idiomatic_nc,eager beaver,Eric stayed a real eager beaver during the audit.,eager beaver,hard worker,beaver,restless rodent,,petrol station
+idiomatic_nc,couch potato,Nina became a couch potato after the exams.,couch potato,lazy person,potato,sofa tuber,,railway signal
+idiomatic_nc,cold feet,The sudden audit gave the manager cold feet before the launch.,cold feet,nervousness,feet,chilly legs,,garden invoice
+idiomatic_nc,white elephant,The abandoned stadium became a white elephant for the city.,white elephant,burden,elephant,pale animal,,kitchen policy
+idiomatic_nc,red tape,The permit was delayed by red tape at the ministry.,red tape,bureaucracy,tape,crimson ribbon,,ocean doorway
+idiomatic_nc,dark horse,A dark horse won the final round of the tournament.,dark horse,unexpected contender,horse,shadowy animal,,library candle
+idiomatic_nc,black sheep,After the scandal Omar was the black sheep of the board.,black sheep,outcast,sheep,dark animal,,museum ticket
+idiomatic_nc,silver lining,The grant rejection had a silver lining for the startup.,silver lining,hopeful aspect,lining,metallic edge,,desert violin
+idiomatic_nc,ivory tower,The report criticized the ivory tower at the institute.,ivory tower,academic isolation,tower,pale structure,,market umbrella
+idiomatic_nc,glass ceiling,The promotion exposed the glass ceiling in the company.,glass ceiling,invisible barrier,ceiling,transparent roof,,forest melody
+idiomatic_nc,cash cow,The old product became a cash cow for the firm.,cash cow,moneymaker,cow,money animal,,airport blanket
+idiomatic_nc,loose cannon,The spokesman was a loose cannon during the debate.,loose cannon,unpredictable person,cannon,unstable weapon,,velvet engine
+idiomatic_nc,golden handshake,The manager received a golden handshake after the merger.,golden handshake,severance payment,handshake,valuable greeting,,mountain pillow
+idiomatic_nc,paper tiger,The threat was a paper tiger in the negotiations.,paper tiger,weak threat,tiger,document animal,,river button
+idiomatic_nc,smoking gun,The email became the smoking gun in the investigation.,smoking gun,decisive evidence,gun,burning weapon,,kitchen horizon
+compositional_nc,economic aid,The committee approved economic aid for the region after the storm.,economic aid,financial assistance,aid,budgetary assistance,,kitchen table
+compositional_nc,research lab,The students joined a research lab during the summer program.,research lab,research facility,lab,investigation workplace,,garden party
+compositional_nc,climate policy,The council debated climate policy during the evening session.,climate policy,environmental policy,policy,weather guideline,,garden spoon
+compositional_nc,medical school,Her brother entered medical school after years of preparation.,medical school,medical college,school,clinical academy,,ocean mirror
+compositional_nc,mountain village,The travelers reached a mountain village before sunset.,mountain village,alpine settlement,village,hill hamlet,,plastic thunder
+compositional_nc,solar panel,The engineer installed a solar panel on the roof.,solar panel,photovoltaic module,panel,sun powered plate,,velvet sandwich
+compositional_nc,election result,The newspaper published the election result at midnight.,election result,vote outcome,result,ballot outcome,,kitchen river
+compositional_nc,airport security,The staff improved airport security before the summit.,airport security,aviation security,security,terminal safety,,forest melody
+compositional_nc,language teacher,The language teacher corrected the essays carefully.,language teacher,language instructor,teacher,linguistic educator,,silver engine
+compositional_nc,water bottle,She packed a water bottle for the hike.,water bottle,drinking container,bottle,liquid vessel,,museum thunder
+compositional_nc,history book,The student borrowed a history book from the library.,history book,historical volume,book,past chronicle,,desert umbrella
+compositional_nc,river bridge,The workers repaired the river bridge after the flood.,river bridge,waterway crossing,bridge,stream viaduct,,lemon window
+compositional_nc,hospital room,The nurse cleaned the hospital room before noon.,hospital room,medical chamber,room,clinic space,,cloud hammer
+compositional_nc,village market,The farmer visited the village market every Friday.,village market,rural marketplace,market,hamlet bazaar,,iron ocean
+compositional_nc,data center,The company expanded the data center near the campus.,data center,computing facility,center,information hub,,velvet forest
+compositional_nc,music festival,The town hosted a music festival in July.,music festival,concert event,festival,melody celebration,,paper mountain
+single_word_control,doctor,The doctor opened the door quickly.,doctor,physician,,,nurse,carpet
+single_word_control,apple,She bought a fresh apple from the market.,apple,fruit,,,pear,engine
+single_word_control,teacher,The teacher explained the problem clearly.,teacher,instructor,,,professor,mountain
+single_word_control,lawyer,The lawyer reviewed the contract before lunch.,lawyer,attorney,,,judge,umbrella
+single_word_control,river,The river flooded the lower fields overnight.,river,stream,,,canal,microscope
+single_word_control,city,The city approved the new housing plan.,city,metropolis,,,town,sandwich
+single_word_control,storm,The storm damaged several houses near the coast.,storm,tempest,,,rainstorm,violin
+single_word_control,idea,The idea changed the direction of the project.,idea,concept,,,thought,hammer
+single_word_control,problem,The problem delayed the final report.,problem,issue,,,question,pillow
+single_word_control,music,The music filled the old theater.,music,melody,,,song,staircase
+single_word_control,letter,The letter arrived before the meeting.,letter,note,,,message,volcano
+single_word_control,machine,The machine stopped during the demonstration.,machine,device,,,apparatus,forest
+single_word_control,road,The road crossed the valley below the town.,road,street,,,highway,singer
+single_word_control,flower,The flower bloomed beside the window.,flower,blossom,,,rose,engine
+single_word_control,ocean,The ocean reflected the morning light.,ocean,sea,,,lake,notebook
+single_word_control,child,The child solved the puzzle quickly.,child,youngster,,,teenager,candle
+ordinary_two_word_control,red car,The red car stopped near the school gate.,red car,crimson vehicle,car,scarlet automobile,,coffee spoon
+ordinary_two_word_control,coffee cup,She placed the coffee cup on the wooden table.,coffee cup,mug,cup,java container,,traffic signal
+ordinary_two_word_control,wooden chair,The wooden chair stood beside the fireplace.,wooden chair,timber seat,chair,wood seat,,silver cloud
+ordinary_two_word_control,summer rain,The summer rain cooled the dusty street.,summer rain,seasonal rainfall,rain,warm shower,,library key
+ordinary_two_word_control,city park,The city park opened after the renovation.,city park,urban garden,park,municipal green,,ocean pencil
+ordinary_two_word_control,glass bottle,The glass bottle rolled under the bench.,glass bottle,transparent container,bottle,crystal vessel,,mountain ticket
+ordinary_two_word_control,school bus,The school bus waited outside the museum.,school bus,student transport,bus,education coach,,kitchen moon
+ordinary_two_word_control,paper bag,The paper bag tore near the counter.,paper bag,paper sack,bag,cellulose pouch,,thunder candle
+ordinary_two_word_control,kitchen knife,The kitchen knife rested beside the plate.,kitchen knife,cooking blade,knife,culinary blade,,desert violin
+ordinary_two_word_control,garden flower,The garden flower attracted several bees.,garden flower,yard blossom,flower,outdoor bloom,,airport spoon
+ordinary_two_word_control,ocean wave,The ocean wave reached the empty pier.,ocean wave,sea swell,wave,marine ripple,,factory pillow
+ordinary_two_word_control,train station,The train station closed after midnight.,train station,railway terminal,station,rail depot,,lemon window
+ordinary_two_word_control,computer screen,The computer screen flickered during the call.,computer screen,monitor,screen,digital display,,forest blanket
+ordinary_two_word_control,stone bridge,The stone bridge crossed the narrow river.,stone bridge,masonry crossing,bridge,rock viaduct,,velvet engine
+ordinary_two_word_control,plastic box,The plastic box held the spare cables.,plastic box,synthetic container,box,polymer case,,museum thunder
+ordinary_two_word_control,winter coat,The winter coat hung behind the office door.,winter coat,cold weather jacket,coat,seasonal garment,,river button

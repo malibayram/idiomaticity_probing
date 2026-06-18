@@ -1,6 +1,6 @@
 # Idiomaticity Probing — Model-Agnostik Çerçeve
 
-He et al. (2025), *Investigating Idiomaticity in Word Representations* (Computational
+He et al. (2025), _Investigating Idiomaticity in Word Representations_ (Computational
 Linguistics 51(2)) makalesinin yöntemini **herhangi bir kelime temsil modelinde** tekrar
 uygulamak için kurulmuş bir çerçeve.
 
@@ -17,16 +17,16 @@ dilli embedding modelleri ve Türkçe modeller** üzerinde de aynı deney koştu
 🗺️ Geliştirme planı: [ROADMAP.md](ROADMAP.md)
 
 > **Bu çalışmanın ana sorusu:** Bu sürede her alanda gelişen yapay zeka modelleri,
-> *idiyomatiklik temsili* alanında da gelişti mi — gelişti ise ne kadar, gelişmedi ise temel
+> _idiyomatiklik temsili_ alanında da gelişti mi — gelişti ise ne kadar, gelişmedi ise temel
 > sorun ne? Cevabı `scripts/analyze.py` üretir (eski vs yeni model kohortları + teşhis).
 
 ---
 
 ## Ne ölçülüyor? (1 dakikada)
 
-Makalenin ana sorusu şudur: Bir temsil modeli, *grey matter* gibi bir isim bileşiğini sadece
+Makalenin ana sorusu şudur: Bir temsil modeli, _grey matter_ gibi bir isim bileşiğini sadece
 `grey + matter` kelimelerinin toplamı olarak mı görüyor, yoksa ifadenin bütüncül anlamını
-(*brain*) yakalayabiliyor mu?
+(_brain_) yakalayabiliyor mu?
 
 Deney bunu doğrudan sınıflandırma olarak sormaz. Bunun yerine her hedef isim bileşiği
 (**NC**, noun compound) için küçük **minimal çiftler** üretir:
@@ -87,12 +87,12 @@ Bu sayılar temsili örnektir; gerçek değerler kullanılan modele, bağlama ve
 
 ### Problar
 
-| Prob | İkame | Beklenti |
-|------|-------|----------|
-| **P_Syn** | NC'nin altın/bütüncül eş anlamlısı | Her sınıfta yüksek benzerlik |
-| **P_Comp** | Anlamı en çok koruyan tek bileşen; pratikte head, yoksa modifier | Kompozisyonelde yüksek, idiyomatikte düşük |
-| **P_WordsSyn** | Bileşenlerin kelime-kelime eş anlamlısı | Kompozisyonelde yüksek, idiyomatikte düşük |
-| **P_Rand** | Frekans-eşli rastgele gerçek ifadeler; genelde 5 örnek | Her sınıfta düşük benzerlik, alt sınır/kontrol |
+| Prob           | İkame                                                            | Beklenti                                       |
+| -------------- | ---------------------------------------------------------------- | ---------------------------------------------- |
+| **P_Syn**      | NC'nin altın/bütüncül eş anlamlısı                               | Her sınıfta yüksek benzerlik                   |
+| **P_Comp**     | Anlamı en çok koruyan tek bileşen; pratikte head, yoksa modifier | Kompozisyonelde yüksek, idiyomatikte düşük     |
+| **P_WordsSyn** | Bileşenlerin kelime-kelime eş anlamlısı                          | Kompozisyonelde yüksek, idiyomatikte düşük     |
+| **P_Rand**     | Frekans-eşli rastgele gerçek ifadeler; genelde 5 örnek           | Her sınıfta düşük benzerlik, alt sınır/kontrol |
 
 Önemli ayrım: `P_Rand` uydurma ya da anlamsız token değildir; veri setinden gelen, hedefle
 semantik ilişkisi olmayan frekans-eşli gerçek ifadelerdir. Bu yüzden modelin "her şeye yüksek
@@ -100,39 +100,39 @@ benzerlik verme" eğilimini görünür kılan bir taban çizgi gibi kullanılır
 
 ### Somut örnek: idiyomatik NC
 
-Örnek hedef ifade: *grey matter* (`Comp` düşük, idiyomatik). Orijinal cümle:
+Örnek hedef ifade: _grey matter_ (`Comp` düşük, idiyomatik). Orijinal cümle:
 
 > These youngsters use their **grey matter** when the presentation is right.
 
-| Prob | Değişmiş cümle | İdeal yorum |
-|------|----------------|-------------|
-| **P_Syn** | These youngsters use their **brain** when the presentation is right. | Bütüncül anlam korunur; benzerlik yüksek olmalı. |
-| **P_Comp** | These youngsters use their **matter** when the presentation is right. | Tek bileşen idiyomatik anlamı taşımaz; benzerlik düşmeli. |
-| **P_WordsSyn** | These youngsters use their **silvery material** when the presentation is right. | Kelime-kelime anlam beyin anlamını vermez; benzerlik düşmeli. |
-| **P_Rand** | These youngsters use their **battlefront serviceman** when the presentation is right. | Semantik ilişki yok; benzerlik en düşük bölgede olmalı. |
+| Prob           | Değişmiş cümle                                                                        | İdeal yorum                                                   |
+| -------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| **P_Syn**      | These youngsters use their **brain** when the presentation is right.                  | Bütüncül anlam korunur; benzerlik yüksek olmalı.              |
+| **P_Comp**     | These youngsters use their **matter** when the presentation is right.                 | Tek bileşen idiyomatik anlamı taşımaz; benzerlik düşmeli.     |
+| **P_WordsSyn** | These youngsters use their **silvery material** when the presentation is right.       | Kelime-kelime anlam beyin anlamını vermez; benzerlik düşmeli. |
+| **P_Rand**     | These youngsters use their **battlefront serviceman** when the presentation is right. | Semantik ilişki yok; benzerlik en düşük bölgede olmalı.       |
 
 Temsili bir ideal çıktı şöyle olabilir:
 
-| Ölçüm | Değer | Yorum |
-|-------|-------|-------|
-| `Sim(P_Syn)` | 0.95 | Altın eş anlamlı orijinale çok yakın. |
-| `Sim(P_Comp)` | 0.40 | Tek bileşen anlamı korumuyor. |
-| `Sim(P_WordsSyn)` | 0.35 | Kelime-kelime eş anlamlı idiyomatik anlamı kaçırıyor. |
-| `Sim(P_Rand)` | 0.10 | Rastgele kontrol alt sınırda. |
+| Ölçüm             | Değer | Yorum                                                 |
+| ----------------- | ----- | ----------------------------------------------------- |
+| `Sim(P_Syn)`      | 0.95  | Altın eş anlamlı orijinale çok yakın.                 |
+| `Sim(P_Comp)`     | 0.40  | Tek bileşen anlamı korumuyor.                         |
+| `Sim(P_WordsSyn)` | 0.35  | Kelime-kelime eş anlamlı idiyomatik anlamı kaçırıyor. |
+| `Sim(P_Rand)`     | 0.10  | Rastgele kontrol alt sınırda.                         |
 
 Bu tek örnek sadece sezgiyi gösterir. Asıl karar, tüm NC'lerde ölçümlerin insan `Comp`
 skoruyla beklenen yönde sıralanıp sıralanmadığına bakılarak verilir.
 
 ### Kompozisyonel karşı örnek
 
-*economic aid* gibi kompozisyonel bir NC'de tablo farklı olmalıdır:
+_economic aid_ gibi kompozisyonel bir NC'de tablo farklı olmalıdır:
 
 > The USSR was soon giving Cuba **economic aid** and military support.
 
-- **P_Syn:** *financial assistance* — yüksek benzerlik beklenir.
-- **P_Comp:** *aid* — anlamın önemli kısmını koruduğu için yüksek/orta-yüksek olabilir.
-- **P_WordsSyn:** *budgetary assistance* — kelime-kelime değişim hâlâ yakın kalabilir.
-- **P_Rand:** *random walk* veya *kitchen table* — düşük kalmalıdır.
+- **P_Syn:** _financial assistance_ — yüksek benzerlik beklenir.
+- **P_Comp:** _aid_ — anlamın önemli kısmını koruduğu için yüksek/orta-yüksek olabilir.
+- **P_WordsSyn:** _budgetary assistance_ — kelime-kelime değişim hâlâ yakın kalabilir.
+- **P_Rand:** _random walk_ veya _kitchen table_ — düşük kalmalıdır.
 
 Yani idiyomatik ifadelerde `P_Comp` ve `P_WordsSyn` düşerken, kompozisyonel ifadelerde bu
 probların orijinale daha yakın kalması beklenir. `P_Syn` ise her iki durumda da yüksek
@@ -140,12 +140,12 @@ kalmalıdır; çünkü bütüncül eş anlamlı zaten hedef anlamı korur.
 
 ### Metrikler nasıl ayrışıyor?
 
-| Metrik | Kod çıktısı | Ne sorar? |
-|--------|-------------|-----------|
-| **Sim** | `sim_P_Syn`, `sim_P_Comp`, `sim_P_WordsSyn`, `sim_P_Rand` | Prob-değiştirilmiş temsil orijinale ham olarak ne kadar yakın? |
-| **Affinity** | `aff_Syn|WordsSyn`, `aff_Syn|Rand` | Model iki probdan hangisini orijinale daha yakın buluyor? Formül: `Sim(Pi) - Sim(Pj)`. |
-| **Scaled Similarity** | `simR_Syn`, `simR_WordsSyn` | Benzerlik, `P_Rand` alt sınırına göre ne kadar anlamlı? Formül: `(Sim(Pi) - Sim(P_Rand)) / (1 - Sim(P_Rand))`. |
-| **Spearman ρ** | `summary.json` içinde `spearman_comp` | Ölçüm değerleri ile insan `Comp` sıralaması ne kadar uyumlu? |
+| Metrik                | Kod çıktısı                                               | Ne sorar?                                                                                                      |
+| --------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----- | -------------------------------------------------------------------------------------- |
+| **Sim**               | `sim_P_Syn`, `sim_P_Comp`, `sim_P_WordsSyn`, `sim_P_Rand` | Prob-değiştirilmiş temsil orijinale ham olarak ne kadar yakın?                                                 |
+| **Affinity**          | `aff_Syn                                                  | WordsSyn`, `aff_Syn                                                                                            | Rand` | Model iki probdan hangisini orijinale daha yakın buluyor? Formül: `Sim(Pi) - Sim(Pj)`. |
+| **Scaled Similarity** | `simR_Syn`, `simR_WordsSyn`                               | Benzerlik, `P_Rand` alt sınırına göre ne kadar anlamlı? Formül: `(Sim(Pi) - Sim(P_Rand)) / (1 - Sim(P_Rand))`. |
+| **Spearman ρ**        | `summary.json` içinde `spearman_comp`                     | Ölçüm değerleri ile insan `Comp` sıralaması ne kadar uyumlu?                                                   |
 
 Örnek sayılarla:
 
@@ -185,21 +185,21 @@ Makaledeki güçlü BERT ayarına yakın bir model olarak `bert-large-uncased` i
 kontrolle çalıştırıldı. BERT-large için en açıklayıcı tablo, `contextual_span_sim` değerlerini
 yan yana göstermektir:
 
-| group | synonym `contextual_span_sim` | random `contextual_span_sim` | `synonym - random` farkı |
-|---|---:|---:|---:|
-| `idiomatic_nc` | 0.761 | 0.671 | 0.089 |
-| `compositional_nc` | 0.942 | 0.723 | 0.219 |
-| `ordinary_two_word_control` | 0.879 | 0.626 | 0.252 |
-| `single_word_control` | 0.912 | 0.627 | 0.285 |
+| group                       | synonym `contextual_span_sim` | random `contextual_span_sim` | `synonym - random` farkı |
+| --------------------------- | ----------------------------: | ---------------------------: | -----------------------: |
+| `idiomatic_nc`              |                         0.761 |                        0.671 |                    0.089 |
+| `compositional_nc`          |                         0.942 |                        0.723 |                    0.219 |
+| `ordinary_two_word_control` |                         0.879 |                        0.626 |                    0.252 |
+| `single_word_control`       |                         0.912 |                        0.627 |                    0.285 |
 
 Ek olarak, sentence-level random benzerlikler sıradan kontrollerde de yüksek kalıyor:
 
-| group | random `sentence_sim` |
-|---|---:|
-| `idiomatic_nc` | 0.901 |
-| `compositional_nc` | 0.939 |
-| `ordinary_two_word_control` | 0.953 |
-| `single_word_control` | 0.943 |
+| group                       | random `sentence_sim` |
+| --------------------------- | --------------------: |
+| `idiomatic_nc`              |                 0.901 |
+| `compositional_nc`          |                 0.939 |
+| `ordinary_two_word_control` |                 0.953 |
+| `single_word_control`       |                 0.943 |
 
 Okuma: sentence-level random similarity sıradan kontrollerde de çok yüksek; bu yüzden tam cümle
 embedding'i ortak cümle iskeletinden ciddi biçimde etkileniyor. Contextual span seviyesinde ise
@@ -274,6 +274,7 @@ python scripts/make_plots.py --results runs/compare/results.csv --out runs/compa
 ```
 
 Çıktılar:
+
 - `results.csv` — uzun format: `model, lang, context, level, nc, comp_class, probe, sim, ...`
 - `summary.json` — model × ölçüm özet tablosu (Affinity, Sim_R, Spearman ρ)
 - `indicators.csv` + `REPORT.md` — gelişme göstergeleri ve hüküm ([RESEARCH_DESIGN.md](RESEARCH_DESIGN.md))
@@ -286,6 +287,7 @@ python scripts/make_plots.py --results runs/compare/results.csv --out runs/compa
 İki yol var:
 
 ### 1) Var olan bir embedder tipini kullan — sadece config
+
 `models.yaml`'a bir giriş ekle:
 
 ```yaml
@@ -313,6 +315,7 @@ models:
 gerekmez.
 
 ### 2) Tamamen yeni bir embedder yaz
+
 `idiomaticity/embedders/base.py` içindeki `BaseEmbedder`'dan türet ve iki metodu uygula:
 
 ```python
