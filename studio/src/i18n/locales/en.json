@@ -1,0 +1,1167 @@
+{
+  "common": {
+    "loading": "Loading…",
+    "signOut": "Sign out",
+    "language": "Language",
+    "clear": "Clear",
+    "close": "Close",
+    "unknownError": "Unknown error",
+    "dataLoadFailed": "Failed to load data: {{message}}",
+    "results": "results",
+    "saving": "Saving…",
+    "saved": "Saved.",
+    "saveFailed": "Save failed.",
+    "firestore": "Firestore",
+    "localSeed": "local seed",
+    "approve": "Approve",
+    "reject": "Reject",
+    "cancel": "Cancel",
+    "refresh": "Refresh",
+    "edit": "Edit",
+    "save": "Save",
+    "source": "source",
+    "paper": "paper",
+    "license": "License",
+    "status": "Status",
+    "size": "Size",
+    "notes": "Notes",
+    "meaning": "Meaning",
+    "detail": "Detail",
+    "soon": "Coming soon",
+    "target": "target",
+    "waiting": "waiting",
+    "passed": "passed",
+    "missing": "{{count}} missing",
+    "noData": "No data.",
+    "review": "review",
+    "authorUnknown": "author unknown",
+    "licenseReviewRequired": "license review required",
+    "publicSiteLink": "Public research site"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "sources": "Source library",
+    "mwes": "MWE inventory",
+    "examples": "Examples lab",
+    "annotation": "Annotation",
+    "probes": "Probe studio",
+    "release": "Validation & release",
+    "experiments": "Experiments",
+    "results": "Results",
+    "admin": "Admin"
+  },
+  "roles": {
+    "labels": {
+      "pending": "Pending approval",
+      "annotator": "Annotator",
+      "curator": "Curator",
+      "viewer": "Viewer",
+      "admin": "Admin"
+    },
+    "descriptions": {
+      "pending": "Signed in; waiting for admin approval.",
+      "annotator": "Only assigned tasks.",
+      "curator": "MWE, examples, probes, and adjudication.",
+      "viewer": "Published data and results.",
+      "admin": "Users, project, worker, and experiment management."
+    }
+  },
+  "domain": {
+    "compClass": {
+      "I": "Idiomatic (I)",
+      "PC": "Partially compositional (PC)",
+      "C": "Compositional (C)"
+    },
+    "workflow": {
+      "draft": "Draft",
+      "examples_ready": "Examples ready",
+      "annotation_ready": "Ready for annotation",
+      "annotated": "Annotated",
+      "probes_ready": "Probes ready",
+      "variants_reviewed": "Variants reviewed",
+      "release_ready": "Release ready",
+      "released": "Released"
+    }
+  },
+  "errors": {
+    "localSeedLoadFailed": "Failed to load local Turkish seed package.",
+    "kenetProbeLoadFailed": "Failed to load KeNet probe candidate package.",
+    "randomProbeLoadFailed": "Failed to load frequency-matched P_Rand candidate package.",
+    "validationReportLoadFailed": "Failed to load Turkish release validation report.",
+    "tatoebaExampleLoadFailed": "Failed to load Tatoeba example candidate package.",
+    "pilotPlanLoadFailed": "Failed to load Turkish annotation pilot plan.",
+    "referenceSummaryLoadFailed": "Failed to load EN/PT reference data summary.",
+    "referenceDatasetLoadFailed": "Failed to load {{language}} reference dataset.",
+    "ordinaryControlLoadFailed": "Failed to load Turkish ordinary-control package.",
+    "invalidJobTemplate": "Invalid job template.",
+    "jobTemplateLoadFailed": "Failed to load job template {{name}}.",
+    "projectAlreadySeeded": "Project was already seeded; live curation data was not overwritten.",
+    "recordConflict": "Record was modified by another user (expected {{expected}}, current {{current}}).",
+    "mweFirestoreMissing": "MWE Firestore record not found; seed the project first.",
+    "mweRevisionConflict": "MWE was modified by another user (current revision {{revision}}).",
+    "probeTargetFull": "{{kind}} target is already full ({{approved}}/{{target}}).",
+    "exampleCandidateMismatch": "Example candidate does not belong to the selected MWE.",
+    "approvalSlotRequired": "Target slot S1, S2, or S3 must be selected for approval.",
+    "contextNotInMwe": "Context does not belong to this MWE.",
+    "probeNotInMwe": "Probe does not belong to this MWE.",
+    "variantNotInMwe": "Variant does not belong to this MWE.",
+    "pilotCampaignExists": "This pilot campaign was already launched; assignments were not rewritten.",
+    "prelabelCampaignExists": "This pre-labeling campaign was already launched; assignments were not rewritten.",
+    "annotationIdMismatch": "Annotation id must match assignment id.",
+    "assignmentNotFound": "Assignment not found.",
+    "prelabelNotGold": "Pre-labels cannot be accepted as gold annotations.",
+    "onlySubmittedReviewable": "Only a submitted annotation can be accepted or excluded.",
+    "goldScoreRange": "Gold score must be between 0 and 5.",
+    "mweNotFound": "MWE record not found.",
+    "minAnnotators": "At least {{count}} distinct annotators must be selected.",
+    "invalidTargetSpan": "Invalid target span: {{start}}:{{end}}.",
+    "contextMissingSpan": "Target span missing in context {{contextId}}.",
+    "exampleSlotNotFound": "Context slot {{slot}} not found.",
+    "exampleCandidateSpanNotFound": "Target surface span not found in example candidate.",
+    "adminProfileMissing": "Admin profile not found.",
+    "runIndicatorsLoadFailed": "Failed to load experiment indicator data.",
+    "usersLoadFailed": "Failed to load users.",
+    "roleUpdateFailed": "Failed to update role.",
+    "anonymousSessionTimeout": "Anonymous Firebase session timed out."
+  },
+  "login": {
+    "title": "NCIMP Research Studio",
+    "description": "Turkish NCIMP curation and experiment platform. Sign in with your Google account to continue.",
+    "signInGoogle": "Sign in with Google",
+    "signInFailed": "Sign-in failed.",
+    "pendingNote": "New accounts require admin approval.",
+    "backToPublicSite": "Back to public research site"
+  },
+  "pending": {
+    "title": "Awaiting approval",
+    "description": "Your account was created ({{email}}). You will get access once an admin approves your role.",
+    "signOut": "Sign out",
+    "checkingSession": "Checking session…"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "welcomeWithName": "Welcome, {{name}}",
+    "loading": "Loading…",
+    "totalMwe": "Total MWEs",
+    "targetCount": "target {{count}}",
+    "goldRated": "Gold scored",
+    "waitingCount": "{{count}} waiting",
+    "sources": "Sources",
+    "campaigns": "Campaigns",
+    "classDistribution": "Class distribution",
+    "classDistributionDesc": "Provisional/gold compositionality class",
+    "workflowStatus": "Workflow status",
+    "workflowStatusDesc": "{{contexts}} context sentences · target {{sentences}} sentences",
+    "turkish": "Turkish",
+    "english": "English",
+    "portuguese": "Portuguese",
+    "activeCuration": "active curation",
+    "readOnlyReference": "read-only reference",
+    "expressionsOpen": "{{current}}/{{target}} expressions · open to edit",
+    "rawRecords": "{{count}} raw records",
+    "humanScored": "{{count}} human scored",
+    "openToReview": "open to review",
+    "referenceSummaryLoading": "Loading reference data summary…"
+  },
+  "mwes": {
+    "title": "MWE inventory",
+    "subtitle": "Review original NCIMP references alongside Turkish curation in the same structure.",
+    "subtitleTr": "{{count}} expressions · source:",
+    "loading": "Loading inventory…",
+    "searchPlaceholder": "Search expression, meaning, or ID…",
+    "allClasses": "All classes",
+    "allStatuses": "All statuses",
+    "columns": {
+      "expression": "Expression",
+      "class": "Class",
+      "goldScore": "Gold score",
+      "status": "Status",
+      "context": "Context"
+    },
+    "goldPrefix": "gold:",
+    "noMatches": "No expressions match the filter.",
+    "detailHint": "Select an expression to view contexts and probes.",
+    "contexts": "Contexts ({{count}})",
+    "note": "Note",
+    "editCurationFields": "Edit curation fields",
+    "provisionalClass": "Provisional class",
+    "saveChanges": "Save changes",
+    "enableFirestoreToEdit": "Enable Firestore seed to edit.",
+    "languageTabsAria": "Dataset language",
+    "tabs": {
+      "TR": "Turkish · editable",
+      "EN": "English · reference",
+      "PT": "Portuguese · reference"
+    }
+  },
+  "sources": {
+    "title": "Source library",
+    "subtitle": "{{count}} sources · license review is shown as a warning and does not block data collection",
+    "loading": "Loading sources…",
+    "addNew": "Add new source",
+    "closeNew": "Close new source",
+    "searchPlaceholder": "Search title, notes, or ID…",
+    "allCategories": "All categories",
+    "allPriorities": "All priorities",
+    "licenseReview": "review: {{license}}",
+    "licenseUnknown": "unknown",
+    "ncimpUse": "NCIMP use",
+    "noMatches": "No sources match the filter.",
+    "editor": {
+      "sourceId": "Source ID",
+      "title": "Title",
+      "url": "URL",
+      "status": "Status",
+      "priority": "Priority",
+      "licenseTerms": "License / terms",
+      "ncimpUse": "NCIMP use",
+      "notes": "Notes",
+      "saveSource": "Save source"
+    }
+  },
+  "results": {
+    "title": "Results",
+    "subtitle": "{{models}} models · {{runs}} runs · primary level:",
+    "contextualSpan": "contextual span",
+    "protocol": "protocol {{version}}",
+    "loading": "Loading results…",
+    "masterFinding": {
+      "title": "Master finding",
+      "description": "Article framework - ICS must be interpreted together with FLOOR.",
+      "captureThreshold": "No model exceeds the idiomaticity capture threshold (ICS ≥ {{capture}}); partial threshold ICS ≥ {{partial}}.",
+      "highestIcs": "Highest ICS:",
+      "ordinaryControl": "The ordinary-perturbation control (Experiment 4) shows this failure is specific to idiomaticity, not a general measurement artifact: OCG (idiom) < {{baseline}} for all models."
+    },
+    "metrics": {
+      "isc": {
+        "label": "ISC",
+        "desc": "Idiomatic–Synonym closeness"
+      },
+      "ig": {
+        "label": "IG",
+        "desc": "Idiomaticity gap"
+      },
+      "lod": {
+        "label": "LOD",
+        "desc": "Literal-overlap distance"
+      },
+      "aid": {
+        "label": "AID",
+        "desc": "Adjusted idiomaticity delta"
+      },
+      "floor": {
+        "label": "FLOOR",
+        "desc": "Floor similarity baseline"
+      },
+      "rho": {
+        "label": "RHO",
+        "desc": "Spearman correlation"
+      },
+      "ics": {
+        "label": "ICS",
+        "desc": "Idiomatic compositionality score"
+      }
+    },
+    "experiments": {
+      "1": "1 · Encoder replication (EN+PT)",
+      "2": "2 · Modern embedding cohort",
+      "3": "3 · Decoder-only LLM cohort",
+      "4": "4 · Ordinary-perturbation calibration"
+    },
+    "filters": {
+      "allExperiments": "All experiments",
+      "allFamilies": "All families",
+      "allLanguages": "All languages",
+      "trRunsMissing": "TR runs not yet available",
+      "modelRows": "{{count}} model rows"
+    },
+    "leaderboard": {
+      "title": "Indicator leaderboard",
+      "description": "Diagnostics (context-averaged). Threshold lines: partial {{partial}}, capture {{capture}}."
+    },
+    "heatmap": {
+      "title": "Indicator heatmap",
+      "description": "Model × 7 indicators ({{lang}})"
+    },
+    "ocg": {
+      "title": "Experiment 4 - Ordinary-perturbation calibration (OCG)",
+      "description": "OCG (idiom) = idiomatic(synonym−random) / ordinary(synonym−random). 1 = as good as ordinary; < 1 = weaker idiomatic discrimination. Compositional ≈ 1 expected.",
+      "noData": "No calibration data.",
+      "idiom": "OCG idiom",
+      "compositional": "OCG compositional"
+    },
+    "calibrationTable": {
+      "model": "Model",
+      "idiomGap": "idiom gap",
+      "compGap": "comp. gap",
+      "ordinaryGap": "ordinary gap",
+      "ocgIdiom": "OCG idiom",
+      "ocgComp": "OCG comp.",
+      "unstable": "unstable"
+    },
+    "scatter": {
+      "title": "Indicator relationship",
+      "description": "Per-measurement distribution (each point is a model/language/context), colored by family",
+      "axisX": "X: {{metric}}",
+      "axisY": "Y: {{metric}}"
+    },
+    "indicatorsTable": {
+      "title": "All measurements",
+      "description": "{{count}} rows · sort by column",
+      "columns": {
+        "model": "Model",
+        "experiment": "Experiment",
+        "family": "Family",
+        "language": "Language",
+        "context": "Context",
+        "representation": "Representation"
+      }
+    },
+    "methodNotes": {
+      "title": "Method notes"
+    },
+    "charts": {
+      "partial": "partial",
+      "capture": "capture",
+      "anisotropy": "anisotropy",
+      "baseline": "baseline {{value}}"
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "subtitle": "User approval, role assignment, and Firestore seed.",
+    "firestoreSeed": {
+      "title": "Firestore seed",
+      "description": "Loads the local seed package (`tr_project.json`) only into an empty project. A second load is rejected to prevent overwriting live curation data.",
+      "loadButton": "Load seed",
+      "success": "Loaded: {{mwes}} MWEs, {{sources}} sources, {{runs}} runs.",
+      "failed": "Seed failed.",
+      "errorPrefix": "Error: {{message}}"
+    },
+    "pending": {
+      "title": "Pending approvals",
+      "titleWithCount": "Pending approvals ({{count}})",
+      "description": "New Google sign-ins wait for approval here.",
+      "empty": "No pending users.",
+      "loading": "Loading…"
+    },
+    "users": {
+      "title": "Users ({{count}})",
+      "empty": "No approved users yet.",
+      "self": "(you)",
+      "cannotChangeOwnRole": "You cannot change your own role"
+    },
+    "usersLoadFailed": "Failed to load users.",
+    "roleUpdateFailed": "Failed to update role.",
+    "publicPublish": {
+      "title": "Read-only public data release",
+      "description": "Copies TR/EN/PT expressions and ordinary-control records into an immutable Firestore snapshot readable with an anonymous session.",
+      "publishButton": "Create public release",
+      "publishing": "Publishing…",
+      "success": "Read-only release ready: TR {{tr}}, EN {{en}}, PT {{pt}}, control {{ctrl}}.",
+      "failed": "Failed to create public data release."
+    }
+  },
+  "probes": {
+    "title": "Probe studio",
+    "subtitle": "Per MWE target: P_Syn 1 · P_Comp 2 · P_WordsSyn 5 · P_Rand 5. All candidates require human approval.",
+    "loading": "Loading probes…",
+    "searchPlaceholder": "Search expression…",
+    "noSelection": "No candidates",
+    "noCandidates": "No candidates.",
+    "probeDecisionFailed": "Failed to save probe decision.",
+    "variantDecisionFailed": "Failed to save variant decision.",
+    "enableFirestore": "Enable Firestore seed to write decisions.",
+    "generatedVariants": "Generated sentence variants",
+    "approveGrammar": "Approve grammar",
+    "probeNotePlaceholder": "Probe meaning/form note",
+    "grammarNotePlaceholder": "Grammar/span review note",
+    "pools": {
+      "kenetTitle": "KeNet P_Syn / P_WordsSyn",
+      "kenetDescription": "Synset, definition, and example-backed candidates for {{expression}}",
+      "randomTitle": "Tatoeba frequency-matched P_Rand",
+      "randomDescription": "Candidates ranked by favg target; not corpus-wide, but the 279 other curated MWE universe",
+      "pendingDecisions": "{{count}} decisions pending",
+      "noPending": "No pending candidates.",
+      "definition": "Definition:",
+      "kenetExample": "KeNet example:",
+      "reviewNotePlaceholder": "Semantic/grammar review note"
+    },
+    "ordinaryControl": {
+      "title": "Experiment 4 · Turkish ordinary-control",
+      "description": "16 idiomatic + 16 compositional MWEs + 16 ordinary words + 16 ordinary two-word phrases. Semantic, grammatical, and frequency-match review required for all 64 records for OCG.",
+      "allGroups": "All groups",
+      "groups": {
+        "idiomatic_nc": "Idiomatic NC",
+        "compositional_nc": "Compositional NC",
+        "single_word_control": "Ordinary word",
+        "ordinary_two_word_control": "Ordinary two-word"
+      },
+      "decisionsPending": "{{count}} decisions pending",
+      "frequency": "frequency: {{status}}",
+      "fields": {
+        "syn": "syn:",
+        "comp": "comp:",
+        "words": "words:",
+        "related": "related:",
+        "random": "random:"
+      },
+      "reviewNotePlaceholder": "Grammar, meaning, and frequency check note"
+    }
+  },
+  "release": {
+    "title": "Validation & release",
+    "subtitle": "Same gates as the backend validator; no optimistic client-side recomputation.",
+    "loading": "Loading release validation report…",
+    "loadFailed": "Failed to load validation report: {{message}}",
+    "validateLive": "Validate live snapshot",
+    "queueing": "Queuing…",
+    "queueSuccess": "Live Firestore validation job queued. This report updates when the worker completes.",
+    "queueFailed": "Failed to queue validation.",
+    "errorPrefix": "Error: {{message}}",
+    "ready": "Release ready",
+    "notReady": "Not release ready",
+    "summary": "{{errors}} errors · {{warnings}} warnings · {{sentences}} sentences",
+    "metrics": {
+      "mwe": "MWE",
+      "context": "Context",
+      "externalExample": "Open-licensed example",
+      "ordinaryControl": "Approved ordinary-control"
+    },
+    "gates": {
+      "title": "Release gates",
+      "description": "Count is the number of errors remaining at this gate; zero means the gate passed.",
+      "passed": "passed",
+      "missing": "{{count}} missing",
+      "labels": {
+        "context_review": "Context review",
+        "external_example_gate": "At least one open-licensed internet example",
+        "gold_missing": "Gold score and expert class",
+        "probe_count": "Probe multiplicities 1/2/5/5",
+        "sentence_count": "19,600 sentence target",
+        "token_annotations": "Eight accepted token annotations",
+        "type_annotations": "Eight accepted type annotations",
+        "variant_count": "All probe variants",
+        "ordinary_control_review": "Experiment 4 ordinary-control review"
+      }
+    },
+    "issues": {
+      "title": "First validation issues",
+      "description": "The live report keeps the first 100 issues in Firestore; the full report is in the worker artifact."
+    },
+    "artifacts": {
+      "title": "Static artifacts",
+      "validationJson": "Validation JSON",
+      "validationMarkdown": "Validation Markdown",
+      "trSeed": "TR seed",
+      "ordinaryControlCsv": "TR ordinary-control CSV",
+      "referenceCsv": "EN/PT reference CSV"
+    }
+  },
+  "experiments": {
+    "title": "Experiments",
+    "subtitle": "Safe job queue for the four paper experiments. Validate/export/aggregate freeze the live Firestore snapshot; model runs count as scientific results only after release gates close.",
+    "loading": "Loading experiments…",
+    "newJob": {
+      "title": "New job",
+      "description": "The worker is a separate local process; it consumes the queue with a service account/ADC. Queuing does not run the job.",
+      "enableFirestore": "Enable Firestore seed from Admin or Annotation first.",
+      "validate": "Validate",
+      "aggregate": "Aggregate annotations",
+      "exportDraft": "Export draft",
+      "smokeRun": "Technical smoke run",
+      "smokeAnalysis": "Smoke analysis",
+      "queueing": "Queuing…",
+      "queued": "{{title}} queued.",
+      "queueFailed": "Failed to queue job.",
+      "errorPrefix": "Error: {{message}}"
+    },
+    "stats": {
+      "jobs": "Jobs",
+      "runs": "Runs",
+      "runsPerLanguage": "Runs / language"
+    },
+    "queue": {
+      "title": "Job queue",
+      "description": "import / validate / export / experiment / analysis",
+      "empty": "No jobs yet.",
+      "cancel": "Cancel"
+    }
+  },
+  "annotation": {
+    "title": "Annotation",
+    "subtitle": "Type tasks score an MWE with three natural contexts; token tasks score a single context. Gold data requires eight independent annotations and curator acceptance per item.",
+    "loading": "Loading annotation system…",
+    "loadFailed": "Failed to load annotation data.",
+    "unexpectedError": "An unexpected error occurred.",
+    "enableFirestore": {
+      "title": "Enable Firestore project",
+      "description": "Local seed is currently shown; load data into Firestore once to write tasks and responses.",
+      "button": "Enable Firestore",
+      "loading": "Loading…",
+      "success": "Firestore seed loaded; annotation write path enabled."
+    },
+    "campaign": {
+      "title": "Launch campaign",
+      "description": "Pre-labels are for guideline development and do not count as gold. The official pilot requires at least 8 distinct annotators.",
+      "startPrelabelType": "Start type pre-labeling",
+      "startPrelabelToken": "Start token pre-labeling",
+      "prelabelCreated": "{{taskType}} pre-labeling tasks created.",
+      "pilotAnnotators": "Pilot annotators ({{count}}/8+)",
+      "startPilotType": "Start type pilot",
+      "startPilotToken": "Start token pilot",
+      "pilotStarted": "{{taskType}} pilot campaign launched.",
+      "annotatorsAdminOnly": "Registered annotators are listed only on admin accounts."
+    },
+    "assignments": {
+      "title": "My tasks",
+      "description": "{{count}} tasks · only records assigned to you",
+      "empty": "No tasks. If you are an admin, launch pre-labeling or the eight-annotator pilot above.",
+      "formTitle": "Labeling form",
+      "formHint": "Select a task on the left to begin."
+    },
+    "status": {
+      "assigned": "assigned",
+      "in_progress": "in progress",
+      "submitted": "submitted",
+      "accepted": "accepted",
+      "excluded": "excluded"
+    },
+    "form": {
+      "overallCompositional": "Overall compositionality",
+      "modifierContribution": "Modifier contribution",
+      "headContribution": "Head contribution",
+      "confidence": "Confidence",
+      "paraphrase": "Paraphrase / intended meaning",
+      "paraphraseRequired": "*",
+      "paraphrasePlaceholder": "Explain the expression in other words in this context…",
+      "comment": "Comment (optional)",
+      "startTask": "Start task",
+      "taskStarted": "Task started.",
+      "submitLock": "Submit and lock",
+      "submitSuccess": "Annotation submitted and locked.",
+      "submitNote": "Submitted annotations cannot be edited later; this preserves independent judgment.",
+      "readOnly": "This task is {{status}}; the form is read-only.",
+      "scoreHints": {
+        "fullyIdiomatic": " - fully idiomatic",
+        "fullyCompositional": " - fully compositional"
+      }
+    },
+    "review": {
+      "title": "Curator review",
+      "description": "{{count}} submissions awaiting decision. Pre-labels are not routed into the gold acceptance flow.",
+      "empty": "No pending submissions.",
+      "overallConfidence": "overall {{overall}} · confidence {{confidence}}",
+      "responseMissing": "response not found",
+      "paraphrase": "Paraphrase:",
+      "notePlaceholder": "Review note / exclusion reason",
+      "accept": "Accept",
+      "exclude": "Exclude",
+      "accepted": "Annotation accepted.",
+      "excluded": "Annotation excluded with reason."
+    },
+    "aggregation": {
+      "title": "Aggregation and gold adjudication",
+      "description": "Produces agreement, confidence intervals, and expert gold decisions from accepted independent annotations.",
+      "aggregateNow": "Aggregate now",
+      "aggregateNowSuccess": "Accepted annotations aggregated in the browser.",
+      "queueAggregate": "Queue aggregation",
+      "queueSuccess": "Aggregation job queued.",
+      "noReport": "No aggregation report yet.",
+      "itemCount": "{{items}} items · {{adjudication}} adjudication",
+      "typeAggregate": "Type aggregate",
+      "selectMwe": "Select MWE…",
+      "aggregateOption": "{{mweId}} · avg {{mean}} · n={{n}}",
+      "goldScore": "Gold score",
+      "goldClass": "Gold class",
+      "expertNotePlaceholder": "Expert decision note",
+      "saveGold": "Save gold decision",
+      "goldSaved": "Gold score and class saved."
+    },
+    "campaigns": {
+      "title": "Campaigns",
+      "progress": "Progress",
+      "progressCount": "{{completed}}/{{total}} ({{pct}}%)",
+      "description": "{{taskType}} · {{items}} items · target {{annotators}} annotators"
+    }
+  },
+  "examples": {
+    "title": "Examples lab",
+    "subtitle": "3 natural + 2 neutral contexts per MWE. Rule: at least one natural example must be corpus-sourced. Missing corpus example:",
+    "loading": "Loading examples…",
+    "searchPlaceholder": "Search expression…",
+    "onlyMissingCorpus": "Only missing corpus example",
+    "mweCount": "{{count}} MWEs",
+    "corpusOk": "corpus ✓",
+    "corpusMissing": "corpus ✗",
+    "noMatches": "No matching MWEs.",
+    "contextDecisionFailed": "Failed to save context decision.",
+    "exampleDecisionFailed": "Failed to save example decision.",
+    "written": "authored",
+    "corpus": "corpus",
+    "approveContext": "Approve context",
+    "contextNotePlaceholder": "Meaning, naturalness, span, and source note",
+    "candidates": {
+      "title": "Tatoeba candidate pool",
+      "description": "{{count}} unreviewed exact surface matches for {{expression}}. Approval updates the selected S1–S3 slot and all linked variants.",
+      "enableFirestore": "Enable Firestore seed from Admin or Annotation to write decisions.",
+      "noPending": "No pending candidates.",
+      "replaceS1": "Replace S1",
+      "replaceS2": "Replace S2",
+      "replaceS3": "Replace S3",
+      "reviewNotePlaceholder": "Meaning/license review note",
+      "sentenceMeta": "{{source}} · sentence {{id}} · {{author}} · {{license}}"
+    }
+  },
+  "reference": {
+    "loading": "Loading {{language}} reference data…",
+    "loadFailed": "Failed to load reference data: {{message}}",
+    "readOnlyBadge": "read-only {{language}}",
+    "paperCount": "paper:",
+    "rawSnapshot": "raw snapshot:",
+    "humanScored": "human scored:",
+    "fiveContexts": "5 contexts:",
+    "firestorePublication": "Firebase read-only publication",
+    "downloadCsv": "Download CSV",
+    "enAuditNote": "The paper reports 280 English MWEs; the current upstream CSV has 281 records and the local human-scored file has 279. dust storm and small fry are unscored. This discrepancy was not silently corrected.",
+    "searchPlaceholder": "Search expression or ID…",
+    "allClasses": "All classes",
+    "classOptions": {
+      "I": "I · idiomatic",
+      "PC": "PC · partially compositional",
+      "C": "C · compositional"
+    },
+    "columns": {
+      "expression": "Expression",
+      "class": "Class",
+      "humanScore": "Human score",
+      "context": "Context"
+    },
+    "unscored": "unscored",
+    "detail": {
+      "title": "Reference detail",
+      "hint": "Select a record to view five contexts and four probe families.",
+      "noHumanScore": "no human score",
+      "score": "score {{value}}"
+    },
+    "probes": {
+      "P_Syn": "Holistic synonym",
+      "P_Comp": "Single component",
+      "P_WordsSyn": "Component synonyms",
+      "P_Rand": "Frequency-matched random"
+    }
+  },
+  "public": {
+    "header": {
+      "brandSubtitle": "Open research atlas",
+      "nav": {
+        "purpose": "Purpose",
+        "method": "Method",
+        "metrics": "Metrics",
+        "experiments": "Experiments",
+        "findings": "Findings",
+        "transparency": "Transparency"
+      },
+      "allExamples": "All examples",
+      "goToStudio": "Go to studio",
+      "annotatorLogin": "Annotator login",
+      "navAriaLabel": "Research sections",
+      "ariaGoToStudio": "Go to research studio",
+      "ariaAnnotatorLogin": "Annotator login"
+    },
+    "dataset": {
+      "languages": {
+        "EN": {
+          "label": "English",
+          "caption": "Original NCIMP"
+        },
+        "PT": {
+          "label": "Portuguese",
+          "caption": "Original NCIMP"
+        },
+        "TR": {
+          "label": "Turkish",
+          "caption": "Active extension"
+        },
+        "CTRL": {
+          "label": "Ordinary control",
+          "caption": "Experiment 4"
+        }
+      },
+      "probeLabels": {
+        "P_Syn": "Holistic synonym",
+        "P_Comp": "Component",
+        "P_WordsSyn": "Word-by-word synonym",
+        "P_Rand": "Random control"
+      },
+      "classPill": {
+        "I": "Idiomatic",
+        "PC": "Partially compositional",
+        "C": "Compositional",
+        "idiomatic_nc": "Idiomatic NC",
+        "compositional_nc": "Compositional NC",
+        "single_word_control": "Single word",
+        "ordinary_two_word_control": "Ordinary two-word",
+        "unscored": "Unscored"
+      },
+      "referenceCard": {
+        "meta": "{{modifier}} + {{head}} · 5 contexts · read-only"
+      },
+      "turkishCard": {
+        "provisionalNote": "Provisional curation · not gold",
+        "awaitingGold": "awaiting gold",
+        "noApprovedVariants": "No approved probe variants for this context yet."
+      },
+      "controlCard": {
+        "probeNotes": {
+          "P_Syn": "Meaning-preserving synonym",
+          "P_Comp": "Component / single target",
+          "P_WordsSyn": "Word-by-word substitution",
+          "P_Rand": "Unrelated control"
+        },
+        "curationStatus": "Curation status: {{review}} · semantic: {{semantic}} · grammar: {{grammar}} · frequency: {{frequency}}"
+      },
+      "auth": {
+        "loadingSession": "Setting up secure anonymous read session…",
+        "sessionFailedTitle": "Anonymous data session could not be established.",
+        "sessionFailedBody": "The Anonymous provider must be enabled in Firebase Authentication. The research overview is public; full example records are not loaded until an anonymous session is created.",
+        "backToHome": "Back to home"
+      },
+      "backToAtlas": "Back to research atlas",
+      "eyebrow": "Read-only data atlas",
+      "title": "All expressions, contexts, and probes",
+      "description": "EN/PT reference data, Turkish extension candidates, and ordinary-control items. Expand cards to view every natural/neutral context and all generated minimal pairs.",
+      "sessionAnonymous": "Anonymous Firebase session active",
+      "sessionApproved": "Approved user session active",
+      "sessionReadOnly": "Read access · write disabled",
+      "searchPlaceholder": "Search expression, meaning, sentence, or probe…",
+      "allClasses": "All classes",
+      "recordCount": "{{filtered}} / {{total}} records",
+      "sourceFirestore": "Firestore release",
+      "sourceBundled": "bundled release",
+      "loadingData": "Loading data release…",
+      "loadFailed": "Failed to load data.",
+      "noMatches": "No records match these filters.",
+      "pagination": "Page {{page}} / {{pageCount}} · {{pageSize}} records per page",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "landing": {
+      "footer": {
+        "title": "NCIMP Idiomaticity Research Atlas",
+        "description": "Combines the published NCIMP study, a 2024–2026 model re-examination, and Turkish dataset extension on one traceable research surface.",
+        "originalPaper": "Original paper",
+        "openExplorer": "Open example explorer",
+        "annotatorLogin": "Annotator login"
+      },
+      "hero": {
+        "badges": {
+          "years": "2024 → 2026",
+          "languages": "EN · PT · TR",
+          "models": "20 models · 4 experiments"
+        },
+        "title": "Do models read idioms by their",
+        "titleEmphasis": "meaning",
+        "titleSuffix": "or by their words?",
+        "description": "With NCIMP minimal pairs we measure whether a model truly represents “grey matter” as “brain”. We rebuild the published English–Portuguese study, extend it to 2026 LLMs, calibrate with ordinary controls, and prepare the Turkish counterpart.",
+        "ctaExplore": "Explore all examples",
+        "ctaMetrics": "See metrics step by step",
+        "demo": {
+          "eyebrow": "Core of the study / BGE-M3",
+          "prompt": "grey matter → ?",
+          "sentence": "These youngsters use their grey matter when the presentation is right.",
+          "alert": "The model sees the literal component matter (0.78) as closest instead of the correct meaning brain (0.55)."
+        }
+      },
+      "probes": {
+        "P_Syn": {
+          "label": "Holistic synonym",
+          "note": "Preserves the true meaning; expected to score highest."
+        },
+        "P_Comp": {
+          "label": "Single component",
+          "note": "Loses the idiom's meaning; incorrectly highest here."
+        },
+        "P_WordsSyn": {
+          "label": "Word-by-word synonym",
+          "note": "Keeps the words but not the holistic meaning."
+        },
+        "P_Rand": {
+          "label": "Frequency-matched random",
+          "note": "Unrelated lower bound; expected to score lowest."
+        }
+      },
+      "metrics": {
+        "S": {
+          "name": "Similarity",
+          "direction": "raw measurement",
+          "formula": "cos(e(NC), e(Pᵢ))",
+          "explanation": "Cosine closeness between the original representation and the perturbed representation.",
+          "example": "S(P_Syn)=0.55"
+        },
+        "A": {
+          "name": "Affinity",
+          "direction": "positive preference",
+          "formula": "S(Pᵢ) - S(Pⱼ)",
+          "explanation": "States which of two probes the model sees as closer to the target.",
+          "example": "A(Syn,WordsSyn)=−0.09: wrong preference"
+        },
+        "SR": {
+          "name": "Scaled Similarity",
+          "direction": "close to 1",
+          "formula": "(S(Pᵢ)-S(Rand))/(1-S(Rand))",
+          "explanation": "Removes the model's random-similarity baseline to reveal meaningful signal.",
+          "example": "Sᴿ(Syn)=0.15"
+        },
+        "ISC": {
+          "name": "Idiomatic Synonym Capture",
+          "direction": "higher is better",
+          "formula": "mean Sᴿ(Syn) | I",
+          "explanation": "Measures how well idioms' true holistic synonyms are recovered.",
+          "example": "1 ideal; 0 random baseline"
+        },
+        "IG": {
+          "name": "Idiomaticity Gap",
+          "direction": "close to 0",
+          "formula": "mean Sᴿ(Syn)|C − mean Sᴿ(Syn)|I",
+          "explanation": "Capture gap between compositional expressions and idioms.",
+          "example": "Large positive value: idiom disadvantage"
+        },
+        "LOD": {
+          "name": "Lexical-Overlap Dominance",
+          "direction": "below 0 is better",
+          "formula": "mean[Sᴿ(WordsSyn)-Sᴿ(Syn)] | I",
+          "explanation": "Tests whether word-by-word literal alternatives beat the true meaning.",
+          "example": ">0: model treats idiom as sum of parts"
+        },
+        "AID": {
+          "name": "Affinity on Idioms",
+          "direction": "above 0 is better",
+          "formula": "mean A(Syn,WordsSyn) | I",
+          "explanation": "Preference for holistic synonym over literal alternative on idioms.",
+          "example": "≤0: wrong semantic preference"
+        },
+        "FLOOR": {
+          "name": "Random Similarity Floor",
+          "direction": "diagnostic",
+          "formula": "mean S(P_Rand)",
+          "explanation": "Shows that even random substitutions look similar and reveals space anisotropy.",
+          "example": "≥0.90: ISC must be read carefully"
+        },
+        "RHO": {
+          "name": "Human-score Correlation",
+          "direction": "low |ρ|",
+          "formula": "ρ(Sᴿ(Syn), human Comp)",
+          "explanation": "Measures whether capture depends on human compositionality scores.",
+          "example": "High positive ρ: success only on compositionals"
+        },
+        "ICS": {
+          "name": "Idiomaticity Capture Score",
+          "direction": "higher is better",
+          "formula": "mean(normalized ISC, IG, LOD, AID, |ρ|)",
+          "explanation": "Intuitive 0–1 summary of five direction-sensitive diagnostics; not gold truth alone.",
+          "example": "≥0.55 partial; ≥0.70 capture"
+        },
+        "OCG": {
+          "name": "Ordinary-Calibrated Gap",
+          "direction": "close to 1",
+          "formula": "Δᵢdᵢom / ½(Δword+Δphrase)",
+          "explanation": "Divides idiom discrimination by the same model's discrimination on ordinary targets.",
+          "example": "0.68: only 68% of ordinary discrimination"
+        }
+      },
+      "experiments": {
+        "01": {
+          "title": "Encoder replication",
+          "scope": "6 models · English + Portuguese",
+          "question": "Can we reproduce the published NCIMP finding?",
+          "result": "Yes. Every condition ICS<0.55; limited improvement in English, none in Portuguese."
+        },
+        "02": {
+          "title": "Modern embedding cohort",
+          "scope": "3 models · 2025–2026",
+          "question": "Do new retrieval/embedding models capture holistic meaning?",
+          "result": "Best ICS 0.478. Lexical pressure decreases, threshold still not crossed."
+        },
+        "03": {
+          "title": "Decoder-only LLM cohort",
+          "scope": "11 models · 0.8B–12B",
+          "question": "Do scale, generation, or instruction tuning break the bottleneck?",
+          "result": "No. True leader base Gemma 4–12B: ICS 0.525; soft ceiling persists."
+        },
+        "04": {
+          "title": "Ordinary perturbation",
+          "scope": "20 models · 64 controls",
+          "question": "Is failure specific to idiomaticity or is measurement generally insensitive?",
+          "result": "Idiom OCG never 1 for any model; best 0.68. Compositional targets hit the ordinary baseline."
+        }
+      },
+      "sourceTrace": [
+        {
+          "title": "Original NCIMP paper",
+          "role": "EN/PT data design, human scores, Affinity and Scaled Similarity",
+          "license": "CC BY-NC-ND 4.0",
+          "status": "published"
+        },
+        {
+          "title": "NCIMP source code and supplementary material",
+          "role": "Original experiment artifacts and reproduction reference",
+          "license": "per repo/file review",
+          "status": "source reference"
+        },
+        {
+          "title": "An Idiom Benchmark for Turkish",
+          "role": "Turkish candidate form, meaning, and idiomatic/literal contexts",
+          "license": "CC BY 4.0",
+          "status": "snapshot used"
+        },
+        {
+          "title": "Tatoeba Turkish sentence export",
+          "role": "Natural example sentence and surface-form search",
+          "license": "CC BY 2.0 FR",
+          "status": "snapshot used"
+        },
+        {
+          "title": "KeNet Turkish WordNet",
+          "role": "P_Syn and P_WordsSyn candidates; synset, definition, and example evidence",
+          "license": "GPL-3 · content license marked",
+          "status": "human review required"
+        },
+        {
+          "title": "Turkish Language Association dictionaries",
+          "role": "Canonical form and meaning verification",
+          "license": "reuse review required",
+          "status": "online verification"
+        }
+      ],
+      "sections": {
+        "01": {
+          "label": "01 / Research question",
+          "heading": "Knowing an idiom is not knowing its parts.",
+          "paragraph": "\"Red tape\" is bureaucracy, \"cash cow\" is a steady revenue source, \"grey matter\" is the brain. Strong surface-word representations are not the same as representing this holistic meaning.",
+          "cards": {
+            "representation": {
+              "title": "Representation question",
+              "text": "Is the target expression closer in vector space to its true holistic meaning or to literal components?"
+            },
+            "comparative": {
+              "title": "Comparative measurement",
+              "text": "Instead of a single high cosine, we compare meaning-preserving and meaning-breaking controlled substitutions."
+            },
+            "crossLingual": {
+              "title": "Cross-lingual test",
+              "text": "Alongside original English and Portuguese experiments, Turkish is added with the same protocol."
+            },
+            "modelAgnostic": {
+              "title": "Model-agnostic probe",
+              "text": "Encoders, sentence embeddings, and decoder LLMs are measured with the same minimal-pair logic."
+            }
+          }
+        },
+        "02": {
+          "label": "02 / Two studies, one research line",
+          "original": {
+            "venue": "Computational Linguistics · 2025",
+            "title": "Original NCIMP study",
+            "description": "He et al. combined human compositionality scores, natural and neutral contexts, four substitution families, Affinity and Scaled Similarity measures. They built 32,200 sentences for 280 English and 180 Portuguese noun compounds.",
+            "bullets": [
+              "Type- and token-level human scores",
+              "3 natural + 2 neutral contexts",
+              "P_Syn, P_Comp, P_WordsSyn, P_Rand",
+              "Random-baseline calibration per model space"
+            ],
+            "link": "Open paper"
+          },
+          "newDraft": {
+            "badge": "New draft · 2026",
+            "title": "New models + missing control",
+            "description": "We carry the same probe to 20 models: 2024 encoders, modern embedding models, and 0.8B–12B decoder LLMs. Then we add the critical missing comparison: if a model can separate ordinary synonyms from random, how much of that separation does it achieve on idioms?",
+            "bullets": [
+              "ISC, IG, LOD, AID, FLOOR, RHO, ICS",
+              "Last-four-layers + final norm LLM recipe",
+              "64 ordinary-control items",
+              "OCG for within-model calibration",
+              "Turkish NCIMP extension"
+            ]
+          }
+        },
+        "03": {
+          "label": "03 / Data and minimal-pair design",
+          "heading": "Same sentence, four controlled interventions.",
+          "paragraph": "The sentence skeleton stays fixed; only the target span changes. This makes clear which semantic expectation drives the representation shift.",
+          "linkAllRecords": "Open all records",
+          "probeArrow": "grey matter → {{value}}",
+          "dataGrid": {
+            "sentenceSuffix": "sentences",
+            "EN": {
+              "detail": "{{natural}} natural · {{neutral}} neutral"
+            },
+            "PT": {
+              "detail": "{{natural}} natural · {{neutral}} neutral"
+            },
+            "TR": {
+              "total": "19,600 target",
+              "detail": "1,400 contexts · active curation"
+            },
+            "CTRL": {
+              "total": "4 × 16",
+              "detail": "idiom · comp. · word · phrase"
+            }
+          },
+          "auditNote": "The local English snapshot has 281 raw records and 279 scored records; the paper's official scope is 280. \"dust storm\" and \"small fry\" score anomalies are not hidden and are noted explicitly in the data explorer."
+        },
+        "04": {
+          "label": "04 / Metric glossary",
+          "heading": "Every score has one question.",
+          "paragraph": "From raw similarity to within-model calibration, all measures are links in the same evidence chain. ICS is a summary; ISC, LOD, AID, FLOOR, and OCG carry the diagnosis.",
+          "workedExample": {
+            "label": "Worked example",
+            "lines": [
+              "S(Syn)=0.55 · S(WordsSyn)=0.64 · S(Rand)=0.47",
+              "Sᴿ(Syn)=(0.55−0.47)/(1−0.47)=0.15"
+            ],
+            "note": "The correct meaning is only 15% beyond the random baseline."
+          }
+        },
+        "05": {
+          "label": "05 / Four experiments",
+          "heading": "From the original finding to 2026 models, then to a control that tests measurement itself.",
+          "representation": {
+            "title": "Why does representation level matter?",
+            "text": "In full sentences shared words dominate: even random substitution can keep similarity at 0.90–0.99. Primary analysis is therefore the target's contextual span representation, not the whole sentence. For sentence embedding models, isolated phrase is reported as the comparable boundary."
+          },
+          "anisotropy": {
+            "title": "Why is anisotropy shown separately?",
+            "text": "When FLOOR→1 the Scaled Similarity denominator shrinks and small noise grows. Instruction-tuned Gemma 4–12B showing ICS 0.520 is this artifact; FLOOR≈0.95 and ISC≈0 show there is no real capture. ICS is always read together with FLOOR."
+          }
+        },
+        "06": {
+          "label": "06 / Results",
+          "stats": {
+            "bestIcs": {
+              "label": "Best true ICS",
+              "value": "0.525",
+              "note": "base Gemma 4–12B; below the 0.55 partial-capture threshold."
+            },
+            "bestOcg": {
+              "label": "Best idiom OCG",
+              "value": "0.68",
+              "note": "Idiom discrimination is only 68% of the same model's ordinary-target discrimination."
+            },
+            "threshold": {
+              "label": "Models above threshold",
+              "value": "0 / 20",
+              "note": "Soft ceiling holds regardless of family, scale, year, or tuning."
+            }
+          },
+          "icsChart": {
+            "title": "ICS across 20 models",
+            "subtitle": "English NC level · dashed line partial-capture threshold",
+            "anisotropyWarning": "Orange: FLOOR anisotropy warning",
+            "loading": "Loading results…",
+            "empty": "No ICS records to display.",
+            "ariaLabel": "ICS values for 20 models; partial-capture threshold 0.55",
+            "chartTitle": "Idiomaticity Capture Score (ICS) across 20 models",
+            "partialThreshold": "partial capture 0.55",
+            "tooltipFloor": "; FLOOR warning"
+          },
+          "ocgChart": {
+            "title": "Ordinary-calibrated gap",
+            "subtitle": "OCG=1 equals the same model's ordinary discrimination performance.",
+            "loading": "Loading calibration…",
+            "empty": "No OCG records to display.",
+            "legendIdiom": "Idiom",
+            "legendCompositional": "Compositional",
+            "ariaLabel": "Idiom and compositional ordinary-calibrated gap values across 20 models",
+            "chartTitle": "Ordinary-Calibrated Gap (OCG) across 20 models",
+            "ordinaryBaseline": "ordinary baseline = 1",
+            "tooltipIdiom": "idiom",
+            "tooltipCompositional": "compositional"
+          },
+          "quote": {
+            "text": "New and larger models move in the right direction; yet representing what an idiom means-not just what it says-remains unsolved.",
+            "attribution": "Combined result: 2024 encoder → 2026 LLM · encoder → embedding → decoder · base → instruct"
+          }
+        },
+        "07": {
+          "label": "07 / Turkish extension and open data",
+          "heading": "The same experiment, with a defensible gold set in Turkish.",
+          "paragraph": "The Turkish inventory started with 280 two-word candidates, 1,400 base contexts, and 4,200 existing sentences. The target is 19,600 sentences matching the original English design, eight independent annotators per type/token score, four probe families, and 64 ordinary-control records.",
+          "stats": [
+            {
+              "value": "280",
+              "label": "Turkish MWE candidates"
+            },
+            {
+              "value": "1,400",
+              "label": "base contexts"
+            },
+            {
+              "value": "19,600",
+              "label": "target sentences"
+            },
+            {
+              "value": "8",
+              "label": "independent annotators / item"
+            }
+          ],
+          "openData": {
+            "title": "Readable, immutable, traceable.",
+            "description": "The public explorer serves EN/PT references, the Turkish working set, and ordinary controls read-only. Visitors receive an anonymous Firebase session; curation write paths are open only to approved roles. When App Check is enabled, Firestore requests are limited to approved site origins.",
+            "cta": "Open data explorer"
+          }
+        },
+        "08": {
+          "label": "08 / Limitations, quality gates, and source trace",
+          "heading": "We publish the boundary as well as the result.",
+          "paragraph": "This atlas shows completed EN/PT reference, experimental ordinary control, and a not-yet-gold Turkish working snapshot in one place. Being \"open\" does not mean presenting provisional labels as final truth.",
+          "limitations": [
+            {
+              "title": "ICS is not gold",
+              "text": "ICS is an intuitive composite for ranking models. The real claim rests on reading ISC, LOD, FLOOR, and OCG together."
+            },
+            {
+              "title": "64 controls is small",
+              "text": "The ordinary-control set is hand-built; some random substitutions are grammatically weak. Semantic, grammar, and frequency review must be completed."
+            },
+            {
+              "title": "Representation levels differ",
+              "text": "Full sentences are misleading because of shared framing. For decoder LLMs contextual span is primary; for sentence embedders isolated phrase is the primary comparison."
+            },
+            {
+              "title": "Language coverage incomplete",
+              "text": "The decoder cohort is currently at English NC level. Portuguese extension and Turkish model runs are deferred until after gold annotation."
+            },
+            {
+              "title": "Turkish set is provisional",
+              "text": "280 Turkish records are visible with meanings and examples; but 0/280 have gold scores. Provisional I/PC/C classes do not replace human annotation."
+            },
+            {
+              "title": "Runtime path is recorded",
+              "text": "The MLX last-four-layers + final norm recipe is close but not identical to the torch path; model, layer, precision, and runtime are reported with results."
+            }
+          ],
+          "pipeline": {
+            "title": "Turkish release pipeline",
+            "description": "Each gate is versioned and produces an audit record. The public snapshot is separate from the curation database; after publication it cannot be changed by client rules.",
+            "steps": [
+              "1 · Candidate + true meaning",
+              "2 · 3 natural + 2 neutral contexts",
+              "3 · Type/token blind annotation",
+              "4 · Gold score + I/PC/C",
+              "5 · Four probe families",
+              "6 · Span/grammar verification",
+              "7 · Experiment + indicator package",
+              "8 · Sealed read-only release"
+            ]
+          },
+          "sources": {
+            "title": "Primary sources and license trace",
+            "description": "License status is kept separate from data acceptance; uncertain records are not hidden and carry a review tag."
+          }
+        }
+      }
+    }
+  }
+}

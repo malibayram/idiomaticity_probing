@@ -1,0 +1,16 @@
+{
+  "id": "export-tr-draft",
+  "type": "export",
+  "title": "Türkçe draft canonical paket",
+  "status": "queued",
+  "progress": 0,
+  "createdAt": "2026-06-23T00:00:00Z",
+  "payload": {
+    "snapshotSource": "firestore",
+    "projectId": "tr-ncimp",
+    "snapshotPath": "studio/public/seed/tr_project.json",
+    "version": "tr-draft-current",
+    "outputDir": "studio/public/artifacts/datasets/tr-draft-current",
+    "allowDraft": true
+  }
+}

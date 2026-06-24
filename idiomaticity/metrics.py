@@ -23,7 +23,7 @@ import numpy as np
 
 
 # ----------------------------------------------------------------------------------------
-# Eq. 2 — cosine similarity
+# Eq. 2 - cosine similarity
 # ----------------------------------------------------------------------------------------
 def cosine_sim(x: np.ndarray, y: np.ndarray, eps: float = 1e-12) -> float:
     x = np.asarray(x, dtype=np.float64)
@@ -36,7 +36,7 @@ def cosine_sim(x: np.ndarray, y: np.ndarray, eps: float = 1e-12) -> float:
 
 
 # ----------------------------------------------------------------------------------------
-# Eq. 3 — Sim(Pi, Target): mean cosine over the probe's substitutions
+# Eq. 3 - Sim(Pi, Target): mean cosine over the probe's substitutions
 # ----------------------------------------------------------------------------------------
 def sim(probe_vectors: Sequence[np.ndarray], target_vector: np.ndarray) -> float:
     """Average cosine similarity between the target representation and the probe-modified
@@ -48,7 +48,7 @@ def sim(probe_vectors: Sequence[np.ndarray], target_vector: np.ndarray) -> float
 
 
 # ----------------------------------------------------------------------------------------
-# Eq. 4 — Affinity
+# Eq. 4 - Affinity
 # ----------------------------------------------------------------------------------------
 def affinity(sim_i: float, sim_j: float) -> float:
     """Aff(Pi, Pj | Target) = Sim(Pi, Target) - Sim(Pj, Target).
@@ -59,7 +59,7 @@ def affinity(sim_i: float, sim_j: float) -> float:
 
 
 # ----------------------------------------------------------------------------------------
-# Eq. 5 — Scaled Similarity (max-min normalization against the random lower bound)
+# Eq. 5 - Scaled Similarity (max-min normalization against the random lower bound)
 # ----------------------------------------------------------------------------------------
 def scaled_similarity(sim_i: float, sim_rand: float, eps: float = 1e-12) -> float:
     """Sim_R(Pi | Target) = (Sim(Pi) - Sim(P_Rand)) / (1 - Sim(P_Rand)).
@@ -73,7 +73,7 @@ def scaled_similarity(sim_i: float, sim_rand: float, eps: float = 1e-12) -> floa
 
 
 # ----------------------------------------------------------------------------------------
-# Eq. 1 correlation — Spearman ρ between a measurement and human Comp
+# Eq. 1 correlation - Spearman ρ between a measurement and human Comp
 # ----------------------------------------------------------------------------------------
 def spearman_with_comp(values: Iterable[float], comp: Iterable[float]):
     """Spearman correlation between per-NC measurements and human Comp scores.

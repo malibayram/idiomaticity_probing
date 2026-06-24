@@ -1,0 +1,281 @@
+rules_version = '2';
+
+// NCIMP Research Studio - Firestore security rules.
+// Mirrors docs plan sections 3 (roles) and 5 (data model). Every operation
+// checks the caller's role document. Annotations and audit events are immutable.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---- helpers ---------------------------------------------------------
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function userDoc() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function hasRole(r) {
+      return isSignedIn() && userDoc().role == r;
+    }
+
+    function isAdmin() {
+      return hasRole('admin');
+    }
+
+    function isBootstrapAdmin() {
+      return isSignedIn()
+        && request.auth.token.email == 'malibayram20@gmail.com'
+        && request.auth.token.email_verified == true;
+    }
+
+    // Approved = signed in and not pending.
+    function isApproved() {
+      return isSignedIn() && userDoc().role != 'pending';
+    }
+
+    function isAnonymousSession() {
+      return isSignedIn()
+        && request.auth.token.firebase.sign_in_provider == 'anonymous';
+    }
+
+    function isCurator() {
+      return hasRole('curator') || isAdmin();
+    }
+
+    function canAnnotate() {
+      return hasRole('annotator') || isCurator();
+    }
+
+    function validOwnedAnnotationCreate() {
+      let assignment = get(/databases/$(database)/documents/assignments/$(request.resource.data.assignmentId)).data;
+      return assignment.assigneeId == request.auth.uid
+        && assignment.status in ['assigned', 'in_progress']
+        && request.resource.data.campaignId == assignment.campaignId
+        && request.resource.data.mweId == assignment.mweId
+        && request.resource.data.get('contextId', null) == assignment.get('contextId', null);
+    }
+
+    // ---- users -----------------------------------------------------------
+    match /users/{uid} {
+      allow read: if isSignedIn() && (request.auth.uid == uid || isAdmin());
+
+      // First sign-in: user may create only their own doc, only as 'pending'.
+      allow create: if isSignedIn()
+        && request.auth.uid == uid
+        && (request.resource.data.role == 'pending'
+            || (request.resource.data.role == 'admin' && isBootstrapAdmin()))
+        && request.resource.data.uid == uid;
+
+      // Users may update their own profile but NOT their role. Admins may
+      // change anything (role approval, etc).
+      allow update: if isAdmin()
+        || (isSignedIn()
+            && request.auth.uid == uid
+            && request.resource.data.role == resource.data.role
+            && request.resource.data.uid == resource.data.uid
+            && request.resource.data.diff(resource.data).affectedKeys()
+              .hasOnly(['displayName', 'photoURL', 'updatedAt']));
+
+      allow delete: if isAdmin();
+    }
+
+    // ---- immutable public research snapshots ----------------------------
+    // Public visitors receive an anonymous Auth session. App Check should be
+    // enforced in Firebase Console to bind these reads to approved web origins.
+    match /publications/{publicationId} {
+      allow read: if isAnonymousSession() || isApproved();
+      allow create: if isCurator();
+      allow update, delete: if isCurator() && resource.data.status != 'released';
+
+      match /{document=**} {
+        allow read: if isAnonymousSession() || isApproved();
+        allow write: if isCurator()
+          && get(/databases/$(database)/documents/publications/$(publicationId)).data.status != 'released';
+      }
+    }
+
+    // ---- projects + nested curation data --------------------------------
+    match /projects/{projectId} {
+      allow read: if isApproved();
+      allow write: if isCurator();
+
+      match /{document=**} {
+        allow read: if isApproved();
+        allow write: if isCurator();
+      }
+    }
+
+    // ---- sources ---------------------------------------------------------
+    match /sources/{sourceId} {
+      allow read: if isApproved();
+      allow write: if isCurator();
+    }
+
+    // ---- campaigns -------------------------------------------------------
+    match /campaigns/{campaignId} {
+      allow read: if isApproved();
+      allow write: if isCurator();
+    }
+
+    // ---- assignments -----------------------------------------------------
+    // Annotators see only their own assignments; curators/admins see all.
+    match /assignments/{assignmentId} {
+      allow read: if isCurator()
+        || (canAnnotate() && resource.data.assigneeId == request.auth.uid);
+      allow create, delete: if isCurator();
+      allow update: if isCurator()
+        || (canAnnotate()
+            && resource.data.assigneeId == request.auth.uid
+            && request.resource.data.assigneeId == resource.data.assigneeId
+            && (
+              (resource.data.status == 'assigned'
+                && request.resource.data.status == 'in_progress'
+                && request.resource.data.diff(resource.data).affectedKeys()
+                  .hasOnly(['status', 'startedAt']))
+              || (resource.data.status in ['assigned', 'in_progress']
+                && request.resource.data.status == 'submitted'
+                && request.resource.data.diff(resource.data).affectedKeys()
+                  .hasOnly(['status', 'submittedAt'])
+                && existsAfter(/databases/$(database)/documents/annotations/$(assignmentId)))
+            ));
+    }
+
+    // ---- annotations (immutable) -----------------------------------------
+    // An annotator may create their own annotation but never read another's
+    // answers, and no one may edit or delete an annotation once written.
+    match /annotations/{annotationId} {
+      allow read: if isCurator()
+        || (canAnnotate() && resource.data.annotatorId == request.auth.uid);
+      allow create: if canAnnotate()
+        && annotationId == request.resource.data.id
+        && annotationId == request.resource.data.assignmentId
+        && request.resource.data.annotatorId == request.auth.uid
+        && validOwnedAnnotationCreate()
+        && request.resource.data.overallScore >= 0
+        && request.resource.data.overallScore <= 5
+        && request.resource.data.modifierScore >= 0
+        && request.resource.data.modifierScore <= 5
+        && request.resource.data.headScore >= 0
+        && request.resource.data.headScore <= 5
+        && request.resource.data.confidence >= 1
+        && request.resource.data.confidence <= 5
+        && request.resource.data.paraphrase is string
+        && request.resource.data.paraphrase.size() > 0;
+      allow update, delete: if false;
+    }
+
+    // ---- lexical probe review decisions ---------------------------------
+    match /probeReviews/{reviewId} {
+      allow read: if isApproved();
+      allow create, update: if isCurator()
+        && request.resource.data.id == reviewId
+        && request.resource.data.reviewerUid == request.auth.uid
+        && request.resource.data.status in ['approved', 'rejected'];
+      allow delete: if isAdmin();
+    }
+
+    match /exampleReviews/{reviewId} {
+      allow read: if isApproved();
+      allow create, update: if isCurator()
+        && request.resource.data.id == reviewId
+        && request.resource.data.reviewerUid == request.auth.uid
+        && request.resource.data.status in ['approved', 'rejected']
+        && request.resource.data.targetSlot in [null, 'S1', 'S2', 'S3'];
+      allow delete: if isAdmin();
+    }
+
+    match /ordinaryControlReviews/{reviewId} {
+      allow read: if isApproved();
+      allow create, update: if isCurator()
+        && request.resource.data.id == reviewId
+        && request.resource.data.itemId == reviewId
+        && request.resource.data.reviewerUid == request.auth.uid
+        && request.resource.data.status in ['approved', 'rejected'];
+      allow delete: if isAdmin();
+    }
+
+    // ---- immutable source candidate pools -------------------------------
+    // These large review queues are not public dataset releases. Only the
+    // curation team may read them; client writes are restricted to admins.
+    match /candidateArtifacts/{artifactId} {
+      allow read: if isCurator();
+      allow write: if isAdmin();
+
+      match /{document=**} {
+        allow read: if isCurator();
+        allow write: if isAdmin();
+      }
+    }
+
+    match /validationReports/{projectId} {
+      allow read: if isApproved();
+      allow write: if isAdmin();
+    }
+
+    match /annotationAggregates/{aggregateId} {
+      allow read: if isCurator();
+      allow write: if isAdmin();
+    }
+
+    match /aggregationReports/{projectId} {
+      allow read: if isCurator();
+      allow write: if isAdmin();
+    }
+
+    // ---- dataset versions ------------------------------------------------
+    // Released versions are immutable; new edits open a fresh draft version.
+    match /datasetVersions/{versionId} {
+      allow read: if isApproved();
+      allow create: if isCurator();
+      allow update: if isCurator() && resource.data.status != 'released';
+      allow delete: if isAdmin() && resource.data.status != 'released';
+    }
+
+    // ---- jobs / runs / heartbeats (experiment worker) --------------------
+    match /jobs/{jobId} {
+      allow read: if isApproved();
+      allow write: if isCurator();
+    }
+
+    match /runs/{runId} {
+      allow read: if isApproved();
+      allow write: if isCurator();
+    }
+
+    match /workerHeartbeats/{workerId} {
+      allow read: if isApproved();
+      allow write: if isCurator();
+    }
+
+    // ---- audit events (append-only) --------------------------------------
+    match /auditEvents/{eventId} {
+      allow read: if isAdmin();
+      allow create: if isSignedIn()
+        && request.resource.data.actorUid == request.auth.uid;
+      allow update, delete: if false;
+    }
+
+    // ---- annotator applications (public intake) --------------------------
+    // Public visitors (anonymous session) may submit one application bound to
+    // their uid; nobody but admins can read them, and they are immutable.
+    match /annotatorApplications/{applicationId} {
+      allow read: if isAdmin();
+      allow create: if isSignedIn()
+        && request.resource.data.submitterUid == request.auth.uid
+        && request.resource.data.status == 'new'
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.email is string
+        && request.resource.data.email.size() > 0
+        && request.resource.data.nativeLanguage is string;
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Default deny.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

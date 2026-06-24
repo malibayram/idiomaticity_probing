@@ -5,11 +5,11 @@ study.
 
 ## Files
 
-- `main.tex` — manuscript source.
-- `main.pdf` — compiled manuscript.
-- `build_assets.py` — regenerates article tables and figures from saved repository results.
-- `tables/` — generated CSV summaries used by the manuscript.
-- `figures/` — generated figures used by the manuscript.
+- `main.tex` - manuscript source.
+- `main.pdf` - compiled manuscript.
+- `build_assets.py` - regenerates article tables and figures from saved repository results.
+- `tables/` - generated CSV summaries used by the manuscript.
+- `figures/` - generated figures used by the manuscript.
 
 ## Evidence Included
 

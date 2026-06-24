@@ -1,7 +1,7 @@
 """Autoregressive / decoder-only LM embedder (Llama2/3, Qwen, Mistral, Gemma, ...).
 
-Same recipe as the encoder embedder — mean of sub-token hidden states over the last N layers
-— but for causal LMs loaded via ``AutoModelForCausalLM``. This is how the paper treats
+Same recipe as the encoder embedder - mean of sub-token hidden states over the last N layers
+- but for causal LMs loaded via ``AutoModelForCausalLM``. This is how the paper treats
 Llama2, and the natural way to extend the study to modern open LLMs.
 
 Note: decoder-only models are causal, so a token only attends to its left context. The paper

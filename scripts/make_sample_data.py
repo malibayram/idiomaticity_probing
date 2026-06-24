@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate a small synthetic NCIMP-style sample dataset in canonical JSON.
 
-This is NOT the real NCIMP data — it is a tiny, hand-written set used for smoke tests and to
+This is NOT the real NCIMP data - it is a tiny, hand-written set used for smoke tests and to
 demonstrate the canonical format. Spans are computed automatically so they are always correct.
 Run ``scripts/download_data.py`` for the real dataset.
 """

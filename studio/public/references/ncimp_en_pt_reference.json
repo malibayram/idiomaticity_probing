@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-23T21:15:38.680416+00:00",
+  "readOnly": true,
+  "source": {
+    "title": "NCIMP original repository snapshot",
+    "url": "https://github.com/risehnhew/Finding-Idiomaticity-in-Word-Representations",
+    "scoreFile": "human_compositionality scores.xlsx",
+    "license": "upstream repository terms; review required before redistribution",
+    "licenseReviewStatus": "review_required"
+  },
+  "protocol": {
+    "primaryAnalysisLevel": "contextual_span",
+    "contextSlots": [
+      "S1",
+      "S2",
+      "S3",
+      "N1",
+      "N2"
+    ],
+    "probeKinds": [
+      "P_Syn",
+      "P_Comp",
+      "P_WordsSyn",
+      "P_Rand"
+    ],
+    "expectedVariantsPerContext": {
+      "P_Syn": 1,
+      "P_Comp": 2,
+      "P_WordsSyn": 5,
+      "P_Rand": 5
+    },
+    "warning": "Raw upstream variants are shown as stored; missing/uneven alternatives are not synthesized."
+  },
+  "summary": {
+    "EN": {
+      "officialPaperMweCount": 280,
+      "rawSnapshotMweCount": 281,
+      "scoredMweCount": 279,
+      "unscoredMweCount": 2,
+      "contextCount": 1405,
+      "naturalContextCount": 843,
+      "neutralContextCount": 562,
+      "classCountsFromLocalWorkbook": {
+        "C": 99,
+        "I": 91,
+        "PC": 89,
+        "unscored": 2
+      }
+    },
+    "PT": {
+      "officialPaperMweCount": 180,
+      "rawSnapshotMweCount": 180,
+      "scoredMweCount": 180,
+      "unscoredMweCount": 0,
+      "contextCount": 900,
+      "naturalContextCount": 540,
+      "neutralContextCount": 360,
+      "classCountsFromLocalWorkbook": {
+        "C": 55,
+        "I": 50,
+        "PC": 75
+      }
+    }
+  },
+  "knownAnomalies": [
+    "The paper reports 280 English MWEs; the current upstream CSV snapshot has 281.",
+    "The local score workbook has 279 scored English MWEs; dust storm and small fry are unscored.",
+    "Local workbook class counts differ from the paper's balanced experiment-selection counts."
+  ],
+  "files": {
+    "EN": "/references/ncimp_en_reference.json",
+    "PT": "/references/ncimp_pt_reference.json"
+  }
+}

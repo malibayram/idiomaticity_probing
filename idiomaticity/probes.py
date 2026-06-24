@@ -1,7 +1,7 @@
 """Probe definitions (Section 3.3.1 of the paper).
 
 Each probe replaces the target NC in a sentence with a different substitution, inducing an
-expected change in meaning — the *Linguistic Prediction* (LP). The four probes:
+expected change in meaning - the *Linguistic Prediction* (LP). The four probes:
 
     P_Syn       gold holistic synonym of the NC          -> high similarity always
     P_Comp      the most meaning-preserving component     -> high if compositional, else low

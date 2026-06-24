@@ -1,8 +1,8 @@
 """Dependency-free mock embedder (numpy only).
 
 Produces deterministic pseudo-random vectors from a hash of the text, with a mild bias so that
-shared words yield more similar vectors. It captures *lexical overlap* — exactly the confound
-the paper highlights (high similarity from word overlap rather than idiomatic understanding) —
+shared words yield more similar vectors. It captures *lexical overlap* - exactly the confound
+the paper highlights (high similarity from word overlap rather than idiomatic understanding) -
 which makes it a useful, honest smoke-test backend: it will show the "everything looks
 similar" effect without any model download.
 

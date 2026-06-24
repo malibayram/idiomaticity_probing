@@ -1,9 +1,9 @@
-# Bulgular — Modern modeller idiyomatiklikte gelişti mi?
+# Bulgular - Modern modeller idiyomatiklikte gelişti mi?
 
 > Ana soru: _Bu sürede her alanda gelişen yapay zeka modelleri idiyomatiklik temsilinde de
 > gelişti mi? Gelişti ise ne kadar? Gelişmedi ise temel sorun ne?_
 > Yöntem: He et al. (2025) NCIMP probları + Affinity/Scaled Similarity, **NC düzeyinde**.
-> Kohortlar — Eski (paper-era): mBERT, DistilBERT-ML, mSBERT · Yeni (modern): XLM-R-large,
+> Kohortlar - Eski (paper-era): mBERT, DistilBERT-ML, mSBERT · Yeni (modern): XLM-R-large,
 > BGE-M3, E5-large. Hepsi çok dilli; aynı reçete (son 4 katman, alt-token ortalaması).
 
 ---
@@ -84,7 +84,7 @@ scaled_by_class_nc).
 | FLOOR (teşhis)        | 0.608  | 0.730  | +0.122 | ❌ kötüleşti          |
 | RHO (↓)               | 0.421  | 0.492  | +0.072 | ❌                    |
 
-### Model bazında ICS (PT) — hepsi yine 0.55 eşiğinin altında
+### Model bazında ICS (PT) - hepsi yine 0.55 eşiğinin altında
 
 | Model         | Kohort | mean ICS | Hüküm       |
 | ------------- | ------ | -------- | ----------- |
@@ -96,7 +96,7 @@ scaled_by_class_nc).
 | XLM-R-large   | yeni   | 0.40     | yakalamıyor |
 
 PT'de eski modeller zaten ~0.43'teydi (EN'deki 0.34'ten yüksek) ve yeni modeller bunu
-**iyileştiremedi** — hatta XLM-R-large/E5 hafifçe geriledi. LOD>0 ve AID<0 yine **tüm
+**iyileştiremedi** - hatta XLM-R-large/E5 hafifçe geriledi. LOD>0 ve AID<0 yine **tüm
 modellerde** geçerli; FLOOR yeni büyük modellerde yine daha yüksek (XLM-R-large 0.95).
 
 **Çıktılar:** `runs/pt_all/` → `REPORT.md`, `indicators.csv`, `results.csv`, `summary.json`,
@@ -131,7 +131,7 @@ temsiline kökten yansımıyor; PT'de hiç yansımıyor. Bu, sorunun bir **kapas
 
 ## Yorum (araştırma sorusu bağlamında)
 
-- **H1 (ölçek hipotezi) kısmen doğrulandı:** Daha yeni/büyük modeller gerçekten daha iyi —
+- **H1 (ölçek hipotezi) kısmen doğrulandı:** Daha yeni/büyük modeller gerçekten daha iyi -
   ilerleme reel ve yön tutarlı.
 - **H0 (yapısal darboğaz) baskın çıkıyor:** İyileşme yüzeysel kalıyor; idiyomatik anlamı
   "anlamak" yerine modeller hâlâ sözcüksel kompozisyona yaslanıyor (LOD>0, AID<0 her modelde).

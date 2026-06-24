@@ -6,8 +6,8 @@ compute ``Sim`` per probe (Eq. 3), then the derived Affinity (Eq. 4) and Scaled 
 correlation with the human Comp score (Eq. 1 correlation).
 
 Granularity (``level``):
-  * ``"sentence"`` — embed whole sentences (Figure 1 in the paper)
-  * ``"nc"``       — embed only the target NC / probe tokens in context (Figure 2)
+  * ``"sentence"`` - embed whole sentences (Figure 1 in the paper)
+  * ``"nc"``       - embed only the target NC / probe tokens in context (Figure 2)
 
 Outputs a long-format ``list[dict]`` (one row per instance × measurement) that can be written
 to CSV and summarized.

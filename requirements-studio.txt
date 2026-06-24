@@ -1,0 +1,6 @@
+# NCIMP Research Studio local worker
+firebase-admin>=6.5
+google-cloud-firestore>=2.16
+
+# Existing experiment/runtime dependencies
+-r requirements.txt

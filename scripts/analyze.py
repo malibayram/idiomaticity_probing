@@ -54,14 +54,14 @@ def main() -> None:
 
     table = indicators_table(df, level=args.level, langs=args.lang, contexts=args.context)
     if table.empty:
-        raise SystemExit("No indicators computed — check --level/--lang/--context and data.")
+        raise SystemExit("No indicators computed - check --level/--lang/--context and data.")
 
     os.makedirs(args.out, exist_ok=True)
     table_path = os.path.join(args.out, "indicators.csv")
     table.to_csv(table_path, index=False)
 
     lines: list[str] = []
-    lines.append("# Idiomaticity — Did Modern Models Improve?\n")
+    lines.append("# Idiomaticity - Did Modern Models Improve?\n")
     lines.append(f"Computed at **{args.level}** level from `{os.path.basename(args.results)}`.\n")
     lines.append(_indicator_legend())
 
@@ -84,7 +84,7 @@ def main() -> None:
             if rep is not None:
                 break
         v = verdict(rep) if rep else "n/a"
-        lines.append(f"### {model} — **{v}** (mean ICS={ics:.2f})")
+        lines.append(f"### {model} - **{v}** (mean ICS={ics:.2f})")
         if rep:
             for note in diagnose(rep):
                 lines.append(f"- {note}")
@@ -99,7 +99,7 @@ def main() -> None:
         lines.append("| metric | old | new | Δ | improved? |")
         lines.append("|--------|-----|-----|---|-----------|")
         for m, d in deltas.items():
-            imp = "—" if d["improved"] is None else ("✅" if d["improved"] else "❌")
+            imp = "-" if d["improved"] is None else ("✅" if d["improved"] else "❌")
             lines.append(
                 f"| {m} ({_DIR_LABEL[m]}) | {d['old']:+.3f} | {d['new']:+.3f} "
                 f"| {d['delta']:+.3f} | {imp} |"
@@ -125,11 +125,11 @@ def _cohort_verdict(ics_delta: dict) -> str:
         return (f"Modern models improved meaningfully (ICS {old:.2f} → {new:.2f}, "
                 f"{rel:+.0f}%). Idiomaticity capture is getting better.")
     if d > 0.03:
-        return (f"Modest improvement (ICS {old:.2f} → {new:.2f}, {rel:+.0f}%) — progress, but "
+        return (f"Modest improvement (ICS {old:.2f} → {new:.2f}, {rel:+.0f}%) - progress, but "
                 "idiomaticity is still far from solved.")
     if d > -0.03:
         return (f"Essentially no change (ICS {old:.2f} → {new:.2f}). Scaling/architecture gains "
-                "elsewhere did NOT transfer to idiomaticity — consistent with a representational "
+                "elsewhere did NOT transfer to idiomaticity - consistent with a representational "
                 "bias toward lexical composition rather than a capacity problem.")
     return (f"Modern models are no better (ICS {old:.2f} → {new:.2f}). The bottleneck is "
             "structural, not scale.")

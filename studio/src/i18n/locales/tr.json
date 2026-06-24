@@ -1,0 +1,1167 @@
+{
+  "common": {
+    "loading": "Yükleniyor…",
+    "signOut": "Çıkış",
+    "language": "Dil",
+    "clear": "Temizle",
+    "close": "Kapat",
+    "unknownError": "bilinmeyen hata",
+    "dataLoadFailed": "Veri yüklenemedi: {{message}}",
+    "results": "sonuç",
+    "saving": "Kaydediliyor…",
+    "saved": "Kaydedildi.",
+    "saveFailed": "Kayıt başarısız.",
+    "firestore": "Firestore",
+    "localSeed": "yerel seed",
+    "approve": "Onayla",
+    "reject": "Reddet",
+    "cancel": "İptal",
+    "refresh": "Yenile",
+    "edit": "Düzenle",
+    "save": "Kaydet",
+    "source": "kaynak",
+    "paper": "makale",
+    "license": "Lisans",
+    "status": "Durum",
+    "size": "Boyut",
+    "notes": "Notlar",
+    "meaning": "Anlam",
+    "detail": "Detay",
+    "soon": "Yakında",
+    "target": "hedef",
+    "waiting": "bekliyor",
+    "passed": "geçti",
+    "missing": "{{count}} eksik",
+    "noData": "Veri yok.",
+    "review": "incele",
+    "authorUnknown": "yazar bilinmiyor",
+    "licenseReviewRequired": "lisans inceleme gerekli",
+    "publicSiteLink": "Herkese açık araştırma sitesi"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "sources": "Kaynak kütüphanesi",
+    "mwes": "MWE envanteri",
+    "examples": "Örnek laboratuvarı",
+    "annotation": "Anotasyon",
+    "probes": "Prob stüdyosu",
+    "release": "Doğrulama & yayın",
+    "experiments": "Deneyler",
+    "results": "Sonuçlar",
+    "admin": "Yönetim"
+  },
+  "roles": {
+    "labels": {
+      "pending": "Onay bekliyor",
+      "annotator": "Anotör",
+      "curator": "Küratör",
+      "viewer": "İzleyici",
+      "admin": "Yönetici"
+    },
+    "descriptions": {
+      "pending": "Giriş yapıldı, yönetici onayı bekleniyor.",
+      "annotator": "Yalnızca kendisine atanan görevler.",
+      "curator": "MWE, örnek, prob ve adjudication.",
+      "viewer": "Yayınlanmış veri ve sonuçlar.",
+      "admin": "Kullanıcı, proje, worker ve deney yönetimi."
+    }
+  },
+  "domain": {
+    "compClass": {
+      "I": "Deyimsel (I)",
+      "PC": "Yarı bileşimsel (PC)",
+      "C": "Bileşimsel (C)"
+    },
+    "workflow": {
+      "draft": "Taslak",
+      "examples_ready": "Örnekler hazır",
+      "annotation_ready": "Anotasyona hazır",
+      "annotated": "Anotasyonlu",
+      "probes_ready": "Problar hazır",
+      "variants_reviewed": "Varyantlar incelendi",
+      "release_ready": "Yayına hazır",
+      "released": "Yayınlandı"
+    }
+  },
+  "errors": {
+    "localSeedLoadFailed": "Yerel Türkçe seed paketi yüklenemedi.",
+    "kenetProbeLoadFailed": "KeNet prob aday paketi yüklenemedi.",
+    "randomProbeLoadFailed": "Frekans eşli P_Rand aday paketi yüklenemedi.",
+    "validationReportLoadFailed": "Türkçe yayın doğrulama raporu yüklenemedi.",
+    "tatoebaExampleLoadFailed": "Tatoeba örnek aday paketi yüklenemedi.",
+    "pilotPlanLoadFailed": "Türkçe anotasyon pilot planı yüklenemedi.",
+    "referenceSummaryLoadFailed": "EN/PT referans veri özeti yüklenemedi.",
+    "referenceDatasetLoadFailed": "{{language}} referans veri seti yüklenemedi.",
+    "ordinaryControlLoadFailed": "Türkçe ordinary-control paketi yüklenemedi.",
+    "invalidJobTemplate": "Geçersiz iş şablonu.",
+    "jobTemplateLoadFailed": "{{name}} iş şablonu yüklenemedi.",
+    "projectAlreadySeeded": "Proje daha önce seed edilmiş; canlı kürasyon verisi üzerine yazılmadı.",
+    "recordConflict": "Kayıt başka bir kullanıcı tarafından değiştirildi (beklenen {{expected}}, güncel {{current}}).",
+    "mweFirestoreMissing": "MWE Firestore kaydı bulunamadı; önce proje seed edilmelidir.",
+    "mweRevisionConflict": "MWE başka bir kullanıcı tarafından değiştirildi (güncel revizyon {{revision}}).",
+    "probeTargetFull": "{{kind}} hedefi zaten dolu ({{approved}}/{{target}}).",
+    "exampleCandidateMismatch": "Örnek adayı seçili MWE'ye ait değil.",
+    "approvalSlotRequired": "Onay için S1, S2 veya S3 hedef yuvası seçilmelidir.",
+    "contextNotInMwe": "Bağlam bu MWE'ye ait değil.",
+    "probeNotInMwe": "Prob bu MWE'ye ait değil.",
+    "variantNotInMwe": "Varyant bu MWE'ye ait değil.",
+    "pilotCampaignExists": "Bu pilot kampanya daha önce başlatılmış; görevler yeniden yazılmadı.",
+    "prelabelCampaignExists": "Bu ön etiketleme kampanyası daha önce başlatılmış; görevler yeniden yazılmadı.",
+    "annotationIdMismatch": "Annotation kimliği assignment kimliğiyle aynı olmalıdır.",
+    "assignmentNotFound": "Assignment bulunamadı.",
+    "prelabelNotGold": "Ön etiketler gold anotasyon olarak kabul edilemez.",
+    "onlySubmittedReviewable": "Yalnız gönderilmiş bir anotasyon kabul edilebilir veya dışlanabilir.",
+    "goldScoreRange": "Gold puan 0–5 aralığında olmalıdır.",
+    "mweNotFound": "MWE kaydı bulunamadı.",
+    "minAnnotators": "En az {{count}} tekil anotör seçilmelidir.",
+    "invalidTargetSpan": "Geçersiz hedef spanı: {{start}}:{{end}}",
+    "contextMissingSpan": "{{contextId}} bağlamında hedef spanı yok.",
+    "exampleSlotNotFound": "{{slot}} bağlam yuvası bulunamadı.",
+    "exampleCandidateSpanNotFound": "Örnek adayında hedef yüzey spanı bulunamadı.",
+    "adminProfileMissing": "Yönetici profili bulunamadı.",
+    "runIndicatorsLoadFailed": "Deney gösterge verisi yüklenemedi.",
+    "usersLoadFailed": "Kullanıcılar yüklenemedi.",
+    "roleUpdateFailed": "Rol güncellenemedi.",
+    "anonymousSessionTimeout": "Anonim Firebase oturumu zaman aşımına uğradı."
+  },
+  "login": {
+    "title": "NCIMP Research Studio",
+    "description": "Türkçe NCIMP kürasyon ve deney platformu. Devam etmek için Google hesabınla giriş yap.",
+    "signInGoogle": "Google ile giriş yap",
+    "signInFailed": "Giriş başarısız oldu.",
+    "pendingNote": "Yeni hesaplar yönetici onayına düşer.",
+    "backToPublicSite": "Herkese açık araştırma sayfasına dön"
+  },
+  "pending": {
+    "title": "Onay bekleniyor",
+    "description": "Hesabın oluşturuldu ({{email}}). Bir yönetici rolünü onayladığında platforma erişebileceksin.",
+    "signOut": "Çıkış yap",
+    "checkingSession": "Oturum kontrol ediliyor…"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Hoş geldin",
+    "welcomeWithName": "Hoş geldin, {{name}}",
+    "loading": "Yükleniyor…",
+    "totalMwe": "Toplam MWE",
+    "targetCount": "hedef {{count}}",
+    "goldRated": "Gold puanlı",
+    "waitingCount": "{{count}} bekliyor",
+    "sources": "Kaynak",
+    "campaigns": "Kampanya",
+    "classDistribution": "Sınıf dağılımı",
+    "classDistributionDesc": "Geçici/gold kompozisyonellik sınıfı",
+    "workflowStatus": "İş akışı durumu",
+    "workflowStatusDesc": "{{contexts}} bağlam cümlesi · hedef {{sentences}} cümle",
+    "turkish": "Türkçe",
+    "english": "İngilizce",
+    "portuguese": "Portekizce",
+    "activeCuration": "aktif kürasyon",
+    "readOnlyReference": "salt-okunur referans",
+    "expressionsOpen": "{{current}}/{{target}} ifade · düzenlemek için aç",
+    "rawRecords": "{{count}} raw kayıt",
+    "humanScored": "{{count}} insan skorlu",
+    "openToReview": "incelemek için aç",
+    "referenceSummaryLoading": "Referans veri özeti yükleniyor…"
+  },
+  "mwes": {
+    "title": "MWE envanteri",
+    "subtitle": "Türkçe kürasyon ile özgün NCIMP referanslarını aynı yapıda inceleyin.",
+    "subtitleTr": "{{count}} ifade · kaynak:",
+    "loading": "Envanter yükleniyor…",
+    "searchPlaceholder": "İfade, anlam veya ID ara…",
+    "allClasses": "Tüm sınıflar",
+    "allStatuses": "Tüm durumlar",
+    "columns": {
+      "expression": "İfade",
+      "class": "Sınıf",
+      "goldScore": "Gold skor",
+      "status": "Durum",
+      "context": "Bağlam"
+    },
+    "goldPrefix": "gold:",
+    "noMatches": "Filtreyle eşleşen ifade yok.",
+    "detailHint": "Bağlamları ve probları görmek için bir ifade seçin.",
+    "contexts": "Bağlamlar ({{count}})",
+    "note": "Not",
+    "editCurationFields": "Kürasyon alanlarını düzenle",
+    "provisionalClass": "Geçici sınıf",
+    "saveChanges": "Değişiklikleri kaydet",
+    "enableFirestoreToEdit": "Düzenlemek için Firestore seed'i etkinleştirin.",
+    "languageTabsAria": "Veri seti dili",
+    "tabs": {
+      "TR": "Türkçe · düzenlenebilir",
+      "EN": "İngilizce · referans",
+      "PT": "Portekizce · referans"
+    }
+  },
+  "sources": {
+    "title": "Kaynak kütüphanesi",
+    "subtitle": "{{count}} kaynak · lisans incelemesi uyarı olarak gösterilir, veri toplamayı engellemez",
+    "loading": "Kaynaklar yükleniyor…",
+    "addNew": "Yeni kaynak ekle",
+    "closeNew": "Yeni kaynağı kapat",
+    "searchPlaceholder": "Başlık, not veya ID ara…",
+    "allCategories": "Tüm kategoriler",
+    "allPriorities": "Tüm öncelikler",
+    "licenseReview": "incele: {{license}}",
+    "licenseUnknown": "belirsiz",
+    "ncimpUse": "NCIMP kullanımı",
+    "noMatches": "Filtreyle eşleşen kaynak yok.",
+    "editor": {
+      "sourceId": "Kaynak ID",
+      "title": "Başlık",
+      "url": "URL",
+      "status": "Durum",
+      "priority": "Öncelik",
+      "licenseTerms": "Lisans / koşullar",
+      "ncimpUse": "NCIMP kullanımı",
+      "notes": "Notlar",
+      "saveSource": "Kaynağı kaydet"
+    }
+  },
+  "results": {
+    "title": "Sonuçlar",
+    "subtitle": "{{models}} model · {{runs}} koşu · birincil seviye:",
+    "contextualSpan": "contextual span",
+    "protocol": "protokol {{version}}",
+    "loading": "Sonuçlar yükleniyor…",
+    "masterFinding": {
+      "title": "Ana bulgu",
+      "description": "Makale çerçevesi - ICS, FLOOR ile birlikte yorumlanmalıdır.",
+      "captureThreshold": "Hiçbir model idiyomatiklik yakalama eşiğini (ICS ≥ {{capture}}) geçemiyor; kısmi eşik ICS ≥ {{partial}}.",
+      "highestIcs": "En yüksek ICS:",
+      "ordinaryControl": "Ordinary-perturbation kontrolü (Deney 4) bu başarısızlığın idiyomatikliğe özgü olduğunu, genel bir ölçüm artefaktı olmadığını gösterir: OCG (idiyom) tüm modellerde < {{baseline}}."
+    },
+    "metrics": {
+      "isc": {
+        "label": "ISC",
+        "desc": "Idiomatic–Synonym closeness"
+      },
+      "ig": {
+        "label": "IG",
+        "desc": "Idiomaticity gap"
+      },
+      "lod": {
+        "label": "LOD",
+        "desc": "Literal-overlap distance"
+      },
+      "aid": {
+        "label": "AID",
+        "desc": "Adjusted idiomaticity delta"
+      },
+      "floor": {
+        "label": "FLOOR",
+        "desc": "Floor benzerlik tabanı"
+      },
+      "rho": {
+        "label": "RHO",
+        "desc": "Spearman korelasyonu"
+      },
+      "ics": {
+        "label": "ICS",
+        "desc": "Idiomatic compositionality score"
+      }
+    },
+    "experiments": {
+      "1": "1 · Encoder replikasyonu (EN+PT)",
+      "2": "2 · Modern embedding kohortu",
+      "3": "3 · Decoder-only LLM kohortu",
+      "4": "4 · Ordinary-perturbation kalibrasyonu"
+    },
+    "filters": {
+      "allExperiments": "Tüm deneyler",
+      "allFamilies": "Tüm aileler",
+      "allLanguages": "Tüm diller",
+      "trRunsMissing": "TR koşuları henüz yok",
+      "modelRows": "{{count}} model satırı"
+    },
+    "leaderboard": {
+      "title": "Gösterge sıralaması",
+      "description": "Diagnostics (bağlam ortalandı). Eşik çizgileri: kısmi {{partial}}, yakalama {{capture}}."
+    },
+    "heatmap": {
+      "title": "Gösterge ısı haritası",
+      "description": "Model × 7 gösterge ({{lang}})"
+    },
+    "ocg": {
+      "title": "Deney 4 - Ordinary-perturbation kalibrasyonu (OCG)",
+      "description": "OCG (idiyom) = idiyomatik(synonym−random) / sıradan(synonym−random). 1 = sıradan kadar iyi; < 1 = idiyomatik ayrım daha zayıf. Kompozisyonel ≈ 1 beklenir.",
+      "noData": "Kalibrasyon verisi yok.",
+      "idiom": "OCG idiyom",
+      "compositional": "OCG kompozisyonel"
+    },
+    "calibrationTable": {
+      "model": "Model",
+      "idiomGap": "idiyom gap",
+      "compGap": "komp. gap",
+      "ordinaryGap": "sıradan gap",
+      "ocgIdiom": "OCG idiyom",
+      "ocgComp": "OCG komp.",
+      "unstable": "kararsız"
+    },
+    "scatter": {
+      "title": "Gösterge ilişkisi",
+      "description": "Ölçüm bazında dağılım (her nokta bir model/dil/bağlam), aileye göre renkli",
+      "axisX": "X: {{metric}}",
+      "axisY": "Y: {{metric}}"
+    },
+    "indicatorsTable": {
+      "title": "Tüm ölçümler",
+      "description": "{{count}} satır · sütundan sırala",
+      "columns": {
+        "model": "Model",
+        "experiment": "Deney",
+        "family": "Aile",
+        "language": "Dil",
+        "context": "Bağlam",
+        "representation": "Temsil"
+      }
+    },
+    "methodNotes": {
+      "title": "Yöntem notları"
+    },
+    "charts": {
+      "partial": "kısmi",
+      "capture": "yakalama",
+      "anisotropy": "anizotropi",
+      "baseline": "taban {{value}}"
+    }
+  },
+  "admin": {
+    "title": "Yönetim",
+    "subtitle": "Kullanıcı onayı, rol atama ve Firestore seed.",
+    "firestoreSeed": {
+      "title": "Firestore seed",
+      "description": "Yerel seed paketini (`tr_project.json`) yalnız boş projeye yükler. Canlı kürasyon verisinin üzerine yazmayı engellemek için ikinci yükleme reddedilir.",
+      "loadButton": "Seed yükle",
+      "success": "Yüklendi: {{mwes}} MWE, {{sources}} kaynak, {{runs}} koşu.",
+      "failed": "Seed başarısız.",
+      "errorPrefix": "Hata: {{message}}"
+    },
+    "pending": {
+      "title": "Onay bekleyenler",
+      "titleWithCount": "Onay bekleyenler ({{count}})",
+      "description": "Yeni Google girişleri burada onay bekler.",
+      "empty": "Bekleyen kullanıcı yok.",
+      "loading": "Yükleniyor…"
+    },
+    "users": {
+      "title": "Kullanıcılar ({{count}})",
+      "empty": "Henüz onaylı kullanıcı yok.",
+      "self": "(siz)",
+      "cannotChangeOwnRole": "Kendi rolünüzü değiştiremezsiniz"
+    },
+    "usersLoadFailed": "Kullanıcılar yüklenemedi.",
+    "roleUpdateFailed": "Rol güncellenemedi.",
+    "publicPublish": {
+      "title": "Salt-okunur kamu veri yayını",
+      "description": "TR/EN/PT ifadelerini ve ordinary-control kayıtlarını anonim oturumla okunabilen, yayımlandıktan sonra değiştirilemeyen Firestore anlık görüntüsüne kopyalar.",
+      "publishButton": "Kamu yayınını oluştur",
+      "publishing": "Yayınlanıyor…",
+      "success": "Salt-okunur yayın hazır: TR {{tr}}, EN {{en}}, PT {{pt}}, kontrol {{ctrl}}.",
+      "failed": "Kamu veri yayını oluşturulamadı."
+    }
+  },
+  "probes": {
+    "title": "Prob stüdyosu",
+    "subtitle": "Her MWE için hedef: P_Syn 1 · P_Comp 2 · P_WordsSyn 5 · P_Rand 5. Tüm adaylar insan onayı gerektirir.",
+    "loading": "Problar yükleniyor…",
+    "searchPlaceholder": "İfade ara…",
+    "noSelection": "Aday yok",
+    "noCandidates": "Aday yok.",
+    "probeDecisionFailed": "Prob kararı kaydedilemedi.",
+    "variantDecisionFailed": "Varyant kararı kaydedilemedi.",
+    "enableFirestore": "Karar yazmak için Firestore seed'i etkinleştirin.",
+    "generatedVariants": "Üretilen cümle varyantları",
+    "approveGrammar": "Dilbilgisini onayla",
+    "probeNotePlaceholder": "Prob anlam/biçim notu",
+    "grammarNotePlaceholder": "Dilbilgisi/span inceleme notu",
+    "pools": {
+      "kenetTitle": "KeNet P_Syn / P_WordsSyn",
+      "kenetDescription": "{{expression}} için synset, tanım ve örnek kanıtlı adaylar",
+      "randomTitle": "Tatoeba frekans eşli P_Rand",
+      "randomDescription": "favg hedefiyle sıralı adaylar; corpus-wide değil, 279 diğer küratörlü MWE evreni",
+      "pendingDecisions": "{{count}} karar bekliyor",
+      "noPending": "Bekleyen aday yok.",
+      "definition": "Tanım:",
+      "kenetExample": "KeNet örneği:",
+      "reviewNotePlaceholder": "Semantik/dilbilgisi inceleme notu"
+    },
+    "ordinaryControl": {
+      "title": "Experiment 4 · Türkçe ordinary-control",
+      "description": "16 deyimsel + 16 bileşimsel MWE + 16 sıradan kelime + 16 sıradan iki sözcüklü ifade. OCG için 64 kaydın semantik, dilbilgisi ve frekans eşleme incelemesi gerekir.",
+      "allGroups": "Tüm gruplar",
+      "groups": {
+        "idiomatic_nc": "Deyimsel NC",
+        "compositional_nc": "Bileşimsel NC",
+        "single_word_control": "Sıradan kelime",
+        "ordinary_two_word_control": "Sıradan iki sözcüklü"
+      },
+      "decisionsPending": "{{count}} karar bekliyor",
+      "frequency": "frekans: {{status}}",
+      "fields": {
+        "syn": "syn:",
+        "comp": "comp:",
+        "words": "words:",
+        "related": "related:",
+        "random": "random:"
+      },
+      "reviewNotePlaceholder": "Dilbilgisi, anlam ve frekans kontrol notu"
+    }
+  },
+  "release": {
+    "title": "Doğrulama & yayın",
+    "subtitle": "Backend validator ile aynı kapılar; istemci tarafında iyimser yeniden hesaplama yapılmaz.",
+    "loading": "Yayın doğrulama raporu yükleniyor…",
+    "loadFailed": "Doğrulama raporu yüklenemedi: {{message}}",
+    "validateLive": "Canlı snapshot'ı doğrula",
+    "queueing": "Kuyruğa alınıyor…",
+    "queueSuccess": "Canlı Firestore doğrulama işi kuyruğa alındı. Worker tamamlayınca bu rapor güncellenir.",
+    "queueFailed": "Doğrulama kuyruğa alınamadı.",
+    "errorPrefix": "Hata: {{message}}",
+    "ready": "Yayına hazır",
+    "notReady": "Yayına hazır değil",
+    "summary": "{{errors}} hata · {{warnings}} uyarı · {{sentences}} cümle",
+    "metrics": {
+      "mwe": "MWE",
+      "context": "Bağlam",
+      "externalExample": "Açık lisanslı örnek",
+      "ordinaryControl": "Onaylı ordinary-control"
+    },
+    "gates": {
+      "title": "Yayın kapıları",
+      "description": "Sayı, bu kapıda kalan hata adedidir; sıfır kapının geçtiğini gösterir.",
+      "passed": "geçti",
+      "missing": "{{count}} eksik",
+      "labels": {
+        "context_review": "Bağlam incelemesi",
+        "external_example_gate": "En az bir açık lisanslı internet örneği",
+        "gold_missing": "Gold puan ve uzman sınıfı",
+        "probe_count": "Prob çoklukları 1/2/5/5",
+        "sentence_count": "19.600 cümle hedefi",
+        "token_annotations": "Sekiz kabul edilmiş token anotasyonu",
+        "type_annotations": "Sekiz kabul edilmiş type anotasyonu",
+        "variant_count": "Bütün prob varyantları",
+        "ordinary_control_review": "Experiment 4 ordinary-control incelemesi"
+      }
+    },
+    "issues": {
+      "title": "İlk doğrulama sorunları",
+      "description": "Canlı rapor Firestore'da ilk 100 sorunu tutar; tam rapor worker artefaktındadır."
+    },
+    "artifacts": {
+      "title": "Statik artefaktlar",
+      "validationJson": "Doğrulama JSON",
+      "validationMarkdown": "Doğrulama Markdown",
+      "trSeed": "TR seed",
+      "ordinaryControlCsv": "TR ordinary-control CSV",
+      "referenceCsv": "EN/PT referans CSV"
+    }
+  },
+  "experiments": {
+    "title": "Deneyler",
+    "subtitle": "Makaledeki dört deney için güvenli iş kuyruğu. Validate/export/aggregate canlı Firestore snapshot'ını dondurur; model koşusu yalnız yayın kapıları kapandıktan sonra bilimsel sonuç sayılır.",
+    "loading": "Deneyler yükleniyor…",
+    "newJob": {
+      "title": "Yeni iş",
+      "description": "Worker ayrı bir yerel süreçtir; servis hesabı/ADC ile kuyruğu tüketir. Kuyruğa almak işlemi çalıştırmaz.",
+      "enableFirestore": "Önce Yönetim veya Anotasyon ekranından Firestore seed'i etkinleştirin.",
+      "validate": "Doğrula",
+      "aggregate": "Anotasyonları agrege et",
+      "exportDraft": "Taslak dışa aktar",
+      "smokeRun": "Teknik smoke koşusu",
+      "smokeAnalysis": "Smoke analizi",
+      "queueing": "Kuyruğa alınıyor…",
+      "queued": "{{title}} kuyruğa alındı.",
+      "queueFailed": "İş kuyruğa alınamadı.",
+      "errorPrefix": "Hata: {{message}}"
+    },
+    "stats": {
+      "jobs": "İş",
+      "runs": "Koşu",
+      "runsPerLanguage": "Koşu / dil"
+    },
+    "queue": {
+      "title": "İş kuyruğu",
+      "description": "import / validate / export / experiment / analysis",
+      "empty": "Henüz iş yok.",
+      "cancel": "İptal"
+    }
+  },
+  "annotation": {
+    "title": "Anotasyon",
+    "subtitle": "Type görevinde MWE üç doğal bağlamla, token görevinde tek bağlamla puanlanır. Gold veri için her item sekiz bağımsız anotasyon ve küratör kabulü gerektirir.",
+    "loading": "Anotasyon sistemi yükleniyor…",
+    "loadFailed": "Anotasyon verisi yüklenemedi.",
+    "unexpectedError": "Beklenmeyen bir hata oluştu.",
+    "enableFirestore": {
+      "title": "Firestore projesini etkinleştir",
+      "description": "Şu an yerel seed görüntüleniyor; görev ve yanıt yazabilmek için veriyi bir kez Firestore'a yükleyin.",
+      "button": "Firestore'u etkinleştir",
+      "loading": "Yükleniyor…",
+      "success": "Firestore seed yüklendi; anotasyon yazma yolu etkin."
+    },
+    "campaign": {
+      "title": "Kampanya başlat",
+      "description": "Ön etiketler yönerge geliştirmek içindir ve gold sayılmaz. Resmî pilot en az 8 farklı anotör gerektirir.",
+      "startPrelabelType": "type ön etiketlemeyi başlat",
+      "startPrelabelToken": "token ön etiketlemeyi başlat",
+      "prelabelCreated": "{{taskType}} ön etiketleme görevleri oluşturuldu.",
+      "pilotAnnotators": "Pilot anotörleri ({{count}}/8+)",
+      "startPilotType": "type pilotu başlat",
+      "startPilotToken": "token pilotu başlat",
+      "pilotStarted": "{{taskType}} pilot kampanyası başlatıldı.",
+      "annotatorsAdminOnly": "Kayıtlı anotörler yalnız yönetici hesabında listelenir."
+    },
+    "assignments": {
+      "title": "Görevlerim",
+      "description": "{{count}} görev · yalnızca size atanan kayıtlar",
+      "empty": "Görev yok. Yöneticiyseniz yukarıdaki ön etiketleme ya da sekiz anotörlü pilotu başlatın.",
+      "formTitle": "Etiketleme formu",
+      "formHint": "Başlamak için soldan bir görev seçin."
+    },
+    "status": {
+      "assigned": "atanmış",
+      "in_progress": "devam ediyor",
+      "submitted": "gönderildi",
+      "accepted": "kabul",
+      "excluded": "dışlandı"
+    },
+    "form": {
+      "overallCompositional": "Genel bileşimsellik",
+      "modifierContribution": "Modifier katkısı",
+      "headContribution": "Head katkısı",
+      "confidence": "Güven",
+      "paraphrase": "Parafraz / gerçek anlam",
+      "paraphraseRequired": "*",
+      "paraphrasePlaceholder": "İfadeyi bu bağlamda başka sözlerle açıklayın…",
+      "comment": "Yorum (opsiyonel)",
+      "startTask": "Görevi başlat",
+      "taskStarted": "Görev başlatıldı.",
+      "submitLock": "Gönder ve kilitle",
+      "submitSuccess": "Anotasyon değiştirilemez biçimde gönderildi.",
+      "submitNote": "Gönderilen anotasyon sonradan düzenlenemez; bu, bağımsız yargıyı korur.",
+      "readOnly": "Bu görev {{status}}; form salt okunur.",
+      "scoreHints": {
+        "fullyIdiomatic": " - tamamen deyimsel",
+        "fullyCompositional": " - tamamen bileşimsel"
+      }
+    },
+    "review": {
+      "title": "Küratör incelemesi",
+      "description": "{{count}} gönderim karar bekliyor. Ön etiketler gold kabul akışına alınmaz.",
+      "empty": "Bekleyen gönderim yok.",
+      "overallConfidence": "genel {{overall}} · güven {{confidence}}",
+      "responseMissing": "yanıt bulunamadı",
+      "paraphrase": "Parafraz:",
+      "notePlaceholder": "İnceleme notu / dışlama gerekçesi",
+      "accept": "Kabul et",
+      "exclude": "Dışla",
+      "accepted": "Anotasyon kabul edildi.",
+      "excluded": "Anotasyon gerekçesiyle dışlandı."
+    },
+    "aggregation": {
+      "title": "Agregasyon ve gold adjudication",
+      "description": "Kabul edilmiş bağımsız anotasyonlardan uyum, güven aralığı ve uzman gold kararı üretir.",
+      "aggregateNow": "Şimdi agrege et",
+      "aggregateNowSuccess": "Kabul edilmiş anotasyonlar tarayıcıda agrege edildi.",
+      "queueAggregate": "Agregasyonu kuyruğa al",
+      "queueSuccess": "Agregasyon işi kuyruğa alındı.",
+      "noReport": "Henüz agregasyon raporu yok.",
+      "itemCount": "{{items}} item · {{adjudication}} adjudication",
+      "typeAggregate": "Type aggregate",
+      "selectMwe": "MWE seçin…",
+      "aggregateOption": "{{mweId}} · ort. {{mean}} · n={{n}}",
+      "goldScore": "Gold puan",
+      "goldClass": "Gold sınıf",
+      "expertNotePlaceholder": "Uzman karar notu",
+      "saveGold": "Gold kararı kaydet",
+      "goldSaved": "Gold puan ve sınıf kaydedildi."
+    },
+    "campaigns": {
+      "title": "Kampanyalar",
+      "progress": "İlerleme",
+      "progressCount": "{{completed}}/{{total}} ({{pct}}%)",
+      "description": "{{taskType}} · {{items}} item · hedef {{annotators}} anotör"
+    }
+  },
+  "examples": {
+    "title": "Örnek laboratuvarı",
+    "subtitle": "Her MWE için 3 doğal + 2 nötr bağlam. Kural: en az bir doğal örnek korpus kaynaklı olmalı. Korpus örneği eksik:",
+    "loading": "Örnekler yükleniyor…",
+    "searchPlaceholder": "İfade ara…",
+    "onlyMissingCorpus": "Yalnız korpus örneği eksik olanlar",
+    "mweCount": "{{count}} MWE",
+    "corpusOk": "korpus ✓",
+    "corpusMissing": "korpus ✗",
+    "noMatches": "Eşleşen MWE yok.",
+    "contextDecisionFailed": "Bağlam kararı kaydedilemedi.",
+    "exampleDecisionFailed": "Örnek kararı kaydedilemedi.",
+    "written": "yazılmış",
+    "corpus": "korpus",
+    "approveContext": "Bağlamı onayla",
+    "contextNotePlaceholder": "Anlam, doğallık, span ve kaynak notu",
+    "candidates": {
+      "title": "Tatoeba aday havuzu",
+      "description": "{{expression}} için {{count}} incelenmemiş tam yüzey eşleşmesi. Onay, seçilen S1–S3 yuvasını ve ona bağlı tüm varyantları günceller.",
+      "enableFirestore": "Karar yazmak için önce Yönetim veya Anotasyon ekranından Firestore seed'i etkinleştirin.",
+      "noPending": "Bekleyen aday yok.",
+      "replaceS1": "S1'i değiştir",
+      "replaceS2": "S2'yi değiştir",
+      "replaceS3": "S3'ü değiştir",
+      "reviewNotePlaceholder": "Anlam/lisans inceleme notu",
+      "sentenceMeta": "{{source}} · cümle {{id}} · {{author}} · {{license}}"
+    }
+  },
+  "reference": {
+    "loading": "{{language}} referans verisi yükleniyor…",
+    "loadFailed": "Referans veri yüklenemedi: {{message}}",
+    "readOnlyBadge": "salt okunur {{language}}",
+    "paperCount": "makale:",
+    "rawSnapshot": "raw snapshot:",
+    "humanScored": "insan skorlu:",
+    "fiveContexts": "5 bağlam:",
+    "downloadCsv": "CSV indir",
+    "enAuditNote": "Makale 280 İngilizce MWE bildirir; güncel upstream CSV 281 kayıt, yerel insan skoru dosyası 279 kayıt içerir. dust storm ve small fry skorsuzdur. Bu fark sessizce düzeltilmedi.",
+    "searchPlaceholder": "İfade veya ID ara…",
+    "allClasses": "Tüm sınıflar",
+    "classOptions": {
+      "I": "I · deyimsel",
+      "PC": "PC · yarı bileşimsel",
+      "C": "C · bileşimsel"
+    },
+    "columns": {
+      "expression": "İfade",
+      "class": "Sınıf",
+      "humanScore": "İnsan puanı",
+      "context": "Bağlam"
+    },
+    "unscored": "skorsuz",
+    "detail": {
+      "title": "Referans detay",
+      "hint": "Beş bağlamı ve dört prob ailesini görmek için bir kayıt seçin.",
+      "noHumanScore": "insan skoru yok",
+      "score": "puan {{value}}"
+    },
+    "probes": {
+      "P_Syn": "Bütüncül eşanlamlı",
+      "P_Comp": "Tek bileşen",
+      "P_WordsSyn": "Bileşen eşanlamlıları",
+      "P_Rand": "Frekans eşli rastgele"
+    },
+    "firestorePublication": "Firebase salt-okunur yayını"
+  },
+  "public": {
+    "header": {
+      "brandSubtitle": "Açık araştırma atlası",
+      "nav": {
+        "purpose": "Amaç",
+        "method": "Yöntem",
+        "metrics": "Metrikler",
+        "experiments": "Deneyler",
+        "findings": "Bulgular",
+        "transparency": "Şeffaflık"
+      },
+      "allExamples": "Tüm örnekler",
+      "goToStudio": "Stüdyoya git",
+      "annotatorLogin": "İşaretleyici girişi",
+      "navAriaLabel": "Araştırma bölümleri",
+      "ariaGoToStudio": "Araştırma stüdyosuna git",
+      "ariaAnnotatorLogin": "İşaretleyici girişi"
+    },
+    "dataset": {
+      "languages": {
+        "EN": {
+          "label": "İngilizce",
+          "caption": "Özgün NCIMP"
+        },
+        "PT": {
+          "label": "Portekizce",
+          "caption": "Özgün NCIMP"
+        },
+        "TR": {
+          "label": "Türkçe",
+          "caption": "Aktif genişletme"
+        },
+        "CTRL": {
+          "label": "Ordinary kontrol",
+          "caption": "Deney 4"
+        }
+      },
+      "probeLabels": {
+        "P_Syn": "Bütüncül eş anlamlı",
+        "P_Comp": "Bileşen",
+        "P_WordsSyn": "Kelime-kelime eş anlamlı",
+        "P_Rand": "Rastgele kontrol"
+      },
+      "classPill": {
+        "I": "İdiyomatik",
+        "PC": "Yarı bileşimsel",
+        "C": "Bileşimsel",
+        "idiomatic_nc": "İdiyomatik NC",
+        "compositional_nc": "Bileşimsel NC",
+        "single_word_control": "Tek kelime",
+        "ordinary_two_word_control": "Sıradan iki sözcük",
+        "unscored": "Skorsuz"
+      },
+      "referenceCard": {
+        "meta": "{{modifier}} + {{head}} · 5 bağlam · salt-okunur"
+      },
+      "turkishCard": {
+        "provisionalNote": "Geçici kürasyon · gold değildir",
+        "awaitingGold": "gold bekliyor",
+        "noApprovedVariants": "Bu bağlam için onaylı prob varyantı henüz yok."
+      },
+      "controlCard": {
+        "probeNotes": {
+          "P_Syn": "Anlamı koruyan eş anlamlı",
+          "P_Comp": "Bileşen / tek hedef",
+          "P_WordsSyn": "Kelime-kelime ikame",
+          "P_Rand": "İlişkisiz kontrol"
+        },
+        "curationStatus": "Kürasyon durumu: {{review}} · semantik: {{semantic}} · dilbilgisi: {{grammar}} · frekans: {{frequency}}"
+      },
+      "auth": {
+        "loadingSession": "Güvenli anonim okuma oturumu kuruluyor…",
+        "sessionFailedTitle": "Anonim veri oturumu kurulamadı.",
+        "sessionFailedBody": "Firebase Authentication içinde Anonymous sağlayıcısının etkin olması gerekir. Araştırma tanıtımı açıktır; tam örnek kayıtları anonim oturum oluşmadan yüklenmez.",
+        "backToHome": "Ana sayfaya dön"
+      },
+      "backToAtlas": "Araştırma atlasına dön",
+      "eyebrow": "Salt-okunur veri atlası",
+      "title": "Bütün ifadeler, bağlamlar ve problar",
+      "description": "EN/PT referans verisi, Türkçe genişletme adayları ve ordinary-control maddeleri. Kartları açarak her doğal/nötr bağlamı ve üretilmiş bütün minimal çiftleri görebilirsiniz.",
+      "sessionAnonymous": "Anonim Firebase oturumu aktif",
+      "sessionApproved": "Onaylı kullanıcı oturumu aktif",
+      "sessionReadOnly": "Okuma erişimi · yazma kapalı",
+      "searchPlaceholder": "İfade, anlam, cümle veya prob içinde ara…",
+      "allClasses": "Bütün sınıflar",
+      "recordCount": "{{filtered}} / {{total}} kayıt",
+      "sourceFirestore": "Firestore release",
+      "sourceBundled": "bundled release",
+      "loadingData": "Veri yayını yükleniyor…",
+      "loadFailed": "Veri yüklenemedi.",
+      "noMatches": "Bu filtrelerle eşleşen kayıt yok.",
+      "pagination": "Sayfa {{page}} / {{pageCount}} · Her sayfada {{pageSize}} kayıt",
+      "previous": "Önceki",
+      "next": "Sonraki"
+    },
+    "landing": {
+      "footer": {
+        "title": "NCIMP Idiomaticity Research Atlas",
+        "description": "Yayımlanmış NCIMP çalışmasını, 2024–2026 model yeniden incelemesini ve Türkçe veri seti genişletmesini tek, izlenebilir araştırma yüzeyinde birleştirir.",
+        "originalPaper": "Özgün makale",
+        "openExplorer": "Açık örnek gezgini",
+        "annotatorLogin": "İşaretleyici girişi"
+      },
+      "hero": {
+        "badges": {
+          "years": "2024 → 2026",
+          "languages": "EN · PT · TR",
+          "models": "20 model · 4 deney"
+        },
+        "title": "Modeller deyimleri",
+        "titleEmphasis": "anlamlarıyla",
+        "titleSuffix": "mı, kelimeleriyle mi okuyor?",
+        "description": "NCIMP minimal çiftleriyle, bir modelin “grey matter” ifadesini gerçekten “brain” olarak temsil edip etmediğini ölçüyoruz. Yayımlanmış İngilizce–Portekizce çalışmayı yeniden kuruyor, 2026 LLM’lerine genişletiyor, ordinary kontrollerle kalibre ediyor ve Türkçe karşılığını hazırlıyoruz.",
+        "ctaExplore": "Tüm örnekleri incele",
+        "ctaMetrics": "Metrikleri adım adım gör",
+        "demo": {
+          "eyebrow": "Çalışmanın özü / BGE-M3",
+          "prompt": "grey matter → ?",
+          "sentence": "These youngsters use their grey matter when the presentation is right.",
+          "alert": "Model doğru anlamı brain (0,55) yerine literal bileşen matter’ı (0,78) en yakın görüyor."
+        }
+      },
+      "probes": {
+        "P_Syn": {
+          "label": "Bütüncül eş anlamlı",
+          "note": "Gerçek anlamı korur; en yüksek olması beklenir."
+        },
+        "P_Comp": {
+          "label": "Tek bileşen",
+          "note": "İdiyomun anlamını kaybeder; burada hatalı biçimde en yüksek."
+        },
+        "P_WordsSyn": {
+          "label": "Kelime-kelime eş anlam",
+          "note": "Sözcükleri korur, bütüncül anlamı korumaz."
+        },
+        "P_Rand": {
+          "label": "Frekans eşli rastgele",
+          "note": "İlişkisiz alt sınır; en düşük olması beklenir."
+        }
+      },
+      "metrics": {
+        "S": {
+          "name": "Similarity",
+          "direction": "ham ölçüm",
+          "formula": "cos(e(NC), e(Pᵢ))",
+          "explanation": "Orijinal temsil ile değiştirilmiş temsilin kosinüs yakınlığı.",
+          "example": "S(P_Syn)=0,55"
+        },
+        "A": {
+          "name": "Affinity",
+          "direction": "pozitif tercih",
+          "formula": "S(Pᵢ) - S(Pⱼ)",
+          "explanation": "Modelin iki probdan hangisini hedefe daha yakın gördüğünü söyler.",
+          "example": "A(Syn,WordsSyn)=−0,09: yanlış tercih"
+        },
+        "SR": {
+          "name": "Scaled Similarity",
+          "direction": "1'e yakın",
+          "formula": "(S(Pᵢ)-S(Rand))/(1-S(Rand))",
+          "explanation": "Modelin rastgele-benzerlik tabanını çıkarır; anlamlı sinyali görünür kılar.",
+          "example": "Sᴿ(Syn)=0,15"
+        },
+        "ISC": {
+          "name": "Idiomatic Synonym Capture",
+          "direction": "yüksek iyi",
+          "formula": "mean Sᴿ(Syn) | I",
+          "explanation": "İdiyomların gerçek bütüncül eş anlamlarının ne kadar geri kazanıldığını ölçer.",
+          "example": "1 ideal; 0 rastgele taban"
+        },
+        "IG": {
+          "name": "Idiomaticity Gap",
+          "direction": "0'a yakın",
+          "formula": "mean Sᴿ(Syn)|C − mean Sᴿ(Syn)|I",
+          "explanation": "Kompozisyonel ifadeler ile idiyomlar arasındaki yakalama farkı.",
+          "example": "Büyük pozitif değer: idiyom dezavantajı"
+        },
+        "LOD": {
+          "name": "Lexical-Overlap Dominance",
+          "direction": "0'ın altı iyi",
+          "formula": "mean[Sᴿ(WordsSyn)-Sᴿ(Syn)] | I",
+          "explanation": "Kelime-kelime literal alternatifin gerçek anlamı yenip yenmediğini sınar.",
+          "example": ">0: model idiyomu parçalarının toplamı sanıyor"
+        },
+        "AID": {
+          "name": "Affinity on Idioms",
+          "direction": "0'ın üstü iyi",
+          "formula": "mean A(Syn,WordsSyn) | I",
+          "explanation": "İdiyomlarda bütüncül eş anlamın literal alternatife tercih edilmesi.",
+          "example": "≤0: yanlış semantik tercih"
+        },
+        "FLOOR": {
+          "name": "Random Similarity Floor",
+          "direction": "teşhis",
+          "formula": "mean S(P_Rand)",
+          "explanation": "Rastgele ikamelerin bile benzer görünmesini ve uzay anizotropisini gösterir.",
+          "example": "≥0,90: ICS dikkatle okunmalı"
+        },
+        "RHO": {
+          "name": "Human-score Correlation",
+          "direction": "|ρ| düşük",
+          "formula": "ρ(Sᴿ(Syn), human Comp)",
+          "explanation": "Yakalamanın insan kompozisyonellik puanına bağımlı olup olmadığını ölçer.",
+          "example": "Pozitif yüksek ρ: yalnız kompozisyonellerde başarı"
+        },
+        "ICS": {
+          "name": "Idiomaticity Capture Score",
+          "direction": "yüksek iyi",
+          "formula": "mean(normalized ISC, IG, LOD, AID, |ρ|)",
+          "explanation": "Beş yön-duyarlı teşhisin 0–1 arası sezgisel özeti; tek başına gold gerçek değildir.",
+          "example": "≥0,55 kısmi; ≥0,70 yakalama"
+        },
+        "OCG": {
+          "name": "Ordinary-Calibrated Gap",
+          "direction": "1'e yakın",
+          "formula": "Δᵢdᵢom / ½(Δword+Δphrase)",
+          "explanation": "İdiyom ayrımını aynı modelin sıradan hedeflerdeki ayrımına böler.",
+          "example": "0,68: sıradan ayrımın yalnız %68'i"
+        }
+      },
+      "experiments": {
+        "01": {
+          "title": "Encoder replikasyonu",
+          "scope": "6 model · İngilizce + Portekizce",
+          "question": "Yayımlanmış NCIMP bulgusunu yeniden üretebiliyor muyuz?",
+          "result": "Evet. Her koşul ICS<0,55; İngilizcede sınırlı iyileşme, Portekizcede yok."
+        },
+        "02": {
+          "title": "Modern embedding kohortu",
+          "scope": "3 model · 2025–2026",
+          "question": "Yeni retrieval/embedding modelleri bütüncül anlamı yakalıyor mu?",
+          "result": "En iyi ICS 0,478. Sözcüksel baskı azalıyor, eşik yine aşılmıyor."
+        },
+        "03": {
+          "title": "Decoder-only LLM kohortu",
+          "scope": "11 model · 0,8B–12B",
+          "question": "Ölçek, nesil veya instruction tuning darboğazı kırıyor mu?",
+          "result": "Hayır. Gerçek lider base Gemma 4–12B: ICS 0,525; yumuşak tavan sürüyor."
+        },
+        "04": {
+          "title": "Ordinary perturbation",
+          "scope": "20 model · 64 kontrol",
+          "question": "Başarısızlık idiyomatikliğe mi özgü, yoksa ölçüm genel olarak mı duyarsız?",
+          "result": "İdiyom OCG hiçbir modelde 1 değil; en iyi 0,68. Kompozisyonel hedefler ordinary tabanı yakalıyor."
+        }
+      },
+      "sourceTrace": [
+        {
+          "title": "Özgün NCIMP makalesi",
+          "role": "EN/PT veri tasarımı, insan puanları, Affinity ve Scaled Similarity",
+          "license": "CC BY-NC-ND 4.0",
+          "status": "yayımlanmış"
+        },
+        {
+          "title": "NCIMP kaynak kodu ve ek materyal",
+          "role": "Özgün deney artefaktları ve yeniden üretim referansı",
+          "license": "repo/dosya bazında kontrol",
+          "status": "kaynak referansı"
+        },
+        {
+          "title": "An Idiom Benchmark for Turkish",
+          "role": "Türkçe aday biçim, anlam ve idiyomatik/literal bağlam",
+          "license": "CC BY 4.0",
+          "status": "snapshot kullanıldı"
+        },
+        {
+          "title": "Tatoeba Türkçe cümle dışa aktarımı",
+          "role": "Doğal örnek cümle ve yüzey biçimi araması",
+          "license": "CC BY 2.0 FR",
+          "status": "snapshot kullanıldı"
+        },
+        {
+          "title": "KeNet Turkish WordNet",
+          "role": "P_Syn ve P_WordsSyn adayları; synset, tanım ve örnek kanıtı",
+          "license": "GPL-3 · içerik lisansı işaretli",
+          "status": "insan incelemesi zorunlu"
+        },
+        {
+          "title": "Türk Dil Kurumu Sözlükleri",
+          "role": "Kanonik biçim ve anlam doğrulama",
+          "license": "yeniden kullanım incelemesi gerekli",
+          "status": "çevrimiçi doğrulama"
+        }
+      ],
+      "sections": {
+        "01": {
+          "label": "01 / Araştırma sorusu",
+          "heading": "Bir deyimi bilmek, parçalarını bilmek değildir.",
+          "paragraph": "“Red tape” bürokrasi, “cash cow” düzenli gelir kaynağı, “grey matter” beyindir. Yüzeydeki kelimeleri güçlü temsil etmek, bu bütüncül anlamı temsil etmekle aynı şey değildir.",
+          "cards": {
+            "representation": {
+              "title": "Temsil sorusu",
+              "text": "Hedef ifade, vektör uzayında gerçek bütüncül anlamına mı; yoksa literal bileşenlerine mi daha yakın?"
+            },
+            "comparative": {
+              "title": "Karşılaştırmalı ölçüm",
+              "text": "Tek bir yüksek kosinüs yerine anlamı koruyan ve bozan kontrollü ikameleri birbiriyle karşılaştırıyoruz."
+            },
+            "crossLingual": {
+              "title": "Diller arası sınama",
+              "text": "Özgün İngilizce ve Portekizce deneylerinin yanına aynı protokolle Türkçe ekleniyor."
+            },
+            "modelAgnostic": {
+              "title": "Modelden bağımsız prob",
+              "text": "Encoder, sentence embedding ve decoder LLM aynı minimal-çift mantığıyla ölçülüyor."
+            }
+          }
+        },
+        "02": {
+          "label": "02 / İki çalışma, tek araştırma çizgisi",
+          "original": {
+            "venue": "Computational Linguistics · 2025",
+            "title": "Özgün NCIMP çalışması",
+            "description": "He ve arkadaşları; insan kompozisyonellik puanlarını, doğal ve nötr bağlamları, dört ikame ailesini, Affinity ve Scaled Similarity ölçülerini birleştirdi. 280 İngilizce ve 180 Portekizce noun compound için toplam 32.200 cümle kurdu.",
+            "bullets": [
+              "Type ve token düzeyi insan puanları",
+              "3 doğal + 2 nötr bağlam",
+              "P_Syn, P_Comp, P_WordsSyn, P_Rand",
+              "Model uzayına göre rastgele taban kalibrasyonu"
+            ],
+            "link": "Makaleyi aç"
+          },
+          "newDraft": {
+            "badge": "Yeni taslak · 2026",
+            "title": "Yeni modeller + eksik kontrol",
+            "description": "Aynı probu 20 modele taşıyoruz: 2024 encoder’lar, modern embedding modelleri ve 0,8B–12B decoder LLM’ler. Sonra kritik eksik karşılaştırmayı ekliyoruz: model sıradan eş anlamlıyı rastgeleden ayırabiliyorsa, aynı ayrımı idiyomda ne kadar yapabiliyor?",
+            "bullets": [
+              "ISC, IG, LOD, AID, FLOOR, RHO, ICS",
+              "Last-four-layers + final norm LLM reçetesi",
+              "64 ordinary-control maddesi",
+              "OCG ile model-içi kalibrasyon",
+              "Türkçe NCIMP genişletmesi"
+            ]
+          }
+        },
+        "03": {
+          "label": "03 / Veri ve minimal çift tasarımı",
+          "heading": "Aynı cümle, kontrollü dört müdahale.",
+          "paragraph": "Cümle iskeleti sabit kalır; yalnız hedef span değiştirilir. Böylece değişen temsilin hangi semantik beklentiden kaynaklandığı açıkça görülebilir.",
+          "linkAllRecords": "Bütün kayıtları aç",
+          "probeArrow": "grey matter → {{value}}",
+          "dataGrid": {
+            "sentenceSuffix": "cümle",
+            "EN": {
+              "detail": "{{natural}} doğal · {{neutral}} nötr"
+            },
+            "PT": {
+              "detail": "{{natural}} doğal · {{neutral}} nötr"
+            },
+            "TR": {
+              "total": "19.600 hedef",
+              "detail": "1.400 bağlam · aktif kürasyon"
+            },
+            "CTRL": {
+              "total": "4 × 16",
+              "detail": "idiyom · komp. · kelime · ifade"
+            }
+          },
+          "auditNote": "İngilizce yerel anlık görüntüde 281 ham kayıt ve 279 skorlu kayıt vardır; makalenin resmi kapsamı 280’dir. “dust storm” ve “small fry” skor anomalileri gizlenmez, veri gezgininde açıkça belirtilir."
+        },
+        "04": {
+          "label": "04 / Metrik sözlüğü",
+          "heading": "Her skorun tek bir sorusu var.",
+          "paragraph": "Ham benzerlikten model-içi kalibrasyona kadar bütün ölçümler aynı kanıt zincirinin farklı halkalarıdır. ICS bir özet; ISC, LOD, AID, FLOOR ve OCG ise tanıyı taşır.",
+          "workedExample": {
+            "label": "Çalışılmış örnek",
+            "lines": [
+              "S(Syn)=0,55 · S(WordsSyn)=0,64 · S(Rand)=0,47",
+              "Sᴿ(Syn)=(0,55−0,47)/(1−0,47)=0,15"
+            ],
+            "note": "Doğru anlam, rastgele tabandan yalnız %15 uzaklaşabiliyor."
+          }
+        },
+        "05": {
+          "label": "05 / Dört deney",
+          "heading": "Özgün bulgudan 2026 modellerine, sonra ölçümün kendisini sınayan kontrole.",
+          "representation": {
+            "title": "Temsil düzeyi neden önemli?",
+            "text": "Tam cümlede ortak kelimeler baskındır: rastgele ikame yapılsa bile benzerlik 0,90–0,99 kalabilir. Bu nedenle birincil analiz, cümlenin tamamı değil hedefin contextual span temsilidir. Sentence embedding modellerinde ise karşılaştırılabilir sınır olarak isolated phrase raporlanır."
+          },
+          "anisotropy": {
+            "title": "Anizotropi neden ayrıca gösteriliyor?",
+            "text": "FLOOR→1 olduğunda Scaled Similarity paydası küçülür ve küçük gürültü büyür. Instruction-tuned Gemma 4–12B’nin ICS 0,520 görünmesi bu artefakttır; FLOOR≈0,95 ve ISC≈0 gerçek yakalamanın olmadığını gösterir. Bu yüzden ICS her zaman FLOOR ile birlikte okunur."
+          }
+        },
+        "06": {
+          "label": "06 / Sonuçlar",
+          "stats": {
+            "bestIcs": {
+              "label": "En iyi gerçek ICS",
+              "value": "0,525",
+              "note": "base Gemma 4–12B; 0,55 kısmi yakalama eşiğinin altında."
+            },
+            "bestOcg": {
+              "label": "En iyi idiyom OCG",
+              "value": "0,68",
+              "note": "İdiyom ayrımı, aynı modelin ordinary hedeflerdeki ayrımının yalnız %68’i."
+            },
+            "threshold": {
+              "label": "Eşiği geçen model",
+              "value": "0 / 20",
+              "note": "Aile, ölçek, yıl veya tuning fark etmeksizin yumuşak tavan kırılmıyor."
+            }
+          },
+          "icsChart": {
+            "title": "20 modelde ICS",
+            "subtitle": "İngilizce NC düzeyi · kesikli çizgi kısmi yakalama eşiği",
+            "anisotropyWarning": "Turuncu: FLOOR anizotropi uyarısı",
+            "loading": "Sonuçlar yükleniyor…",
+            "empty": "Gösterilecek ICS kaydı yok.",
+            "ariaLabel": "20 modelin ICS değerleri; kısmi yakalama eşiği 0,55",
+            "chartTitle": "20 modelde Idiomaticity Capture Score (ICS)",
+            "partialThreshold": "kısmi yakalama 0,55",
+            "tooltipFloor": "; FLOOR uyarısı"
+          },
+          "ocgChart": {
+            "title": "Ordinary-calibrated gap",
+            "subtitle": "OCG=1 aynı modelin ordinary ayrımına eşit performanstır.",
+            "loading": "Kalibrasyon yükleniyor…",
+            "empty": "Gösterilecek OCG kaydı yok.",
+            "legendIdiom": "İdiyom",
+            "legendCompositional": "Kompozisyonel",
+            "ariaLabel": "20 modelde idiyom ve kompozisyonel ordinary-calibrated gap değerleri",
+            "chartTitle": "20 modelde Ordinary-Calibrated Gap (OCG)",
+            "ordinaryBaseline": "ordinary taban = 1",
+            "tooltipIdiom": "idiyom",
+            "tooltipCompositional": "kompozisyonel"
+          },
+          "quote": {
+            "text": "Yeni ve büyük modeller doğru yöne yaklaşıyor; fakat bir idiyomun ne söylediğini değil, ne anlama geldiğini temsil etme problemi henüz çözülmüş değil.",
+            "attribution": "Birleşik sonuç: 2024 encoder → 2026 LLM · encoder → embedding → decoder · base → instruct"
+          }
+        },
+        "07": {
+          "label": "07 / Türkçe genişletme ve açık veri",
+          "heading": "Aynı deney, Türkçede savunulabilir bir gold set ile.",
+          "paragraph": "Türkçe envanter 280 iki sözcüklü aday, 1.400 temel bağlam ve 4.200 mevcut cümleyle başladı. Hedef; özgün İngilizce tasarımıyla eşleşen 19.600 cümle, sekiz bağımsız anotörlü type/token puanları, dört prob ailesi ve 64 ordinary-control kaydıdır.",
+          "stats": [
+            {
+              "value": "280",
+              "label": "Türkçe MWE adayı"
+            },
+            {
+              "value": "1.400",
+              "label": "temel bağlam"
+            },
+            {
+              "value": "19.600",
+              "label": "hedef cümle"
+            },
+            {
+              "value": "8",
+              "label": "bağımsız anotör / madde"
+            }
+          ],
+          "openData": {
+            "title": "Okunabilir, değiştirilemez, izlenebilir.",
+            "description": "Kamu gezgini EN/PT referanslarını, Türkçe çalışma setini ve ordinary kontrolleri salt okunur sunar. Ziyaretçi anonim Firebase oturumu alır; kürasyon yazma yolları yalnız onaylı rollere açıktır. App Check etkinleştirildiğinde Firestore istekleri onaylı site kökeniyle sınırlandırılır.",
+            "cta": "Veri gezginini aç"
+          }
+        },
+        "08": {
+          "label": "08 / Sınırlılıklar, kalite kapıları ve kaynak izi",
+          "heading": "Sonuç kadar sınırı da yayımlıyoruz.",
+          "paragraph": "Bu atlas, tamamlanmış EN/PT referansını; deneysel ordinary kontrolü ve henüz gold olmayan Türkçe çalışma snapshot’ını aynı yerde gösterir. “Açık” olmak, geçici etiketi nihai gerçek gibi sunmak değildir.",
+          "limitations": [
+            {
+              "title": "ICS gold değildir",
+              "text": "ICS model sıralamak için sezgisel bir bileşiktir. İddianın asıl kanıtı ISC, LOD, FLOOR ve OCG göstergelerinin birlikte okunmasıdır."
+            },
+            {
+              "title": "64 kontrol küçüktür",
+              "text": "Ordinary-control seti el yapımıdır; bazı rastgele ikameler dilbilgisel olarak zayıftır. Semantik, dilbilgisi ve frekans incelemesi tamamlanmalıdır."
+            },
+            {
+              "title": "Temsil düzeyi eşit değildir",
+              "text": "Tam cümle ortak çerçeve yüzünden yanıltıcıdır. Decoder LLM’de contextual span, sentence embedder’da isolated phrase birincil karşılaştırmadır."
+            },
+            {
+              "title": "Dil kapsamı tamamlanmadı",
+              "text": "Decoder kohortu şu anda İngilizce NC düzeyindedir. Portekizce genişletme ve Türkçe model koşuları, gold anotasyon sonrasına bırakılmıştır."
+            },
+            {
+              "title": "Türkçe set geçicidir",
+              "text": "280 Türkçe kayıt anlam ve örnekleriyle görünür; fakat 0/280 gold puanlıdır. Geçici I/PC/C sınıfları insan anotasyonunun yerine geçmez."
+            },
+            {
+              "title": "Runtime yolu kaydedilir",
+              "text": "MLX last-four-layers + final norm reçetesi torch yolu ile yakın ama özdeş değildir; model, katman, precision ve runtime sonuçla birlikte raporlanır."
+            }
+          ],
+          "pipeline": {
+            "title": "Türkçe yayın zinciri",
+            "description": "Her kapı sürümlenir ve audit kaydı üretir. Kamu snapshot’ı kürasyon veritabanından ayrıdır; yayımlandıktan sonra istemci kurallarıyla değiştirilemez.",
+            "steps": [
+              "1 · Aday + gerçek anlam",
+              "2 · 3 doğal + 2 nötr bağlam",
+              "3 · Type/token kör anotasyon",
+              "4 · Gold puan + I/PC/C",
+              "5 · Dört prob ailesi",
+              "6 · Span/dilbilgisi doğrulama",
+              "7 · Deney + gösterge paketi",
+              "8 · Mühürlü salt-okunur yayın"
+            ]
+          },
+          "sources": {
+            "title": "Birincil kaynak ve lisans izi",
+            "description": "Lisans durumu veri kabulünden ayrı tutulur; belirsiz kayıtlar gizlenmez, inceleme etiketiyle taşınır."
+          }
+        }
+      }
+    }
+  }
+}

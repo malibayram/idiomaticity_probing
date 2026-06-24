@@ -1,0 +1,14 @@
+{
+  "id": "aggregate-tr-current",
+  "type": "aggregate",
+  "title": "Kabul edilmiş Türkçe anotasyonları agrege et",
+  "status": "queued",
+  "progress": 0,
+  "createdAt": "2026-06-23T00:00:00Z",
+  "payload": {
+    "snapshotSource": "firestore",
+    "projectId": "tr-ncimp",
+    "snapshotPath": "studio/public/seed/tr_project.json",
+    "outputDir": "runs/research-studio-worker/aggregation"
+  }
+}

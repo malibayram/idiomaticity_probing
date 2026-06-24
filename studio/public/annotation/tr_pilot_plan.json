@@ -1,0 +1,3776 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-23T20:55:03.511493+00:00",
+  "projectId": "tr-ncimp",
+  "selection": {
+    "seed": 20260623,
+    "perClass": 10,
+    "selectedMweIds": [
+      "TR-NC-037",
+      "TR-NC-086",
+      "TR-NC-003",
+      "TR-NC-051",
+      "TR-NC-002",
+      "TR-NC-050",
+      "TR-NC-089",
+      "TR-NC-007",
+      "TR-NC-087",
+      "TR-NC-064",
+      "TR-NC-121",
+      "TR-NC-171",
+      "TR-NC-140",
+      "TR-NC-135",
+      "TR-NC-139",
+      "TR-NC-130",
+      "TR-NC-162",
+      "TR-NC-186",
+      "TR-NC-179",
+      "TR-NC-107",
+      "TR-NC-215",
+      "TR-NC-242",
+      "TR-NC-221",
+      "TR-NC-236",
+      "TR-NC-223",
+      "TR-NC-206",
+      "TR-NC-214",
+      "TR-NC-197",
+      "TR-NC-198",
+      "TR-NC-219"
+    ],
+    "warning": "Provisional classes are used only for balanced pilot sampling and are hidden from annotators."
+  },
+  "campaigns": {
+    "type": {
+      "id": "tr-type-pilot-v1",
+      "targetAnnotators": 8,
+      "items": [
+        {
+          "id": "TR-NC-037-TYPE",
+          "mweId": "TR-NC-037",
+          "contextId": null,
+          "itemSnapshotHash": "53f5a9974d1e728534620f5593a4bbcbc82f856ccf7525eba06e93bd7180e3ab",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-037",
+            "canonicalForm": "kör düğüm",
+            "modifier": "kör",
+            "head": "düğüm",
+            "meaning": "Çözümü çok güçleşmiş karmaşık sorun",
+            "contexts": [
+              {
+                "id": "TR-NC-037-S1",
+                "slot": "S1",
+                "sentence": "Yıllardır çözülemeyen mülkiyet sorunu kör düğüme dönüştü.",
+                "targetSurface": "kör düğüme",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-037-S2",
+                "slot": "S2",
+                "sentence": "Görüşmelerdeki kör düğümü yeni öneri çözdü.",
+                "targetSurface": "kör düğümü",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-037-S3",
+                "slot": "S3",
+                "sentence": "Dosya bürokratik bir kör düğüm hâlinde bekliyor.",
+                "targetSurface": "kör düğüm",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-086-TYPE",
+          "mweId": "TR-NC-086",
+          "contextId": null,
+          "itemSnapshotHash": "9925e740963b7ceab4983c8ac03eb01a92e35f874c5beceeb9fa9862dc967a3f",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-086",
+            "canonicalForm": "kırılma noktası",
+            "modifier": "kırılma",
+            "head": "noktası",
+            "meaning": "Bir sürecin davranışını veya yönünü değiştirdiği kritik eşik",
+            "contexts": [
+              {
+                "id": "TR-NC-086-S1",
+                "slot": "S1",
+                "sentence": "Herkesin bir kırılma noktası var.",
+                "targetSurface": "kırılma noktası",
+                "span": [
+                  2,
+                  4
+                ]
+              },
+              {
+                "id": "TR-NC-086-S2",
+                "slot": "S2",
+                "sentence": "Uzayan grev görüşmelerde kırılma noktası oldu.",
+                "targetSurface": "kırılma noktası",
+                "span": [
+                  3,
+                  5
+                ]
+              },
+              {
+                "id": "TR-NC-086-S3",
+                "slot": "S3",
+                "sentence": "Sıcaklık malzemenin kırılma noktasına yaklaştı.",
+                "targetSurface": "kırılma noktasına",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-003-TYPE",
+          "mweId": "TR-NC-003",
+          "contextId": null,
+          "itemSnapshotHash": "d7fd9a7a186f74d95ddc1d44bb2c9479f87a3b5ca199790153a388aebed82135",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-003",
+            "canonicalForm": "ağır top",
+            "modifier": "ağır",
+            "head": "top",
+            "meaning": "Bir çevrede etkisi ve gücü çok yüksek kişi",
+            "contexts": [
+              {
+                "id": "TR-NC-003-S1",
+                "slot": "S1",
+                "sentence": "Partinin ağır topu seçim kampanyasına bugün katıldı.",
+                "targetSurface": "ağır topu",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-003-S2",
+                "slot": "S2",
+                "sentence": "Toplantıda sektörün ağır topları aynı masada buluştu.",
+                "targetSurface": "ağır topları",
+                "span": [
+                  2,
+                  4
+                ]
+              },
+              {
+                "id": "TR-NC-003-S3",
+                "slot": "S3",
+                "sentence": "Kulübün ağır topu transfer görüşmelerini bizzat yürüttü.",
+                "targetSurface": "ağır topu",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-051-TYPE",
+          "mweId": "TR-NC-051",
+          "contextId": null,
+          "itemSnapshotHash": "14a2d0db0222e858ab674706829e09f0f55da54beecf027e953ecd923b1d3e94",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-051",
+            "canonicalForm": "yağlı kapı",
+            "modifier": "yağlı",
+            "head": "kapı",
+            "meaning": "Büyük ve kolay kazanç sağlayan iş ya da kişi",
+            "contexts": [
+              {
+                "id": "TR-NC-051-S1",
+                "slot": "S1",
+                "sentence": "Bir yağlı kapı bulma umuduyla partiye üye oldu.",
+                "targetSurface": "yağlı kapı",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-051-S2",
+                "slot": "S2",
+                "sentence": "Kolay kazanç için kendine yağlı kapı arıyordu.",
+                "targetSurface": "yağlı kapı",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-051-S3",
+                "slot": "S3",
+                "sentence": "İhaleler bazı şirketler için yağlı kapıya dönüştü.",
+                "targetSurface": "yağlı kapıya",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-002-TYPE",
+          "mweId": "TR-NC-002",
+          "contextId": null,
+          "itemSnapshotHash": "9bbd7c9fd3e22c61c74c0440b55b1f5ab8892eab6a724a12727fd791d869aed0",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-002",
+            "canonicalForm": "açık çek",
+            "modifier": "açık",
+            "head": "çek",
+            "meaning": "Sınırı önceden belirlenmemiş yetki veya hareket serbestliği",
+            "contexts": [
+              {
+                "id": "TR-NC-002-S1",
+                "slot": "S1",
+                "sentence": "Yönetim müdüre harcamalar konusunda açık çek vermedi.",
+                "targetSurface": "açık çek",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-002-S2",
+                "slot": "S2",
+                "sentence": "Bu yetkiyi açık çek olarak yorumlamak yanlış olur.",
+                "targetSurface": "açık çek",
+                "span": [
+                  2,
+                  4
+                ]
+              },
+              {
+                "id": "TR-NC-002-S3",
+                "slot": "S3",
+                "sentence": "Meclis kararla birlikte yürütmeye adeta açık çek sundu.",
+                "targetSurface": "açık çek",
+                "span": [
+                  5,
+                  7
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-050-TYPE",
+          "mweId": "TR-NC-050",
+          "contextId": null,
+          "itemSnapshotHash": "f72f7c8b051373ea8fb02cac2d88e47a51806ff2cf3ad092473e718706b30226",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-050",
+            "canonicalForm": "süt liman",
+            "modifier": "süt",
+            "head": "liman",
+            "meaning": "Hiçbir gerginliğin veya hareketliliğin bulunmadığı sakin durum",
+            "contexts": [
+              {
+                "id": "TR-NC-050-S1",
+                "slot": "S1",
+                "sentence": "Fırtınadan sonra deniz süt liman oldu.",
+                "targetSurface": "süt liman",
+                "span": [
+                  3,
+                  5
+                ]
+              },
+              {
+                "id": "TR-NC-050-S2",
+                "slot": "S2",
+                "sentence": "Tartışmalar bitince ofis birden süt liman kesildi.",
+                "targetSurface": "süt liman",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-050-S3",
+                "slot": "S3",
+                "sentence": "Dün gergin olan sokaklar bugün süt limandı.",
+                "targetSurface": "süt limandı",
+                "span": [
+                  5,
+                  7
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-089-TYPE",
+          "mweId": "TR-NC-089",
+          "contextId": null,
+          "itemSnapshotHash": "54fb7e4d220f27f9103cfcf6f418e0d2ace4c0f1ef5be4fd2d02109f0592ce40",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-089",
+            "canonicalForm": "kukla hükümet",
+            "modifier": "kukla",
+            "head": "hükümet",
+            "meaning": "Başka bir gücün yönlendirmesiyle hareket eden yönetim",
+            "contexts": [
+              {
+                "id": "TR-NC-089-S1",
+                "slot": "S1",
+                "sentence": "Muhalefet yönetimi kukla hükümet olmakla suçladı.",
+                "targetSurface": "kukla hükümet",
+                "span": [
+                  2,
+                  4
+                ]
+              },
+              {
+                "id": "TR-NC-089-S2",
+                "slot": "S2",
+                "sentence": "İşgal gücü bölgede bir kukla hükümet kurdu.",
+                "targetSurface": "kukla hükümet",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-089-S3",
+                "slot": "S3",
+                "sentence": "Kukla hükümet bağımsız karar alamıyordu.",
+                "targetSurface": "Kukla hükümet",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-007-TYPE",
+          "mweId": "TR-NC-007",
+          "contextId": null,
+          "itemSnapshotHash": "fecbb3160052dec6fc338bd02f8101326ee4383176b20b78598509297bf28759",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-007",
+            "canonicalForm": "arka kapı",
+            "modifier": "arka",
+            "head": "kapı",
+            "meaning": "Resmî olmayan, gizli veya dolaylı işlem yolu",
+            "contexts": [
+              {
+                "id": "TR-NC-007-S1",
+                "slot": "S1",
+                "sentence": "İhaleyi arka kapı ilişkileriyle alma girişimi soruşturuluyor.",
+                "targetSurface": "arka kapı",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-007-S2",
+                "slot": "S2",
+                "sentence": "Sorunu arka kapı diplomasisiyle çözmeye çalıştılar.",
+                "targetSurface": "arka kapı",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-007-S3",
+                "slot": "S3",
+                "sentence": "Yasağın arka kapı yöntemleriyle aşılmasına izin verilmedi.",
+                "targetSurface": "arka kapı",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-087-TYPE",
+          "mweId": "TR-NC-087",
+          "contextId": null,
+          "itemSnapshotHash": "f310d7d930e7e07fef5f9f77c29427f52b309edf11c80485dd5c2dbc296e6315",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-087",
+            "canonicalForm": "kör nokta",
+            "modifier": "kör",
+            "head": "nokta",
+            "meaning": "Fark edilmeyen eksiklik veya değerlendirme dışı kalan alan",
+            "contexts": [
+              {
+                "id": "TR-NC-087-S1",
+                "slot": "S1",
+                "sentence": "Rapor, politikanın en önemli kör noktasını gösterdi.",
+                "targetSurface": "kör noktasını",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-087-S2",
+                "slot": "S2",
+                "sentence": "Her yöneticinin fark etmediği bir kör noktası olabilir.",
+                "targetSurface": "kör noktası",
+                "span": [
+                  5,
+                  7
+                ]
+              },
+              {
+                "id": "TR-NC-087-S3",
+                "slot": "S3",
+                "sentence": "Tartışmada kırsal kesim yine kör nokta olarak kaldı.",
+                "targetSurface": "kör nokta",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-064-TYPE",
+          "mweId": "TR-NC-064",
+          "contextId": null,
+          "itemSnapshotHash": "bbc19c32f5a42220ee673956fec9aba21abb61d7b4074dfb08677e6c01269bd2",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-064",
+            "canonicalForm": "ölüm kalım",
+            "modifier": "ölüm",
+            "head": "kalım",
+            "meaning": "Sonucu yaşamsal önem taşıyan kritik durum",
+            "contexts": [
+              {
+                "id": "TR-NC-064-S1",
+                "slot": "S1",
+                "sentence": "Bu bir ölüm kalım meselesidir.",
+                "targetSurface": "ölüm kalım",
+                "span": [
+                  2,
+                  4
+                ]
+              },
+              {
+                "id": "TR-NC-064-S2",
+                "slot": "S2",
+                "sentence": "Bu ameliyat onun için ölüm kalım meselesiydi.",
+                "targetSurface": "ölüm kalım",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-064-S3",
+                "slot": "S3",
+                "sentence": "Takım ölüm kalım maçına çıkacak.",
+                "targetSurface": "ölüm kalım",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-121-TYPE",
+          "mweId": "TR-NC-121",
+          "contextId": null,
+          "itemSnapshotHash": "05883ff7bc6d71ecba3b62da92102f533b6f8c85b6c7a0aa2e5b30b623bdb2e0",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-121",
+            "canonicalForm": "kara liste",
+            "modifier": "kara",
+            "head": "liste",
+            "meaning": "Sakıncalı görülerek işlem yapılmaması istenen kişi veya kurum listesi",
+            "contexts": [
+              {
+                "id": "TR-NC-121-S1",
+                "slot": "S1",
+                "sentence": "Kara listede olanlar bence haklılar.",
+                "targetSurface": "Kara listede",
+                "span": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "id": "TR-NC-121-S2",
+                "slot": "S2",
+                "sentence": "Şirket güvenlik ihlali yapan tedarikçileri kara listeye aldı.",
+                "targetSurface": "kara listeye",
+                "span": [
+                  5,
+                  7
+                ]
+              },
+              {
+                "id": "TR-NC-121-S3",
+                "slot": "S3",
+                "sentence": "Adı uluslararası kara listede yer alıyor.",
+                "targetSurface": "kara listede",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-171-TYPE",
+          "mweId": "TR-NC-171",
+          "contextId": null,
+          "itemSnapshotHash": "3d13c131f316760892b93a3550327f7ff64ba1f13c3d1fe4b39aa281c668e0a1",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-171",
+            "canonicalForm": "altın fırsat",
+            "modifier": "altın",
+            "head": "fırsat",
+            "meaning": "Başarı için çok değerli ve ender imkân",
+            "contexts": [
+              {
+                "id": "TR-NC-171-S1",
+                "slot": "S1",
+                "sentence": "Yeni pazar şirket için altın fırsat sunuyor.",
+                "targetSurface": "altın fırsat",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-171-S2",
+                "slot": "S2",
+                "sentence": "Bu burs eğitimine devam etmesi için altın fırsattı.",
+                "targetSurface": "altın fırsattı",
+                "span": [
+                  6,
+                  8
+                ]
+              },
+              {
+                "id": "TR-NC-171-S3",
+                "slot": "S3",
+                "sentence": "Takım öne geçmek için altın fırsatı kaçırdı.",
+                "targetSurface": "altın fırsatı",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-140-TYPE",
+          "mweId": "TR-NC-140",
+          "contextId": null,
+          "itemSnapshotHash": "93b074fe190f96dd16e5f7cc26bdc3baebf26b6704caa41f7fa58330f61cc104",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-140",
+            "canonicalForm": "çifte standart",
+            "modifier": "çifte",
+            "head": "standart",
+            "meaning": "Benzer durumlara çıkar doğrultusunda farklı ölçüt uygulama",
+            "contexts": [
+              {
+                "id": "TR-NC-140-S1",
+                "slot": "S1",
+                "sentence": "Bu ülkede adalet biraz çifte standartlıdır: fakirlerin adaleti ve zenginlerin adaleti.",
+                "targetSurface": "çifte standartlıdır",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-140-S2",
+                "slot": "S2",
+                "sentence": "Aynı olayda farklı karar verilmesi çifte standarttır.",
+                "targetSurface": "çifte standarttır",
+                "span": [
+                  5,
+                  7
+                ]
+              },
+              {
+                "id": "TR-NC-140-S3",
+                "slot": "S3",
+                "sentence": "Kurumun çifte standart uyguladığı öne sürüldü.",
+                "targetSurface": "çifte standart",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-135-TYPE",
+          "mweId": "TR-NC-135",
+          "contextId": null,
+          "itemSnapshotHash": "99dc87c424dcd3d58c02215d10553e891060651d7a15f67d5a1696776f7703e3",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-135",
+            "canonicalForm": "vicdan azabı",
+            "modifier": "vicdan",
+            "head": "azabı",
+            "meaning": "Yanlış bir davranıştan sonra duyulan yoğun suçluluk",
+            "contexts": [
+              {
+                "id": "TR-NC-135-S1",
+                "slot": "S1",
+                "sentence": "Tom'un diğer insanların yiyeceğini çalmakla ilgili vicdan azabı yok.",
+                "targetSurface": "vicdan azabı",
+                "span": [
+                  6,
+                  8
+                ]
+              },
+              {
+                "id": "TR-NC-135-S2",
+                "slot": "S2",
+                "sentence": "Yalan söylediği için vicdan azabı çekiyordu.",
+                "targetSurface": "vicdan azabı",
+                "span": [
+                  3,
+                  5
+                ]
+              },
+              {
+                "id": "TR-NC-135-S3",
+                "slot": "S3",
+                "sentence": "Kazadan sonra duyduğu vicdan azabı dinmedi.",
+                "targetSurface": "vicdan azabı",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-139-TYPE",
+          "mweId": "TR-NC-139",
+          "contextId": null,
+          "itemSnapshotHash": "ca8d14ed3e5252f738fb665e640c6a51a5a6080cbae8ec6b64462b6a3729bc61",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-139",
+            "canonicalForm": "çamur atma",
+            "modifier": "çamur",
+            "head": "atma",
+            "meaning": "Kanıtsız suçlamalarla birinin itibarını zedeleme",
+            "contexts": [
+              {
+                "id": "TR-NC-139-S1",
+                "slot": "S1",
+                "sentence": "Eğer çamur atmaya gidersen onun birazı sana yapışır.",
+                "targetSurface": "çamur atmaya",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-139-S2",
+                "slot": "S2",
+                "sentence": "Kanıtsız iddiaları açık bir çamur atma girişimiydi.",
+                "targetSurface": "çamur atma",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-139-S3",
+                "slot": "S3",
+                "sentence": "Seçim kampanyası karşılıklı çamur atmaya dönüştü.",
+                "targetSurface": "çamur atmaya",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-130-TYPE",
+          "mweId": "TR-NC-130",
+          "contextId": null,
+          "itemSnapshotHash": "499180a3b3a4d355c4b7561e1cd861548e0ff75e9eccb0277ea742a16e1d38ce",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-130",
+            "canonicalForm": "puslu hava",
+            "modifier": "puslu",
+            "head": "hava",
+            "meaning": "Belirsizlik ve güvensizliğin egemen olduğu ortam",
+            "contexts": [
+              {
+                "id": "TR-NC-130-S1",
+                "slot": "S1",
+                "sentence": "Seçim öncesi siyasette puslu hava hâkimdi.",
+                "targetSurface": "puslu hava",
+                "span": [
+                  3,
+                  5
+                ]
+              },
+              {
+                "id": "TR-NC-130-S2",
+                "slot": "S2",
+                "sentence": "Piyasadaki puslu hava yatırımcıyı beklemeye yöneltti.",
+                "targetSurface": "puslu hava",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-130-S3",
+                "slot": "S3",
+                "sentence": "Açıklamalar belirsizliği gidermek yerine puslu hava yarattı.",
+                "targetSurface": "puslu hava",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-162-TYPE",
+          "mweId": "TR-NC-162",
+          "contextId": null,
+          "itemSnapshotHash": "1bfe7eb4ce1d7909e56c80e7ccbc0b42fff1c571ae124c8dacd3900fb83d8b85",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-162",
+            "canonicalForm": "söz düellosu",
+            "modifier": "söz",
+            "head": "düellosu",
+            "meaning": "Tarafların karşılıklı sert sözlerle yürüttüğü tartışma",
+            "contexts": [
+              {
+                "id": "TR-NC-162-S1",
+                "slot": "S1",
+                "sentence": "İki aday canlı yayında söz düellosuna girdi.",
+                "targetSurface": "söz düellosuna",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-162-S2",
+                "slot": "S2",
+                "sentence": "Mecliste iktidar ile muhalefet arasında söz düellosu yaşandı.",
+                "targetSurface": "söz düellosu",
+                "span": [
+                  5,
+                  7
+                ]
+              },
+              {
+                "id": "TR-NC-162-S3",
+                "slot": "S3",
+                "sentence": "Sert söz düellosu toplantının önüne geçti.",
+                "targetSurface": "söz düellosu",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-186-TYPE",
+          "mweId": "TR-NC-186",
+          "contextId": null,
+          "itemSnapshotHash": "9b2ab3998b9e465891fe1d95ac730afa4ead4c63b981d0c4fca1e40a69246148",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-186",
+            "canonicalForm": "linç kültürü",
+            "modifier": "linç",
+            "head": "kültürü",
+            "meaning": "Bir kişiyi topluca ve ölçüsüz biçimde hedef alma alışkanlığı",
+            "contexts": [
+              {
+                "id": "TR-NC-186-S1",
+                "slot": "S1",
+                "sentence": "Sosyal medyadaki linç kültürü günümüzün engizisyonu olmuş durumda.",
+                "targetSurface": "linç kültürü",
+                "span": [
+                  2,
+                  4
+                ]
+              },
+              {
+                "id": "TR-NC-186-S2",
+                "slot": "S2",
+                "sentence": "Sosyal medyadaki linç kültürü farklı görüşleri susturuyor.",
+                "targetSurface": "linç kültürü",
+                "span": [
+                  2,
+                  4
+                ]
+              },
+              {
+                "id": "TR-NC-186-S3",
+                "slot": "S3",
+                "sentence": "Linç kültürü yüzünden insanlar hata yapmaktan korkuyor.",
+                "targetSurface": "Linç kültürü",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-179-TYPE",
+          "mweId": "TR-NC-179",
+          "contextId": null,
+          "itemSnapshotHash": "9c33054f0505ea1df31cabd632731ee6e998aa53617ba1d42fc9cbd844f2e742",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-179",
+            "canonicalForm": "güç zehirlenmesi",
+            "modifier": "güç",
+            "head": "zehirlenmesi",
+            "meaning": "Yetki kazanan kişinin ölçüsüz ve kibirli davranmaya başlaması",
+            "contexts": [
+              {
+                "id": "TR-NC-179-S1",
+                "slot": "S1",
+                "sentence": "Yönetici kısa sürede güç zehirlenmesine kapıldı.",
+                "targetSurface": "güç zehirlenmesine",
+                "span": [
+                  3,
+                  5
+                ]
+              },
+              {
+                "id": "TR-NC-179-S2",
+                "slot": "S2",
+                "sentence": "Güç zehirlenmesi eleştiriye tahammülünü yok etti.",
+                "targetSurface": "Güç zehirlenmesi",
+                "span": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "id": "TR-NC-179-S3",
+                "slot": "S3",
+                "sentence": "Uzun iktidarın güç zehirlenmesi yaratabileceği uyarısı yapıldı.",
+                "targetSurface": "güç zehirlenmesi",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-107-TYPE",
+          "mweId": "TR-NC-107",
+          "contextId": null,
+          "itemSnapshotHash": "ecfba27c2b767481cae8f7108a2d43e86be91cbc2f3aa5f3c283505a1cce2f75",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-107",
+            "canonicalForm": "cam tavan",
+            "modifier": "cam",
+            "head": "tavan",
+            "meaning": "Belirli grupların yükselmesini görünmez biçimde engelleyen sınır",
+            "contexts": [
+              {
+                "id": "TR-NC-107-S1",
+                "slot": "S1",
+                "sentence": "İnsanın cam tavanları görecek kadar siyaset ve tarih bilinci olmalı.",
+                "targetSurface": "cam tavanları",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-107-S2",
+                "slot": "S2",
+                "sentence": "Kadın yöneticiler cam tavanı aşmakta hâlâ zorlanıyor.",
+                "targetSurface": "cam tavanı",
+                "span": [
+                  2,
+                  4
+                ]
+              },
+              {
+                "id": "TR-NC-107-S3",
+                "slot": "S3",
+                "sentence": "Araştırma iş yerindeki cam tavan etkisini inceliyor.",
+                "targetSurface": "cam tavan",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-215-TYPE",
+          "mweId": "TR-NC-215",
+          "contextId": null,
+          "itemSnapshotHash": "e4cffd1849e2bd7dca4f09fc2f135dc7a3e7002e898d091b1949f210d202539b",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-215",
+            "canonicalForm": "kredi kartı",
+            "modifier": "kredi",
+            "head": "kartı",
+            "meaning": "Banka kredisini kullanarak ödeme yapmayı sağlayan kart",
+            "contexts": [
+              {
+                "id": "TR-NC-215-S1",
+                "slot": "S1",
+                "sentence": "Kredi kartım ATM tarafından reddedildi.",
+                "targetSurface": "Kredi kartım",
+                "span": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "id": "TR-NC-215-S2",
+                "slot": "S2",
+                "sentence": "Ödeme için kredi kartı kullanabilir miyim?",
+                "targetSurface": "kredi kartı",
+                "span": [
+                  2,
+                  4
+                ]
+              },
+              {
+                "id": "TR-NC-215-S3",
+                "slot": "S3",
+                "sentence": "Ben bir kredi kartı ile ödemek istiyorum.",
+                "targetSurface": "kredi kartı",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-242-TYPE",
+          "mweId": "TR-NC-242",
+          "contextId": null,
+          "itemSnapshotHash": "f7a8ce03f4b6745e57ebed7216bb9e1405a128305d1c8ad960b267e106b69514",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-242",
+            "canonicalForm": "televizyon kanalı",
+            "modifier": "televizyon",
+            "head": "kanalı",
+            "meaning": "Belirli bir yayın akışı sunan televizyon kuruluşu",
+            "contexts": [
+              {
+                "id": "TR-NC-242-S1",
+                "slot": "S1",
+                "sentence": "Videoyu bir yerel televizyon kanalına götürdü.",
+                "targetSurface": "televizyon kanalına",
+                "span": [
+                  3,
+                  5
+                ]
+              },
+              {
+                "id": "TR-NC-242-S2",
+                "slot": "S2",
+                "sentence": "Bu, dinî bir televizyon kanalıdır.",
+                "targetSurface": "televizyon kanalıdır",
+                "span": [
+                  3,
+                  5
+                ]
+              },
+              {
+                "id": "TR-NC-242-S3",
+                "slot": "S3",
+                "sentence": "Videoyu yerel bir televizyon kanalına götürdü.",
+                "targetSurface": "televizyon kanalına",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-221-TYPE",
+          "mweId": "TR-NC-221",
+          "contextId": null,
+          "itemSnapshotHash": "de6a6c358644f1b06cfa8ec977ebc6401a8611fec2dca4e6f4e1b5b3a327150f",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-221",
+            "canonicalForm": "müşteri hizmetleri",
+            "modifier": "müşteri",
+            "head": "hizmetleri",
+            "meaning": "Müşterilere bilgi ve destek sağlayan hizmet birimi",
+            "contexts": [
+              {
+                "id": "TR-NC-221-S1",
+                "slot": "S1",
+                "sentence": "Bugünlerde, müşteri hizmetlerinde deneyimi olan kişiler arıyoruz.",
+                "targetSurface": "müşteri hizmetlerinde",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-221-S2",
+                "slot": "S2",
+                "sentence": "Müşteri hizmetleri temsilcisiyle konuşmak istiyorsanız lütfen üçe basın.",
+                "targetSurface": "Müşteri hizmetleri",
+                "span": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "id": "TR-NC-221-S3",
+                "slot": "S3",
+                "sentence": "Ben müşteri hizmetleri temsilcisine ulaşmadan önce telefonda 20 dakika beklemek zorunda kaldım.",
+                "targetSurface": "müşteri hizmetleri",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-236-TYPE",
+          "mweId": "TR-NC-236",
+          "contextId": null,
+          "itemSnapshotHash": "9728fe8a06a15a3586533091b377671c79511a6a7829b027a37cc3b88f724b44",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-236",
+            "canonicalForm": "kütüphane kartı",
+            "modifier": "kütüphane",
+            "head": "kartı",
+            "meaning": "Kütüphane hizmetlerinden yararlanmayı sağlayan kart",
+            "contexts": [
+              {
+                "id": "TR-NC-236-S1",
+                "slot": "S1",
+                "sentence": "Tom'un kütüphane kartının süresi dolmuş.",
+                "targetSurface": "kütüphane kartının",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-236-S2",
+                "slot": "S2",
+                "sentence": "Bir kütüphane kartı almak için ne yapmam gerekiyor?",
+                "targetSurface": "kütüphane kartı",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-236-S3",
+                "slot": "S3",
+                "sentence": "Benim bir kütüphane kartım yok.",
+                "targetSurface": "kütüphane kartım",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-223-TYPE",
+          "mweId": "TR-NC-223",
+          "contextId": null,
+          "itemSnapshotHash": "30826631b393b3b1ab1de0af779b08c8fe0f3d07a569c89f426901749150e75f",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-223",
+            "canonicalForm": "üretim hattı",
+            "modifier": "üretim",
+            "head": "hattı",
+            "meaning": "Bir ürünün aşamalı olarak üretildiği düzenek",
+            "contexts": [
+              {
+                "id": "TR-NC-223-S1",
+                "slot": "S1",
+                "sentence": "Yeni üretim hattı kapasiteyi iki kat artırdı.",
+                "targetSurface": "üretim hattı",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-223-S2",
+                "slot": "S2",
+                "sentence": "Arıza yüzünden üretim hattı durdu.",
+                "targetSurface": "üretim hattı",
+                "span": [
+                  2,
+                  4
+                ]
+              },
+              {
+                "id": "TR-NC-223-S3",
+                "slot": "S3",
+                "sentence": "Mühendisler üretim hattını yeniden düzenledi.",
+                "targetSurface": "üretim hattını",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-206-TYPE",
+          "mweId": "TR-NC-206",
+          "contextId": null,
+          "itemSnapshotHash": "b18b1aac6dfe262db662bbcd80a30b80fa777b3e6e9933b0bbffb6d23b8de683",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-206",
+            "canonicalForm": "kitap kapağı",
+            "modifier": "kitap",
+            "head": "kapağı",
+            "meaning": "Bir kitabın önünü ve arkasını koruyan dış bölüm",
+            "contexts": [
+              {
+                "id": "TR-NC-206-S1",
+                "slot": "S1",
+                "sentence": "Kitap kapağı genç bir tasarımcı tarafından hazırlandı.",
+                "targetSurface": "Kitap kapağı",
+                "span": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "id": "TR-NC-206-S2",
+                "slot": "S2",
+                "sentence": "Yırtılan kitap kapağını dikkatlice onardı.",
+                "targetSurface": "kitap kapağını",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-206-S3",
+                "slot": "S3",
+                "sentence": "Yeni baskının kitap kapağı mavi olacak.",
+                "targetSurface": "kitap kapağı",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-214-TYPE",
+          "mweId": "TR-NC-214",
+          "contextId": null,
+          "itemSnapshotHash": "d6bd7db30c6d32ad1f16c381e7882af3bf5a5511e1f8a0087b12cb6b2098a6c5",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-214",
+            "canonicalForm": "elektrik faturası",
+            "modifier": "elektrik",
+            "head": "faturası",
+            "meaning": "Tüketilen elektrik için düzenlenen ödeme belgesi",
+            "contexts": [
+              {
+                "id": "TR-NC-214-S1",
+                "slot": "S1",
+                "sentence": "Elektrik faturasında ödenecek miktar düşüktü.",
+                "targetSurface": "Elektrik faturasında",
+                "span": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "id": "TR-NC-214-S2",
+                "slot": "S2",
+                "sentence": "Elektrik faturasını ödemeyi unutmadın, değil mi?",
+                "targetSurface": "Elektrik faturasını",
+                "span": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "id": "TR-NC-214-S3",
+                "slot": "S3",
+                "sentence": "Leyla, elektrik faturasının çok yüksek olduğunu düşündü.",
+                "targetSurface": "elektrik faturasının",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-197-TYPE",
+          "mweId": "TR-NC-197",
+          "contextId": null,
+          "itemSnapshotHash": "7d28f4451bb092be7faa91a72bf71fde7c45eba95717d0c1dc774be9d19169e9",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-197",
+            "canonicalForm": "kahve fincanı",
+            "modifier": "kahve",
+            "head": "fincanı",
+            "meaning": "Kahve içmek için kullanılan küçük fincan",
+            "contexts": [
+              {
+                "id": "TR-NC-197-S1",
+                "slot": "S1",
+                "sentence": "Bu, İngiltere'de yapılmış bir kahve fincanı.",
+                "targetSurface": "kahve fincanı",
+                "span": [
+                  4,
+                  6
+                ]
+              },
+              {
+                "id": "TR-NC-197-S2",
+                "slot": "S2",
+                "sentence": "Yanlışlıkla kahve fincanına tuz koydu.",
+                "targetSurface": "kahve fincanına",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-197-S3",
+                "slot": "S3",
+                "sentence": "Tom kahve fincanından bir yudum aldı.",
+                "targetSurface": "kahve fincanından",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-198-TYPE",
+          "mweId": "TR-NC-198",
+          "contextId": null,
+          "itemSnapshotHash": "0d0be7e691b211b17ce87392e66cb4cf65419190937feae5e332e3be300e75d6",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-198",
+            "canonicalForm": "okul bahçesi",
+            "modifier": "okul",
+            "head": "bahçesi",
+            "meaning": "Bir okulun çevresindeki açık kullanım alanı",
+            "contexts": [
+              {
+                "id": "TR-NC-198-S1",
+                "slot": "S1",
+                "sentence": "Oynamak için lütfen okul bahçesine gidin.",
+                "targetSurface": "okul bahçesine",
+                "span": [
+                  3,
+                  5
+                ]
+              },
+              {
+                "id": "TR-NC-198-S2",
+                "slot": "S2",
+                "sentence": "Okul bahçesinde bazı öğrenciler var.",
+                "targetSurface": "Okul bahçesinde",
+                "span": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "id": "TR-NC-198-S3",
+                "slot": "S3",
+                "sentence": "Yağmur, çocukların okul bahçesinde beyzbol oynamalarına engel oldu.",
+                "targetSurface": "okul bahçesinde",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-219-TYPE",
+          "mweId": "TR-NC-219",
+          "contextId": null,
+          "itemSnapshotHash": "eef94b3782b79a90597a018516f945616f5096eaf1a133ec2f505f6056e24576",
+          "itemSnapshot": {
+            "taskType": "type",
+            "mweId": "TR-NC-219",
+            "canonicalForm": "proje yönetimi",
+            "modifier": "proje",
+            "head": "yönetimi",
+            "meaning": "Bir projenin kaynaklarını ve aşamalarını planlama süreci",
+            "contexts": [
+              {
+                "id": "TR-NC-219-S1",
+                "slot": "S1",
+                "sentence": "Görevim, proje yönetimi ve ekip koordinasyonunu içeriyor.",
+                "targetSurface": "proje yönetimi",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-219-S2",
+                "slot": "S2",
+                "sentence": "Ekip proje yönetimi için yeni yazılım kullanıyor.",
+                "targetSurface": "proje yönetimi",
+                "span": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "id": "TR-NC-219-S3",
+                "slot": "S3",
+                "sentence": "Proje yönetimi deneyimi bu görevde çok önemli.",
+                "targetSurface": "Proje yönetimi",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "token": {
+      "id": "tr-token-pilot-v1",
+      "targetAnnotators": 8,
+      "items": [
+        {
+          "id": "TR-NC-037-S1",
+          "mweId": "TR-NC-037",
+          "contextId": "TR-NC-037-S1",
+          "itemSnapshotHash": "1e32d06f2203778f3d48b957b124941ff6e0a442c43c0e3373e371c49f87be07",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-037",
+            "canonicalForm": "kör düğüm",
+            "modifier": "kör",
+            "head": "düğüm",
+            "meaning": "Çözümü çok güçleşmiş karmaşık sorun",
+            "contexts": [
+              {
+                "id": "TR-NC-037-S1",
+                "slot": "S1",
+                "sentence": "Yıllardır çözülemeyen mülkiyet sorunu kör düğüme dönüştü.",
+                "targetSurface": "kör düğüme",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-037-S2",
+          "mweId": "TR-NC-037",
+          "contextId": "TR-NC-037-S2",
+          "itemSnapshotHash": "fdcf2fb8b9bfa65a944d8d7c252b518ee3cbff3e41b54fd7d39b9e75cc719220",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-037",
+            "canonicalForm": "kör düğüm",
+            "modifier": "kör",
+            "head": "düğüm",
+            "meaning": "Çözümü çok güçleşmiş karmaşık sorun",
+            "contexts": [
+              {
+                "id": "TR-NC-037-S2",
+                "slot": "S2",
+                "sentence": "Görüşmelerdeki kör düğümü yeni öneri çözdü.",
+                "targetSurface": "kör düğümü",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-037-S3",
+          "mweId": "TR-NC-037",
+          "contextId": "TR-NC-037-S3",
+          "itemSnapshotHash": "a5a176b044e65679b5951ab7109183385ecd25fac6360f880104f0ccd81a4bd9",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-037",
+            "canonicalForm": "kör düğüm",
+            "modifier": "kör",
+            "head": "düğüm",
+            "meaning": "Çözümü çok güçleşmiş karmaşık sorun",
+            "contexts": [
+              {
+                "id": "TR-NC-037-S3",
+                "slot": "S3",
+                "sentence": "Dosya bürokratik bir kör düğüm hâlinde bekliyor.",
+                "targetSurface": "kör düğüm",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-086-S1",
+          "mweId": "TR-NC-086",
+          "contextId": "TR-NC-086-S1",
+          "itemSnapshotHash": "d0aa9bc15e8b0fe55c45149f207b26e8baedab7fcd558bb2358a4a0d7bf6f938",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-086",
+            "canonicalForm": "kırılma noktası",
+            "modifier": "kırılma",
+            "head": "noktası",
+            "meaning": "Bir sürecin davranışını veya yönünü değiştirdiği kritik eşik",
+            "contexts": [
+              {
+                "id": "TR-NC-086-S1",
+                "slot": "S1",
+                "sentence": "Herkesin bir kırılma noktası var.",
+                "targetSurface": "kırılma noktası",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-086-S2",
+          "mweId": "TR-NC-086",
+          "contextId": "TR-NC-086-S2",
+          "itemSnapshotHash": "70db1cf4ee9ae0decba167b6054d38ef277b66d7aeb9e9d985b26ffae1860004",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-086",
+            "canonicalForm": "kırılma noktası",
+            "modifier": "kırılma",
+            "head": "noktası",
+            "meaning": "Bir sürecin davranışını veya yönünü değiştirdiği kritik eşik",
+            "contexts": [
+              {
+                "id": "TR-NC-086-S2",
+                "slot": "S2",
+                "sentence": "Uzayan grev görüşmelerde kırılma noktası oldu.",
+                "targetSurface": "kırılma noktası",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-086-S3",
+          "mweId": "TR-NC-086",
+          "contextId": "TR-NC-086-S3",
+          "itemSnapshotHash": "c2c4d8159c297d4475674dba2d2b89180485212b5f7aa4d38c3220983b54df0b",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-086",
+            "canonicalForm": "kırılma noktası",
+            "modifier": "kırılma",
+            "head": "noktası",
+            "meaning": "Bir sürecin davranışını veya yönünü değiştirdiği kritik eşik",
+            "contexts": [
+              {
+                "id": "TR-NC-086-S3",
+                "slot": "S3",
+                "sentence": "Sıcaklık malzemenin kırılma noktasına yaklaştı.",
+                "targetSurface": "kırılma noktasına",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-003-S1",
+          "mweId": "TR-NC-003",
+          "contextId": "TR-NC-003-S1",
+          "itemSnapshotHash": "87cffa1521764842540717f5a465a20110172bfa31276cb40e969acf3bbe8b2d",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-003",
+            "canonicalForm": "ağır top",
+            "modifier": "ağır",
+            "head": "top",
+            "meaning": "Bir çevrede etkisi ve gücü çok yüksek kişi",
+            "contexts": [
+              {
+                "id": "TR-NC-003-S1",
+                "slot": "S1",
+                "sentence": "Partinin ağır topu seçim kampanyasına bugün katıldı.",
+                "targetSurface": "ağır topu",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-003-S2",
+          "mweId": "TR-NC-003",
+          "contextId": "TR-NC-003-S2",
+          "itemSnapshotHash": "289e6b3af8e6237c72d3613d207c8366e83cbf8989f9cfd31c9afd3da9dcadc5",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-003",
+            "canonicalForm": "ağır top",
+            "modifier": "ağır",
+            "head": "top",
+            "meaning": "Bir çevrede etkisi ve gücü çok yüksek kişi",
+            "contexts": [
+              {
+                "id": "TR-NC-003-S2",
+                "slot": "S2",
+                "sentence": "Toplantıda sektörün ağır topları aynı masada buluştu.",
+                "targetSurface": "ağır topları",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-003-S3",
+          "mweId": "TR-NC-003",
+          "contextId": "TR-NC-003-S3",
+          "itemSnapshotHash": "12119fb0e028820b2e75c9983b5283a82024cdd2e02c2ea2b960ff5ac889bbbd",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-003",
+            "canonicalForm": "ağır top",
+            "modifier": "ağır",
+            "head": "top",
+            "meaning": "Bir çevrede etkisi ve gücü çok yüksek kişi",
+            "contexts": [
+              {
+                "id": "TR-NC-003-S3",
+                "slot": "S3",
+                "sentence": "Kulübün ağır topu transfer görüşmelerini bizzat yürüttü.",
+                "targetSurface": "ağır topu",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-051-S1",
+          "mweId": "TR-NC-051",
+          "contextId": "TR-NC-051-S1",
+          "itemSnapshotHash": "7aa72dceaa19d55519a0ed62965394d8b61552025a5ad0f1ee324fa72de9795e",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-051",
+            "canonicalForm": "yağlı kapı",
+            "modifier": "yağlı",
+            "head": "kapı",
+            "meaning": "Büyük ve kolay kazanç sağlayan iş ya da kişi",
+            "contexts": [
+              {
+                "id": "TR-NC-051-S1",
+                "slot": "S1",
+                "sentence": "Bir yağlı kapı bulma umuduyla partiye üye oldu.",
+                "targetSurface": "yağlı kapı",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-051-S2",
+          "mweId": "TR-NC-051",
+          "contextId": "TR-NC-051-S2",
+          "itemSnapshotHash": "661b0cd552c01f1515dcad7fb11101e406ddafb07d7dcbae6b0dc9bd07a2c097",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-051",
+            "canonicalForm": "yağlı kapı",
+            "modifier": "yağlı",
+            "head": "kapı",
+            "meaning": "Büyük ve kolay kazanç sağlayan iş ya da kişi",
+            "contexts": [
+              {
+                "id": "TR-NC-051-S2",
+                "slot": "S2",
+                "sentence": "Kolay kazanç için kendine yağlı kapı arıyordu.",
+                "targetSurface": "yağlı kapı",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-051-S3",
+          "mweId": "TR-NC-051",
+          "contextId": "TR-NC-051-S3",
+          "itemSnapshotHash": "c154388146551ebe5297288cbdf8302e5d5c6a05f85f8e40a7c28a597d553c7e",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-051",
+            "canonicalForm": "yağlı kapı",
+            "modifier": "yağlı",
+            "head": "kapı",
+            "meaning": "Büyük ve kolay kazanç sağlayan iş ya da kişi",
+            "contexts": [
+              {
+                "id": "TR-NC-051-S3",
+                "slot": "S3",
+                "sentence": "İhaleler bazı şirketler için yağlı kapıya dönüştü.",
+                "targetSurface": "yağlı kapıya",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-002-S1",
+          "mweId": "TR-NC-002",
+          "contextId": "TR-NC-002-S1",
+          "itemSnapshotHash": "cf659e7cb802300b3b01c1e817445415a7f91cf2fcb5ac9c943027b09850393e",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-002",
+            "canonicalForm": "açık çek",
+            "modifier": "açık",
+            "head": "çek",
+            "meaning": "Sınırı önceden belirlenmemiş yetki veya hareket serbestliği",
+            "contexts": [
+              {
+                "id": "TR-NC-002-S1",
+                "slot": "S1",
+                "sentence": "Yönetim müdüre harcamalar konusunda açık çek vermedi.",
+                "targetSurface": "açık çek",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-002-S2",
+          "mweId": "TR-NC-002",
+          "contextId": "TR-NC-002-S2",
+          "itemSnapshotHash": "ed1d6706eb62d8a606a265acd6f6ac826722798affcc90c2909a467708e41d2a",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-002",
+            "canonicalForm": "açık çek",
+            "modifier": "açık",
+            "head": "çek",
+            "meaning": "Sınırı önceden belirlenmemiş yetki veya hareket serbestliği",
+            "contexts": [
+              {
+                "id": "TR-NC-002-S2",
+                "slot": "S2",
+                "sentence": "Bu yetkiyi açık çek olarak yorumlamak yanlış olur.",
+                "targetSurface": "açık çek",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-002-S3",
+          "mweId": "TR-NC-002",
+          "contextId": "TR-NC-002-S3",
+          "itemSnapshotHash": "9e7c389e62625e7c1cf44252f8df9639fc11695ac3615ab9ee4138bc66ecc155",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-002",
+            "canonicalForm": "açık çek",
+            "modifier": "açık",
+            "head": "çek",
+            "meaning": "Sınırı önceden belirlenmemiş yetki veya hareket serbestliği",
+            "contexts": [
+              {
+                "id": "TR-NC-002-S3",
+                "slot": "S3",
+                "sentence": "Meclis kararla birlikte yürütmeye adeta açık çek sundu.",
+                "targetSurface": "açık çek",
+                "span": [
+                  5,
+                  7
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-050-S1",
+          "mweId": "TR-NC-050",
+          "contextId": "TR-NC-050-S1",
+          "itemSnapshotHash": "9e2a6edff3cb930f72a1d70958d0f7ae61659e18ca06654e1b52a266c0299087",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-050",
+            "canonicalForm": "süt liman",
+            "modifier": "süt",
+            "head": "liman",
+            "meaning": "Hiçbir gerginliğin veya hareketliliğin bulunmadığı sakin durum",
+            "contexts": [
+              {
+                "id": "TR-NC-050-S1",
+                "slot": "S1",
+                "sentence": "Fırtınadan sonra deniz süt liman oldu.",
+                "targetSurface": "süt liman",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-050-S2",
+          "mweId": "TR-NC-050",
+          "contextId": "TR-NC-050-S2",
+          "itemSnapshotHash": "98edc6f829cc0ae72d975c4a38ab885f5787ade9e41a1f1707acda4368958460",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-050",
+            "canonicalForm": "süt liman",
+            "modifier": "süt",
+            "head": "liman",
+            "meaning": "Hiçbir gerginliğin veya hareketliliğin bulunmadığı sakin durum",
+            "contexts": [
+              {
+                "id": "TR-NC-050-S2",
+                "slot": "S2",
+                "sentence": "Tartışmalar bitince ofis birden süt liman kesildi.",
+                "targetSurface": "süt liman",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-050-S3",
+          "mweId": "TR-NC-050",
+          "contextId": "TR-NC-050-S3",
+          "itemSnapshotHash": "15916a9d46bd53fe53646021420e94d535e8d042cbb15bbe2afeee479d297033",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-050",
+            "canonicalForm": "süt liman",
+            "modifier": "süt",
+            "head": "liman",
+            "meaning": "Hiçbir gerginliğin veya hareketliliğin bulunmadığı sakin durum",
+            "contexts": [
+              {
+                "id": "TR-NC-050-S3",
+                "slot": "S3",
+                "sentence": "Dün gergin olan sokaklar bugün süt limandı.",
+                "targetSurface": "süt limandı",
+                "span": [
+                  5,
+                  7
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-089-S1",
+          "mweId": "TR-NC-089",
+          "contextId": "TR-NC-089-S1",
+          "itemSnapshotHash": "a4b64c3d3a9da510f51fc67e780dffcf04fa8d5b26b797a892f84d4ccc3a69a5",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-089",
+            "canonicalForm": "kukla hükümet",
+            "modifier": "kukla",
+            "head": "hükümet",
+            "meaning": "Başka bir gücün yönlendirmesiyle hareket eden yönetim",
+            "contexts": [
+              {
+                "id": "TR-NC-089-S1",
+                "slot": "S1",
+                "sentence": "Muhalefet yönetimi kukla hükümet olmakla suçladı.",
+                "targetSurface": "kukla hükümet",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-089-S2",
+          "mweId": "TR-NC-089",
+          "contextId": "TR-NC-089-S2",
+          "itemSnapshotHash": "c32e34e9b783342e9464e1b0a0602b6fd99b26cd7b605fc4edb688be85f13fcb",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-089",
+            "canonicalForm": "kukla hükümet",
+            "modifier": "kukla",
+            "head": "hükümet",
+            "meaning": "Başka bir gücün yönlendirmesiyle hareket eden yönetim",
+            "contexts": [
+              {
+                "id": "TR-NC-089-S2",
+                "slot": "S2",
+                "sentence": "İşgal gücü bölgede bir kukla hükümet kurdu.",
+                "targetSurface": "kukla hükümet",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-089-S3",
+          "mweId": "TR-NC-089",
+          "contextId": "TR-NC-089-S3",
+          "itemSnapshotHash": "d9bbed40978d881450f58d9c2252f9bb442c794b8990dc3c4bb5dc8cb728f0c8",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-089",
+            "canonicalForm": "kukla hükümet",
+            "modifier": "kukla",
+            "head": "hükümet",
+            "meaning": "Başka bir gücün yönlendirmesiyle hareket eden yönetim",
+            "contexts": [
+              {
+                "id": "TR-NC-089-S3",
+                "slot": "S3",
+                "sentence": "Kukla hükümet bağımsız karar alamıyordu.",
+                "targetSurface": "Kukla hükümet",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-007-S1",
+          "mweId": "TR-NC-007",
+          "contextId": "TR-NC-007-S1",
+          "itemSnapshotHash": "65f4a85a64314479ac76834a666a6e050fcbdf9bdd2218291efc4f0eb2437378",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-007",
+            "canonicalForm": "arka kapı",
+            "modifier": "arka",
+            "head": "kapı",
+            "meaning": "Resmî olmayan, gizli veya dolaylı işlem yolu",
+            "contexts": [
+              {
+                "id": "TR-NC-007-S1",
+                "slot": "S1",
+                "sentence": "İhaleyi arka kapı ilişkileriyle alma girişimi soruşturuluyor.",
+                "targetSurface": "arka kapı",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-007-S2",
+          "mweId": "TR-NC-007",
+          "contextId": "TR-NC-007-S2",
+          "itemSnapshotHash": "eec062639570ee42e28bba176f9b90a8c612508425566265c45d77c1edfe8778",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-007",
+            "canonicalForm": "arka kapı",
+            "modifier": "arka",
+            "head": "kapı",
+            "meaning": "Resmî olmayan, gizli veya dolaylı işlem yolu",
+            "contexts": [
+              {
+                "id": "TR-NC-007-S2",
+                "slot": "S2",
+                "sentence": "Sorunu arka kapı diplomasisiyle çözmeye çalıştılar.",
+                "targetSurface": "arka kapı",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-007-S3",
+          "mweId": "TR-NC-007",
+          "contextId": "TR-NC-007-S3",
+          "itemSnapshotHash": "df098a2a7710223e4e4a32f60114256553de8d719c505b750a1e8c2226f33551",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-007",
+            "canonicalForm": "arka kapı",
+            "modifier": "arka",
+            "head": "kapı",
+            "meaning": "Resmî olmayan, gizli veya dolaylı işlem yolu",
+            "contexts": [
+              {
+                "id": "TR-NC-007-S3",
+                "slot": "S3",
+                "sentence": "Yasağın arka kapı yöntemleriyle aşılmasına izin verilmedi.",
+                "targetSurface": "arka kapı",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-087-S1",
+          "mweId": "TR-NC-087",
+          "contextId": "TR-NC-087-S1",
+          "itemSnapshotHash": "46ad13648ac099592cc6f4a7c3959c229520fe4992ebecde6d54e21d228da803",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-087",
+            "canonicalForm": "kör nokta",
+            "modifier": "kör",
+            "head": "nokta",
+            "meaning": "Fark edilmeyen eksiklik veya değerlendirme dışı kalan alan",
+            "contexts": [
+              {
+                "id": "TR-NC-087-S1",
+                "slot": "S1",
+                "sentence": "Rapor, politikanın en önemli kör noktasını gösterdi.",
+                "targetSurface": "kör noktasını",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-087-S2",
+          "mweId": "TR-NC-087",
+          "contextId": "TR-NC-087-S2",
+          "itemSnapshotHash": "c72f0c504f614a974ce1adab431c00bf1c8b435565b0eb62a94fd8c9ad8d64ed",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-087",
+            "canonicalForm": "kör nokta",
+            "modifier": "kör",
+            "head": "nokta",
+            "meaning": "Fark edilmeyen eksiklik veya değerlendirme dışı kalan alan",
+            "contexts": [
+              {
+                "id": "TR-NC-087-S2",
+                "slot": "S2",
+                "sentence": "Her yöneticinin fark etmediği bir kör noktası olabilir.",
+                "targetSurface": "kör noktası",
+                "span": [
+                  5,
+                  7
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-087-S3",
+          "mweId": "TR-NC-087",
+          "contextId": "TR-NC-087-S3",
+          "itemSnapshotHash": "390618e32d19a7f43d0b8ce0a28598ecab5ee0e73d62a4227fccc3e3dfa4c380",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-087",
+            "canonicalForm": "kör nokta",
+            "modifier": "kör",
+            "head": "nokta",
+            "meaning": "Fark edilmeyen eksiklik veya değerlendirme dışı kalan alan",
+            "contexts": [
+              {
+                "id": "TR-NC-087-S3",
+                "slot": "S3",
+                "sentence": "Tartışmada kırsal kesim yine kör nokta olarak kaldı.",
+                "targetSurface": "kör nokta",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-064-S1",
+          "mweId": "TR-NC-064",
+          "contextId": "TR-NC-064-S1",
+          "itemSnapshotHash": "6e176053b96bc50de6a02dc57ac7c28fd476cf8603577dad45683e53d2d5fa2c",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-064",
+            "canonicalForm": "ölüm kalım",
+            "modifier": "ölüm",
+            "head": "kalım",
+            "meaning": "Sonucu yaşamsal önem taşıyan kritik durum",
+            "contexts": [
+              {
+                "id": "TR-NC-064-S1",
+                "slot": "S1",
+                "sentence": "Bu bir ölüm kalım meselesidir.",
+                "targetSurface": "ölüm kalım",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-064-S2",
+          "mweId": "TR-NC-064",
+          "contextId": "TR-NC-064-S2",
+          "itemSnapshotHash": "7665161bca1388668922a8432e3e0317565a67547236e0c9c50ab2c76ea767c6",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-064",
+            "canonicalForm": "ölüm kalım",
+            "modifier": "ölüm",
+            "head": "kalım",
+            "meaning": "Sonucu yaşamsal önem taşıyan kritik durum",
+            "contexts": [
+              {
+                "id": "TR-NC-064-S2",
+                "slot": "S2",
+                "sentence": "Bu ameliyat onun için ölüm kalım meselesiydi.",
+                "targetSurface": "ölüm kalım",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-064-S3",
+          "mweId": "TR-NC-064",
+          "contextId": "TR-NC-064-S3",
+          "itemSnapshotHash": "04fa77e517254af063d26b47da79e39d9f6b8445a9d86c84e88474d8d13e78d5",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-064",
+            "canonicalForm": "ölüm kalım",
+            "modifier": "ölüm",
+            "head": "kalım",
+            "meaning": "Sonucu yaşamsal önem taşıyan kritik durum",
+            "contexts": [
+              {
+                "id": "TR-NC-064-S3",
+                "slot": "S3",
+                "sentence": "Takım ölüm kalım maçına çıkacak.",
+                "targetSurface": "ölüm kalım",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-121-S1",
+          "mweId": "TR-NC-121",
+          "contextId": "TR-NC-121-S1",
+          "itemSnapshotHash": "7283e378d437c420cc41e8684ff58be56ab29ac25ad7b223b3aec91fb652633a",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-121",
+            "canonicalForm": "kara liste",
+            "modifier": "kara",
+            "head": "liste",
+            "meaning": "Sakıncalı görülerek işlem yapılmaması istenen kişi veya kurum listesi",
+            "contexts": [
+              {
+                "id": "TR-NC-121-S1",
+                "slot": "S1",
+                "sentence": "Kara listede olanlar bence haklılar.",
+                "targetSurface": "Kara listede",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-121-S2",
+          "mweId": "TR-NC-121",
+          "contextId": "TR-NC-121-S2",
+          "itemSnapshotHash": "0f11b5ce19f48d0a70bd5e09527498c1f7a4ed7a5efe2e12c436d4c12a5573fe",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-121",
+            "canonicalForm": "kara liste",
+            "modifier": "kara",
+            "head": "liste",
+            "meaning": "Sakıncalı görülerek işlem yapılmaması istenen kişi veya kurum listesi",
+            "contexts": [
+              {
+                "id": "TR-NC-121-S2",
+                "slot": "S2",
+                "sentence": "Şirket güvenlik ihlali yapan tedarikçileri kara listeye aldı.",
+                "targetSurface": "kara listeye",
+                "span": [
+                  5,
+                  7
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-121-S3",
+          "mweId": "TR-NC-121",
+          "contextId": "TR-NC-121-S3",
+          "itemSnapshotHash": "c8b252f24f091076db01e7c99221ea15412fbee228a6863beeb00a424f2436b4",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-121",
+            "canonicalForm": "kara liste",
+            "modifier": "kara",
+            "head": "liste",
+            "meaning": "Sakıncalı görülerek işlem yapılmaması istenen kişi veya kurum listesi",
+            "contexts": [
+              {
+                "id": "TR-NC-121-S3",
+                "slot": "S3",
+                "sentence": "Adı uluslararası kara listede yer alıyor.",
+                "targetSurface": "kara listede",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-171-S1",
+          "mweId": "TR-NC-171",
+          "contextId": "TR-NC-171-S1",
+          "itemSnapshotHash": "edaeea9c20f579beb7a11ee9113891df72009c403e00088a951ca52b32e6861c",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-171",
+            "canonicalForm": "altın fırsat",
+            "modifier": "altın",
+            "head": "fırsat",
+            "meaning": "Başarı için çok değerli ve ender imkân",
+            "contexts": [
+              {
+                "id": "TR-NC-171-S1",
+                "slot": "S1",
+                "sentence": "Yeni pazar şirket için altın fırsat sunuyor.",
+                "targetSurface": "altın fırsat",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-171-S2",
+          "mweId": "TR-NC-171",
+          "contextId": "TR-NC-171-S2",
+          "itemSnapshotHash": "ebfc032ecd738dad24bc0bb785d32385754c045893a346706accb19b9a1b5a69",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-171",
+            "canonicalForm": "altın fırsat",
+            "modifier": "altın",
+            "head": "fırsat",
+            "meaning": "Başarı için çok değerli ve ender imkân",
+            "contexts": [
+              {
+                "id": "TR-NC-171-S2",
+                "slot": "S2",
+                "sentence": "Bu burs eğitimine devam etmesi için altın fırsattı.",
+                "targetSurface": "altın fırsattı",
+                "span": [
+                  6,
+                  8
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-171-S3",
+          "mweId": "TR-NC-171",
+          "contextId": "TR-NC-171-S3",
+          "itemSnapshotHash": "a3e23c1093d8ac00d32bdacba8a633a799f2bf4ffbc63fb8875949b85ac9d340",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-171",
+            "canonicalForm": "altın fırsat",
+            "modifier": "altın",
+            "head": "fırsat",
+            "meaning": "Başarı için çok değerli ve ender imkân",
+            "contexts": [
+              {
+                "id": "TR-NC-171-S3",
+                "slot": "S3",
+                "sentence": "Takım öne geçmek için altın fırsatı kaçırdı.",
+                "targetSurface": "altın fırsatı",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-140-S1",
+          "mweId": "TR-NC-140",
+          "contextId": "TR-NC-140-S1",
+          "itemSnapshotHash": "b6c2aedeaf8eb12bd75b626f128f299f76ae0854050bf39fb8c737ef87e7d1d7",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-140",
+            "canonicalForm": "çifte standart",
+            "modifier": "çifte",
+            "head": "standart",
+            "meaning": "Benzer durumlara çıkar doğrultusunda farklı ölçüt uygulama",
+            "contexts": [
+              {
+                "id": "TR-NC-140-S1",
+                "slot": "S1",
+                "sentence": "Bu ülkede adalet biraz çifte standartlıdır: fakirlerin adaleti ve zenginlerin adaleti.",
+                "targetSurface": "çifte standartlıdır",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-140-S2",
+          "mweId": "TR-NC-140",
+          "contextId": "TR-NC-140-S2",
+          "itemSnapshotHash": "b9ddd4edf70bede34646ec89c24aeb2e1ca045f3f880cb01204aff8d8a9b2b82",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-140",
+            "canonicalForm": "çifte standart",
+            "modifier": "çifte",
+            "head": "standart",
+            "meaning": "Benzer durumlara çıkar doğrultusunda farklı ölçüt uygulama",
+            "contexts": [
+              {
+                "id": "TR-NC-140-S2",
+                "slot": "S2",
+                "sentence": "Aynı olayda farklı karar verilmesi çifte standarttır.",
+                "targetSurface": "çifte standarttır",
+                "span": [
+                  5,
+                  7
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-140-S3",
+          "mweId": "TR-NC-140",
+          "contextId": "TR-NC-140-S3",
+          "itemSnapshotHash": "92094cc740bf555cd470e81bf2b8860b91cc85b96fab377dc4a1d43115317475",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-140",
+            "canonicalForm": "çifte standart",
+            "modifier": "çifte",
+            "head": "standart",
+            "meaning": "Benzer durumlara çıkar doğrultusunda farklı ölçüt uygulama",
+            "contexts": [
+              {
+                "id": "TR-NC-140-S3",
+                "slot": "S3",
+                "sentence": "Kurumun çifte standart uyguladığı öne sürüldü.",
+                "targetSurface": "çifte standart",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-135-S1",
+          "mweId": "TR-NC-135",
+          "contextId": "TR-NC-135-S1",
+          "itemSnapshotHash": "7c15ac9b6a3b03124c2e07e22ac0481c8d05be4073f8064a62f977686cc5e3e3",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-135",
+            "canonicalForm": "vicdan azabı",
+            "modifier": "vicdan",
+            "head": "azabı",
+            "meaning": "Yanlış bir davranıştan sonra duyulan yoğun suçluluk",
+            "contexts": [
+              {
+                "id": "TR-NC-135-S1",
+                "slot": "S1",
+                "sentence": "Tom'un diğer insanların yiyeceğini çalmakla ilgili vicdan azabı yok.",
+                "targetSurface": "vicdan azabı",
+                "span": [
+                  6,
+                  8
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-135-S2",
+          "mweId": "TR-NC-135",
+          "contextId": "TR-NC-135-S2",
+          "itemSnapshotHash": "1edcb4b1c5b68301b67585b551f6ebcb098cfa9e2a847361d176277f9ca32622",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-135",
+            "canonicalForm": "vicdan azabı",
+            "modifier": "vicdan",
+            "head": "azabı",
+            "meaning": "Yanlış bir davranıştan sonra duyulan yoğun suçluluk",
+            "contexts": [
+              {
+                "id": "TR-NC-135-S2",
+                "slot": "S2",
+                "sentence": "Yalan söylediği için vicdan azabı çekiyordu.",
+                "targetSurface": "vicdan azabı",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-135-S3",
+          "mweId": "TR-NC-135",
+          "contextId": "TR-NC-135-S3",
+          "itemSnapshotHash": "80b7fe666838154bb6ce2a23597ded09be1c5c548f1c22bfffc4cf10debd7d6a",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-135",
+            "canonicalForm": "vicdan azabı",
+            "modifier": "vicdan",
+            "head": "azabı",
+            "meaning": "Yanlış bir davranıştan sonra duyulan yoğun suçluluk",
+            "contexts": [
+              {
+                "id": "TR-NC-135-S3",
+                "slot": "S3",
+                "sentence": "Kazadan sonra duyduğu vicdan azabı dinmedi.",
+                "targetSurface": "vicdan azabı",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-139-S1",
+          "mweId": "TR-NC-139",
+          "contextId": "TR-NC-139-S1",
+          "itemSnapshotHash": "5e4f943a83e9b9867cdd855dd2bbec6abcc83d6cbd423d87ee0ff9b762ef5822",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-139",
+            "canonicalForm": "çamur atma",
+            "modifier": "çamur",
+            "head": "atma",
+            "meaning": "Kanıtsız suçlamalarla birinin itibarını zedeleme",
+            "contexts": [
+              {
+                "id": "TR-NC-139-S1",
+                "slot": "S1",
+                "sentence": "Eğer çamur atmaya gidersen onun birazı sana yapışır.",
+                "targetSurface": "çamur atmaya",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-139-S2",
+          "mweId": "TR-NC-139",
+          "contextId": "TR-NC-139-S2",
+          "itemSnapshotHash": "28a87292f09a6276f25a6357c6ced9a4f70284102c69cb50e4c4a9f6838083f5",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-139",
+            "canonicalForm": "çamur atma",
+            "modifier": "çamur",
+            "head": "atma",
+            "meaning": "Kanıtsız suçlamalarla birinin itibarını zedeleme",
+            "contexts": [
+              {
+                "id": "TR-NC-139-S2",
+                "slot": "S2",
+                "sentence": "Kanıtsız iddiaları açık bir çamur atma girişimiydi.",
+                "targetSurface": "çamur atma",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-139-S3",
+          "mweId": "TR-NC-139",
+          "contextId": "TR-NC-139-S3",
+          "itemSnapshotHash": "2ea5f7d151b4de7ef3d9fa5686a55e4f1f2962a54813bbad43bd685761c376dc",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-139",
+            "canonicalForm": "çamur atma",
+            "modifier": "çamur",
+            "head": "atma",
+            "meaning": "Kanıtsız suçlamalarla birinin itibarını zedeleme",
+            "contexts": [
+              {
+                "id": "TR-NC-139-S3",
+                "slot": "S3",
+                "sentence": "Seçim kampanyası karşılıklı çamur atmaya dönüştü.",
+                "targetSurface": "çamur atmaya",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-130-S1",
+          "mweId": "TR-NC-130",
+          "contextId": "TR-NC-130-S1",
+          "itemSnapshotHash": "3f00c2178db894d84256b9188496692986aec3eb61ec0a8bbfb299504dafedf8",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-130",
+            "canonicalForm": "puslu hava",
+            "modifier": "puslu",
+            "head": "hava",
+            "meaning": "Belirsizlik ve güvensizliğin egemen olduğu ortam",
+            "contexts": [
+              {
+                "id": "TR-NC-130-S1",
+                "slot": "S1",
+                "sentence": "Seçim öncesi siyasette puslu hava hâkimdi.",
+                "targetSurface": "puslu hava",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-130-S2",
+          "mweId": "TR-NC-130",
+          "contextId": "TR-NC-130-S2",
+          "itemSnapshotHash": "d53b2248524e6bfe85dc80c39c09d6a426b9e63b78ca6a4cd4aeb77cee68e444",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-130",
+            "canonicalForm": "puslu hava",
+            "modifier": "puslu",
+            "head": "hava",
+            "meaning": "Belirsizlik ve güvensizliğin egemen olduğu ortam",
+            "contexts": [
+              {
+                "id": "TR-NC-130-S2",
+                "slot": "S2",
+                "sentence": "Piyasadaki puslu hava yatırımcıyı beklemeye yöneltti.",
+                "targetSurface": "puslu hava",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-130-S3",
+          "mweId": "TR-NC-130",
+          "contextId": "TR-NC-130-S3",
+          "itemSnapshotHash": "0c6c89dd46d86fb213c1343b6499ffa4bfe4044085492e35ff217626d82e38ff",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-130",
+            "canonicalForm": "puslu hava",
+            "modifier": "puslu",
+            "head": "hava",
+            "meaning": "Belirsizlik ve güvensizliğin egemen olduğu ortam",
+            "contexts": [
+              {
+                "id": "TR-NC-130-S3",
+                "slot": "S3",
+                "sentence": "Açıklamalar belirsizliği gidermek yerine puslu hava yarattı.",
+                "targetSurface": "puslu hava",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-162-S1",
+          "mweId": "TR-NC-162",
+          "contextId": "TR-NC-162-S1",
+          "itemSnapshotHash": "19fba645d6e5a588586e37251c05b04997715dfe7d132632a2aa7a226c0adb42",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-162",
+            "canonicalForm": "söz düellosu",
+            "modifier": "söz",
+            "head": "düellosu",
+            "meaning": "Tarafların karşılıklı sert sözlerle yürüttüğü tartışma",
+            "contexts": [
+              {
+                "id": "TR-NC-162-S1",
+                "slot": "S1",
+                "sentence": "İki aday canlı yayında söz düellosuna girdi.",
+                "targetSurface": "söz düellosuna",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-162-S2",
+          "mweId": "TR-NC-162",
+          "contextId": "TR-NC-162-S2",
+          "itemSnapshotHash": "df065ad9349096e8859a5c965c4e73c7a3c78f68cf8b3c26dc7be08f6af13dcb",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-162",
+            "canonicalForm": "söz düellosu",
+            "modifier": "söz",
+            "head": "düellosu",
+            "meaning": "Tarafların karşılıklı sert sözlerle yürüttüğü tartışma",
+            "contexts": [
+              {
+                "id": "TR-NC-162-S2",
+                "slot": "S2",
+                "sentence": "Mecliste iktidar ile muhalefet arasında söz düellosu yaşandı.",
+                "targetSurface": "söz düellosu",
+                "span": [
+                  5,
+                  7
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-162-S3",
+          "mweId": "TR-NC-162",
+          "contextId": "TR-NC-162-S3",
+          "itemSnapshotHash": "5e71bfeb6f5b33db3e686890889fd988285d00cbb838dc1b7326c3f81486742c",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-162",
+            "canonicalForm": "söz düellosu",
+            "modifier": "söz",
+            "head": "düellosu",
+            "meaning": "Tarafların karşılıklı sert sözlerle yürüttüğü tartışma",
+            "contexts": [
+              {
+                "id": "TR-NC-162-S3",
+                "slot": "S3",
+                "sentence": "Sert söz düellosu toplantının önüne geçti.",
+                "targetSurface": "söz düellosu",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-186-S1",
+          "mweId": "TR-NC-186",
+          "contextId": "TR-NC-186-S1",
+          "itemSnapshotHash": "999274a01f9a6637e02c2d7ba0c31bcf6f00b2f02c86cc6d7ea3379ae5e6b1f5",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-186",
+            "canonicalForm": "linç kültürü",
+            "modifier": "linç",
+            "head": "kültürü",
+            "meaning": "Bir kişiyi topluca ve ölçüsüz biçimde hedef alma alışkanlığı",
+            "contexts": [
+              {
+                "id": "TR-NC-186-S1",
+                "slot": "S1",
+                "sentence": "Sosyal medyadaki linç kültürü günümüzün engizisyonu olmuş durumda.",
+                "targetSurface": "linç kültürü",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-186-S2",
+          "mweId": "TR-NC-186",
+          "contextId": "TR-NC-186-S2",
+          "itemSnapshotHash": "d819147510f939c8891e043aa01f4a5adc6de2d4580249c61a901e8a5665ab6c",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-186",
+            "canonicalForm": "linç kültürü",
+            "modifier": "linç",
+            "head": "kültürü",
+            "meaning": "Bir kişiyi topluca ve ölçüsüz biçimde hedef alma alışkanlığı",
+            "contexts": [
+              {
+                "id": "TR-NC-186-S2",
+                "slot": "S2",
+                "sentence": "Sosyal medyadaki linç kültürü farklı görüşleri susturuyor.",
+                "targetSurface": "linç kültürü",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-186-S3",
+          "mweId": "TR-NC-186",
+          "contextId": "TR-NC-186-S3",
+          "itemSnapshotHash": "251ee950425ce86d222af5fc03ce1e98cb23c6fb498ee516f949093a4873612e",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-186",
+            "canonicalForm": "linç kültürü",
+            "modifier": "linç",
+            "head": "kültürü",
+            "meaning": "Bir kişiyi topluca ve ölçüsüz biçimde hedef alma alışkanlığı",
+            "contexts": [
+              {
+                "id": "TR-NC-186-S3",
+                "slot": "S3",
+                "sentence": "Linç kültürü yüzünden insanlar hata yapmaktan korkuyor.",
+                "targetSurface": "Linç kültürü",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-179-S1",
+          "mweId": "TR-NC-179",
+          "contextId": "TR-NC-179-S1",
+          "itemSnapshotHash": "fda04acf99e49b3818731d6dab6e9e01bc4be6a68a51fd174a78eb565860c84c",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-179",
+            "canonicalForm": "güç zehirlenmesi",
+            "modifier": "güç",
+            "head": "zehirlenmesi",
+            "meaning": "Yetki kazanan kişinin ölçüsüz ve kibirli davranmaya başlaması",
+            "contexts": [
+              {
+                "id": "TR-NC-179-S1",
+                "slot": "S1",
+                "sentence": "Yönetici kısa sürede güç zehirlenmesine kapıldı.",
+                "targetSurface": "güç zehirlenmesine",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-179-S2",
+          "mweId": "TR-NC-179",
+          "contextId": "TR-NC-179-S2",
+          "itemSnapshotHash": "aa8add601f67cf3fae48b8a6c60664b4cb55884b4d79c21ee76d9836ad3d86e4",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-179",
+            "canonicalForm": "güç zehirlenmesi",
+            "modifier": "güç",
+            "head": "zehirlenmesi",
+            "meaning": "Yetki kazanan kişinin ölçüsüz ve kibirli davranmaya başlaması",
+            "contexts": [
+              {
+                "id": "TR-NC-179-S2",
+                "slot": "S2",
+                "sentence": "Güç zehirlenmesi eleştiriye tahammülünü yok etti.",
+                "targetSurface": "Güç zehirlenmesi",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-179-S3",
+          "mweId": "TR-NC-179",
+          "contextId": "TR-NC-179-S3",
+          "itemSnapshotHash": "751c3caa304216ef7e743cfb85b6893b27ff97e418eb2898a917844fc1c4e87c",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-179",
+            "canonicalForm": "güç zehirlenmesi",
+            "modifier": "güç",
+            "head": "zehirlenmesi",
+            "meaning": "Yetki kazanan kişinin ölçüsüz ve kibirli davranmaya başlaması",
+            "contexts": [
+              {
+                "id": "TR-NC-179-S3",
+                "slot": "S3",
+                "sentence": "Uzun iktidarın güç zehirlenmesi yaratabileceği uyarısı yapıldı.",
+                "targetSurface": "güç zehirlenmesi",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-107-S1",
+          "mweId": "TR-NC-107",
+          "contextId": "TR-NC-107-S1",
+          "itemSnapshotHash": "d6198a4fcd50084659ad5a084564fd079c58047fc297324579a9c8e3facd5632",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-107",
+            "canonicalForm": "cam tavan",
+            "modifier": "cam",
+            "head": "tavan",
+            "meaning": "Belirli grupların yükselmesini görünmez biçimde engelleyen sınır",
+            "contexts": [
+              {
+                "id": "TR-NC-107-S1",
+                "slot": "S1",
+                "sentence": "İnsanın cam tavanları görecek kadar siyaset ve tarih bilinci olmalı.",
+                "targetSurface": "cam tavanları",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-107-S2",
+          "mweId": "TR-NC-107",
+          "contextId": "TR-NC-107-S2",
+          "itemSnapshotHash": "17a6d4ed1966b1d5dc406b5fcedfd17f732b9689935876a554099a72f626aba4",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-107",
+            "canonicalForm": "cam tavan",
+            "modifier": "cam",
+            "head": "tavan",
+            "meaning": "Belirli grupların yükselmesini görünmez biçimde engelleyen sınır",
+            "contexts": [
+              {
+                "id": "TR-NC-107-S2",
+                "slot": "S2",
+                "sentence": "Kadın yöneticiler cam tavanı aşmakta hâlâ zorlanıyor.",
+                "targetSurface": "cam tavanı",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-107-S3",
+          "mweId": "TR-NC-107",
+          "contextId": "TR-NC-107-S3",
+          "itemSnapshotHash": "aa62d2c538f0eda2596bae0137b3d55527480b14fef446b832761543ceadbc25",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-107",
+            "canonicalForm": "cam tavan",
+            "modifier": "cam",
+            "head": "tavan",
+            "meaning": "Belirli grupların yükselmesini görünmez biçimde engelleyen sınır",
+            "contexts": [
+              {
+                "id": "TR-NC-107-S3",
+                "slot": "S3",
+                "sentence": "Araştırma iş yerindeki cam tavan etkisini inceliyor.",
+                "targetSurface": "cam tavan",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-215-S1",
+          "mweId": "TR-NC-215",
+          "contextId": "TR-NC-215-S1",
+          "itemSnapshotHash": "b615f838b5764f27875c254acd91cefdc9d8056e1ecca60a5045dbe0089948a3",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-215",
+            "canonicalForm": "kredi kartı",
+            "modifier": "kredi",
+            "head": "kartı",
+            "meaning": "Banka kredisini kullanarak ödeme yapmayı sağlayan kart",
+            "contexts": [
+              {
+                "id": "TR-NC-215-S1",
+                "slot": "S1",
+                "sentence": "Kredi kartım ATM tarafından reddedildi.",
+                "targetSurface": "Kredi kartım",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-215-S2",
+          "mweId": "TR-NC-215",
+          "contextId": "TR-NC-215-S2",
+          "itemSnapshotHash": "d4b9d47d7cee53f30c2eea99fe54c2b530363f020b356fab0d6a189cb0e726ed",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-215",
+            "canonicalForm": "kredi kartı",
+            "modifier": "kredi",
+            "head": "kartı",
+            "meaning": "Banka kredisini kullanarak ödeme yapmayı sağlayan kart",
+            "contexts": [
+              {
+                "id": "TR-NC-215-S2",
+                "slot": "S2",
+                "sentence": "Ödeme için kredi kartı kullanabilir miyim?",
+                "targetSurface": "kredi kartı",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-215-S3",
+          "mweId": "TR-NC-215",
+          "contextId": "TR-NC-215-S3",
+          "itemSnapshotHash": "384e3ea2c568c80596ed4ba274f938b48c29b9a3a8f11353285c7d59d66f2351",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-215",
+            "canonicalForm": "kredi kartı",
+            "modifier": "kredi",
+            "head": "kartı",
+            "meaning": "Banka kredisini kullanarak ödeme yapmayı sağlayan kart",
+            "contexts": [
+              {
+                "id": "TR-NC-215-S3",
+                "slot": "S3",
+                "sentence": "Ben bir kredi kartı ile ödemek istiyorum.",
+                "targetSurface": "kredi kartı",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-242-S1",
+          "mweId": "TR-NC-242",
+          "contextId": "TR-NC-242-S1",
+          "itemSnapshotHash": "5b39abfd3c22892ccf13797de5a5ed213ee68fe2bad44e8b889dabfbbd73c1be",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-242",
+            "canonicalForm": "televizyon kanalı",
+            "modifier": "televizyon",
+            "head": "kanalı",
+            "meaning": "Belirli bir yayın akışı sunan televizyon kuruluşu",
+            "contexts": [
+              {
+                "id": "TR-NC-242-S1",
+                "slot": "S1",
+                "sentence": "Videoyu bir yerel televizyon kanalına götürdü.",
+                "targetSurface": "televizyon kanalına",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-242-S2",
+          "mweId": "TR-NC-242",
+          "contextId": "TR-NC-242-S2",
+          "itemSnapshotHash": "28ae0db47634a2e3c950d0dc9c8e7b9e2524afb9e81af1f8b4275ef3d69f3a99",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-242",
+            "canonicalForm": "televizyon kanalı",
+            "modifier": "televizyon",
+            "head": "kanalı",
+            "meaning": "Belirli bir yayın akışı sunan televizyon kuruluşu",
+            "contexts": [
+              {
+                "id": "TR-NC-242-S2",
+                "slot": "S2",
+                "sentence": "Bu, dinî bir televizyon kanalıdır.",
+                "targetSurface": "televizyon kanalıdır",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-242-S3",
+          "mweId": "TR-NC-242",
+          "contextId": "TR-NC-242-S3",
+          "itemSnapshotHash": "42bf76e460f5248709936b03123207e7664ffaa0ca6d7b09bf0e66419306e475",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-242",
+            "canonicalForm": "televizyon kanalı",
+            "modifier": "televizyon",
+            "head": "kanalı",
+            "meaning": "Belirli bir yayın akışı sunan televizyon kuruluşu",
+            "contexts": [
+              {
+                "id": "TR-NC-242-S3",
+                "slot": "S3",
+                "sentence": "Videoyu yerel bir televizyon kanalına götürdü.",
+                "targetSurface": "televizyon kanalına",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-221-S1",
+          "mweId": "TR-NC-221",
+          "contextId": "TR-NC-221-S1",
+          "itemSnapshotHash": "b2273dc7ea913b2262e33330f3453688dbb473b388172530670e86d0624420e4",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-221",
+            "canonicalForm": "müşteri hizmetleri",
+            "modifier": "müşteri",
+            "head": "hizmetleri",
+            "meaning": "Müşterilere bilgi ve destek sağlayan hizmet birimi",
+            "contexts": [
+              {
+                "id": "TR-NC-221-S1",
+                "slot": "S1",
+                "sentence": "Bugünlerde, müşteri hizmetlerinde deneyimi olan kişiler arıyoruz.",
+                "targetSurface": "müşteri hizmetlerinde",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-221-S2",
+          "mweId": "TR-NC-221",
+          "contextId": "TR-NC-221-S2",
+          "itemSnapshotHash": "07e1396490a4fa07e56d20a1430f6cb75519827f68b186b7f5485245a63f0c4c",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-221",
+            "canonicalForm": "müşteri hizmetleri",
+            "modifier": "müşteri",
+            "head": "hizmetleri",
+            "meaning": "Müşterilere bilgi ve destek sağlayan hizmet birimi",
+            "contexts": [
+              {
+                "id": "TR-NC-221-S2",
+                "slot": "S2",
+                "sentence": "Müşteri hizmetleri temsilcisiyle konuşmak istiyorsanız lütfen üçe basın.",
+                "targetSurface": "Müşteri hizmetleri",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-221-S3",
+          "mweId": "TR-NC-221",
+          "contextId": "TR-NC-221-S3",
+          "itemSnapshotHash": "628b95e6e6c568d86d5cf30d6347e520c15ece930616f96aaaf0d832c77426e9",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-221",
+            "canonicalForm": "müşteri hizmetleri",
+            "modifier": "müşteri",
+            "head": "hizmetleri",
+            "meaning": "Müşterilere bilgi ve destek sağlayan hizmet birimi",
+            "contexts": [
+              {
+                "id": "TR-NC-221-S3",
+                "slot": "S3",
+                "sentence": "Ben müşteri hizmetleri temsilcisine ulaşmadan önce telefonda 20 dakika beklemek zorunda kaldım.",
+                "targetSurface": "müşteri hizmetleri",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-236-S1",
+          "mweId": "TR-NC-236",
+          "contextId": "TR-NC-236-S1",
+          "itemSnapshotHash": "f7624293a992e1301a5b52b17f2661a9941c83a36cd53dcaff97a9540479d0f9",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-236",
+            "canonicalForm": "kütüphane kartı",
+            "modifier": "kütüphane",
+            "head": "kartı",
+            "meaning": "Kütüphane hizmetlerinden yararlanmayı sağlayan kart",
+            "contexts": [
+              {
+                "id": "TR-NC-236-S1",
+                "slot": "S1",
+                "sentence": "Tom'un kütüphane kartının süresi dolmuş.",
+                "targetSurface": "kütüphane kartının",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-236-S2",
+          "mweId": "TR-NC-236",
+          "contextId": "TR-NC-236-S2",
+          "itemSnapshotHash": "7ba8d567badf1763dc9bb6930c0f49ac6cbb98a1ac8dbdd2ba0238e7c588663a",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-236",
+            "canonicalForm": "kütüphane kartı",
+            "modifier": "kütüphane",
+            "head": "kartı",
+            "meaning": "Kütüphane hizmetlerinden yararlanmayı sağlayan kart",
+            "contexts": [
+              {
+                "id": "TR-NC-236-S2",
+                "slot": "S2",
+                "sentence": "Bir kütüphane kartı almak için ne yapmam gerekiyor?",
+                "targetSurface": "kütüphane kartı",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-236-S3",
+          "mweId": "TR-NC-236",
+          "contextId": "TR-NC-236-S3",
+          "itemSnapshotHash": "b52f5da394e643f4a0206a169bf984bb01728b0d9cfe7b00301b65bca7957ac4",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-236",
+            "canonicalForm": "kütüphane kartı",
+            "modifier": "kütüphane",
+            "head": "kartı",
+            "meaning": "Kütüphane hizmetlerinden yararlanmayı sağlayan kart",
+            "contexts": [
+              {
+                "id": "TR-NC-236-S3",
+                "slot": "S3",
+                "sentence": "Benim bir kütüphane kartım yok.",
+                "targetSurface": "kütüphane kartım",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-223-S1",
+          "mweId": "TR-NC-223",
+          "contextId": "TR-NC-223-S1",
+          "itemSnapshotHash": "f95332972da0dd42a15187bd57829bd6d3053fd861aac6ebd13dcb0752edd1f8",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-223",
+            "canonicalForm": "üretim hattı",
+            "modifier": "üretim",
+            "head": "hattı",
+            "meaning": "Bir ürünün aşamalı olarak üretildiği düzenek",
+            "contexts": [
+              {
+                "id": "TR-NC-223-S1",
+                "slot": "S1",
+                "sentence": "Yeni üretim hattı kapasiteyi iki kat artırdı.",
+                "targetSurface": "üretim hattı",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-223-S2",
+          "mweId": "TR-NC-223",
+          "contextId": "TR-NC-223-S2",
+          "itemSnapshotHash": "a25dae29b59b17c794fd58f343e35a1059eecab766a0cc9d0e7d193614acaa7d",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-223",
+            "canonicalForm": "üretim hattı",
+            "modifier": "üretim",
+            "head": "hattı",
+            "meaning": "Bir ürünün aşamalı olarak üretildiği düzenek",
+            "contexts": [
+              {
+                "id": "TR-NC-223-S2",
+                "slot": "S2",
+                "sentence": "Arıza yüzünden üretim hattı durdu.",
+                "targetSurface": "üretim hattı",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-223-S3",
+          "mweId": "TR-NC-223",
+          "contextId": "TR-NC-223-S3",
+          "itemSnapshotHash": "dd46232be4f14352b43a77b10c045d411b6e54db172a015b4e4c10e0b3fc3839",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-223",
+            "canonicalForm": "üretim hattı",
+            "modifier": "üretim",
+            "head": "hattı",
+            "meaning": "Bir ürünün aşamalı olarak üretildiği düzenek",
+            "contexts": [
+              {
+                "id": "TR-NC-223-S3",
+                "slot": "S3",
+                "sentence": "Mühendisler üretim hattını yeniden düzenledi.",
+                "targetSurface": "üretim hattını",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-206-S1",
+          "mweId": "TR-NC-206",
+          "contextId": "TR-NC-206-S1",
+          "itemSnapshotHash": "12a92266e1d47a579354527569907bc42dc0151d1f07b0f1fdb0dae765c22dd9",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-206",
+            "canonicalForm": "kitap kapağı",
+            "modifier": "kitap",
+            "head": "kapağı",
+            "meaning": "Bir kitabın önünü ve arkasını koruyan dış bölüm",
+            "contexts": [
+              {
+                "id": "TR-NC-206-S1",
+                "slot": "S1",
+                "sentence": "Kitap kapağı genç bir tasarımcı tarafından hazırlandı.",
+                "targetSurface": "Kitap kapağı",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-206-S2",
+          "mweId": "TR-NC-206",
+          "contextId": "TR-NC-206-S2",
+          "itemSnapshotHash": "1fae8efaa812f21d505d851cfa29bbcbbe4ab7644c52a03c7082377deb623769",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-206",
+            "canonicalForm": "kitap kapağı",
+            "modifier": "kitap",
+            "head": "kapağı",
+            "meaning": "Bir kitabın önünü ve arkasını koruyan dış bölüm",
+            "contexts": [
+              {
+                "id": "TR-NC-206-S2",
+                "slot": "S2",
+                "sentence": "Yırtılan kitap kapağını dikkatlice onardı.",
+                "targetSurface": "kitap kapağını",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-206-S3",
+          "mweId": "TR-NC-206",
+          "contextId": "TR-NC-206-S3",
+          "itemSnapshotHash": "da4d482a68c634ff1756d69d985657df323a4de8e95ee15541dc83ff03b45f4b",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-206",
+            "canonicalForm": "kitap kapağı",
+            "modifier": "kitap",
+            "head": "kapağı",
+            "meaning": "Bir kitabın önünü ve arkasını koruyan dış bölüm",
+            "contexts": [
+              {
+                "id": "TR-NC-206-S3",
+                "slot": "S3",
+                "sentence": "Yeni baskının kitap kapağı mavi olacak.",
+                "targetSurface": "kitap kapağı",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-214-S1",
+          "mweId": "TR-NC-214",
+          "contextId": "TR-NC-214-S1",
+          "itemSnapshotHash": "96cd1a1ccc1be522c4ada7b4dc4a9f96b281c5205a6b7e0f6732b5890fc884b6",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-214",
+            "canonicalForm": "elektrik faturası",
+            "modifier": "elektrik",
+            "head": "faturası",
+            "meaning": "Tüketilen elektrik için düzenlenen ödeme belgesi",
+            "contexts": [
+              {
+                "id": "TR-NC-214-S1",
+                "slot": "S1",
+                "sentence": "Elektrik faturasında ödenecek miktar düşüktü.",
+                "targetSurface": "Elektrik faturasında",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-214-S2",
+          "mweId": "TR-NC-214",
+          "contextId": "TR-NC-214-S2",
+          "itemSnapshotHash": "7e63ffb2a697a4756a0b459561c9982335cee2835486411dbdb0e0939c80ef3e",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-214",
+            "canonicalForm": "elektrik faturası",
+            "modifier": "elektrik",
+            "head": "faturası",
+            "meaning": "Tüketilen elektrik için düzenlenen ödeme belgesi",
+            "contexts": [
+              {
+                "id": "TR-NC-214-S2",
+                "slot": "S2",
+                "sentence": "Elektrik faturasını ödemeyi unutmadın, değil mi?",
+                "targetSurface": "Elektrik faturasını",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-214-S3",
+          "mweId": "TR-NC-214",
+          "contextId": "TR-NC-214-S3",
+          "itemSnapshotHash": "6d2d285e8a3bc79b826b54ab0536e5625a3926cf551d5bc815689c90501a50a2",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-214",
+            "canonicalForm": "elektrik faturası",
+            "modifier": "elektrik",
+            "head": "faturası",
+            "meaning": "Tüketilen elektrik için düzenlenen ödeme belgesi",
+            "contexts": [
+              {
+                "id": "TR-NC-214-S3",
+                "slot": "S3",
+                "sentence": "Leyla, elektrik faturasının çok yüksek olduğunu düşündü.",
+                "targetSurface": "elektrik faturasının",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-197-S1",
+          "mweId": "TR-NC-197",
+          "contextId": "TR-NC-197-S1",
+          "itemSnapshotHash": "eaa18093e487b83d1c1967616036782cba7ca26bd1b5be30d433588d4aba781a",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-197",
+            "canonicalForm": "kahve fincanı",
+            "modifier": "kahve",
+            "head": "fincanı",
+            "meaning": "Kahve içmek için kullanılan küçük fincan",
+            "contexts": [
+              {
+                "id": "TR-NC-197-S1",
+                "slot": "S1",
+                "sentence": "Bu, İngiltere'de yapılmış bir kahve fincanı.",
+                "targetSurface": "kahve fincanı",
+                "span": [
+                  4,
+                  6
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-197-S2",
+          "mweId": "TR-NC-197",
+          "contextId": "TR-NC-197-S2",
+          "itemSnapshotHash": "919a239aed4cd79ff4202b4c24c464ea39753a40d66f032880a2c4bbbad4a941",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-197",
+            "canonicalForm": "kahve fincanı",
+            "modifier": "kahve",
+            "head": "fincanı",
+            "meaning": "Kahve içmek için kullanılan küçük fincan",
+            "contexts": [
+              {
+                "id": "TR-NC-197-S2",
+                "slot": "S2",
+                "sentence": "Yanlışlıkla kahve fincanına tuz koydu.",
+                "targetSurface": "kahve fincanına",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-197-S3",
+          "mweId": "TR-NC-197",
+          "contextId": "TR-NC-197-S3",
+          "itemSnapshotHash": "f17e60d60e6dcc135f88c223c3bca4d1e6e2d157e444fd95243d04f07b58b441",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-197",
+            "canonicalForm": "kahve fincanı",
+            "modifier": "kahve",
+            "head": "fincanı",
+            "meaning": "Kahve içmek için kullanılan küçük fincan",
+            "contexts": [
+              {
+                "id": "TR-NC-197-S3",
+                "slot": "S3",
+                "sentence": "Tom kahve fincanından bir yudum aldı.",
+                "targetSurface": "kahve fincanından",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-198-S1",
+          "mweId": "TR-NC-198",
+          "contextId": "TR-NC-198-S1",
+          "itemSnapshotHash": "449813e6d69f59bcb5a651d235209d104a19535ba4030d57fedba2ef2aa85ed9",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-198",
+            "canonicalForm": "okul bahçesi",
+            "modifier": "okul",
+            "head": "bahçesi",
+            "meaning": "Bir okulun çevresindeki açık kullanım alanı",
+            "contexts": [
+              {
+                "id": "TR-NC-198-S1",
+                "slot": "S1",
+                "sentence": "Oynamak için lütfen okul bahçesine gidin.",
+                "targetSurface": "okul bahçesine",
+                "span": [
+                  3,
+                  5
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-198-S2",
+          "mweId": "TR-NC-198",
+          "contextId": "TR-NC-198-S2",
+          "itemSnapshotHash": "ba6e897bcc503bf0bbdc177526434220e30e99d519e9cfa65bfb052e4102768d",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-198",
+            "canonicalForm": "okul bahçesi",
+            "modifier": "okul",
+            "head": "bahçesi",
+            "meaning": "Bir okulun çevresindeki açık kullanım alanı",
+            "contexts": [
+              {
+                "id": "TR-NC-198-S2",
+                "slot": "S2",
+                "sentence": "Okul bahçesinde bazı öğrenciler var.",
+                "targetSurface": "Okul bahçesinde",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-198-S3",
+          "mweId": "TR-NC-198",
+          "contextId": "TR-NC-198-S3",
+          "itemSnapshotHash": "b8820e1e50ab6e34d97bc597843c75bd4706094269c6efad65aa1b88cb456941",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-198",
+            "canonicalForm": "okul bahçesi",
+            "modifier": "okul",
+            "head": "bahçesi",
+            "meaning": "Bir okulun çevresindeki açık kullanım alanı",
+            "contexts": [
+              {
+                "id": "TR-NC-198-S3",
+                "slot": "S3",
+                "sentence": "Yağmur, çocukların okul bahçesinde beyzbol oynamalarına engel oldu.",
+                "targetSurface": "okul bahçesinde",
+                "span": [
+                  2,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-219-S1",
+          "mweId": "TR-NC-219",
+          "contextId": "TR-NC-219-S1",
+          "itemSnapshotHash": "458c78c5dff1d40af3209586f1b8beda5cb0cd5bc9b3246c93f41f1d47dc9731",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-219",
+            "canonicalForm": "proje yönetimi",
+            "modifier": "proje",
+            "head": "yönetimi",
+            "meaning": "Bir projenin kaynaklarını ve aşamalarını planlama süreci",
+            "contexts": [
+              {
+                "id": "TR-NC-219-S1",
+                "slot": "S1",
+                "sentence": "Görevim, proje yönetimi ve ekip koordinasyonunu içeriyor.",
+                "targetSurface": "proje yönetimi",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-219-S2",
+          "mweId": "TR-NC-219",
+          "contextId": "TR-NC-219-S2",
+          "itemSnapshotHash": "ce5e5e424d6fe7b6cd7ac386e3bc2a628b38923f186ad26dd2c58ddfcb08f0ca",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-219",
+            "canonicalForm": "proje yönetimi",
+            "modifier": "proje",
+            "head": "yönetimi",
+            "meaning": "Bir projenin kaynaklarını ve aşamalarını planlama süreci",
+            "contexts": [
+              {
+                "id": "TR-NC-219-S2",
+                "slot": "S2",
+                "sentence": "Ekip proje yönetimi için yeni yazılım kullanıyor.",
+                "targetSurface": "proje yönetimi",
+                "span": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "TR-NC-219-S3",
+          "mweId": "TR-NC-219",
+          "contextId": "TR-NC-219-S3",
+          "itemSnapshotHash": "4ec59ac06b201873dd9a7d70fc5d8f1a53465a658fceffeaa9a6cb50dba298c3",
+          "itemSnapshot": {
+            "taskType": "token",
+            "mweId": "TR-NC-219",
+            "canonicalForm": "proje yönetimi",
+            "modifier": "proje",
+            "head": "yönetimi",
+            "meaning": "Bir projenin kaynaklarını ve aşamalarını planlama süreci",
+            "contexts": [
+              {
+                "id": "TR-NC-219-S3",
+                "slot": "S3",
+                "sentence": "Proje yönetimi deneyimi bu görevde çok önemli.",
+                "targetSurface": "Proje yönetimi",
+                "span": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

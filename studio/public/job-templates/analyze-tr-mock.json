@@ -1,0 +1,13 @@
+{
+  "id": "analyze-tr-mock",
+  "type": "analysis",
+  "title": "Türkçe mock sonuç analizi",
+  "status": "queued",
+  "progress": 0,
+  "createdAt": "2026-06-23T00:00:00Z",
+  "payload": {
+    "resultsPath": "studio/public/artifacts/runs/tr-mock-smoke/results.csv",
+    "outputDir": "studio/public/artifacts/runs/tr-mock-smoke",
+    "level": "nc"
+  }
+}

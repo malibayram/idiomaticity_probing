@@ -1,0 +1,19 @@
+{
+  "id": "experiment-tr-mock",
+  "type": "experiment",
+  "title": "Türkçe mock smoke deneyi",
+  "status": "queued",
+  "progress": 0,
+  "createdAt": "2026-06-23T00:00:00Z",
+  "payload": {
+    "dataDir": "studio/public/artifacts/datasets/tr-draft-current",
+    "models": ["mock"],
+    "contexts": ["naturalistic", "neutral"],
+    "levels": ["nc", "sentence"],
+    "device": "cpu",
+    "seed": 0,
+    "limit": 20,
+    "runId": "tr-mock-smoke",
+    "outputDir": "studio/public/artifacts/runs/tr-mock-smoke"
+  }
+}

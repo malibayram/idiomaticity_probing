@@ -154,6 +154,21 @@ Thumbs.db
 data/
 !data/sample/
 !data/sample/**
+# Keep downloaded NCIMP source files ignored, but version the Turkish extension
+# and its reproducibility audit.
+!data/
+data/*
+!data/ncimp/
+data/ncimp/*
+!data/ncimp/DATASET_AUDIT_EN_PT_TR.md
+!data/ncimp/TR/
+data/ncimp/TR/*
+!data/ncimp/TR/turkish_ncimp_inventory.csv
+!data/ncimp/TR/turkish_ordinary_control.csv
+!data/ncimp/TR/sources/
+data/ncimp/TR/sources/*
+!data/ncimp/TR/sources/README.md
+!data/ncimp/TR/sources/source_manifest.csv
 runs/
 *.pkl
 *.pickle

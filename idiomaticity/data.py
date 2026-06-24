@@ -9,9 +9,9 @@ column marking the target token positions. We expose:
   * :func:`load_dataset`    - load a directory of NCIMP/canonical data into ``list[NCInstance]``
 
 Two on-disk formats are supported:
-  1. **canonical** JSON (``*.json``) — the clean format this project emits/consumes; see
+  1. **canonical** JSON (``*.json``) - the clean format this project emits/consumes; see
      ``data/sample/``. Recommended.
-  2. **NCIMP CSV** — the original repo layout
+  2. **NCIMP CSV** - the original repo layout
      (``dataset/<LANG>/naturalistics_examplesent{1,2,3}.csv``, ``neutral.csv``), via
      :func:`load_ncimp_csv`.
 
@@ -227,7 +227,7 @@ def load_ncimp_csv(
     """Load one NCIMP CSV file into NCInstances.
 
     ``comp_scores`` / ``comp_classes`` map an NC string to its human Comp score / class
-    (loaded separately from the xlsx — see :func:`load_comp_scores`).
+    (loaded separately from the xlsx - see :func:`load_comp_scores`).
     """
     comp_scores = comp_scores or {}
     comp_classes = comp_classes or {}

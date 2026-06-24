@@ -1,0 +1,14 @@
+{
+  "id": "validate-tr-current",
+  "type": "validate",
+  "title": "Güncel Türkçe seed doğrulaması",
+  "status": "queued",
+  "progress": 0,
+  "createdAt": "2026-06-23T00:00:00Z",
+  "payload": {
+    "snapshotSource": "firestore",
+    "projectId": "tr-ncimp",
+    "snapshotPath": "studio/public/seed/tr_project.json",
+    "outputDir": "studio/public/reports"
+  }
+}

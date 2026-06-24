@@ -36,21 +36,21 @@ durduğu 2024 modellerinin ötesinde **modern modellerde** tekrar uygulamak.
    metrikler ve modeller çıkarıldı.
 2. **Dokümantasyon:** PAPER_SUMMARY, RESEARCH_DESIGN, README, ROADMAP.
 3. **Model-agnostik çerçeve** (`idiomaticity/` paketi):
-   - `embedders/` — `BaseEmbedder` + registry; pluggable backend'ler:
+   - `embedders/` - `BaseEmbedder` + registry; pluggable backend'ler:
      `transformer` (BERT/XLM-R/BERTurk), `causal` (Llama/Qwen), `sentence` (SBERT/BGE/E5),
      `multimodal_causal` (Gemma 4 metin yolu), `static` (Word2Vec/GloVe), `mock` (bağımsız test).
-   - `data.py` — NCIMP CSV adaptörü + kanonik JSON + insan `Comp` skorları.
-   - `probes.py` — P_Syn / P_Comp / P_WordsSyn / P_Rand tanımları + Dilbilimsel Tahminler.
-   - `metrics.py` — Sim (Eq.2-3), Affinity (Eq.4), Scaled Similarity (Eq.5), Spearman ρ.
-   - `experiment.py` — pipeline (cache'li, cümle + NC düzeyi).
-   - `analysis.py` — iyileşme göstergeleri (ISC/IG/LOD/AID/FLOOR/RHO), kompozit ICS, teşhis,
+   - `data.py` - NCIMP CSV adaptörü + kanonik JSON + insan `Comp` skorları.
+   - `probes.py` - P_Syn / P_Comp / P_WordsSyn / P_Rand tanımları + Dilbilimsel Tahminler.
+   - `metrics.py` - Sim (Eq.2-3), Affinity (Eq.4), Scaled Similarity (Eq.5), Spearman ρ.
+   - `experiment.py` - pipeline (cache'li, cümle + NC düzeyi).
+   - `analysis.py` - iyileşme göstergeleri (ISC/IG/LOD/AID/FLOOR/RHO), kompozit ICS, teşhis,
      eski-vs-yeni kohort karşılaştırması.
 4. **Scriptler** (`scripts/`): `download_data.py`, `run_experiment.py`, `analyze.py`,
    `make_plots.py`, `compare_models.py`, `make_sample_data.py`, `run_cohort.sh`.
 5. **Gerçek NCIMP verisi** indirildi ve adaptör **gerçek formata** göre düzeltildi
    (list-literal `[True,False]` tag'leri, BOM, çoğul/tekil kanonik eşleme, NC=idiyomatik→I).
-6. **Encoder/embedding kohortu (EN+PT) koşuldu** — 6 model × 2 dil. (Bölüm 4)
-7. **Decoder-only LLM kohortu başlatıldı** — Qwen3 base merdiveni + Gemma 4 adaptörü. (Bölüm 5)
+6. **Encoder/embedding kohortu (EN+PT) koşuldu** - 6 model × 2 dil. (Bölüm 4)
+7. **Decoder-only LLM kohortu başlatıldı** - Qwen3 base merdiveni + Gemma 4 adaptörü. (Bölüm 5)
 
 ---
 
@@ -80,13 +80,13 @@ Her isim bileşiği (NC) cümle içinde 4 probla değiştirilir; orijinalle kosi
 
 ---
 
-## 4. SONUÇLAR — Encoder/embedding kohortu (TAMAMLANDI)
+## 4. SONUÇLAR - Encoder/embedding kohortu (TAMAMLANDI)
 
 **Kohortlar:** Eski (paper-era): mBERT, DistilBERT-ML, mSBERT · Yeni (modern): XLM-R-large,
 BGE-M3, E5-large. Hepsi çok dilli; NC düzeyi; naturalistic+neutral bağlam.
 Çıktılar: `runs/en_all/`, `runs/pt_all/` (+ `runs/en_mbert/` ilk pilot).
 
-### 4.1 İngilizce (EN) — eski vs yeni
+### 4.1 İngilizce (EN) - eski vs yeni
 
 | Gösterge          | Eski   | Yeni   | Δ                 | İyileşti?    |
 | ----------------- | ------ | ------ | ----------------- | ------------ |
@@ -102,7 +102,7 @@ BGE-M3, E5-large. Hepsi çok dilli; NC düzeyi; naturalistic+neutral bağlam.
 DistilBERT-ML 0.35 · mSBERT 0.32 → **hepsi <0.55, "yakalamıyor".**
 **Hüküm:** Mütevazı iyileşme (+26%), ama idiyomatiklik hâlâ çözülmedi.
 
-### 4.2 Portekizce (PT) — eski vs yeni
+### 4.2 Portekizce (PT) - eski vs yeni
 
 | Gösterge    | Eski   | Yeni   | Δ                | İyileşti?    |
 | ----------- | ------ | ------ | ---------------- | ------------ |
@@ -142,7 +142,7 @@ Beş başarısızlık imzasının tamamını gösterdi; He et al. (2025)'in mBER
 
 ---
 
-## 5. DEVAM EDEN — Decoder-only LLM kohortu (<15B, base/PT)
+## 5. DEVAM EDEN - Decoder-only LLM kohortu (<15B, base/PT)
 
 Seçim gerekçesi (RESEARCH_DESIGN'la uyumlu): **IT değil base** kullanıyoruz (temsil-probing için
 hizalama geometriyi kirletir). Sınır 15B. 64GB M2 Max → bellek sorun değil.
@@ -210,7 +210,7 @@ semeval2022/
 pip install -r requirements.txt
 python scripts/download_data.py --out data/ncimp
 
-# Encoder kohortu (EN+PT) — TAMAMLANMIŞ sonuçları yeniden üretir:
+# Encoder kohortu (EN+PT) - TAMAMLANMIŞ sonuçları yeniden üretir:
 bash scripts/run_cohort.sh          # DEVICE=mps varsayılan
 
 # Decoder-only LLM (base, <15B):
@@ -253,7 +253,7 @@ python scripts/analyze.py --results runs/qwen14_en/results.csv --out runs/qwen14
   sentence-level vs izole-ifade vs contextual-span metodolojik etiketi belgelendi.
 - **v0.5** Decoder-only LLM kohortu MLX'te koşuldu (Qwen3.5 + Gemma3/4). Yeni `mlx_causal`
   embedder: `mlx-lm` (text) + `mlx-vlm` (gemma4_unified) ile yükleme; **son-4 katman + final-norm**
-  reçetesi (decoder LLM residual akışı norm'suz anizotropik — Gemma'da FLOOR 0.98→0.6). Eski 2024
+  reçetesi (decoder LLM residual akışı norm'suz anizotropik - Gemma'da FLOOR 0.98→0.6). Eski 2024
   embedding modelleri çıkarıldı, Harrier-OSS (2026) eklendi. Makale: LLM tablosu CSV'den otomatik
   `\input`; MLX metodolojisi + anizotropi/ICS-metrik uyarısı + base-vs-instruct belgelendi.
   Gece-script'i kalan koşuları + base Gemma4-12B'yi tamamlayıp makaleyi otomatik yeniliyor.

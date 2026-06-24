@@ -1,6 +1,6 @@
 """Answering the central research question, quantitatively.
 
-Question: *Have modern AI models — which improved dramatically elsewhere — also improved at
+Question: *Have modern AI models - which improved dramatically elsewhere - also improved at
 capturing idiomaticity? If so, by how much? If not, what is the fundamental problem?*
 
 He et al. (2025) showed 2024-era models do **not** capture idiomatic meaning. This module
@@ -18,7 +18,7 @@ IG   Idiomaticity Gap = mean Sim_R|Syn(C) − mean Sim_R|Syn(I).
      Ideal ≈ 0 (idioms handled as well as compositional). Paper: large positive. Lower = better.
 
 LOD  Lexical-Overlap Dominance = mean over IDIOMATIC NCs of (Sim_R|WordsSyn − Sim_R|Syn).
-     >0 means word-by-word literal synonyms beat the gold holistic synonym — i.e. the model
+     >0 means word-by-word literal synonyms beat the gold holistic synonym - i.e. the model
      represents the idiom as the sum of its parts. Paper: >0. Ideal <0. Lower = better.
 
 AID  Affinity on idioms = mean A_Syn|WordsSyn over IDIOMATIC NCs.
@@ -31,7 +31,7 @@ FLOOR  Random-similarity floor = mean Sim(P_Rand) at NC level.
 
 RHO  Spearman ρ(Sim_R|Syn, Comp). A model that captured idioms equally well across the
      idiomaticity spectrum would show ρ ≈ 0 (flat-high). Strong positive ρ means it only works
-     for compositional NCs. |ρ| lower = better. (Subtle — reported, lightly weighted.)
+     for compositional NCs. |ρ| lower = better. (Subtle - reported, lightly weighted.)
 
 ICS  Idiomaticity Capture Score ∈ [0, 1]: a single composite of the above (see weights below).
      This is a heuristic summary for ranking/▲comparison, not a claim of ground truth.
@@ -164,13 +164,13 @@ def diagnose(ind: Indicators) -> List[str]:
     if not np.isnan(ind.LOD) and ind.LOD > 0.05:
         notes.append(
             "Compositional bias: literal word-by-word synonyms are recovered better than the "
-            "holistic gold synonym for idioms (LOD>0) — the model still treats the idiom as the "
+            "holistic gold synonym for idioms (LOD>0) - the model still treats the idiom as the "
             "sum of its parts."
         )
     if not np.isnan(ind.IG) and ind.IG > 0.2:
         notes.append(
             "Idiomaticity gap: idioms are handled markedly worse than compositional NCs "
-            f"(IG={ind.IG:.2f}) — context is not rescuing the non-literal cases."
+            f"(IG={ind.IG:.2f}) - context is not rescuing the non-literal cases."
         )
     if not np.isnan(ind.FLOOR) and ind.FLOOR > 0.5:
         notes.append(

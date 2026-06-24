@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "projectId": "tr-ncimp",
+  "protocolVersion": "ncimp-paper-exact-v1",
+  "createdAt": "2026-06-23T20:31:14.519948+00:00",
+  "draft": true,
+  "files": {
+    "TR.json": {
+      "sha256": "6194a84ce0d64252528b49d5ebcff22e6d126af26c9864b2b2825c6d780a4e2d",
+      "bytes": 870456
+    },
+    "validation.json": {
+      "sha256": "a8f30229a5ef206c658db4dafa36463f2d876d02b34a5d949b029ae69ee4d898",
+      "bytes": 1577205
+    }
+  }
+}

@@ -2,10 +2,10 @@
 """Reproduce the paper's figures from a results.csv.
 
 Generates:
-  * similarity_<level>.png   — Figure 1/2 style: per-probe Sim distributions by model
-  * scaled_<level>.png       — Figure 5 style: Sim_R|Syn vs Sim_R|WordsSyn by model
-  * scaled_by_class_<level>  — Figure 6 style: Sim_R|Syn by idiomaticity class (I/PC/C)
-  * correlogram_<level>.png  — Figure 10 style: between-model correlation of a measurement
+  * similarity_<level>.png   - Figure 1/2 style: per-probe Sim distributions by model
+  * scaled_<level>.png       - Figure 5 style: Sim_R|Syn vs Sim_R|WordsSyn by model
+  * scaled_by_class_<level>  - Figure 6 style: Sim_R|Syn by idiomaticity class (I/PC/C)
+  * correlogram_<level>.png  - Figure 10 style: between-model correlation of a measurement
 
 Usage:
   python scripts/make_plots.py --results runs/compare/results.csv --out runs/compare/figures

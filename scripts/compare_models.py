@@ -4,9 +4,9 @@
 From a results.csv, builds report-friendly charts that put all models side by side and
 highlight the old (paper-era) vs new (modern) cohort split:
 
-  * ics_by_model.png        — composite Idiomaticity Capture Score per model (old vs new colored)
-  * indicators_grid.png     — ISC / IG / LOD / AID per model (with ideal-direction arrows)
-  * simR_by_class.png       — mean Sim_R|Syn per idiomaticity class (I/PC/C) per model
+  * ics_by_model.png        - composite Idiomaticity Capture Score per model (old vs new colored)
+  * indicators_grid.png     - ISC / IG / LOD / AID per model (with ideal-direction arrows)
+  * simR_by_class.png       - mean Sim_R|Syn per idiomaticity class (I/PC/C) per model
 
 Usage:
   python scripts/compare_models.py --results runs/en_all/results.csv --out runs/en_all/figures \
@@ -112,7 +112,7 @@ def plot_simR_by_class(df: pd.DataFrame, out_dir: str, level: str, context: str)
     ax.axhline(0, color="k", lw=0.8)
     ax.set_ylabel("mean Sim_R | Syn")
     ax.set_title(
-        "Gold-synonym recovery by idiomaticity class — ideal: all bars ≈1 and flat"
+        "Gold-synonym recovery by idiomaticity class - ideal: all bars ≈1 and flat"
     )
     ax.legend(title="class")
     fig.tight_layout()

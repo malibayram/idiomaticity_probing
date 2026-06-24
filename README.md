@@ -1,4 +1,4 @@
-# Idiomaticity Probing — Model-Agnostik Çerçeve
+# Idiomaticity Probing - Model-Agnostik Çerçeve
 
 He et al. (2025), _Investigating Idiomaticity in Word Representations_ (Computational
 Linguistics 51(2)) makalesinin yöntemini **herhangi bir kelime temsil modelinde** tekrar
@@ -7,7 +7,7 @@ uygulamak için kurulmuş bir çerçeve.
 Makale; isim bileşiklerinin (noun compounds) idiyomatikliğinin modeller tarafından ne kadar
 yakalandığını **minimal çiftler** ve **model-agnostik metrikler** (Affinity, Scaled Similarity)
 ile ölçer. Bu repo aynı problar ve metrikleri sabit tutup **modelleri takılıp-çıkarılabilir**
-hale getirir — böylece makalenin durduğu 2024 modellerinin ötesinde **modern LLM'ler, çok
+hale getirir - böylece makalenin durduğu 2024 modellerinin ötesinde **modern LLM'ler, çok
 dilli embedding modelleri ve Türkçe modeller** üzerinde de aynı deney koşturulabilir.
 
 📄 Detaylı yöntem özeti: [PAPER_SUMMARY.md](PAPER_SUMMARY.md)
@@ -17,7 +17,7 @@ dilli embedding modelleri ve Türkçe modeller** üzerinde de aynı deney koştu
 🗺️ Geliştirme planı: [ROADMAP.md](ROADMAP.md)
 
 > **Bu çalışmanın ana sorusu:** Bu sürede her alanda gelişen yapay zeka modelleri,
-> _idiyomatiklik temsili_ alanında da gelişti mi — gelişti ise ne kadar, gelişmedi ise temel
+> _idiyomatiklik temsili_ alanında da gelişti mi - gelişti ise ne kadar, gelişmedi ise temel
 > sorun ne? Cevabı `scripts/analyze.py` üretir (eski vs yeni model kohortları + teşhis).
 
 ---
@@ -129,10 +129,10 @@ _economic aid_ gibi kompozisyonel bir NC'de tablo farklı olmalıdır:
 
 > The USSR was soon giving Cuba **economic aid** and military support.
 
-- **P_Syn:** _financial assistance_ — yüksek benzerlik beklenir.
-- **P_Comp:** _aid_ — anlamın önemli kısmını koruduğu için yüksek/orta-yüksek olabilir.
-- **P_WordsSyn:** _budgetary assistance_ — kelime-kelime değişim hâlâ yakın kalabilir.
-- **P_Rand:** _random walk_ veya _kitchen table_ — düşük kalmalıdır.
+- **P_Syn:** _financial assistance_ - yüksek benzerlik beklenir.
+- **P_Comp:** _aid_ - anlamın önemli kısmını koruduğu için yüksek/orta-yüksek olabilir.
+- **P_WordsSyn:** _budgetary assistance_ - kelime-kelime değişim hâlâ yakın kalabilir.
+- **P_Rand:** _random walk_ veya _kitchen table_ - düşük kalmalıdır.
 
 Yani idiyomatik ifadelerde `P_Comp` ve `P_WordsSyn` düşerken, kompozisyonel ifadelerde bu
 probların orijinale daha yakın kalması beklenir. `P_Syn` ise her iki durumda da yüksek
@@ -275,10 +275,10 @@ python scripts/make_plots.py --results runs/compare/results.csv --out runs/compa
 
 Çıktılar:
 
-- `results.csv` — uzun format: `model, lang, context, level, nc, comp_class, probe, sim, ...`
-- `summary.json` — model × ölçüm özet tablosu (Affinity, Sim_R, Spearman ρ)
-- `indicators.csv` + `REPORT.md` — gelişme göstergeleri ve hüküm ([RESEARCH_DESIGN.md](RESEARCH_DESIGN.md))
-- `figures/` — Şekil 1/2/5/10 tarzı grafikler
+- `results.csv` - uzun format: `model, lang, context, level, nc, comp_class, probe, sim, ...`
+- `summary.json` - model × ölçüm özet tablosu (Affinity, Sim_R, Spearman ρ)
+- `indicators.csv` + `REPORT.md` - gelişme göstergeleri ve hüküm ([RESEARCH_DESIGN.md](RESEARCH_DESIGN.md))
+- `figures/` - Şekil 1/2/5/10 tarzı grafikler
 
 ---
 
@@ -286,7 +286,7 @@ python scripts/make_plots.py --results runs/compare/results.csv --out runs/compa
 
 İki yol var:
 
-### 1) Var olan bir embedder tipini kullan — sadece config
+### 1) Var olan bir embedder tipini kullan - sadece config
 
 `models.yaml`'a bir giriş ekle:
 
