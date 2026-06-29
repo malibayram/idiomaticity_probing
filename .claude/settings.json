@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(node -e \"console.log\\(JSON.stringify\\(require\\('./package.json'\\).scripts,null,2\\)\\)\")",
+      "Bash(npm run *)",
+      "Bash(node -e ' *)",
+      "Bash(./node_modules/.bin/tsc --noEmit)",
+      "Bash(node -e 'require\\(\"./src/i18n/locales/en.json\"\\);require\\(\"./src/i18n/locales/tr.json\"\\);console.log\\(\"both parse OK\"\\)')",
+      "Bash(cd /Users/alibayram/Desktop/idiomaticity_probing/studio *)",
+      "Read(//Users/alibayram/Desktop/**)",
+      "Bash(node -e 'require\\(\"./src/i18n/locales/en.json\"\\);require\\(\"./src/i18n/locales/tr.json\"\\);console.log\\(\"OK\"\\)')"
+    ]
+  }
+}

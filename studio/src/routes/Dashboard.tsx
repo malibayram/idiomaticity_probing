@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Spinner } from "@/components/ui/spinner";
 import { WORKFLOW_ORDER } from "@/lib/domain-labels";
+import { computeParitySummary } from "@/data/english-parity";
 
 const LANGUAGES = [
   { code: "EN", labelKey: "dashboard.english", noteKey: "dashboard.readOnlyReference" },
@@ -70,8 +71,12 @@ export function Dashboard() {
       contexts,
       sources: snapshot.sources.length,
       campaigns: snapshot.campaigns.length,
+      released: statusCounts["released"] ?? 0,
+      parityAvg: computeParitySummary(mwes).avgPct,
     };
   }, [data]);
+
+  const privileged = profile?.role === "curator" || profile?.role === "admin";
 
   return (
     <div className="space-y-6">
@@ -97,6 +102,71 @@ export function Dashboard() {
         </div>
       ) : (
         <>
+          {privileged ? (
+            <Card>
+              <CardHeader>
+                <CardTitle>{t("home.pipeline.title")}</CardTitle>
+                <CardDescription>{t("home.pipeline.description")}</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                {[
+                  {
+                    to: "/studio/mwes",
+                    label: t("home.pipeline.dataset"),
+                    status: t("home.pipeline.datasetStatus", {
+                      current: stats.total,
+                      target: stats.project.targetMweCount,
+                    }),
+                  },
+                  {
+                    to: "/studio/annotation",
+                    label: t("home.pipeline.annotation"),
+                    status: t("home.pipeline.annotationStatus", {
+                      done: stats.goldRated,
+                      total: stats.total,
+                    }),
+                  },
+                  {
+                    to: "/studio/release",
+                    label: t("home.pipeline.release"),
+                    status: t("home.pipeline.releaseStatus", {
+                      released: stats.released,
+                      total: stats.total,
+                    }),
+                  },
+                  {
+                    to: "/studio/results",
+                    label: t("home.pipeline.analysis"),
+                    status: t("home.pipeline.analysisStatus", {
+                      parity: stats.parityAvg,
+                    }),
+                  },
+                ].map((phase, index) => (
+                  <Link
+                    key={phase.to}
+                    to={phase.to}
+                    className="flex items-center justify-between gap-3 rounded-md border border-[hsl(var(--border))] p-3 transition-colors hover:border-[hsl(var(--primary))]"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[hsl(var(--muted))] text-xs font-medium tabular-nums">
+                        {index + 1}
+                      </span>
+                      <div>
+                        <p className="text-sm font-medium">{phase.label}</p>
+                        <p className="text-xs text-[hsl(var(--muted-foreground))]">
+                          {phase.status}
+                        </p>
+                      </div>
+                    </div>
+                    <span className="text-sm text-[hsl(var(--muted-foreground))]">
+                      {t("home.pipeline.open")} →
+                    </span>
+                  </Link>
+                ))}
+              </CardContent>
+            </Card>
+          ) : null}
+
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <StatCard
               label={t("dashboard.totalMwe")}

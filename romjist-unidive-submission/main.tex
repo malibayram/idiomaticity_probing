@@ -1,0 +1,137 @@
+% ROMJIST UniDive special issue - starter manuscript.
+% Official class copied from template/Template_Latex/.../romjist.cls.
+\documentclass[twoside]{romjist}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=4.3cm,bottom=5.7cm,left=3.74cm,right=3.75cm]{geometry}
+\usepackage{times}
+\usepackage{authblk}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cite}
+\usepackage[labelsep=space]{caption}
+
+\title{Has Idiomaticity Representation Improved? A Controlled,
+Model-Agnostic Re-Evaluation Across Model Generations}
+
+\author[1]{M. Ali \uppercase{Bayram}}
+\author[2]{Wei \uppercase{He}}
+\author[3]{Aline \uppercase{Villavicencio}}
+\author[ ]{\emph{[co-authors TBC after consultation]}}
+
+\affil[1]{{\small Affiliation TBC}}
+\affil[2]{{\small Affiliation TBC}}
+\affil[3]{{\small Affiliation TBC}}
+\affil[ ]{{\small \texttt{Email: TBC}}}
+
+\begin{document}
+
+% The following four values are for final ROMJIST print editing.
+% Keep placeholders until acceptance/final page assignment.
+\issuevolume{X}
+\issuenumber{X}
+\issueyear{2027}
+\issuepages{XXX--XXX}
+
+\headauthors{M. A. Bayram et al.}
+\headtitle{Idiomaticity Representation Across Model Generations}
+
+\maketitle
+
+\begin{abstract}
+He et al.\ (2025) showed that 2024-era word- and sentence-representation models do not
+faithfully encode idiomaticity, relying instead on lexical overlap. We ask whether the rapid
+progress of language models since then has changed this, and if not, what the underlying
+obstacle is. We re-implement the original controlled evaluation---Noun Compound Idiomaticity
+Minimal Pairs (NCIMP), the four probes, and the Affinity / Scaled-Similarity metrics---as a
+model-agnostic framework, validate it against the published results, and apply it across three
+cohorts: paper-era multilingual encoders, modern encoder and sentence-embedding models, and
+an eleven-model Qwen/Gemma decoder cohort from 2025--2026. Across twenty model conditions, no
+model reaches the partial-capture threshold. The best model, base Gemma 4-12B, reaches
+ICS $=0.525$ and is only the first to prefer the gold idiomatic synonym over the literal
+component. We also introduce the Ordinary-Calibrated Gap (OCG), which normalises idiomatic
+synonym-vs-random separation by a model's behaviour on ordinary single-word and two-word
+controls. The calibration shows that models separate ordinary synonyms from random
+replacements much more cleanly than they separate idioms from literal alternatives. The results
+support a structural-bottleneck account: scale narrows, but does not solve, idiomaticity
+representation.
+\end{abstract}
+
+\begin{keywords}
+Idiomaticity; multiword expressions; sentence embeddings; model evaluation; anisotropy; UniDive.
+\end{keywords}
+
+\section{Introduction}
+% Motivation; the UniDive themes (multilingual/cross-lingual LT; quantifying diversity);
+% research question (H1 scaling vs H0 structural bottleneck).
+
+\section{Background and Related Work}
+% He et al. (2025); NCIMP; probes; Affinity & Scaled Similarity; anisotropy.
+
+\section{Method}
+% Model-agnostic re-implementation; probes P_Syn/P_Comp/P_WordsSyn/P_Rand; metrics;
+% improvement indicators ISC/IG/LOD/AID/FLOOR/RHO and composite ICS; cohorts; languages.
+
+\section{The Ordinary-Calibrated Gap (OCG)}
+% Definition: synonym-random gap of a group divided by the model's average synonym-random gap
+% on ordinary single-word and two-word controls, at the same representation level
+% (sentence / isolated-phrase / contextual-span). Purpose: separate idiomaticity-specific
+% behaviour from generic lexical-overlap and anisotropy artefacts.
+
+\section{Results}
+
+\begin{table}[t]
+\centering
+\caption{English, paper-era vs modern encoder cohort (NC level).}
+\begin{tabular}{lccc}
+\toprule
+Indicator & Paper-era & Modern & $\Delta$ \\
+\midrule
+ICS (composite $\uparrow$) & 0.341 & 0.430 & $+0.089\ (+26\%)$ \\
+ISC ($\uparrow$)           & 0.099 & 0.174 & $+0.075$ \\
+IG ($\downarrow$)          & 0.446 & 0.348 & $-0.098$ \\
+LOD ($\downarrow$, $<0$)   & 0.227 & 0.077 & $-0.150$ \\
+AID ($\uparrow$, $>0$)     & $-0.108$ & $-0.021$ & $+0.087$ \\
+FLOOR (anisotropy)         & 0.575 & 0.723 & $+0.148$ \\
+RHO ($\downarrow$)         & 0.615 & 0.578 & $-0.037$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Portuguese, paper-era vs modern encoder cohort (NC level).}
+\begin{tabular}{lccc}
+\toprule
+Indicator & Paper-era & Modern & $\Delta$ \\
+\midrule
+ICS ($\uparrow$) & 0.428 & 0.423 & $-0.005\ (\approx 0\%)$ \\
+ISC ($\uparrow$) & 0.150 & 0.095 & $-0.055$ \\
+IG ($\downarrow$) & 0.304 & 0.328 & $+0.024$ \\
+LOD ($\downarrow$) & 0.203 & 0.158 & $-0.045$ \\
+AID ($\uparrow$) & $-0.085$ & $-0.026$ & $+0.059$ \\
+FLOOR & 0.608 & 0.730 & $+0.122$ \\
+RHO ($\downarrow$) & 0.421 & 0.492 & $+0.072$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Add: per-model ICS; preliminary decoder-only LLM table; OCG cross-model figure.
+% Source data: runs/en_all, runs/pt_all, article tables in
+% article_perturbation_calibration/tables/.
+
+\section{Discussion}
+% Language-dependent, fragile gains; universal failure signatures; H0 supported.
+
+\section{Conclusion and Future Work}
+% Structural bottleneck; planned Turkish (morphologically rich) NCIMP extension; cross-architecture table.
+
+\section*{Use of AI and AI-assisted technologies}
+% Required disclosure statement per ROMJIST policy (language/readability assistance only).
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

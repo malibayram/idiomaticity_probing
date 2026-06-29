@@ -1,0 +1,154 @@
+\documentclass[twoside]{romjist}
+\usepackage[top=4.3cm, bottom=5.7cm, left = 3.74cm, right = 3.75cm]{geometry}
+\usepackage{times}
+\usepackage{authblk}
+\usepackage{graphicx} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{amssymb}
+\usepackage{chemfig}
+\usepackage{centernot} 
+\usepackage[labelsep=space]{caption}
+
+
+\begin{document}
+      
+    % the following 4 statements are for final print editing
+    %do not modify them yourself
+    \issuevolume{X}%set volume
+    \issuenumber{X}%set number
+    \issueyear{XXXX}%set year
+    \issuepages{XXX--XXX}%set pages
+
+    \headauthors{J. Examplea, M. Exampleb}%short author string, for placement in heading
+    \headtitle{Romjist Template: An Introduction and Guide}%short title string, for placement in heading
+    
+    % Article top matter (title, authors)
+    \title{Romjist Template: An Introduction and Guide}%full title string
+
+    \author[1]{John \uppercase{Examplea}}%set name of first author and superscript of affiliation mark
+    \author[2, *]{Mary \uppercase{Exampleb}}
+
+    \affil[1]{{\small First author affiliation and institutional address}}%affiliation for superscript mark
+    \affil[2]{{\small Second author affiliation and institutional address}}
+    \affil[ ]{ {\small \texttt {Email: jexamplea@website.com, mexampleb@otherwebsite.ro$^*$}}}%optionally, set email underneath affiliation, leave mark blank
+    \affil[ ]{{ \small $^*$ Corresponding author}}
+    
+    % etc., as many authors as required
+
+    % always issue maketitle before abstract
+    \maketitle
+    
+    \begin{abstract} This is a short description of the Romjist paper template. Abstracts should not exceed 200 words. \end{abstract}
+    
+    \begin{keywords} Keywords; separated by semicolons. \end{keywords}
+
+\section{Introduction}
+
+\hspace{0.5cm} Please follow the indications in the subsequent sections in order to carefully ensure that your paper complies with the Romjist template. Sections are numbered sequentially.
+
+\subsection{An example of subsection}
+
+\hspace{0.5cm} This is an example of a subsection and its numbering.
+
+\subsubsection{An example of sub-subsection}
+
+\hspace{0.5cm} The numbering pattern continues for lower levels.
+
+\section{Figures in Template}
+
+\hspace{0.5cm} Figures must be centered, and captions set below the image. Image width must not exceed text width. Any text in images must not be larger than the main body text of the paper. An illustration of this guideline is presented in Figure \ref{fig:figure1}. Figures should be placed at the top or bottom of pages, and as close as possible to the text which references them. Authors should avoid placing figures in the first page.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/figure_example}
+    \caption{Example figure of a digital circuit.}
+    \label{fig:figure1}
+\end{figure}
+
+We prefer vector image formats such as EPS. If EPS is not available, use high-quality images (minimum 200 dpi). Please note that figure images must be provided separately, alongside Latex and MS Word source files, when a paper has been accepted, for final editing.
+
+\section{Tables in Template}
+
+\hspace{0.5cm} Tables must be centered and captions set above the table, as presented in Table \ref{tab:table1}. Text should be centered in a cell, both vertically and horizontally. Tables, like figures, should be placed at the top or bottom of pages, and as close as possible to the text which references them. Authors should avoid placing tables on the first page.
+
+\begin{table}[!h]
+    \centering
+    \caption{Example table}
+    \begin{tabular}{ | c | c | c | }
+    \hline
+    Column 1 Head & Column 3 Head & Column 3 Head \\ \hline
+    1 & 2 & 3 \\ \hline
+    4 & 5 & 6 \\ \hline
+    7 & 8 & 9 \\
+    \hline
+    \end{tabular}
+    \label{tab:table1}
+\end{table}
+
+\section{Equations}
+
+\hspace{0.5cm} The following example displays an equation:
+
+\begin{equation} \label{eq1}
+\omega_T \times l_e +r_e \cong R_s.
+\end{equation}
+
+Equations are numbered and referenced in text as (\ref{eq1}), (\ref{eq2}), etc. Equations are inserted within the text, i.e., in phrases:
+
+\begin{equation} \label{eq2}
+\omega_o^2(l_b+l_e) \times (C_{be}+C_{bc})\cong 1,
+\omega(l_b+l_e) = \frac{1}{\omega(C_{be}+C_{bc})},
+\end{equation}
+
+\noindent so please use punctuation as illustrated in (\ref{eq1}) and (\ref{eq2}).
+
+\section{References}
+
+\hspace{0.5cm} References should be cited in text in IEEE style as follows: \cite{1}, \cite{2}, \cite{3--6}. The References section must list all cited references in the order of citation, i.e., the reference cited first is listed first and so on.
+
+You should place bracketed citations within the line of text, before any punctuation, with a space before the first bracket.\\
+
+\textbf{Acknowledgement.} Please include any acknowledgements in an unnumbered section immediately before the References. Please also include any grant / contract details here.
+
+\begin{thebibliography}{24}
+
+\bibitem{1}	C.-J.\uppercase{Kwak}, K.-C. \uppercase{Ri}, S.-I. \uppercase{Kwak}, K.-J. \uppercase{Kim}, U.-S. \uppercase{Ryu} and N.-H. \uppercase{Kim}, \textit{Fuzzy modus ponens and tollens based on moving distance in SISO fuzzy system}, Romanian Journal of Information Science and Technology \textbf{24}(3), 2021, pp. 257--283.
+
+\bibitem{2}	D.-Y. \uppercase{Meng} and J.-Y. \uppercase{Zhang}, \textit{Design and analysis of data-driven learning control: an optimization-based approach}, IEEE Transactions on Neural Networks and Learning Systems,  2022.
+
+\bibitem{3}	M. \uppercase{Fanoro}, S.-S.\uppercase{Olokede} and S. \uppercase{Sinha}, \textit{Investigation of the effect of input matching network on 60 GHz low noise amplifier}, Proceedings of 10$^{\textrm{th}}$ International Semiconductor Conference, Sinaia, Romania, 2016, pp. 71--74.
+
+\bibitem{4}	W. \uppercase{Singhose} and D. \uppercase{Kim}, \textit{Manipulation with tower cranes exhibiting double-pendulum oscillations}, Proceedings of 2007 IEEE International Conference on Robotics and Automation, Washington, DC, USA, pp. 4550--4555, 2007.
+
+\bibitem{5}	L. \uppercase{Bass}, P. \uppercase{Clements} and R. \uppercase{Kazman}, \textit{Software Architecture in Practice}, 2$^{\textrm{nd}}$ ed., Addison Wesley, Reading, MA, 2003.
+
+\bibitem{6}	D. \uppercase{Sarunyagate}, Ed., \textit{Lasers in Theory and Practice}, McGraw-Hill, Englewood Cliffs, NJ, 1996.
+
+\bibitem{7}	G. O. \uppercase{Young}, \textit{Synthetic structure of industrial plastics}, in Plastics, 2$^{\textrm{nd}}$ ed., J. Peters, Ed., McGraw-Hill, New York, NY \textbf{3}, 1964, pp. 15--64.
+
+\bibitem{8}	R.-E. \uppercase{Precup}, R.-C. \uppercase{David}, E. M. \uppercase{Petriu}, S. \uppercase{Preitl} and A. S. \uppercase{Paul}, \textit{Gravitational search algorithm-based tuning of fuzzy control systems with a reduced parametric sensitivity}, in Soft Computing in Industrial Applications, A. Gaspar-Cunha, R. Takahashi, G. Schaefer and L. Costa, Eds., Springer-Verlag, Berlin, Heidelberg, Advances in Intelligent and Soft Computing  \textbf{96}, 2011, pp. 141--150.
+
+\bibitem{9}	J. O. \uppercase{Williams}, \textit{Narrow-band analyzer}, Ph.D. thesis, Department of Electrical Engineering, Harvard University, Cambridge, MA, USA, 1993.
+
+\bibitem{10}	A.-B. \uppercase{Popescu}, \textit{Tehnici de analiza a stabilitatii sistemelor automate} (in Romanian), M.Sc. thesis, Politehnica University Timisoara, Timisoara, Romania, 2022.
+
+\bibitem{11}	K. E. \uppercase{Elliott} and C. M. \uppercase{Greene}, \textit{A local adaptive protocol}, Argonne National Laboratory, Argonne, France, Technical Report 916-1010-BB, 1997.
+
+\bibitem{12}	J. P. \uppercase{Wilkinson}, \textit{Nonlinear resonant circuit devices}, U.S. Patent 3 624 125, Jul. 16, 1990.
+
+\bibitem{13}	\textit{Hybrid Particle Filter-Particle Swarm Optimization Algorithm}. Accessed: Mar. 1, 2022. [Online]. Available: http://www.aut.upt.ro/~rprecup/PF-PSO.zip.
+
+\bibitem{14}	R.-E. \uppercase{Precup}, E.-L. \uppercase{Hedrea}, R.-C. \uppercase{Roman}, E. M. \uppercase{Petriu}, A.-I. \uppercase{Szedlak-Stinean} and C.-A. \uppercase{Bojan-Dragos}, \textit{Details on Laboratories Based on Experiments}. Accessed: Jul. 15, 2022. [Online]. Available: http://www.aut.upt.ro/~rprecup/Section\_III.pdf.
+
+
+\bibitem{15}	\textit{Iris Dataset}. Accessed: May 1, 2022 [Online]. Available: https://uptro29158-my.sharepoint.com/:f:/g/\\
+personal/radu\_precup\_upt\_ro/EvCTOMkb5WVLpdzK4ieClO8BoUXF2qqWIdPwGgN9EQ\_IRA?e=\\
+YQv6zB.	
+\end{thebibliography}
+
+\end{document}

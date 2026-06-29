@@ -123,7 +123,15 @@ service cloud.firestore {
     match /assignments/{assignmentId} {
       allow read: if isCurator()
         || (canAnnotate() && resource.data.assigneeId == request.auth.uid);
-      allow create, delete: if isCurator();
+      // Curators may create any assignment. Approved annotators may self-provision
+      // only their OWN fresh tasks (no campaign-launch step needed); they can
+      // never create assignments for another user.
+      allow create: if isCurator()
+        || (canAnnotate()
+            && request.resource.data.assigneeId == request.auth.uid
+            && request.resource.data.id == assignmentId
+            && request.resource.data.status == 'assigned');
+      allow delete: if isCurator();
       allow update: if isCurator()
         || (canAnnotate()
             && resource.data.assigneeId == request.auth.uid

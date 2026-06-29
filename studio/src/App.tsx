@@ -10,7 +10,7 @@ import { FullPageSpinner } from "@/components/ui/spinner";
 const ResearchLanding = lazy(() => import("@/routes/public/ResearchLanding").then((m) => ({ default: m.ResearchLanding })));
 const PublicDataset = lazy(() => import("@/routes/public/PublicDataset").then((m) => ({ default: m.PublicDataset })));
 const ApplyAnnotator = lazy(() => import("@/routes/public/ApplyAnnotator").then((m) => ({ default: m.ApplyAnnotator })));
-const Dashboard = lazy(() => import("@/routes/Dashboard").then((m) => ({ default: m.Dashboard })));
+const StudioHome = lazy(() => import("@/routes/StudioHome").then((m) => ({ default: m.StudioHome })));
 const MweInventory = lazy(() => import("@/routes/MweInventory").then((m) => ({ default: m.MweInventory })));
 const SourcesLibrary = lazy(() => import("@/routes/SourcesLibrary").then((m) => ({ default: m.SourcesLibrary })));
 const ResultsView = lazy(() => import("@/routes/ResultsView").then((m) => ({ default: m.ResultsView })));
@@ -20,6 +20,7 @@ const ReleaseGate = lazy(() => import("@/routes/ReleaseGate").then((m) => ({ def
 const ExperimentsView = lazy(() => import("@/routes/ExperimentsView").then((m) => ({ default: m.ExperimentsView })));
 const AnnotationView = lazy(() => import("@/routes/AnnotationView").then((m) => ({ default: m.AnnotationView })));
 const ExamplesLab = lazy(() => import("@/routes/ExamplesLab").then((m) => ({ default: m.ExamplesLab })));
+const EnglishParityView = lazy(() => import("@/routes/EnglishParityView").then((m) => ({ default: m.EnglishParityView })));
 
 export default function App() {
   return (
@@ -54,7 +55,7 @@ export default function App() {
         <Route path="/studio">
           <Route element={<ProtectedRoute />}>
             <Route element={<AppShell />}>
-              <Route index element={<Dashboard />} />
+              <Route index element={<StudioHome />} />
               <Route path="annotation" element={<AnnotationView />} />
               <Route path="results" element={<ResultsView />} />
               <Route path="mwes" element={<MweInventory />} />
@@ -62,6 +63,7 @@ export default function App() {
           </Route>
           <Route element={<ProtectedRoute roles={["curator", "admin"]} />}>
             <Route element={<AppShell />}>
+              <Route path="parity" element={<EnglishParityView />} />
               <Route path="sources" element={<SourcesLibrary />} />
               <Route path="examples" element={<ExamplesLab />} />
               <Route path="probes" element={<ProbeStudio />} />
@@ -75,7 +77,7 @@ export default function App() {
             </Route>
           </Route>
         </Route>
-        {["annotation", "results", "mwes", "sources", "examples", "probes", "release", "experiments", "admin"].map((path) => (
+        {["annotation", "results", "mwes", "parity", "sources", "examples", "probes", "release", "experiments", "admin"].map((path) => (
           <Route key={path} path={`/${path}`} element={<Navigate to={`/studio/${path}`} replace />} />
         ))}
         <Route path="*" element={<Navigate to="/" replace />} />

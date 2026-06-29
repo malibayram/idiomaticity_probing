@@ -701,6 +701,28 @@ export async function launchPreAnnotationCampaign(
   return assignments.length;
 }
 
+/**
+ * Ensure the current user has their own "type" annotation tasks, creating any
+ * that are missing. This replaces the manual campaign-launch step: every
+ * approved annotator self-provisions the full type task set on entry, and each
+ * annotation is saved under their own uid. Already-created tasks (including
+ * submitted ones) are left untouched.
+ */
+export async function ensureMyTypeTasks(
+  plan: AnnotationPilotPlan,
+  uid: string,
+): Promise<number> {
+  const validatedPlan = annotationPilotPlanSchema.parse(plan);
+  const wanted = buildPilotAssignments(validatedPlan, "type", [uid]);
+  const missing: AssignmentRecord[] = [];
+  for (const assignment of wanted) {
+    const existing = await getDoc(doc(db, "assignments", assignment.id));
+    if (!existing.exists()) missing.push(assignment);
+  }
+  if (missing.length > 0) await createAssignments(missing);
+  return missing.length;
+}
+
 export async function submitAnnotation(record: AnnotationRecord): Promise<void> {
   const validated = annotationSchema.parse(record);
   if (validated.id !== validated.assignmentId) {

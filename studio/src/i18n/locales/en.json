@@ -36,19 +36,44 @@
     "review": "review",
     "authorUnknown": "author unknown",
     "licenseReviewRequired": "license review required",
-    "publicSiteLink": "Public research site"
+    "publicSiteLink": "Public research site",
+    "studioName": "Research Studio"
   },
   "nav": {
-    "dashboard": "Dashboard",
+    "dashboard": "Home",
+    "tasks": "My tasks",
     "sources": "Source library",
     "mwes": "MWE inventory",
+    "parity": "English parity",
     "examples": "Examples lab",
     "annotation": "Annotation",
     "probes": "Probe studio",
     "release": "Validation & release",
     "experiments": "Experiments",
     "results": "Results",
-    "admin": "Admin"
+    "admin": "Admin",
+    "groups": {
+      "general": "General",
+      "dataset": "Dataset",
+      "annotation": "Annotation",
+      "analysis": "Analysis",
+      "admin": "Administration"
+    }
+  },
+  "home": {
+    "pipeline": {
+      "title": "Next steps",
+      "description": "The project pipeline at a glance — open the stage you want to work on.",
+      "dataset": "1. Build the dataset",
+      "datasetStatus": "{{current}} / {{target}} expressions ready",
+      "annotation": "2. Annotate",
+      "annotationStatus": "{{done}} / {{total}} items have a gold score",
+      "release": "3. Validate & release",
+      "releaseStatus": "{{released}} / {{total}} items released",
+      "analysis": "4. Analyze",
+      "analysisStatus": "English parity {{parity}}%",
+      "open": "Open"
+    }
   },
   "roles": {
     "labels": {
@@ -236,7 +261,7 @@
     "metrics": {
       "isc": {
         "label": "ISC",
-        "desc": "Idiomatic–Synonym closeness"
+        "desc": "Idiomatic-Synonym closeness"
       },
       "ig": {
         "label": "IG",
@@ -489,9 +514,64 @@
       "cancel": "Cancel"
     }
   },
+  "parity": {
+    "loading": "Loading English-parity data…",
+    "loadFailed": "Failed to load parity data.",
+    "title": "English parity",
+    "subtitle": "How close each Turkish item is to its English NCIMP counterpart. Each item targets four probe families plus a human gold score; the bars and the to-do list show what is still missing.",
+    "summary": {
+      "avgTitle": "Average closeness",
+      "referenceNote": "{{items}} Turkish items · English reference has {{reference}}",
+      "completeTitle": "Fully matched items",
+      "completeNote": "Items with all probe families and a gold score",
+      "coverageTitle": "Coverage per dimension",
+      "coverageNote": "How many items already have each artifact"
+    },
+    "legend": {
+      "title": "What each dimension means",
+      "description": "An item is \"close\" to English when all of these are produced for it."
+    },
+    "dimensions": {
+      "P_Syn": "Synonym probe",
+      "P_Comp": "Component probe",
+      "P_WordsSyn": "Word-synonym probe",
+      "P_Rand": "Random probe",
+      "gold": "Human gold score"
+    },
+    "dimensionHelp": {
+      "P_Syn": "Sentence where the whole expression is swapped for a synonym.",
+      "P_Comp": "Sentence where one component word is dropped/replaced.",
+      "P_WordsSyn": "Sentence where each word is swapped for a word-level synonym.",
+      "P_Rand": "Control sentence with a random replacement.",
+      "gold": "Aggregated human compositionality score from the annotation pilot."
+    },
+    "table": {
+      "title": "Per-item closeness",
+      "description": "{{count}} items shown · sorted so the least-complete come first",
+      "searchPlaceholder": "Search expression…",
+      "mwe": "Expression",
+      "closeness": "Closeness",
+      "dimensions": "Produced",
+      "todo": "To do",
+      "empty": "No items match the current filter.",
+      "todoNone": "✓ Complete",
+      "todoPrefix": "Produce:"
+    },
+    "filter": {
+      "all": "All items",
+      "incomplete": "Only incomplete",
+      "complete": "Only complete"
+    },
+    "sort": {
+      "closenessAsc": "Closeness: low → high",
+      "closenessDesc": "Closeness: high → low",
+      "alpha": "Alphabetical"
+    }
+  },
   "annotation": {
     "title": "Annotation",
     "subtitle": "Type tasks score an MWE with three natural contexts; token tasks score a single context. Gold data requires eight independent annotations and curator acceptance per item.",
+    "subtitleAnnotator": "Open each of your tasks below and score the ready-made sentences.",
     "loading": "Loading annotation system…",
     "loadFailed": "Failed to load annotation data.",
     "unexpectedError": "An unexpected error occurred.",
@@ -508,18 +588,28 @@
       "startPrelabelType": "Start type pre-labeling",
       "startPrelabelToken": "Start token pre-labeling",
       "prelabelCreated": "{{taskType}} pre-labeling tasks created.",
+      "prelabelExplain": "Pre-labeling: you alone label every item to draft and test the guidelines. This is practice — it does not count as gold data. Use this to try the workflow first.",
+      "pilotExplain": "Pilot: the official run. At least 8 different people independently label the same items so we can measure how much they agree. Tick the annotators below, then start.",
       "pilotAnnotators": "Pilot annotators ({{count}}/8+)",
       "startPilotType": "Start type pilot",
       "startPilotToken": "Start token pilot",
       "pilotStarted": "{{taskType}} pilot campaign launched.",
+      "alreadyLaunchedType": "✓ Type pre-labeling launched",
+      "alreadyLaunchedToken": "✓ Token pre-labeling launched",
+      "alreadyLaunchedPilotType": "✓ Type pilot launched",
+      "alreadyLaunchedPilotToken": "✓ Token pilot launched",
+      "launchedHint": "This campaign is already launched. Your tasks are in the “My tasks” section below — click a task to start scoring.",
+      "goToTasks": "Go to my tasks",
       "annotatorsAdminOnly": "Registered annotators are listed only on admin accounts."
     },
     "assignments": {
       "title": "My tasks",
       "description": "{{count}} tasks · only records assigned to you",
-      "empty": "No tasks. If you are an admin, launch pre-labeling or the eight-annotator pilot above.",
+      "empty": "No tasks assigned to you yet. They appear here when ready; click one to score it.",
+      "emptyAdmin": "No tasks assigned to you yet. They appear here when ready; click one to score it.",
+      "preparing": "Preparing your tasks…",
       "formTitle": "Labeling form",
-      "formHint": "Select a task on the left to begin."
+      "formHint": "Pick a task on the left, then score the ready-made sentences (0–5) and write a paraphrase. You don't write sentences — they come with the task."
     },
     "status": {
       "assigned": "assigned",
@@ -529,10 +619,11 @@
       "excluded": "excluded"
     },
     "form": {
-      "overallCompositional": "Overall compositionality",
-      "modifierContribution": "Modifier contribution",
-      "headContribution": "Head contribution",
+      "overallCompositional": "Overall transparency of meaning",
+      "modifierContribution": "Contribution of the modifier word",
+      "headContribution": "Contribution of the head word",
       "confidence": "Confidence",
+      "contextsLabel": "Sentences to score (the expression is highlighted):",
       "paraphrase": "Paraphrase / intended meaning",
       "paraphraseRequired": "*",
       "paraphrasePlaceholder": "Explain the expression in other words in this context…",
@@ -546,38 +637,54 @@
       "scoreHints": {
         "fullyIdiomatic": " - fully idiomatic",
         "fullyCompositional": " - fully compositional"
+      },
+      "help": {
+        "title": "How to score (quick guide)",
+        "task": "You see the highlighted expression used in real sentences. Judge how much its overall meaning is built from the literal (dictionary) meanings of its individual words, then give the scores below and rewrite the meaning in your own words. The sentences are given — you do not write them.",
+        "scaleTitle": "Meaning-transparency scale (0–5)",
+        "scaleHigh": "5 = fully literal: the meaning is just the words combined. Example: “red car” = a car that is red.",
+        "scaleMid": "2–3 = partly figurative: one word is literal, the other is not. Example: “black list” — it is a real list, but “black” is not about the colour.",
+        "scaleLow": "0 = fully idiomatic: the meaning has nothing to do with the literal words. Example: “kick the bucket” = to die."
+      },
+      "hints": {
+        "overall": "0 = fully idiomatic · 5 = fully literal",
+        "modifier": "Does “{{word}}” keep its literal meaning here? 0 = no, 5 = fully literal.",
+        "head": "Does “{{word}}” keep its literal meaning here? 0 = no, 5 = fully literal.",
+        "confidence": "1 = guessing · 5 = certain",
+        "paraphrase": "Rewrite what the expression means in THIS sentence, in plain words.",
+        "paraphraseExample": "Example — sentence: “He was put on the black list.” → paraphrase: “the group of people who are banned or not trusted.”"
       }
     },
     "review": {
-      "title": "Curator review",
-      "description": "{{count}} submissions awaiting decision. Pre-labels are not routed into the gold acceptance flow.",
-      "empty": "No pending submissions.",
+      "title": "Review (approve submitted ratings)",
+      "description": "{{count}} ratings awaiting approval. Approved ones feed the shared reliable result (gold).",
+      "empty": "No ratings awaiting approval.",
       "overallConfidence": "overall {{overall}} · confidence {{confidence}}",
       "responseMissing": "response not found",
-      "paraphrase": "Paraphrase:",
-      "notePlaceholder": "Review note / exclusion reason",
-      "accept": "Accept",
-      "exclude": "Exclude",
-      "accepted": "Annotation accepted.",
-      "excluded": "Annotation excluded with reason."
+      "paraphrase": "Explanation:",
+      "notePlaceholder": "Review note / reason for removal",
+      "accept": "Approve",
+      "exclude": "Remove",
+      "accepted": "Rating approved.",
+      "excluded": "Rating removed with a reason."
     },
     "aggregation": {
-      "title": "Aggregation and gold adjudication",
-      "description": "Produces agreement, confidence intervals, and expert gold decisions from accepted independent annotations.",
-      "aggregateNow": "Aggregate now",
-      "aggregateNowSuccess": "Accepted annotations aggregated in the browser.",
-      "queueAggregate": "Queue aggregation",
-      "queueSuccess": "Aggregation job queued.",
-      "noReport": "No aggregation report yet.",
-      "itemCount": "{{items}} items · {{adjudication}} adjudication",
-      "typeAggregate": "Type aggregate",
-      "selectMwe": "Select MWE…",
+      "title": "Combine results and decide",
+      "description": "Combines approved independent ratings into agreement, a confidence interval, and the final shared decision (gold).",
+      "aggregateNow": "Combine now",
+      "aggregateNowSuccess": "Approved ratings combined in the browser.",
+      "queueAggregate": "Queue the combine job",
+      "queueSuccess": "Combine job queued.",
+      "noReport": "No combined report yet.",
+      "itemCount": "{{items}} expressions · {{adjudication}} awaiting decision",
+      "typeAggregate": "Expression (type) result",
+      "selectMwe": "Select an expression…",
       "aggregateOption": "{{mweId}} · avg {{mean}} · n={{n}}",
-      "goldScore": "Gold score",
-      "goldClass": "Gold class",
+      "goldScore": "Shared score (gold)",
+      "goldClass": "Class (gold)",
       "expertNotePlaceholder": "Expert decision note",
-      "saveGold": "Save gold decision",
-      "goldSaved": "Gold score and class saved."
+      "saveGold": "Save decision (gold)",
+      "goldSaved": "Shared score and class saved."
     },
     "campaigns": {
       "title": "Campaigns",
@@ -604,7 +711,7 @@
     "contextNotePlaceholder": "Meaning, naturalness, span, and source note",
     "candidates": {
       "title": "Tatoeba candidate pool",
-      "description": "{{count}} unreviewed exact surface matches for {{expression}}. Approval updates the selected S1–S3 slot and all linked variants.",
+      "description": "{{count}} unreviewed exact surface matches for {{expression}}. Approval updates the selected S1-S3 slot and all linked variants.",
       "enableFirestore": "Enable Firestore seed from Admin or Annotation to write decisions.",
       "noPending": "No pending candidates.",
       "replaceS1": "Replace S1",
@@ -689,7 +796,7 @@
           "caption": "Experiment 4"
         }
       },
-      "probeLabels": {
+      "probes": {
         "P_Syn": "Holistic synonym",
         "P_Comp": "Component",
         "P_WordsSyn": "Word-by-word synonym",
@@ -710,7 +817,7 @@
       },
       "turkishCard": {
         "provisionalNote": "Provisional curation · not gold",
-        "awaitingGold": "awaiting gold",
+        "goldPending": "awaiting gold",
         "noApprovedVariants": "No approved probe variants for this context yet."
       },
       "controlCard": {
@@ -722,25 +829,27 @@
         },
         "curationStatus": "Curation status: {{review}} · semantic: {{semantic}} · grammar: {{grammar}} · frequency: {{frequency}}"
       },
-      "auth": {
-        "loadingSession": "Setting up secure anonymous read session…",
-        "sessionFailedTitle": "Anonymous data session could not be established.",
-        "sessionFailedBody": "The Anonymous provider must be enabled in Firebase Authentication. The research overview is public; full example records are not loaded until an anonymous session is created.",
-        "backToHome": "Back to home"
+      "authLoading": "Setting up secure anonymous read session…",
+      "sessionFailed": {
+        "title": "Anonymous data session could not be established.",
+        "description": "The Anonymous provider must be enabled in Firebase Authentication. The research overview is public; full example records are not loaded until an anonymous session is created."
+      },
+      "backToHome": "Back to home",
+      "sessionBanner": {
+        "anonymous": "Anonymous Firebase session active",
+        "authenticated": "Approved user session active",
+        "readOnly": "Read access · write disabled"
       },
       "backToAtlas": "Back to research atlas",
       "eyebrow": "Read-only data atlas",
       "title": "All expressions, contexts, and probes",
       "description": "EN/PT reference data, Turkish extension candidates, and ordinary-control items. Expand cards to view every natural/neutral context and all generated minimal pairs.",
-      "sessionAnonymous": "Anonymous Firebase session active",
-      "sessionApproved": "Approved user session active",
-      "sessionReadOnly": "Read access · write disabled",
       "searchPlaceholder": "Search expression, meaning, sentence, or probe…",
       "allClasses": "All classes",
-      "recordCount": "{{filtered}} / {{total}} records",
+      "records": "records",
       "sourceFirestore": "Firestore release",
       "sourceBundled": "bundled release",
-      "loadingData": "Loading data release…",
+      "loading": "Loading data release…",
       "loadFailed": "Failed to load data.",
       "noMatches": "No records match these filters.",
       "pagination": "Page {{page}} / {{pageCount}} · {{pageSize}} records per page",
@@ -750,7 +859,7 @@
     "landing": {
       "footer": {
         "title": "NCIMP Idiomaticity Research Atlas",
-        "description": "Combines the published NCIMP study, a 2024–2026 model re-examination, and Turkish dataset extension on one traceable research surface.",
+        "description": "Combines the published NCIMP study, a 2024-2026 model re-examination, and Turkish dataset extension on one traceable research surface.",
         "originalPaper": "Original paper",
         "openExplorer": "Open example explorer",
         "annotatorLogin": "Annotator login"
@@ -764,7 +873,7 @@
         "title": "Do models read idioms by their",
         "titleEmphasis": "meaning",
         "titleSuffix": "or by their words?",
-        "description": "With NCIMP minimal pairs we measure whether a model truly represents “grey matter” as “brain”. We rebuild the published English–Portuguese study, extend it to 2026 LLMs, calibrate with ordinary controls, and prepare the Turkish counterpart.",
+        "description": "With NCIMP minimal pairs we measure whether a model truly represents “grey matter” as “brain”. We rebuild the published English-Portuguese study, extend it to 2026 LLMs, calibrate with ordinary controls, and prepare the Turkish counterpart.",
         "ctaExplore": "Explore all examples",
         "ctaMetrics": "See metrics step by step",
         "demo": {
@@ -860,7 +969,7 @@
           "name": "Idiomaticity Capture Score",
           "direction": "higher is better",
           "formula": "mean(normalized ISC, IG, LOD, AID, |ρ|)",
-          "explanation": "Intuitive 0–1 summary of five direction-sensitive diagnostics; not gold truth alone.",
+          "explanation": "Intuitive 0-1 summary of five direction-sensitive diagnostics; not gold truth alone.",
           "example": "≥0.55 partial; ≥0.70 capture"
         },
         "OCG": {
@@ -880,15 +989,15 @@
         },
         "02": {
           "title": "Modern embedding cohort",
-          "scope": "3 models · 2025–2026",
+          "scope": "3 models · 2025-2026",
           "question": "Do new retrieval/embedding models capture holistic meaning?",
           "result": "Best ICS 0.478. Lexical pressure decreases, threshold still not crossed."
         },
         "03": {
           "title": "Decoder-only LLM cohort",
-          "scope": "11 models · 0.8B–12B",
+          "scope": "11 models · 0.8B-12B",
           "question": "Do scale, generation, or instruction tuning break the bottleneck?",
-          "result": "No. True leader base Gemma 4–12B: ICS 0.525; soft ceiling persists."
+          "result": "No. True leader base Gemma 4-12B: ICS 0.525; soft ceiling persists."
         },
         "04": {
           "title": "Ordinary perturbation",
@@ -976,7 +1085,7 @@
           "newDraft": {
             "badge": "New draft · 2026",
             "title": "New models + missing control",
-            "description": "We carry the same probe to 20 models: 2024 encoders, modern embedding models, and 0.8B–12B decoder LLMs. Then we add the critical missing comparison: if a model can separate ordinary synonyms from random, how much of that separation does it achieve on idioms?",
+            "description": "We carry the same probe to 20 models: 2024 encoders, modern embedding models, and 0.8B-12B decoder LLMs. Then we add the critical missing comparison: if a model can separate ordinary synonyms from random, how much of that separation does it achieve on idioms?",
             "bullets": [
               "ISC, IG, LOD, AID, FLOOR, RHO, ICS",
               "Last-four-layers + final norm LLM recipe",
@@ -1029,11 +1138,11 @@
           "heading": "From the original finding to 2026 models, then to a control that tests measurement itself.",
           "representation": {
             "title": "Why does representation level matter?",
-            "text": "In full sentences shared words dominate: even random substitution can keep similarity at 0.90–0.99. Primary analysis is therefore the target's contextual span representation, not the whole sentence. For sentence embedding models, isolated phrase is reported as the comparable boundary."
+            "text": "In full sentences shared words dominate: even random substitution can keep similarity at 0.90-0.99. Primary analysis is therefore the target's contextual span representation, not the whole sentence. For sentence embedding models, isolated phrase is reported as the comparable boundary."
           },
           "anisotropy": {
             "title": "Why is anisotropy shown separately?",
-            "text": "When FLOOR→1 the Scaled Similarity denominator shrinks and small noise grows. Instruction-tuned Gemma 4–12B showing ICS 0.520 is this artifact; FLOOR≈0.95 and ISC≈0 show there is no real capture. ICS is always read together with FLOOR."
+            "text": "When FLOOR→1 the Scaled Similarity denominator shrinks and small noise grows. Instruction-tuned Gemma 4-12B showing ICS 0.520 is this artifact; FLOOR≈0.95 and ISC≈0 show there is no real capture. ICS is always read together with FLOOR."
           }
         },
         "06": {
@@ -1042,7 +1151,7 @@
             "bestIcs": {
               "label": "Best true ICS",
               "value": "0.525",
-              "note": "base Gemma 4–12B; below the 0.55 partial-capture threshold."
+              "note": "base Gemma 4-12B; below the 0.55 partial-capture threshold."
             },
             "bestOcg": {
               "label": "Best idiom OCG",

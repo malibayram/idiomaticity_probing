@@ -5,29 +5,44 @@ import tr from "./locales/tr.json";
 
 const STORAGE_KEY = "studio-language";
 const USER_SET_KEY = "studio-language-user-set";
+const PREFERENCE_VERSION_KEY = "studio-language-preference-version";
+export const LANGUAGE_PREFERENCE_VERSION = "2";
+
+type Language = "en" | "tr";
+type LanguageStorage = Pick<Storage, "getItem">;
 
 /**
  * Deterministic initial language. An explicit user selection (EN/TR switcher)
  * wins; otherwise the default is English unless the browser's PRIMARY language
  * is Turkish. Secondary navigator languages (e.g. a Turkish region on an English
- * UI) never force Turkish — this is the "browser-first, default English" rule.
+ * UI) never force Turkish - this is the "browser-first, default English" rule.
  */
-function detectInitialLanguage(): "en" | "tr" {
-  if (typeof localStorage !== "undefined" && localStorage.getItem(USER_SET_KEY) === "1") {
-    const saved = localStorage.getItem(STORAGE_KEY);
+export function detectInitialLanguage(
+  storage: LanguageStorage | null,
+  browserLanguage: string,
+): Language {
+  const hasCurrentPreference = storage?.getItem(PREFERENCE_VERSION_KEY) === LANGUAGE_PREFERENCE_VERSION;
+  if (hasCurrentPreference && storage?.getItem(USER_SET_KEY) === "1") {
+    const saved = storage.getItem(STORAGE_KEY);
     if (saved === "en" || saved === "tr") return saved;
   }
-  if (typeof navigator !== "undefined" && (navigator.language || "").toLowerCase().startsWith("tr")) {
+  if (browserLanguage.toLowerCase().startsWith("tr")) {
     return "tr";
   }
   return "en";
 }
 
+const initialLanguage = detectInitialLanguage(
+  typeof window !== "undefined" ? window.localStorage : null,
+  typeof window !== "undefined" ? window.navigator.language || "" : "",
+);
+
 /** Persist an explicit user choice from the EN/TR switcher. */
 export function setUserLanguage(language: "en" | "tr"): void {
-  if (typeof localStorage !== "undefined") {
-    localStorage.setItem(USER_SET_KEY, "1");
-    localStorage.setItem(STORAGE_KEY, language);
+  if (typeof window !== "undefined") {
+    window.localStorage.setItem(PREFERENCE_VERSION_KEY, LANGUAGE_PREFERENCE_VERSION);
+    window.localStorage.setItem(USER_SET_KEY, "1");
+    window.localStorage.setItem(STORAGE_KEY, language);
   }
   void i18n.changeLanguage(language);
 }
@@ -39,7 +54,7 @@ void i18n
       en: { translation: en },
       tr: { translation: tr },
     },
-    lng: detectInitialLanguage(),
+    lng: initialLanguage,
     fallbackLng: "en",
     supportedLngs: ["en", "tr"],
     interpolation: { escapeValue: false },

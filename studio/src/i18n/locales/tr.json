@@ -36,19 +36,44 @@
     "review": "incele",
     "authorUnknown": "yazar bilinmiyor",
     "licenseReviewRequired": "lisans inceleme gerekli",
-    "publicSiteLink": "Herkese açık araştırma sitesi"
+    "publicSiteLink": "Herkese açık araştırma sitesi",
+    "studioName": "Araştırma Stüdyosu"
   },
   "nav": {
-    "dashboard": "Dashboard",
+    "dashboard": "Ana sayfa",
+    "tasks": "Görevlerim",
     "sources": "Kaynak kütüphanesi",
     "mwes": "MWE envanteri",
+    "parity": "İngilizce paritesi",
     "examples": "Örnek laboratuvarı",
     "annotation": "Anotasyon",
     "probes": "Prob stüdyosu",
     "release": "Doğrulama & yayın",
     "experiments": "Deneyler",
     "results": "Sonuçlar",
-    "admin": "Yönetim"
+    "admin": "Yönetim",
+    "groups": {
+      "general": "Genel",
+      "dataset": "Veri seti",
+      "annotation": "Anotasyon",
+      "analysis": "Analiz",
+      "admin": "Yönetim"
+    }
+  },
+  "home": {
+    "pipeline": {
+      "title": "Sıradaki adımlar",
+      "description": "Proje akışına tek bakış — çalışmak istediğiniz aşamayı açın.",
+      "dataset": "1. Veri setini hazırla",
+      "datasetStatus": "{{current}} / {{target}} ifade hazır",
+      "annotation": "2. Anotasyon",
+      "annotationStatus": "{{done}} / {{total}} öğenin gold puanı var",
+      "release": "3. Doğrula & yayınla",
+      "releaseStatus": "{{released}} / {{total}} öğe yayınlandı",
+      "analysis": "4. Analiz",
+      "analysisStatus": "İngilizce paritesi %{{parity}}",
+      "open": "Aç"
+    }
   },
   "roles": {
     "labels": {
@@ -111,7 +136,7 @@
     "assignmentNotFound": "Assignment bulunamadı.",
     "prelabelNotGold": "Ön etiketler gold anotasyon olarak kabul edilemez.",
     "onlySubmittedReviewable": "Yalnız gönderilmiş bir anotasyon kabul edilebilir veya dışlanabilir.",
-    "goldScoreRange": "Gold puan 0–5 aralığında olmalıdır.",
+    "goldScoreRange": "Gold puan 0-5 aralığında olmalıdır.",
     "mweNotFound": "MWE kaydı bulunamadı.",
     "minAnnotators": "En az {{count}} tekil anotör seçilmelidir.",
     "invalidTargetSpan": "Geçersiz hedef spanı: {{start}}:{{end}}",
@@ -236,7 +261,7 @@
     "metrics": {
       "isc": {
         "label": "ISC",
-        "desc": "Idiomatic–Synonym closeness"
+        "desc": "Idiomatic-Synonym closeness"
       },
       "ig": {
         "label": "IG",
@@ -489,9 +514,64 @@
       "cancel": "İptal"
     }
   },
+  "parity": {
+    "loading": "İngilizce paritesi verileri yükleniyor…",
+    "loadFailed": "Parite verileri yüklenemedi.",
+    "title": "İngilizce paritesi",
+    "subtitle": "Her Türkçe öğenin İngilizce NCIMP karşılığına ne kadar yakın olduğunu gösterir. Her öğenin hedefi dört probe ailesi ve bir insan gold puanıdır; çubuklar ve yapılacaklar listesi neyin hâlâ eksik olduğunu gösterir.",
+    "summary": {
+      "avgTitle": "Ortalama yakınlık",
+      "referenceNote": "{{items}} Türkçe öğe · İngilizce referansta {{reference}} öğe",
+      "completeTitle": "Tam eşleşen öğeler",
+      "completeNote": "Tüm probe aileleri ve gold puanı olan öğeler",
+      "coverageTitle": "Boyut başına kapsam",
+      "coverageNote": "Her bir çıktıya kaç öğenin sahip olduğu"
+    },
+    "legend": {
+      "title": "Her boyut ne demek",
+      "description": "Bir öğe, bunların hepsi üretildiğinde İngilizce'ye \"yakın\" sayılır."
+    },
+    "dimensions": {
+      "P_Syn": "Eş anlamlı probe",
+      "P_Comp": "Bileşen probe",
+      "P_WordsSyn": "Kelime eş-anlam probe",
+      "P_Rand": "Rastgele probe",
+      "gold": "İnsan gold puanı"
+    },
+    "dimensionHelp": {
+      "P_Syn": "İfadenin tamamının bir eş anlamlıyla değiştirildiği cümle.",
+      "P_Comp": "Bileşen kelimelerden birinin çıkarıldığı/değiştirildiği cümle.",
+      "P_WordsSyn": "Her kelimenin kelime düzeyinde eş anlamlısıyla değiştirildiği cümle.",
+      "P_Rand": "Rastgele bir değişiklik içeren kontrol cümlesi.",
+      "gold": "Anotasyon pilotundan toplanan birleşik insan bileşimsellik puanı."
+    },
+    "table": {
+      "title": "Öğe başına yakınlık",
+      "description": "{{count}} öğe gösteriliyor · en az tamamlanan önce gelecek şekilde sıralı",
+      "searchPlaceholder": "İfade ara…",
+      "mwe": "İfade",
+      "closeness": "Yakınlık",
+      "dimensions": "Üretilen",
+      "todo": "Yapılacak",
+      "empty": "Geçerli filtreye uyan öğe yok.",
+      "todoNone": "✓ Tamam",
+      "todoPrefix": "Üret:"
+    },
+    "filter": {
+      "all": "Tüm öğeler",
+      "incomplete": "Yalnız eksikler",
+      "complete": "Yalnız tamamlananlar"
+    },
+    "sort": {
+      "closenessAsc": "Yakınlık: düşük → yüksek",
+      "closenessDesc": "Yakınlık: yüksek → düşük",
+      "alpha": "Alfabetik"
+    }
+  },
   "annotation": {
     "title": "Anotasyon",
-    "subtitle": "Type görevinde MWE üç doğal bağlamla, token görevinde tek bağlamla puanlanır. Gold veri için her item sekiz bağımsız anotasyon ve küratör kabulü gerektirir.",
+    "subtitle": "Her ifade birden çok kişi tarafından ayrı ayrı (bağımsız) puanlanır. Güvenilir ortak sonuç için yeterli sayıda puanlama ve bir kontrol gerekir.",
+    "subtitleAnnotator": "Aşağıdaki görevlerinizi tek tek açıp hazır cümleleri puanlayın.",
     "loading": "Anotasyon sistemi yükleniyor…",
     "loadFailed": "Anotasyon verisi yüklenemedi.",
     "unexpectedError": "Beklenmeyen bir hata oluştu.",
@@ -508,18 +588,28 @@
       "startPrelabelType": "type ön etiketlemeyi başlat",
       "startPrelabelToken": "token ön etiketlemeyi başlat",
       "prelabelCreated": "{{taskType}} ön etiketleme görevleri oluşturuldu.",
+      "prelabelExplain": "Ön etiketleme: yönergeyi taslaklaştırıp denemek için tüm öğeleri tek başınıza etiketlersiniz. Bu bir alıştırmadır — gold (altın) veri sayılmaz. Akışı önce denemek için kullanın.",
+      "pilotExplain": "Pilot: resmî çalışma. En az 8 farklı kişi aynı öğeleri bağımsız etiketler; böylece ne kadar uyuştukları ölçülür. Aşağıdan anotörleri işaretleyip başlatın.",
       "pilotAnnotators": "Pilot anotörleri ({{count}}/8+)",
       "startPilotType": "type pilotu başlat",
       "startPilotToken": "token pilotu başlat",
       "pilotStarted": "{{taskType}} pilot kampanyası başlatıldı.",
+      "alreadyLaunchedType": "✓ Type ön etiketleme başlatıldı",
+      "alreadyLaunchedToken": "✓ Token ön etiketleme başlatıldı",
+      "alreadyLaunchedPilotType": "✓ Type pilotu başlatıldı",
+      "alreadyLaunchedPilotToken": "✓ Token pilotu başlatıldı",
+      "launchedHint": "Bu kampanya zaten başlatıldı. Görevleriniz aşağıdaki “Görevlerim” bölümünde — puanlamaya başlamak için bir göreve tıklayın.",
+      "goToTasks": "Görevlerime git",
       "annotatorsAdminOnly": "Kayıtlı anotörler yalnız yönetici hesabında listelenir."
     },
     "assignments": {
       "title": "Görevlerim",
       "description": "{{count}} görev · yalnızca size atanan kayıtlar",
-      "empty": "Görev yok. Yöneticiyseniz yukarıdaki ön etiketleme ya da sekiz anotörlü pilotu başlatın.",
+      "empty": "Size atanmış görev henüz yok. Hazır olduğunda burada görünür; puanlamak için bir göreve tıklayın.",
+      "emptyAdmin": "Size atanmış görev henüz yok. Hazır olduğunda burada görünür; puanlamak için bir göreve tıklayın.",
+      "preparing": "Görevleriniz hazırlanıyor…",
       "formTitle": "Etiketleme formu",
-      "formHint": "Başlamak için soldan bir görev seçin."
+      "formHint": "Soldan bir görev seçin; ardından hazır cümleleri 0–5 puanlayın ve bir paraphrase (açıklama) yazın. Cümleleri siz yazmazsınız — görevle birlikte gelir."
     },
     "status": {
       "assigned": "atanmış",
@@ -529,10 +619,11 @@
       "excluded": "dışlandı"
     },
     "form": {
-      "overallCompositional": "Genel bileşimsellik",
-      "modifierContribution": "Modifier katkısı",
-      "headContribution": "Head katkısı",
+      "overallCompositional": "Genel anlam saydamlığı",
+      "modifierContribution": "Niteleyen kelimenin katkısı",
+      "headContribution": "Ana kelimenin katkısı",
       "confidence": "Güven",
+      "contextsLabel": "Puanlanacak cümleler (ifade vurgulanmıştır):",
       "paraphrase": "Parafraz / gerçek anlam",
       "paraphraseRequired": "*",
       "paraphrasePlaceholder": "İfadeyi bu bağlamda başka sözlerle açıklayın…",
@@ -546,38 +637,54 @@
       "scoreHints": {
         "fullyIdiomatic": " - tamamen deyimsel",
         "fullyCompositional": " - tamamen bileşimsel"
+      },
+      "help": {
+        "title": "Nasıl puanlanır (hızlı kılavuz)",
+        "task": "Vurgulanan ifadeyi gerçek cümleler içinde görürsünüz. İfadenin genel anlamının, içindeki tek tek kelimelerin düz (sözlük) anlamlarından ne kadar oluştuğunu değerlendirin; sonra aşağıdaki puanları verin ve anlamı kendi sözcüklerinizle yeniden yazın. Cümleler size verilir — onları siz yazmazsınız.",
+        "scaleTitle": "Anlam saydamlığı ölçeği (0–5)",
+        "scaleHigh": "5 = tamamen düz anlam: anlam, kelimelerin birebir toplamıdır. Örnek: “kırmızı araba” = kırmızı renkli bir araba.",
+        "scaleMid": "2–3 = kısmen mecazi: kelimelerden biri düz, diğeri değil. Örnek: “kara liste” — gerçek bir listedir ama “kara” renk anlamında değildir.",
+        "scaleLow": "0 = tamamen deyimsel: anlamın kelimelerin düz anlamıyla ilgisi yoktur. Örnek: “kafayı yemek” = aklını yitirmek (kafa yemekle ilgisi yok)."
+      },
+      "hints": {
+        "overall": "0 = tamamen deyimsel · 5 = tamamen düz anlam",
+        "modifier": "“{{word}}” burada düz anlamını koruyor mu? 0 = hayır, 5 = tamamen düz anlam.",
+        "head": "“{{word}}” burada düz anlamını koruyor mu? 0 = hayır, 5 = tamamen düz anlam.",
+        "confidence": "1 = tahmin ediyorum · 5 = eminim",
+        "paraphrase": "İfadenin BU cümledeki anlamını sade sözcüklerle yeniden yazın.",
+        "paraphraseExample": "Örnek — cümle: “Adamı kara listeye aldılar.” → parafraz: “yasaklı veya güvenilmeyen kişiler grubu.”"
       }
     },
     "review": {
-      "title": "Küratör incelemesi",
-      "description": "{{count}} gönderim karar bekliyor. Ön etiketler gold kabul akışına alınmaz.",
-      "empty": "Bekleyen gönderim yok.",
+      "title": "İnceleme (gönderilen puanlamaları onaylama)",
+      "description": "{{count}} puanlama onay bekliyor. Onayladıklarınız ortak güvenilir sonuca (gold) katılır.",
+      "empty": "Onay bekleyen puanlama yok.",
       "overallConfidence": "genel {{overall}} · güven {{confidence}}",
       "responseMissing": "yanıt bulunamadı",
-      "paraphrase": "Parafraz:",
-      "notePlaceholder": "İnceleme notu / dışlama gerekçesi",
-      "accept": "Kabul et",
-      "exclude": "Dışla",
-      "accepted": "Anotasyon kabul edildi.",
-      "excluded": "Anotasyon gerekçesiyle dışlandı."
+      "paraphrase": "Açıklama:",
+      "notePlaceholder": "İnceleme notu / neden çıkarıldığı",
+      "accept": "Onayla",
+      "exclude": "Çıkar",
+      "accepted": "Puanlama onaylandı.",
+      "excluded": "Puanlama gerekçesiyle çıkarıldı."
     },
     "aggregation": {
-      "title": "Agregasyon ve gold adjudication",
-      "description": "Kabul edilmiş bağımsız anotasyonlardan uyum, güven aralığı ve uzman gold kararı üretir.",
-      "aggregateNow": "Şimdi agrege et",
-      "aggregateNowSuccess": "Kabul edilmiş anotasyonlar tarayıcıda agrege edildi.",
-      "queueAggregate": "Agregasyonu kuyruğa al",
-      "queueSuccess": "Agregasyon işi kuyruğa alındı.",
-      "noReport": "Henüz agregasyon raporu yok.",
-      "itemCount": "{{items}} item · {{adjudication}} adjudication",
-      "typeAggregate": "Type aggregate",
-      "selectMwe": "MWE seçin…",
+      "title": "Sonuçları birleştir ve karar ver",
+      "description": "Onaylanmış bağımsız puanlamaları birleştirir; kişiler arası uyumu, güven aralığını ve nihai ortak kararı (gold) üretir.",
+      "aggregateNow": "Şimdi birleştir",
+      "aggregateNowSuccess": "Onaylanmış puanlamalar tarayıcıda birleştirildi.",
+      "queueAggregate": "Birleştirmeyi kuyruğa al",
+      "queueSuccess": "Birleştirme işi kuyruğa alındı.",
+      "noReport": "Henüz birleştirme raporu yok.",
+      "itemCount": "{{items}} ifade · {{adjudication}} karar bekliyor",
+      "typeAggregate": "İfade (type) sonucu",
+      "selectMwe": "İfade seçin…",
       "aggregateOption": "{{mweId}} · ort. {{mean}} · n={{n}}",
-      "goldScore": "Gold puan",
-      "goldClass": "Gold sınıf",
+      "goldScore": "Ortak puan (gold)",
+      "goldClass": "Sınıf (gold)",
       "expertNotePlaceholder": "Uzman karar notu",
-      "saveGold": "Gold kararı kaydet",
-      "goldSaved": "Gold puan ve sınıf kaydedildi."
+      "saveGold": "Kararı kaydet (gold)",
+      "goldSaved": "Ortak puan ve sınıf kaydedildi."
     },
     "campaigns": {
       "title": "Kampanyalar",
@@ -604,7 +711,7 @@
     "contextNotePlaceholder": "Anlam, doğallık, span ve kaynak notu",
     "candidates": {
       "title": "Tatoeba aday havuzu",
-      "description": "{{expression}} için {{count}} incelenmemiş tam yüzey eşleşmesi. Onay, seçilen S1–S3 yuvasını ve ona bağlı tüm varyantları günceller.",
+      "description": "{{expression}} için {{count}} incelenmemiş tam yüzey eşleşmesi. Onay, seçilen S1-S3 yuvasını ve ona bağlı tüm varyantları günceller.",
       "enableFirestore": "Karar yazmak için önce Yönetim veya Anotasyon ekranından Firestore seed'i etkinleştirin.",
       "noPending": "Bekleyen aday yok.",
       "replaceS1": "S1'i değiştir",
@@ -689,7 +796,7 @@
           "caption": "Deney 4"
         }
       },
-      "probeLabels": {
+      "probes": {
         "P_Syn": "Bütüncül eş anlamlı",
         "P_Comp": "Bileşen",
         "P_WordsSyn": "Kelime-kelime eş anlamlı",
@@ -710,7 +817,7 @@
       },
       "turkishCard": {
         "provisionalNote": "Geçici kürasyon · gold değildir",
-        "awaitingGold": "gold bekliyor",
+        "goldPending": "gold bekliyor",
         "noApprovedVariants": "Bu bağlam için onaylı prob varyantı henüz yok."
       },
       "controlCard": {
@@ -722,25 +829,27 @@
         },
         "curationStatus": "Kürasyon durumu: {{review}} · semantik: {{semantic}} · dilbilgisi: {{grammar}} · frekans: {{frequency}}"
       },
-      "auth": {
-        "loadingSession": "Güvenli anonim okuma oturumu kuruluyor…",
-        "sessionFailedTitle": "Anonim veri oturumu kurulamadı.",
-        "sessionFailedBody": "Firebase Authentication içinde Anonymous sağlayıcısının etkin olması gerekir. Araştırma tanıtımı açıktır; tam örnek kayıtları anonim oturum oluşmadan yüklenmez.",
-        "backToHome": "Ana sayfaya dön"
+      "authLoading": "Güvenli anonim okuma oturumu kuruluyor…",
+      "sessionFailed": {
+        "title": "Anonim veri oturumu kurulamadı.",
+        "description": "Firebase Authentication içinde Anonymous sağlayıcısının etkin olması gerekir. Araştırma tanıtımı açıktır; tam örnek kayıtları anonim oturum oluşmadan yüklenmez."
+      },
+      "backToHome": "Ana sayfaya dön",
+      "sessionBanner": {
+        "anonymous": "Anonim Firebase oturumu aktif",
+        "authenticated": "Onaylı kullanıcı oturumu aktif",
+        "readOnly": "Okuma erişimi · yazma kapalı"
       },
       "backToAtlas": "Araştırma atlasına dön",
       "eyebrow": "Salt-okunur veri atlası",
       "title": "Bütün ifadeler, bağlamlar ve problar",
       "description": "EN/PT referans verisi, Türkçe genişletme adayları ve ordinary-control maddeleri. Kartları açarak her doğal/nötr bağlamı ve üretilmiş bütün minimal çiftleri görebilirsiniz.",
-      "sessionAnonymous": "Anonim Firebase oturumu aktif",
-      "sessionApproved": "Onaylı kullanıcı oturumu aktif",
-      "sessionReadOnly": "Okuma erişimi · yazma kapalı",
       "searchPlaceholder": "İfade, anlam, cümle veya prob içinde ara…",
       "allClasses": "Bütün sınıflar",
-      "recordCount": "{{filtered}} / {{total}} kayıt",
+      "records": "kayıt",
       "sourceFirestore": "Firestore release",
       "sourceBundled": "bundled release",
-      "loadingData": "Veri yayını yükleniyor…",
+      "loading": "Veri yayını yükleniyor…",
       "loadFailed": "Veri yüklenemedi.",
       "noMatches": "Bu filtrelerle eşleşen kayıt yok.",
       "pagination": "Sayfa {{page}} / {{pageCount}} · Her sayfada {{pageSize}} kayıt",
@@ -750,7 +859,7 @@
     "landing": {
       "footer": {
         "title": "NCIMP Idiomaticity Research Atlas",
-        "description": "Yayımlanmış NCIMP çalışmasını, 2024–2026 model yeniden incelemesini ve Türkçe veri seti genişletmesini tek, izlenebilir araştırma yüzeyinde birleştirir.",
+        "description": "Yayımlanmış NCIMP çalışmasını, 2024-2026 model yeniden incelemesini ve Türkçe veri seti genişletmesini tek, izlenebilir araştırma yüzeyinde birleştirir.",
         "originalPaper": "Özgün makale",
         "openExplorer": "Açık örnek gezgini",
         "annotatorLogin": "İşaretleyici girişi"
@@ -764,7 +873,7 @@
         "title": "Modeller deyimleri",
         "titleEmphasis": "anlamlarıyla",
         "titleSuffix": "mı, kelimeleriyle mi okuyor?",
-        "description": "NCIMP minimal çiftleriyle, bir modelin “grey matter” ifadesini gerçekten “brain” olarak temsil edip etmediğini ölçüyoruz. Yayımlanmış İngilizce–Portekizce çalışmayı yeniden kuruyor, 2026 LLM’lerine genişletiyor, ordinary kontrollerle kalibre ediyor ve Türkçe karşılığını hazırlıyoruz.",
+        "description": "NCIMP minimal çiftleriyle, bir modelin “grey matter” ifadesini gerçekten “brain” olarak temsil edip etmediğini ölçüyoruz. Yayımlanmış İngilizce-Portekizce çalışmayı yeniden kuruyor, 2026 LLM’lerine genişletiyor, ordinary kontrollerle kalibre ediyor ve Türkçe karşılığını hazırlıyoruz.",
         "ctaExplore": "Tüm örnekleri incele",
         "ctaMetrics": "Metrikleri adım adım gör",
         "demo": {
@@ -860,7 +969,7 @@
           "name": "Idiomaticity Capture Score",
           "direction": "yüksek iyi",
           "formula": "mean(normalized ISC, IG, LOD, AID, |ρ|)",
-          "explanation": "Beş yön-duyarlı teşhisin 0–1 arası sezgisel özeti; tek başına gold gerçek değildir.",
+          "explanation": "Beş yön-duyarlı teşhisin 0-1 arası sezgisel özeti; tek başına gold gerçek değildir.",
           "example": "≥0,55 kısmi; ≥0,70 yakalama"
         },
         "OCG": {
@@ -880,15 +989,15 @@
         },
         "02": {
           "title": "Modern embedding kohortu",
-          "scope": "3 model · 2025–2026",
+          "scope": "3 model · 2025-2026",
           "question": "Yeni retrieval/embedding modelleri bütüncül anlamı yakalıyor mu?",
           "result": "En iyi ICS 0,478. Sözcüksel baskı azalıyor, eşik yine aşılmıyor."
         },
         "03": {
           "title": "Decoder-only LLM kohortu",
-          "scope": "11 model · 0,8B–12B",
+          "scope": "11 model · 0,8B-12B",
           "question": "Ölçek, nesil veya instruction tuning darboğazı kırıyor mu?",
-          "result": "Hayır. Gerçek lider base Gemma 4–12B: ICS 0,525; yumuşak tavan sürüyor."
+          "result": "Hayır. Gerçek lider base Gemma 4-12B: ICS 0,525; yumuşak tavan sürüyor."
         },
         "04": {
           "title": "Ordinary perturbation",
@@ -976,7 +1085,7 @@
           "newDraft": {
             "badge": "Yeni taslak · 2026",
             "title": "Yeni modeller + eksik kontrol",
-            "description": "Aynı probu 20 modele taşıyoruz: 2024 encoder’lar, modern embedding modelleri ve 0,8B–12B decoder LLM’ler. Sonra kritik eksik karşılaştırmayı ekliyoruz: model sıradan eş anlamlıyı rastgeleden ayırabiliyorsa, aynı ayrımı idiyomda ne kadar yapabiliyor?",
+            "description": "Aynı probu 20 modele taşıyoruz: 2024 encoder’lar, modern embedding modelleri ve 0,8B-12B decoder LLM’ler. Sonra kritik eksik karşılaştırmayı ekliyoruz: model sıradan eş anlamlıyı rastgeleden ayırabiliyorsa, aynı ayrımı idiyomda ne kadar yapabiliyor?",
             "bullets": [
               "ISC, IG, LOD, AID, FLOOR, RHO, ICS",
               "Last-four-layers + final norm LLM reçetesi",
@@ -1029,11 +1138,11 @@
           "heading": "Özgün bulgudan 2026 modellerine, sonra ölçümün kendisini sınayan kontrole.",
           "representation": {
             "title": "Temsil düzeyi neden önemli?",
-            "text": "Tam cümlede ortak kelimeler baskındır: rastgele ikame yapılsa bile benzerlik 0,90–0,99 kalabilir. Bu nedenle birincil analiz, cümlenin tamamı değil hedefin contextual span temsilidir. Sentence embedding modellerinde ise karşılaştırılabilir sınır olarak isolated phrase raporlanır."
+            "text": "Tam cümlede ortak kelimeler baskındır: rastgele ikame yapılsa bile benzerlik 0,90-0,99 kalabilir. Bu nedenle birincil analiz, cümlenin tamamı değil hedefin contextual span temsilidir. Sentence embedding modellerinde ise karşılaştırılabilir sınır olarak isolated phrase raporlanır."
           },
           "anisotropy": {
             "title": "Anizotropi neden ayrıca gösteriliyor?",
-            "text": "FLOOR→1 olduğunda Scaled Similarity paydası küçülür ve küçük gürültü büyür. Instruction-tuned Gemma 4–12B’nin ICS 0,520 görünmesi bu artefakttır; FLOOR≈0,95 ve ISC≈0 gerçek yakalamanın olmadığını gösterir. Bu yüzden ICS her zaman FLOOR ile birlikte okunur."
+            "text": "FLOOR→1 olduğunda Scaled Similarity paydası küçülür ve küçük gürültü büyür. Instruction-tuned Gemma 4-12B’nin ICS 0,520 görünmesi bu artefakttır; FLOOR≈0,95 ve ISC≈0 gerçek yakalamanın olmadığını gösterir. Bu yüzden ICS her zaman FLOOR ile birlikte okunur."
           }
         },
         "06": {
@@ -1042,7 +1151,7 @@
             "bestIcs": {
               "label": "En iyi gerçek ICS",
               "value": "0,525",
-              "note": "base Gemma 4–12B; 0,55 kısmi yakalama eşiğinin altında."
+              "note": "base Gemma 4-12B; 0,55 kısmi yakalama eşiğinin altında."
             },
             "bestOcg": {
               "label": "En iyi idiyom OCG",

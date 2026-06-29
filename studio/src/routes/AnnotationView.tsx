@@ -21,8 +21,7 @@ import {
 import {
     adjudicateMwe,
     aggregateAnnotationsNow,
-    launchPilotCampaign,
-    launchPreAnnotationCampaign,
+    ensureMyTypeTasks,
     loadJobTemplate,
     queueJob,
     reviewAssignment,
@@ -33,11 +32,9 @@ import {
 import type {
     AnnotationAggregate,
     AssignmentRecord,
-    CampaignRecord,
 } from "@/data/schema";
-import { listUsers, type AdminUserRow } from "@/lib/admin-users";
 import { useQueryClient } from "@tanstack/react-query";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const ALPHA_THRESHOLD = 0.67;
@@ -51,22 +48,15 @@ export function AnnotationView() {
   const aggregateQuery = useAnnotationAggregates();
   const reportQuery = useAggregationReport();
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [users, setUsers] = useState<AdminUserRow[]>([]);
-  const [selectedAnnotators, setSelectedAnnotators] = useState<string[]>([]);
   const [busy, setBusy] = useState<string | null>(null);
+  const [provisioning, setProvisioning] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const provisionedRef = useRef<string | null>(null);
 
   const data = snapshotQuery.data;
   const snapshot = data?.snapshot;
   const privileged = profile?.role === "admin" || profile?.role === "curator";
-
-  useEffect(() => {
-    if (profile?.role !== "admin") return;
-    listUsers()
-      .then(setUsers)
-      .catch((reason) => setError(errorText(reason, t)));
-  }, [profile?.role, t]);
 
   const ownAssignments = useMemo(
     () =>
@@ -92,6 +82,11 @@ export function AnnotationView() {
         (snapshot?.annotations ?? []).map((item) => [item.assignmentId, item]),
       ),
     [snapshot?.annotations],
+  );
+
+  const plan = planQuery.data;
+  const hasTypeTask = ownAssignments.some(
+    (item) => item.itemSnapshot.taskType === "type",
   );
 
   async function refresh() {
@@ -124,6 +119,21 @@ export function AnnotationView() {
     }
   }
 
+  // Self-provision the current user's tasks once, replacing the manual
+  // campaign-launch step. Runs only against a live Firestore project, at most
+  // once per user, and only when they have no type task yet.
+  useEffect(() => {
+    if (data?.origin !== "firestore" || !plan || !profile?.uid) return;
+    if (hasTypeTask || provisionedRef.current === profile.uid) return;
+    provisionedRef.current = profile.uid;
+    setProvisioning(true);
+    ensureMyTypeTasks(plan, profile.uid)
+      .then((created) => (created > 0 ? refresh() : undefined))
+      .catch((reason) => setError(errorText(reason, t)))
+      .finally(() => setProvisioning(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data?.origin, plan, profile?.uid, hasTypeTask]);
+
   if (snapshotQuery.isLoading)
     return <FullPageSpinner label={t("annotation.loading")} />;
   if (!profile || !snapshot)
@@ -134,7 +144,7 @@ export function AnnotationView() {
       <div>
         <h1 className="text-2xl font-semibold">{t("annotation.title")}</h1>
         <p className="text-sm text-[hsl(var(--muted-foreground))]">
-          {t("annotation.subtitle")}
+          {t(privileged ? "annotation.subtitle" : "annotation.subtitleAnnotator")}
         </p>
       </div>
 
@@ -168,20 +178,7 @@ export function AnnotationView() {
         </Card>
       ) : null}
 
-      {privileged ? (
-        <CampaignLauncher
-          plan={planQuery.data}
-          origin={data?.origin}
-          profileUid={profile.uid}
-          users={users}
-          selectedAnnotators={selectedAnnotators}
-          setSelectedAnnotators={setSelectedAnnotators}
-          busy={busy}
-          runAction={runAction}
-        />
-      ) : null}
-
-      <div className="grid gap-4 xl:grid-cols-[360px_1fr]">
+      <div id="my-tasks" className="grid gap-4 xl:grid-cols-[360px_1fr]">
         <Card>
           <CardHeader>
             <CardTitle>{t("annotation.assignments.title")}</CardTitle>
@@ -194,7 +191,11 @@ export function AnnotationView() {
           <CardContent className="max-h-[70vh] space-y-2 overflow-auto">
             {ownAssignments.length === 0 ? (
               <p className="text-sm text-[hsl(var(--muted-foreground))]">
-                {t("annotation.assignments.empty")}
+                {t(
+                  provisioning
+                    ? "annotation.assignments.preparing"
+                    : "annotation.assignments.empty",
+                )}
               </p>
             ) : (
               ownAssignments.map((assignment) => (
@@ -271,153 +272,7 @@ export function AnnotationView() {
           runAction={runAction}
         />
       ) : null}
-
-      <div>
-        <h2 className="mb-2 text-lg font-semibold">
-          {t("annotation.campaigns.title")}
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {snapshot.campaigns.map((campaign) => (
-            <CampaignCard key={campaign.id} campaign={campaign} />
-          ))}
-        </div>
-      </div>
     </div>
-  );
-}
-
-function CampaignLauncher({
-  plan,
-  origin,
-  profileUid,
-  users,
-  selectedAnnotators,
-  setSelectedAnnotators,
-  busy,
-  runAction,
-}: {
-  plan: ReturnType<typeof useAnnotationPilotPlan>["data"];
-  origin: "firestore" | "bundled" | undefined;
-  profileUid: string;
-  users: AdminUserRow[];
-  selectedAnnotators: string[];
-  setSelectedAnnotators: (items: string[]) => void;
-  busy: string | null;
-  runAction: (
-    key: string,
-    action: () => Promise<void>,
-    success: string,
-  ) => Promise<void>;
-}) {
-  const { t } = useTranslation();
-  const eligible = users.filter((user) =>
-    ["annotator", "curator", "admin"].includes(user.role),
-  );
-  const canWrite = origin === "firestore" && !!plan;
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{t("annotation.campaign.title")}</CardTitle>
-        <CardDescription>
-          {t("annotation.campaign.description")}
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <div className="flex flex-wrap gap-2">
-          {(["type", "token"] as const).map((taskType) => (
-            <Button
-              key={`pre-${taskType}`}
-              variant="outline"
-              disabled={!canWrite || busy === `pre-${taskType}`}
-              onClick={() =>
-                runAction(
-                  `pre-${taskType}`,
-                  () =>
-                    launchPreAnnotationCampaign(
-                      plan!,
-                      taskType,
-                      profileUid,
-                      profileUid,
-                    ).then(() => undefined),
-                  t("annotation.campaign.prelabelCreated", { taskType }),
-                )
-              }
-            >
-              {taskType === "type"
-                ? t("annotation.campaign.startPrelabelType")
-                : t("annotation.campaign.startPrelabelToken")}
-            </Button>
-          ))}
-        </div>
-        {users.length > 0 ? (
-          <div className="space-y-2">
-            <p className="text-sm font-medium">
-              {t("annotation.campaign.pilotAnnotators", {
-                count: selectedAnnotators.length,
-              })}
-            </p>
-            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-              {eligible.map((user) => (
-                <label
-                  key={user.uid}
-                  className="flex items-center gap-2 rounded border border-[hsl(var(--border))] p-2 text-sm"
-                >
-                  <input
-                    type="checkbox"
-                    checked={selectedAnnotators.includes(user.uid)}
-                    onChange={(event) =>
-                      setSelectedAnnotators(
-                        event.target.checked
-                          ? [...selectedAnnotators, user.uid]
-                          : selectedAnnotators.filter(
-                              (uid) => uid !== user.uid,
-                            ),
-                      )
-                    }
-                  />
-                  <span className="truncate">
-                    {user.displayName || user.email || user.uid}
-                  </span>
-                </label>
-              ))}
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {(["type", "token"] as const).map((taskType) => (
-                <Button
-                  key={`pilot-${taskType}`}
-                  disabled={
-                    !canWrite ||
-                    selectedAnnotators.length < 8 ||
-                    busy === `pilot-${taskType}`
-                  }
-                  onClick={() =>
-                    runAction(
-                      `pilot-${taskType}`,
-                      () =>
-                        launchPilotCampaign(
-                          plan!,
-                          taskType,
-                          selectedAnnotators,
-                          profileUid,
-                        ).then(() => undefined),
-                      t("annotation.campaign.pilotStarted", { taskType }),
-                    )
-                  }
-                >
-                  {taskType === "type"
-                    ? t("annotation.campaign.startPilotType")
-                    : t("annotation.campaign.startPilotToken")}
-                </Button>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <p className="text-xs text-[hsl(var(--muted-foreground))]">
-            {t("annotation.campaign.annotatorsAdminOnly")}
-          </p>
-        )}
-      </CardContent>
-    </Card>
   );
 }
 
@@ -486,7 +341,27 @@ function AnnotationForm({
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-5">
+        {editable ? (
+          <div className="space-y-2 rounded-md border border-[hsl(var(--primary))]/30 bg-[hsl(var(--primary))]/5 p-4 text-sm">
+            <p className="font-medium">{t("annotation.form.help.title")}</p>
+            <p className="text-[hsl(var(--muted-foreground))]">
+              {t("annotation.form.help.task")}
+            </p>
+            <p className="font-medium">
+              {t("annotation.form.help.scaleTitle")}
+            </p>
+            <ul className="list-disc space-y-1 pl-5 text-[hsl(var(--muted-foreground))]">
+              <li>{t("annotation.form.help.scaleHigh")}</li>
+              <li>{t("annotation.form.help.scaleMid")}</li>
+              <li>{t("annotation.form.help.scaleLow")}</li>
+            </ul>
+          </div>
+        ) : null}
+
         <div className="space-y-2">
+          <p className="text-xs font-medium text-[hsl(var(--muted-foreground))]">
+            {t("annotation.form.contextsLabel")}
+          </p>
           {assignment.itemSnapshot.contexts.map((context) => (
             <div
               key={context.id}
@@ -507,6 +382,7 @@ function AnnotationForm({
             <div className="grid gap-3 sm:grid-cols-2">
               <ScoreSelect
                 label={t("annotation.form.overallCompositional")}
+                hint={t("annotation.form.hints.overall")}
                 value={overallScore}
                 onChange={setOverall}
                 min={0}
@@ -515,6 +391,9 @@ function AnnotationForm({
               />
               <ScoreSelect
                 label={t("annotation.form.modifierContribution")}
+                hint={t("annotation.form.hints.modifier", {
+                  word: assignment.itemSnapshot.modifier,
+                })}
                 value={modifierScore}
                 onChange={setModifier}
                 min={0}
@@ -522,6 +401,9 @@ function AnnotationForm({
               />
               <ScoreSelect
                 label={t("annotation.form.headContribution")}
+                hint={t("annotation.form.hints.head", {
+                  word: assignment.itemSnapshot.head,
+                })}
                 value={headScore}
                 onChange={setHead}
                 min={0}
@@ -529,6 +411,7 @@ function AnnotationForm({
               />
               <ScoreSelect
                 label={t("annotation.form.confidence")}
+                hint={t("annotation.form.hints.confidence")}
                 value={confidence}
                 onChange={setConfidence}
                 min={1}
@@ -541,6 +424,12 @@ function AnnotationForm({
                 <span className="text-[hsl(var(--destructive))]">
                   {t("annotation.form.paraphraseRequired")}
                 </span>
+              </span>
+              <span className="block text-xs font-normal text-[hsl(var(--muted-foreground))]">
+                {t("annotation.form.hints.paraphrase")}
+              </span>
+              <span className="block text-xs font-normal italic text-[hsl(var(--muted-foreground))]">
+                {t("annotation.form.hints.paraphraseExample")}
               </span>
               <textarea
                 value={paraphrase}
@@ -963,6 +852,7 @@ function AggregationPanel({
 
 function ScoreSelect({
   label,
+  hint,
   value,
   onChange,
   min,
@@ -970,6 +860,7 @@ function ScoreSelect({
   showScoreHints,
 }: {
   label: string;
+  hint?: string;
   value: number;
   onChange: (value: number) => void;
   min: number;
@@ -980,6 +871,11 @@ function ScoreSelect({
   return (
     <label className="space-y-1 text-sm">
       <span className="font-medium">{label}</span>
+      {hint ? (
+        <span className="block text-xs font-normal text-[hsl(var(--muted-foreground))]">
+          {hint}
+        </span>
+      ) : null}
       <Select
         className="w-full"
         value={value}
@@ -1001,68 +897,6 @@ function ScoreSelect({
         )}
       </Select>
     </label>
-  );
-}
-
-function CampaignCard({ campaign }: { campaign: CampaignRecord }) {
-  const { t } = useTranslation();
-  const pct =
-    campaign.totalAssignments > 0
-      ? Math.round(
-          (campaign.completedAssignments / campaign.totalAssignments) * 100,
-        )
-      : 0;
-  const lowAgreement =
-    campaign.agreement != null && campaign.agreement < ALPHA_THRESHOLD;
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center justify-between gap-2 text-base">
-          {campaign.name}
-          <Badge
-            variant={
-              campaign.status === "active"
-                ? "success"
-                : campaign.status === "pilot"
-                  ? "primary"
-                  : "default"
-            }
-          >
-            {campaign.status}
-          </Badge>
-        </CardTitle>
-        <CardDescription>
-          {t("annotation.campaigns.description", {
-            taskType: campaign.taskType,
-            items: campaign.itemCount,
-            annotators: campaign.targetAnnotators,
-          })}
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-2">
-        <div className="flex justify-between text-sm">
-          <span>{t("annotation.campaigns.progress")}</span>
-          <span>
-            {t("annotation.campaigns.progressCount", {
-              completed: campaign.completedAssignments,
-              total: campaign.totalAssignments,
-              pct,
-            })}
-          </span>
-        </div>
-        <div className="h-2 overflow-hidden rounded bg-[hsl(var(--muted))]">
-          <div
-            className="h-full bg-[hsl(var(--primary))]"
-            style={{ width: `${pct}%` }}
-          />
-        </div>
-        {campaign.agreement != null ? (
-          <Badge variant={lowAgreement ? "warning" : "success"}>
-            α {campaign.agreement.toFixed(2)}
-          </Badge>
-        ) : null}
-      </CardContent>
-    </Card>
   );
 }
 
