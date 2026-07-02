@@ -10,6 +10,8 @@ import statistics
 from collections import defaultdict
 from typing import Any, Iterable
 
+TARGET_ANNOTATORS = 2
+
 
 def select_stratified_pilot(
     mwes: list[dict[str, Any]],
@@ -207,7 +209,7 @@ def aggregate_annotations(
                 "modifierMean": statistics.fmean(modifier),
                 "headMean": statistics.fmean(head),
                 "confidenceMean": statistics.fmean(confidence),
-                "requiresAdjudication": len(scores) < 8 or (statistics.stdev(scores) if len(scores) > 1 else 0.0) > 1.25,
+                "requiresAdjudication": len(scores) < TARGET_ANNOTATORS or (statistics.stdev(scores) if len(scores) > 1 else 0.0) > 1.25,
                 "paraphrases": sorted({item["paraphrase"].strip() for item in responses if item.get("paraphrase", "").strip()}),
             }
         )

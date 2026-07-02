@@ -122,12 +122,12 @@ describe("frozen annotation pilot", () => {
     const plan = annotationPilotPlanSchema.parse(readJson("public/annotation/tr_pilot_plan.json"));
     expect(plan.campaigns.type.items).toHaveLength(30);
     expect(plan.campaigns.token.items).toHaveLength(90);
-    const annotators = Array.from({ length: 8 }, (_, index) => `ann-${index}`);
+    const annotators = Array.from({ length: 2 }, (_, index) => `ann-${index}`);
     const typeAssignments = buildPilotAssignments(plan, "type", annotators);
     const tokenAssignments = buildPilotAssignments(plan, "token", annotators);
-    expect(typeAssignments).toHaveLength(240);
-    expect(tokenAssignments).toHaveLength(720);
-    expect(new Set(typeAssignments.map((item) => item.id)).size).toBe(240);
+    expect(typeAssignments).toHaveLength(60);
+    expect(tokenAssignments).toHaveLength(180);
+    expect(new Set(typeAssignments.map((item) => item.id)).size).toBe(60);
     expect(typeAssignments.every((item) => !("provisionalClass" in item.itemSnapshot))).toBe(true);
     expect(typeAssignments.every((item) => item.itemSnapshot.contexts.length === 3)).toBe(true);
     expect(tokenAssignments.every((item) => item.itemSnapshot.contexts.length === 1)).toBe(true);
@@ -143,8 +143,8 @@ describe("frozen annotation pilot", () => {
 
   test("browser aggregation uses only accepted immutable assignment joins", () => {
     const plan = annotationPilotPlanSchema.parse(readJson("public/annotation/tr_pilot_plan.json"));
-    const assignments = buildPilotAssignments(plan, "type", Array.from({ length: 8 }, (_, index) => `ann-${index}`))
-      .slice(0, 8)
+    const assignments = buildPilotAssignments(plan, "type", Array.from({ length: 2 }, (_, index) => `ann-${index}`))
+      .slice(0, 2)
       .map((assignment) => ({ ...assignment, status: "accepted" as const }));
     const annotations = assignments.map((assignment, index) => ({
       id: assignment.id, assignmentId: assignment.id, campaignId: assignment.campaignId,
@@ -154,8 +154,8 @@ describe("frozen annotation pilot", () => {
     }));
     const result = aggregateAcceptedAnnotations(annotations, assignments);
     expect(result.items).toHaveLength(1);
-    expect(result.items[0].n).toBe(8);
-    expect(result.items[0].mean).toBeCloseTo(0.875);
+    expect(result.items[0].n).toBe(2);
+    expect(result.items[0].mean).toBeCloseTo(0.5);
     expect(result.items[0].requiresAdjudication).toBe(false);
   });
 });

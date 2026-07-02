@@ -46,6 +46,7 @@
     "mwes": "MWE inventory",
     "parity": "English parity",
     "examples": "Examples lab",
+    "curation": "Curation studio",
     "annotation": "Annotation",
     "probes": "Probe studio",
     "release": "Validation & release",
@@ -435,6 +436,49 @@
       "reviewNotePlaceholder": "Grammar, meaning, and frequency check note"
     }
   },
+  "curation": {
+    "title": "Curation studio",
+    "subtitle": "Review example contexts first, then approve P_Comp probes and their generated sentence variants.",
+    "loading": "Loading curation studio…",
+    "searchPlaceholder": "Search expression…",
+    "list": {
+      "examples": "S1-S3"
+    },
+    "steps": {
+      "examples": "Examples S1-S3",
+      "pComp": "P_Comp probes"
+    },
+    "tabs": {
+      "label": "Curation stage",
+      "examples": "Examples",
+      "pComp": "P_Comp",
+      "pCompLocked": "P_Comp opens after S1, S2, and S3 are approved."
+    },
+    "edit": {
+      "classTitle": "1. Class label",
+      "examplesTitle": "2. Example sentences S1-S3/N1-N2",
+      "probeFormPlaceholder": "Write {{kind}} probe form...",
+      "saveEdit": "Save edit"
+    },
+    "contexts": {
+      "title": "Example contexts",
+      "description": "S1-S3 are reviewed before P_Comp probe review opens.",
+      "sourceInfo": "Show source and license details",
+      "source": "Source:",
+      "license": "License:",
+      "licenseStatus": "License status:",
+      "origin": "Origin:"
+    },
+    "pCompLocked": {
+      "title": "P_Comp review is waiting",
+      "description": "Approve S1, S2, and S3 first; then the component probe review opens here."
+    },
+    "pComp": {
+      "title": "P_Comp component probes",
+      "description": "Approve the modifier/head component probes, then check the generated P_Comp sentence variants.",
+      "noVariants": "No P_Comp variants yet."
+    }
+  },
   "release": {
     "title": "Validation & release",
     "subtitle": "Same gates as the backend validator; no optimistic client-side recomputation.",
@@ -570,7 +614,7 @@
   },
   "annotation": {
     "title": "Annotation",
-    "subtitle": "Type tasks score an MWE with three natural contexts; token tasks score a single context. Gold data requires eight independent annotations and curator acceptance per item.",
+    "subtitle": "Type tasks score an MWE with three natural contexts; token tasks score a single context. Gold data currently requires two independent annotations and curator acceptance per item.",
     "subtitleAnnotator": "Open each of your tasks below and score the ready-made sentences.",
     "loading": "Loading annotation system…",
     "loadFailed": "Failed to load annotation data.",
@@ -584,13 +628,14 @@
     },
     "campaign": {
       "title": "Launch campaign",
-      "description": "Pre-labels are for guideline development and do not count as gold. The official pilot requires at least 8 distinct annotators.",
+      "selfAssignTitle": "Create tasks for myself",
+      "description": "Pre-labels are for guideline development and do not count as gold. The official pilot currently requires at least 2 distinct annotators.",
       "startPrelabelType": "Start type pre-labeling",
       "startPrelabelToken": "Start token pre-labeling",
       "prelabelCreated": "{{taskType}} pre-labeling tasks created.",
       "prelabelExplain": "Pre-labeling: you alone label every item to draft and test the guidelines. This is practice — it does not count as gold data. Use this to try the workflow first.",
-      "pilotExplain": "Pilot: the official run. At least 8 different people independently label the same items so we can measure how much they agree. Tick the annotators below, then start.",
-      "pilotAnnotators": "Pilot annotators ({{count}}/8+)",
+      "pilotExplain": "Pilot: the official run. At least 2 different people independently label the same items so we can measure how much they agree. Tick the annotators below, then start.",
+      "pilotAnnotators": "Pilot annotators ({{count}}/2+)",
       "startPilotType": "Start type pilot",
       "startPilotToken": "Start token pilot",
       "pilotStarted": "{{taskType}} pilot campaign launched.",
@@ -1196,7 +1241,7 @@
         "07": {
           "label": "07 / Turkish extension and open data",
           "heading": "The same experiment, with a defensible gold set in Turkish.",
-          "paragraph": "The Turkish inventory started with 280 two-word candidates, 1,400 base contexts, and 4,200 existing sentences. The target is 19,600 sentences matching the original English design, eight independent annotators per type/token score, four probe families, and 64 ordinary-control records.",
+          "paragraph": "The Turkish inventory started with 280 two-word candidates, 1,400 base contexts, and 4,200 existing sentences. The current target is 19,600 sentences matching the original English design, two independent annotators per type/token score, four probe families, and 64 ordinary-control records.",
           "stats": [
             {
               "value": "280",

@@ -21,6 +21,7 @@ import {
 import {
     adjudicateMwe,
     aggregateAnnotationsNow,
+    ensureMyPreAnnotationTasks,
     ensureMyTypeTasks,
     loadJobTemplate,
     queueJob,
@@ -173,6 +174,66 @@ export function AnnotationView() {
               {busy === "seed"
                 ? t("annotation.enableFirestore.loading")
                 : t("annotation.enableFirestore.button")}
+            </Button>
+          </CardContent>
+        </Card>
+      ) : null}
+
+      {privileged && plan ? (
+        <Card>
+          <CardHeader>
+            <CardTitle>{t("annotation.campaign.selfAssignTitle")}</CardTitle>
+            <CardDescription>
+              {t("annotation.campaign.prelabelExplain")}
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-wrap gap-2">
+            {data?.origin !== "firestore" ? (
+              <p className="w-full text-xs text-[hsl(var(--warning))]">
+                {t("annotation.enableFirestore.description")}
+              </p>
+            ) : null}
+            <Button
+              variant="outline"
+              disabled={data?.origin !== "firestore" || busy === "prelabel-type"}
+              onClick={() =>
+                runAction(
+                  "prelabel-type",
+                  () =>
+                    ensureMyPreAnnotationTasks(
+                      plan,
+                      "type",
+                      profile.uid,
+                      profile.uid,
+                    ).then(() => undefined),
+                  t("annotation.campaign.prelabelCreated", {
+                    taskType: "type",
+                  }),
+                )
+              }
+            >
+              {t("annotation.campaign.startPrelabelType")}
+            </Button>
+            <Button
+              variant="outline"
+              disabled={data?.origin !== "firestore" || busy === "prelabel-token"}
+              onClick={() =>
+                runAction(
+                  "prelabel-token",
+                  () =>
+                    ensureMyPreAnnotationTasks(
+                      plan,
+                      "token",
+                      profile.uid,
+                      profile.uid,
+                    ).then(() => undefined),
+                  t("annotation.campaign.prelabelCreated", {
+                    taskType: "token",
+                  }),
+                )
+              }
+            >
+              {t("annotation.campaign.startPrelabelToken")}
             </Button>
           </CardContent>
         </Card>

@@ -1,5 +1,7 @@
 import type { AnnotationRecord, AssignmentRecord } from "@/data/schema";
 
+const TARGET_ANNOTATORS = 2;
+
 export interface BrowserAggregateItem {
   mweId: string;
   contextId: string | null;
@@ -81,7 +83,7 @@ export function aggregateAcceptedAnnotations(annotations: AnnotationRecord[], as
       modifierMean: mean(group.responses.map((response) => response.modifierScore)),
       headMean: mean(group.responses.map((response) => response.headScore)),
       confidenceMean: mean(group.responses.map((response) => response.confidence)),
-      requiresAdjudication: scores.length < 8 || deviation > 1.25,
+      requiresAdjudication: scores.length < TARGET_ANNOTATORS || deviation > 1.25,
       paraphrases: [...new Set(group.responses.map((response) => response.paraphrase.trim()).filter(Boolean))].sort(),
     });
   }

@@ -46,10 +46,10 @@ export function buildPreAnnotationAssignments(
   rawPlan: AnnotationPilotPlan,
   taskType: "type" | "token",
   assigneeId: string,
+  campaignId = `tr-prelabel-${taskType}-v1`,
 ): AssignmentRecord[] {
   const plan = annotationPilotPlanSchema.parse(rawPlan);
   const campaign = plan.campaigns[taskType];
-  const campaignId = `tr-prelabel-${taskType}-v1`;
   return [...campaign.items]
     .sort((a, b) => a.id.localeCompare(b.id))
     .map((item) => assignmentSchema.parse({

@@ -87,8 +87,8 @@ def main() -> None:
             "warning": "Provisional classes are used only for balanced pilot sampling and are hidden from annotators.",
         },
         "campaigns": {
-            "type": {"id": "tr-type-pilot-v1", "targetAnnotators": 8, "items": type_items},
-            "token": {"id": "tr-token-pilot-v1", "targetAnnotators": 8, "items": token_items},
+            "type": {"id": "tr-type-pilot-v1", "targetAnnotators": 2, "items": type_items},
+            "token": {"id": "tr-token-pilot-v1", "targetAnnotators": 2, "items": token_items},
         },
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)

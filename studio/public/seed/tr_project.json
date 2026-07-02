@@ -66047,20 +66047,20 @@
       "name": "TR Type Pilot - 30 MWE",
       "taskType": "type",
       "status": "draft",
-      "targetAnnotators": 8,
+      "targetAnnotators": 2,
       "itemCount": 30,
       "completedAssignments": 0,
-      "totalAssignments": 240
+      "totalAssignments": 60
     },
     {
       "id": "tr-token-pilot-v1",
       "name": "TR Token Pilot - 90 Bağlam",
       "taskType": "token",
       "status": "draft",
-      "targetAnnotators": 8,
+      "targetAnnotators": 2,
       "itemCount": 90,
       "completedAssignments": 0,
-      "totalAssignments": 720
+      "totalAssignments": 180
     }
   ],
   "assignments": [],
