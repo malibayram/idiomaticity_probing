@@ -701,6 +701,56 @@ export async function launchPreAnnotationCampaign(
   return assignments.length;
 }
 
+export async function ensureMyPreAnnotationTasks(
+  plan: AnnotationPilotPlan,
+  taskType: "type" | "token",
+  assigneeId: string,
+  actorUid: string,
+): Promise<number> {
+  const validatedPlan = annotationPilotPlanSchema.parse(plan);
+  const campaignId = `tr-prelabel-${taskType}-v1-${assigneeId}`;
+  const wanted = buildPreAnnotationAssignments(
+    validatedPlan,
+    taskType,
+    assigneeId,
+    campaignId,
+  );
+  const missing: AssignmentRecord[] = [];
+  for (const assignment of wanted) {
+    const existing = await getDoc(doc(db, "assignments", assignment.id));
+    if (!existing.exists()) missing.push(assignment);
+  }
+  if (missing.length > 0) await createAssignments(missing);
+  const batch = writeBatch(db);
+  batch.set(doc(db, "campaigns", campaignId), {
+    id: campaignId,
+    name: `TR ${taskType} ön etiketleme`,
+    taskType,
+    status: "active",
+    targetAnnotators: 1,
+    itemCount: wanted.length,
+    completedAssignments: 0,
+    totalAssignments: wanted.length,
+    annotatorIds: [assigneeId],
+    purpose: "curator_prelabel",
+    eligibleForGold: false,
+    launchedAt: new Date().toISOString(),
+    launchedBy: actorUid,
+  }, { merge: true });
+  batch.set(doc(collection(db, "auditEvents")), {
+    type: "annotation_prelabel_ensured",
+    projectId: validatedPlan.projectId,
+    campaignId,
+    taskType,
+    assignmentCount: missing.length,
+    actorUid,
+    createdAt: serverTimestamp(),
+    schemaVersion: 1,
+  });
+  await batch.commit();
+  return missing.length;
+}
+
 /**
  * Ensure the current user has their own "type" annotation tasks, creating any
  * that are missing. This replaces the manual campaign-launch step: every
@@ -713,7 +763,24 @@ export async function ensureMyTypeTasks(
   uid: string,
 ): Promise<number> {
   const validatedPlan = annotationPilotPlanSchema.parse(plan);
-  const wanted = buildPilotAssignments(validatedPlan, "type", [uid]);
+  const targetAnnotators = validatedPlan.campaigns.type.targetAnnotators;
+  let annotatorIds = [uid];
+  try {
+    const users = await getDocs(
+      query(collection(db, "users"), where("role", "in", ["annotator", "curator", "admin"])),
+    );
+    annotatorIds = [
+      uid,
+      ...users.docs
+        .map((item) => item.data().uid as string | undefined)
+        .filter((item): item is string => !!item && item !== uid)
+        .sort(),
+    ].slice(0, targetAnnotators);
+  } catch {
+    // Non-admin annotators cannot list users; in that case an admin/curator
+    // must create the shared pilot assignments.
+  }
+  const wanted = buildPilotAssignments(validatedPlan, "type", annotatorIds);
   const missing: AssignmentRecord[] = [];
   for (const assignment of wanted) {
     const existing = await getDoc(doc(db, "assignments", assignment.id));

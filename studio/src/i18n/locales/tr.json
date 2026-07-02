@@ -46,6 +46,7 @@
     "mwes": "MWE envanteri",
     "parity": "İngilizce paritesi",
     "examples": "Örnek laboratuvarı",
+    "curation": "Curation stüdyosu",
     "annotation": "Anotasyon",
     "probes": "Prob stüdyosu",
     "release": "Doğrulama & yayın",
@@ -435,6 +436,49 @@
       "reviewNotePlaceholder": "Dilbilgisi, anlam ve frekans kontrol notu"
     }
   },
+  "curation": {
+    "title": "Curation stüdyosu",
+    "subtitle": "Önce örnek bağlamları incele, sonra P_Comp probları ve üretilen cümle varyantlarını onayla.",
+    "loading": "Curation stüdyosu yükleniyor…",
+    "searchPlaceholder": "İfade ara…",
+    "list": {
+      "examples": "S1-S3"
+    },
+    "steps": {
+      "examples": "Örnekler S1-S3",
+      "pComp": "P_Comp probları"
+    },
+    "tabs": {
+      "label": "Curation aşaması",
+      "examples": "Examples",
+      "pComp": "P_Comp",
+      "pCompLocked": "P_Comp, S1, S2 ve S3 onaylandıktan sonra açılır."
+    },
+    "edit": {
+      "classTitle": "1. Sınıf etiketi",
+      "examplesTitle": "2. Örnek cümleler S1-S3/N1-N2",
+      "probeFormPlaceholder": "{{kind}} prob formu yaz...",
+      "saveEdit": "Kaydet"
+    },
+    "contexts": {
+      "title": "Örnek bağlamlar",
+      "description": "P_Comp prob incelemesi açılmadan önce S1-S3 incelenir.",
+      "sourceInfo": "Kaynak ve lisans detaylarını göster",
+      "source": "Kaynak:",
+      "license": "Lisans:",
+      "licenseStatus": "Lisans durumu:",
+      "origin": "Köken:"
+    },
+    "pCompLocked": {
+      "title": "P_Comp incelemesi bekliyor",
+      "description": "Önce S1, S2 ve S3'ü onayla; sonra bileşen prob incelemesi burada açılır."
+    },
+    "pComp": {
+      "title": "P_Comp bileşen probları",
+      "description": "Modifier/head bileşen problarını onayla, sonra üretilen P_Comp cümle varyantlarını kontrol et.",
+      "noVariants": "Henüz P_Comp varyantı yok."
+    }
+  },
   "release": {
     "title": "Doğrulama & yayın",
     "subtitle": "Backend validator ile aynı kapılar; istemci tarafında iyimser yeniden hesaplama yapılmaz.",
@@ -584,13 +628,14 @@
     },
     "campaign": {
       "title": "Kampanya başlat",
-      "description": "Ön etiketler yönerge geliştirmek içindir ve gold sayılmaz. Resmî pilot en az 8 farklı anotör gerektirir.",
+      "selfAssignTitle": "Kendime görev oluştur",
+      "description": "Ön etiketler yönerge geliştirmek içindir ve gold sayılmaz. Resmî pilot şimdilik en az 2 farklı anotör gerektirir.",
       "startPrelabelType": "type ön etiketlemeyi başlat",
       "startPrelabelToken": "token ön etiketlemeyi başlat",
       "prelabelCreated": "{{taskType}} ön etiketleme görevleri oluşturuldu.",
       "prelabelExplain": "Ön etiketleme: yönergeyi taslaklaştırıp denemek için tüm öğeleri tek başınıza etiketlersiniz. Bu bir alıştırmadır — gold (altın) veri sayılmaz. Akışı önce denemek için kullanın.",
-      "pilotExplain": "Pilot: resmî çalışma. En az 8 farklı kişi aynı öğeleri bağımsız etiketler; böylece ne kadar uyuştukları ölçülür. Aşağıdan anotörleri işaretleyip başlatın.",
-      "pilotAnnotators": "Pilot anotörleri ({{count}}/8+)",
+      "pilotExplain": "Pilot: resmî çalışma. En az 2 farklı kişi aynı öğeleri bağımsız etiketler; böylece ne kadar uyuştukları ölçülür. Aşağıdan anotörleri işaretleyip başlatın.",
+      "pilotAnnotators": "Pilot anotörleri ({{count}}/2+)",
       "startPilotType": "type pilotu başlat",
       "startPilotToken": "token pilotu başlat",
       "pilotStarted": "{{taskType}} pilot kampanyası başlatıldı.",
@@ -1196,7 +1241,7 @@
         "07": {
           "label": "07 / Türkçe genişletme ve açık veri",
           "heading": "Aynı deney, Türkçede savunulabilir bir gold set ile.",
-          "paragraph": "Türkçe envanter 280 iki sözcüklü aday, 1.400 temel bağlam ve 4.200 mevcut cümleyle başladı. Hedef; özgün İngilizce tasarımıyla eşleşen 19.600 cümle, sekiz bağımsız anotörlü type/token puanları, dört prob ailesi ve 64 ordinary-control kaydıdır.",
+          "paragraph": "Türkçe envanter 280 iki sözcüklü aday, 1.400 temel bağlam ve 4.200 mevcut cümleyle başladı. Şimdiki hedef; özgün İngilizce tasarımıyla eşleşen 19.600 cümle, iki bağımsız anotörlü type/token puanları, dört prob ailesi ve 64 ordinary-control kaydıdır.",
           "stats": [
             {
               "value": "280",

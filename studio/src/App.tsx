@@ -15,11 +15,10 @@ const MweInventory = lazy(() => import("@/routes/MweInventory").then((m) => ({ d
 const SourcesLibrary = lazy(() => import("@/routes/SourcesLibrary").then((m) => ({ default: m.SourcesLibrary })));
 const ResultsView = lazy(() => import("@/routes/ResultsView").then((m) => ({ default: m.ResultsView })));
 const AdminPage = lazy(() => import("@/routes/AdminPage").then((m) => ({ default: m.AdminPage })));
-const ProbeStudio = lazy(() => import("@/routes/ProbeStudio").then((m) => ({ default: m.ProbeStudio })));
 const ReleaseGate = lazy(() => import("@/routes/ReleaseGate").then((m) => ({ default: m.ReleaseGate })));
 const ExperimentsView = lazy(() => import("@/routes/ExperimentsView").then((m) => ({ default: m.ExperimentsView })));
 const AnnotationView = lazy(() => import("@/routes/AnnotationView").then((m) => ({ default: m.AnnotationView })));
-const ExamplesLab = lazy(() => import("@/routes/ExamplesLab").then((m) => ({ default: m.ExamplesLab })));
+const CurationStudio = lazy(() => import("@/routes/CurationStudio").then((m) => ({ default: m.CurationStudio })));
 const EnglishParityView = lazy(() => import("@/routes/EnglishParityView").then((m) => ({ default: m.EnglishParityView })));
 
 export default function App() {
@@ -65,8 +64,8 @@ export default function App() {
             <Route element={<AppShell />}>
               <Route path="parity" element={<EnglishParityView />} />
               <Route path="sources" element={<SourcesLibrary />} />
-              <Route path="examples" element={<ExamplesLab />} />
-              <Route path="probes" element={<ProbeStudio />} />
+              <Route path="examples" element={<CurationStudio />} />
+              <Route path="probes" element={<Navigate to="/studio/examples" replace />} />
               <Route path="release" element={<ReleaseGate />} />
               <Route path="experiments" element={<ExperimentsView />} />
             </Route>

@@ -24,7 +24,7 @@ artefaktlar `public/` üzerinden Hosting'de statik sunulur.
    düğmesine bir kez basın. İkinci seed canlı veriyi korumak için reddedilir.
 3. Hemen kişisel çalışma için `type` veya `token` **ön etiketleme** kampanyası
    başlatın. Ön etiketler gold sayılmaz.
-4. Gold pilot için Yönetim ekranında en az sekiz kullanıcıyı `annotator` rolüne
+4. Gold pilot için Yönetim ekranında en az iki kullanıcıyı `annotator` rolüne
    alın, Anotasyon ekranından seçip pilotu başlatın.
 5. Anotörler 0–5 genel/modifier/head, 1–5 güven ve zorunlu parafrazı gönderir.
    Yanıt immutable'dır.
@@ -40,7 +40,7 @@ artefaktlar `public/` üzerinden Hosting'de statik sunulur.
 - Prob stüdyosu: KeNet P_Syn/P_WordsSyn, frekans eşli P_Rand, mevcut P_Comp ve
   üretilen her cümle varyantının dilbilgisi/span incelemesi.
 - Experiment 4: 64 Türkçe ordinary-control kaydının ayrı onay kuyruğu.
-- Doğrulama: Python validator ile aynı kapılar; 280 MWE, 5 bağlam, sekiz type ve
+- Doğrulama: Python validator ile aynı kapılar; 280 MWE, 5 bağlam, iki type ve
   token anotasyonu, gold skor/sınıf, 1/2/5/5 prob, onaylı varyantlar, 64 control
   ve 19.600 cümle.
 

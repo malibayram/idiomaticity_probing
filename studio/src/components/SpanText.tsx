@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import type { ReactNode } from "react";
 
 /**
  * Renders a sentence with the target multiword expression highlighted.
@@ -11,11 +12,13 @@ export function SpanText({
   span,
   surface,
   className,
+  highlightSuffix,
 }: {
   sentence: string;
   span: [number, number] | null;
   surface?: string;
   className?: string;
+  highlightSuffix?: ReactNode;
 }) {
   const tokens = sentence.split(/(\s+)/); // keep whitespace tokens for round-trip
 
@@ -29,13 +32,14 @@ export function SpanText({
           const isWord = tok.trim().length > 0;
           if (isWord) wordIdx += 1;
           const inSpan = isWord && wordIdx >= start && wordIdx < end;
+          const isSpanEnd = inSpan && wordIdx === end - 1;
           return inSpan ? (
-            <mark
-              key={i}
-              className="rounded bg-[hsl(var(--warning))]/30 px-0.5 font-medium text-[hsl(var(--foreground))]"
-            >
-              {tok}
-            </mark>
+            <span key={i}>
+              <mark className="rounded bg-[hsl(var(--warning))]/30 px-0.5 font-medium text-[hsl(var(--foreground))]">
+                {tok}
+              </mark>
+              {isSpanEnd ? highlightSuffix : null}
+            </span>
           ) : (
             <span key={i}>{tok}</span>
           );
@@ -52,6 +56,7 @@ export function SpanText({
         <mark className="rounded bg-[hsl(var(--warning))]/30 px-0.5 font-medium text-[hsl(var(--foreground))]">
           {surface}
         </mark>
+        {highlightSuffix}
         {sentence.slice(idx + surface.length)}
       </span>
     );

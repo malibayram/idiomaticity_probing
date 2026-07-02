@@ -42,7 +42,7 @@
   "campaigns": {
     "type": {
       "id": "tr-type-pilot-v1",
-      "targetAnnotators": 8,
+      "targetAnnotators": 2,
       "items": [
         {
           "id": "TR-NC-037-TYPE",
@@ -1428,7 +1428,7 @@
     },
     "token": {
       "id": "tr-token-pilot-v1",
-      "targetAnnotators": 8,
+      "targetAnnotators": 2,
       "items": [
         {
           "id": "TR-NC-037-S1",
